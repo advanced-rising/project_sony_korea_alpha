@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- k_sing_up.html -->
+<html lang="ko-KR" class="no-js">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+      $("#headBox").load("z_common_header.html .head_wrap")
+      $("#footBox").load("z_common_footer.html .foot_wrap")
+    });
+  </script>    
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/common/variable.css">
+  <link rel="stylesheet" href="../css/src/z_common_header.css">
+  <link rel="stylesheet" href="../css/src/z_common_footer.css">
+  <link rel="stylesheet" href="../css/src/common_design.css">
+  <link rel="stylesheet" href="../css/src/k_sign_up.css">
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <script src="../js/common/modernizr-custom.js"></script>
+
+  <title>Sony KOREA - Alpha | 회원가입</title>
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <!-- ============================ #headBox-->
+    <header id="headBox"></header>
+    <!-- ============ // #headBox ============ -->
+    <section id="container">
+      <div class="signUpWrap">
+        <div class="signUp_area">
+          <h2 class="signUp_notice_title">회원가입</h2>
+          <p class="signUp_notice_txt">
+            고객님께서 해당하시는 회원의 유형을 선택 해주세요.<br />
+            각 유형마다 가입절차의 차이가 있으니 반드시 본인이 해당하는 경우를 선택 하시기 바랍니다.<br />
+            소니 고객지원 사이트(SCS) 와 소니스토어는 하나의 아이디와 비밀번호로 운영됩니다.<br />
+            회원가입을 통해 다양한 서비스를 이용하실 수 있습니다</p>
+          <div class="signUp">
+            <ul class="clearfix">
+              <li class="sign_person">
+                <div class="icon person"></div>
+                <div class="txt"><span>개인 회원가입</span></div>
+              </li>
+              <li class="sign_company">
+                <div class="icon company"></div>
+                <div class="txt"><span>법인 회원가입</span></div>
+              </li>
+              <li class="sign_foreigner">
+                <div class="icon foreigner"></div>
+                <div class="txt"><span>foreigner</span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sns_signUp_area">
+          <p class="sns_title">
+            SNS 회원가입
+          </p>
+          <p class="sns_txt">
+            일반회원(개인회원)으로 로그인 할 경우에만 가능합니다.
+          </p>
+          <div class="sns_signUp">
+            <ul class="clearfix">
+              <li class="sns_naver">
+                <div class="icon"></div>
+                <div class="txt"><span>네이버로 회원가입</span></div>
+              </li>
+              <li class="sns_kakao">
+                <div class="icon"></div>
+                <div class="txt"><span>카카오로 회원가입</span></div>
+              </li>
+              <li class="sns_facebook">
+                <div class="icon"></div>
+                <div class="txt"><span>페이스북으로 회원가입</span></div>
+              </li>
+            </ul>
+          </div>
+          <p class="sns_notice">
+            소니코리아 통합 웹 회원 정책 상 공식적으로 <strong>만 14세 미만의 경우 회원가입</strong>이 불가합니다. <br />
+            법인회원은 사업자등록번호로 가입하시면 됩니다.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- ============ #footBox ============ -->
+    <footer id="footBox"></footer>
+    <!-- ============ // #footBox ============ -->
+  </div>
+
+  <!-- script -->
+  
+</body>
+</html>

@@ -1,0 +1,207 @@
+@charset "utf-8";
+/* h_support_origin.css */
+
+#container {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: var(--back-white);
+}
+/* ====================================== */
+.viewBox {
+  width: 100%;
+  height: 400px;
+  padding-top: 80px;
+  background-color: var(--back-lightblue);
+}
+.view_wrap {
+  position: relative;
+  width: 1280px;
+  height: 100%;
+  margin: auto;
+  color: var(--back-black);
+}
+.view_wrap h3 {
+  margin-bottom: 20px;
+  font-size: 2.25rem;
+}
+.view_wrap span {
+  font-size: 1.125rem;
+}
+.view_wrap button {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: auto;
+  height: 50px;
+  padding: 0 20px;
+  color: var(--back-white);
+  background-color: var(--back-blue);
+}
+/* ====================================== */
+.content {
+  width: 1280px;
+  height: auto;
+  margin: auto;
+  padding-top: 40px;
+}
+.content_title {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.content_title h3 {
+  margin-bottom: 20px;
+  font-size: 2.125rem;
+}
+.content_title ul li p {
+  font-size: 1rem;
+}
+.content_list {
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+}
+.content_list > ul {
+  width: auto;
+  height: auto;
+  padding: 0 10px;
+}
+.content_list > ul li {
+  float: left;
+  width: 300px;
+  height: 300px;
+  margin-right: 20px;
+  padding: 20px;
+  background-color: #add;
+}
+.content_list li:last-child {
+  margin-right: 0;
+}
+.content_img {
+  width: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: invert(19%) sepia(0%) saturate(51%) hue-rotate(12deg) brightness(108%) contrast(102%);
+}
+.content_list li:hover .content_img {
+  filter: invert(39%) sepia(91%) saturate(2688%) hue-rotate(3deg) brightness(92%) contrast(102%);
+}
+.content_img button {
+  width: 100%;
+  height: 100%;
+}
+.content_list ul li p {
+  text-align: center;
+}
+.con1_img {
+  background-image: url("../../img/support/origin/ico_free.png");
+}
+.con2_img {
+  background-image: url("../../img/support/origin/ico_event.png");
+}
+.con3_img {
+  background-image: url("../../img/support/origin/ico_coupon.png");
+}
+.con4_img {
+  background-image: url("../../img/support/origin/ico_pickup.png");
+}
+/* ======================================== */
+.sub_content {
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+}
+.sub_content ul {
+  width: auto;
+  height: 100%;
+}
+.sub_content li {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 80px;
+}
+.sub_content li::before {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  content: "";
+  display: block;
+  width: 50px;
+  height: 40px;
+  background-image: url("../../img/support/origin/m_bul_db_quote.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+.free {
+  display: none;
+  background-color: #C94C0C;
+}
+.event {
+  display: none;
+  background-color: #AA8FD4;
+}
+.sale {
+  display: none;
+  background-color: #61178E;
+}
+.pickup {
+  display: none;
+  background-color: #E0698A;
+}
+.pickup i {
+  color: var(--back-blue);
+}
+.content_img button:hover .sub_content li {
+  display: block;
+}
+/* ========================================= */
+.content_area {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  margin-top: 40px;
+  padding: 80px;
+  background-color: var(--back-lightblue);
+}
+.content_txt {
+  width: auto;
+  height: auto;
+  float: left;
+}
+.content_area h3 {
+  margin-bottom: 20px;
+  font-size: 1.875rem;
+  font-weight: 400;
+}
+.content_area hr {
+  width: 600px;
+  margin: 40px 0px;
+}
+.content_area span {
+  display: block;
+  width: 600px;
+  height: auto;
+}
+.original_img {
+  float: right;
+  width: 480px;
+  height: 200px;
+  margin-top: 40px;
+  background-image: url("../../img/support/origin/sony_certified.gif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* ====================================== */
+.notice {
+  width: 1280px;
+  height: auto;
+  margin: auto;
+}

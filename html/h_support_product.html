@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- h_support_product.html -->
+<html lang="ko-KR" class="no-js">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+      $("#support_headBox").load("support_headBox.html .support_headerWrap")
+      $("#footBox").load("footer.html .foot_wrap")
+    });
+  </script>
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/common/variable.css">
+  <link rel="stylesheet" href="../css/src/z_common_footer.css">
+  <link rel="stylesheet" href="../css/src/support_headBox.css">
+  <link rel="stylesheet" href="../css/src/h_support_product.css">
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <script src="../js/common/modernizr-custom.js"></script>
+
+  <title>제품지원</title>
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <!-- #support_headBox =============================== -->
+    <header id="support_headBox"></header>
+    <!-- // #support_headBox =============================== -->
+    <section id="container">
+      <article class="viewBox"></article>
+      <article class="content"></article>
+      <article class="notice"> </article>
+    </section>
+    <!-- #footBox_headBox =============================== -->
+    <footer id="footBox"></footer>
+    <!-- // #footBox_headBox =============================== -->
+  </div>
+  
+  <!-- script -->
+  <script>
+  </script>
+</body>
+</html>

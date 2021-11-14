@@ -1,0 +1,228 @@
+/* ========================== #headBox */
+#headBox {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  margin: auto;
+  background-color: var(--back-lightblack);
+}
+.head_wrap {
+  width: 1280px;
+  height: 100%;
+  margin: auto;
+}
+h1 {
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+}
+.navigation {
+  width: 100%;
+  height: auto;
+}
+.gnb {
+  float: left;
+  width: 840px;
+  height: 60px;
+  margin-top: 10px;
+  margin-left: 100px;
+  color: var(--back-white);
+}
+.gnb ul {
+  width: 100%;
+  height: auto;
+}
+.gnb > ul > li {
+  float: left;
+  width: 90px;
+  height: 100%;
+  margin-right: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+.gnb > ul > li:last-child {margin-right: 0px;}
+.gnb > ul > li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+.gnb > ul > li a:focus,
+.gnb > ul > li a:hover {
+  font-weight: bold;
+  color: var(--main-color);
+}
+.sub_menu {
+  display: none;
+  width: 300%;
+  height: 100%;
+  margin-top: 20px;
+}
+.sub_menu li {
+  width: 300%;
+  height: auto;
+  text-align: start;
+  padding: 5px 20px;
+  color: var(--back-white);
+  background-color: var(--back-lightblack);
+}
+.sub_menu li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.gnb li:hover .sub_menu { display: block;}
+.sub_menu > li a:hover {
+  font-weight: bold;
+  color: var(--main-color);
+}
+.unb {
+  float: right;
+  width: auto;
+  height: 40px;
+  margin-top: 10px;
+  color: var(--back-white);
+}
+.unb > ul{
+  width: 100%;
+  height: 100%;
+}
+.unb > ul > li {
+  position: relative;
+  float: left;
+  width: auto;
+  height: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+.unb > ul > li:first-child::after { 
+  position: absolute; 
+  top: 16px;
+  right: -10px;
+  content: "";
+  width: 1px; 
+  height: 10px; 
+  background-color: var(--back-white);
+}
+.unb > ul > li:last-child {
+  float:right;
+  width: 40px;
+  height: 100%;
+  margin-right: 0px;
+}
+.unb > ul > li:first-child { word-spacing: -4px;}
+.unb > ul > li a:hover,
+.unb > ul > li a:focus {
+  font-weight: bold;
+  color: var(--main-color);
+  text-decoration: none;
+}
+.unb li .search {
+  width: 100%;
+  height: 100%;
+}
+.unb li .search span {
+  width: 100%;
+  height: 100%;
+}
+/* ==================================== */
+.search_modal { 
+  display: none;
+}
+.search_engin {
+  overflow-x: hidden;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 1000px;
+  height: 600px;
+  outline: 1px solid var(--main-color);
+  background-color: var(--back-white);
+}
+#search_icon {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  width: 600px;
+  height: 40px;
+  margin: auto;
+  border: 1px solid var(--back-black);
+}
+.search_open_btn {
+  filter: invert(99%) sepia(22%) saturate(2%) hue-rotate(105deg) brightness(106%) contrast(100%);
+}
+.search_open_btn img {
+  width: 100%;
+  height: 100%;
+}
+.search_engin ul {
+  overflow-y: auto;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  margin-top: 20px;
+  width: 900px;
+  height: 400px;
+  box-sizing: content-box;
+  padding-right: 10rem;
+  text-align: start;
+}
+.search_engin li {
+  width: 800px;
+  height: 40px;
+  list-style: disc;
+  line-height: 40px;
+  border-top: 1px solid  var(--main-color);
+  border-bottom: 1px solid  var(--main-color);
+  color: var(--back-black);
+}
+.search_engin li:nth-child(even) {
+  border-top: 0;
+  border-bottom: 0;
+}
+.search_engin li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.search_topBox {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 40px;
+}
+.search_engin input {
+  width: 600px;
+  height: 40px;
+  padding: 5px;
+}
+.search_close_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background-color: var(--back-whiteblack);
+}
+.search_modal_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: var(--back-lightblack);
+}
+/* ========================== // #headBox */

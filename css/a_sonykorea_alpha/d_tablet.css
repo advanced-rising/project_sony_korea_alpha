@@ -1,0 +1,360 @@
+/* design 768px */
+@media all and (min-width:768px) and (max-width:1279px) {
+  /* =============== #headBox ============== */
+  /* #headBox {} */
+  .head_wrap {
+    height: auto;
+  }
+  /* =================== .gnb ============== */
+  .gnb_btn {
+    display: block;
+    position: relative;
+    float: right;
+    width: 40px;
+    height: 36px;
+    margin: 10px 20px 0 20px;
+    border-bottom: 4px solid #fff;
+  }
+  .gnb_btn::before, .gnb_btn::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--back-white);
+  }
+  .gnb_btn::before {
+    top: 4px;
+    left: 0;
+  }
+  .gnb_btn::after {
+    bottom: 10px;
+    left: 0;
+  }
+  .gnb_close {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-image: url("../../img/cross_white.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .gnb {
+    display: none;
+    width: 100%;
+    height: auto;
+    background-color: var(--back-black);
+  }
+  .gnb > ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+  }
+  .gnb > ul > li {
+    width: 100%;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+  .moblie_login { display: block;}
+  .mobile_signUp { display: block;}
+  /* ================== // .gnb ================= */
+  .unb {
+    position: absolute;
+    top: 0;
+    right: 80px;
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-right: 0;
+  }
+  .login_txt { display: none;}
+  .signUp_txt { display: none;}
+  /* ================ .search_modal ============ */
+  .search_engin {
+    width: 680px;
+    height: 620px;
+  }
+  #search_icon {
+    width: 90%;
+  }
+  .search_engin ul {
+    width: 100%;
+    height: 400px;
+    left: 3%;
+    padding: 0 10px;
+  }
+  /* ============= // .search_modal ============ */
+  /* =============== // #headBox ============== */
+  /* =============== #viewBox ============== */
+  #viewBox {
+    height: 1000px;
+  }
+  .view_area dl {
+    bottom: 18vw;
+  }
+  .view_area dt {
+    font-size: 3rem;
+  }
+  .view_area dd {
+    font-size: 1.5rem;
+  }
+  /* =============== .view_indicator ============ */
+  .view_indicator {
+    width: 700px;
+  }
+  /* .view_indicator ul {} */
+  .view_indicator ul li {
+    width: 160px;
+  }
+  .view_indicator span {
+    display: none;
+  }
+  /* =============== // .view_indicator ============ */
+  /* =============== // #viewBox ============== */
+  /* ===============  #productBox ============== */
+  #productBox {
+    height: auto;
+  }
+  .product_list {
+    width: 620px;
+  }
+  .product_list ul {
+    padding-bottom: 80px;
+  }
+  .product_list li {
+    float: left;
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  .product_list li:nth-child(-n + 2) {margin-top: 0;}
+  .product_list li:nth-child(2n) {margin-right: 0;}
+  .product_list li:last-child .product_img { display: none;}
+  .product_list li:last-child {
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+  }
+  .more_product {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translate(0, 0);
+  }
+  /* =============== // #productBox ============== */
+  /* ===============  #magazineBox ============== */
+  /* #magazineBox {} */
+  .magazine_list {
+    width: 620px;
+  }
+  .magazine_list ul li {
+    float: left;
+    width: 300px;
+    height: 340px;
+  }
+  .magazine_list ul li:nth-child(3) { margin-right: 20px;}
+  .magazine_list ul li:nth-child(2n) { margin-right: 0px;}
+  .magazine_list ul li:nth-child(-n + 2) { margin-top: 0px;}
+  .magazine_list ul li:nth-last-child(-n + 3) { margin-top: 20px;}
+  .magazine_list ul li:first-child {
+    width: 300px;
+    height: 340px;
+  }
+  .magazine_img {
+    width: 100%;
+    height: 250px;
+  }
+  .magazine_txt {
+    height: 90px;
+  }
+  .magazine_list li:first-of-type .magazine_img {
+    width: 100%;
+    height: 250px;
+  }
+  .magazine_list ul li:first-of-type .magazine_txt {
+    width: 100%;
+    height: 90px;
+    padding: 5px 10px;
+  }
+  .magazine_txt p {
+    font-size: 0.875rem;
+  }
+  .magazine_txt span {
+    font-size: 1rem;
+  }
+  .magazine_list ul li:first-child .magazine_txt p {
+    margin-bottom: 0;
+    font-size: 0.875rem;
+  }
+  .magazine_list ul li:first-child .magazine_txt span {
+    font-size: 1rem;
+  }
+  .magazine_list ul li:last-child { display: none;}
+  /* =============== // #magazineBox ============== */
+  /* =============== #videoBox ============== */
+  /* #videoBox {} */
+  .video_list button { display: none;}
+  .video {
+    display: none;
+    width: 760px;
+    height: 520px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  .video.action {
+    display: block;
+    z-index: 10;
+  }
+  .video_indicator {
+    display: block;
+    width: 420px;
+    height: 50px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+  .video_indicator ul {
+    width: 100%;
+    height: 100%;
+  }
+  .video_indicator ul li {
+    float: left;
+    width: 50px;
+    height: 100%;
+    border-radius: 100%;
+    margin-right: 20px;
+    background-color: var(--light-gray01);
+  }
+  .video_indicator ul li:last-child { margin-right: 0;}
+  .video_indicator ul li.action {
+    width: 100px;
+    border-radius: 50px;
+    background-color: var(--deep-gray01);
+  }
+  /* =============== // #videoBox ============== */
+  /* =============== #esBox ============== */
+  /* #esBox {} */
+  .es_area {
+    position: relative;
+    width: 768px;
+  }
+  .es_content {
+    float: left;
+    width: 768px;
+    height: auto;
+    margin: auto;
+    margin-left: 20px;
+  }
+  .es_content h3 {
+    width: 100%;
+    height: 80px;
+    margin: auto;
+  }
+  .es_inner {
+    overflow-x: auto;
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  .es_inner ul {
+    width: 200%;
+  }
+  .es_inner ul li {
+    float: left;
+    width: 240px;
+    height: auto;
+    margin-top: 0;
+    margin-right: 20px;
+  }
+  .es_inner ul li:last-child {margin-right: 0;}
+  .es_bar { display: none;}
+  .event_img, .seminar_img {
+    width: 100%;
+    height: 220px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+  }
+  .event_txt, .seminar_txt {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 1rem;
+    word-break: break-all;
+    color: var(--back-white);
+    background-color: var(--deep-gray01);
+  }
+  .put_in_btn {
+    width: auto;
+    line-height: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 2px 10px;
+    color: var(--back-white);
+  }
+  /* =============== // #esBox ============== */
+  /* =============== #scroll_nav ============== */
+  #scroll_nav {display: none;}
+  /* =============== // #scroll_nav ============== */
+  /* =============== #supportBox ============== */
+  /* #supportBox {} */
+  #supportBox ul {
+    width: 688px;
+  }
+  #supportBox ul li {
+    width: 334px;
+    height: 120px;
+  }
+  /* =============== // #supportBox ============== */
+  /* =============== #footBox ============== */
+  /* #footBox {} */
+  .foot_area {
+    width: 700px;
+    margin: auto;
+  }
+  .company_info {
+    float: left;
+  }
+  .other_site {
+    float: left;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .siteNav > ul {
+    float: left;
+    width: 376px;
+  }
+  .siteNav > ul > li {
+    width: 100%;
+  }
+  .sns_site {
+    float: right;
+    width: 178px;
+    height: 112px;
+    margin-top: 20px;
+  }
+  .sns_site li {
+    margin-top: 20px;
+  }
+  .sns_site li:nth-child(-n + 3) {
+    margin-top: 0;
+  }
+  .sns_site li:nth-child(3n) {
+    margin-right: 0;
+  }
+  /* =============== // #footBox ============== */
+}

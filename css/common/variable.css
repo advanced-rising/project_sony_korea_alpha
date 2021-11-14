@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* variable.css */
+
+:root {
+
+font-size: 16px;
+/* color */
+--color-color0: #fff;
+--color-color1: #eee;
+--color-color2: #ddd;
+--color-color3: #999;
+--color-color4: #777;
+--color-color5: #555;
+
+--main-color: #e75300;
+--back-white: #ffffff;
+--back-black: #03010f;
+--back-deepblack: rgba(0,0,0,0.5);
+--back-lightblack: #03010fdd;
+--back-whiteblack: #03010faa;
+--back-lightblue: #f1f5f9;
+--light-gray01: #6f6f75;
+--deep-gray01: #333335;
+--back-blue: #3264ec;
+
+
+/* font */
+--font-h2:40px;
+--font-h3:36px;
+--font-point:60px;
+--font-p1:18px;
+--font-p2:16px;
+--font-p3:14px;
+--font-p4:12px;
+--font-title1:24px;
+--font-title2:20px;
+/* size */
+--widht-1:1px;
+
+/* border */
+}

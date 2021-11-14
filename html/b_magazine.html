@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!-- b_magazine.html -->
+<html lang="ko-KR" class="no-js">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+      $("#headBox").load("z_common_header.html .head_wrap")
+      $("#footBox").load("z_common_footer.html .foot_wrap")
+    });
+  </script>  
+  <link rel="stylesheet" href="../css/common/variable.css">
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/z_common_header.css">
+  <link rel="stylesheet" href="../css/src/z_common_footer.css">
+  <link rel="stylesheet" href="../css/src/common_design.css">
+  <link rel="stylesheet" href="../css/src/b_magazine.css">
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <script src="../js/common/modernizr-custom.js"></script>
+  <title>Sony KOREA - Alpha | POST</title>
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <!-- ============================ #headBox-->
+    <header id="headBox"></header>
+    <!-- ============ // #headBox ============ -->
+    <!-- ==================== viewBox ======================= -->
+    <section id="container">
+      <div id="viewBox" class="magazine">
+        <p>Magazine</p>
+        <h2>메거진</h2>
+      </div>
+      <div id="magazineBox">
+        <div class="magazine_nav">
+          <ul>
+            <li>
+              <div>
+                <span class="magazine_nav_icon"></span>
+                <span class="magazine_nav_txt">전체</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span class="magazine_nav_icon"></span>
+                <span class="magazine_nav_txt">기사</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span class="magazine_nav_icon"></span>
+                <span class="magazine_nav_txt">동영상</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span class="magazine_nav_icon"></span>
+                <span class="magazine_nav_txt">노하우</span>
+              </div>
+            </li>
+          </ul>
+          <div class="magazine_search">
+            <select name="camera" id="select_product">
+              <option value="fullframe" selected >풀프레임</option>
+              <option value="apsc">APS&ndash;C</option>
+              <option value="lens">렌즈</option>
+              <option value="rxzv">RX&amp;ZV</option>
+              <option value="acc">액세서리</option>
+            </select>
+            <button type="button" class="triangle_icon"><span></span></button>
+          </div>
+        </div>
+        <div class="magazine_list">
+          <ul class="clearfix">
+            <li>
+              <div class="magazine_img">
+                <a href="../html/2_1.magazine_detail.html">
+                  <span class="magazine_list_icon list_post"></span>
+                </a>
+              </div>
+              <div class="magazine_label">
+                <span>풀프레임</span>
+              </div>
+              <div class="magazine_text">
+                <dl>
+                  <dt>&lsqb;Lorem ipsum dolor sit amet.&rsqb;</dt>
+                  <dd>Lorem ipsum dolor sit amet.</dd>
+                </dl>
+                <div class="magazine_days"><span>2037.04.14</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="magazine_img">
+                <a href="#">
+                  <span class="magazine_list_icon list_post"></span>
+                </a>
+              </div>
+              <div class="magazine_label">
+                <span>렌즈</span>
+              </div>
+              <div class="magazine_text">
+                <dl>
+                  <dt>&lsqb;Lorem ipsum dolor sit amet.&rsqb;</dt>
+                  <dd>Lorem ipsum dolor sit amet.</dd>
+                </dl>
+                <div class="magazine_days"><span>2037.04.14</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="magazine_img">
+                <a href="#">
+                  <span class="magazine_list_icon list_post"></span>
+                </a>
+              </div>
+              <div class="magazine_label">
+                <span>풀프레임</span>
+                <span>렌즈</span>
+              </div>
+              <div class="magazine_text">
+                <dl>
+                  <dt>&lsqb;Lorem ipsum dolor sit amet.&rsqb;</dt>
+                  <dd>Lorem ipsum dolor sit amet.</dd>
+                </dl>
+                <div class="magazine_days"><span>2037.04.14</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="magazine_img">
+                <a href="#">
+                  <span class="magazine_list_icon list_post"></span>
+                </a>
+              </div>
+              <div class="magazine_label">
+                <span>RX &amp; ZV</span>
+              </div>
+              <div class="magazine_text">
+                <dl>
+                  <dt>&lsqb;Lorem ipsum dolor sit amet.&rsqb;</dt>
+                  <dd>Lorem ipsum dolor sit amet.</dd>
+                </dl>
+                <div class="magazine_days"><span>2037.04.14</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="magazine_img">
+                <a href="#">
+                  <span class="magazine_list_icon list_post"></span>
+                </a>
+              </div>
+              <div class="magazine_label">
+                <span>액세서리</span>
+              </div>
+              <div class="magazine_text">
+                <dl>
+                  <dt>&lsqb;Lorem ipsum dolor sit amet.&rsqb;</dt>
+                  <dd>Lorem ipsum dolor sit amet.</dd>
+                </dl>
+                <div class="magazine_days"><span>2037.04.14</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="magazine_img">
+                <a href="#">
+                  <span class="magazine_list_icon list_post"></span>
+                </a>
+              </div>
+              <div class="magazine_label">
+                <span>APS-C</span>
+              </div>
+              <div class="magazine_text">
+                <dl>
+                  <dt>&lsqb;Lorem ipsum dolor sit amet.&rsqb;</dt>
+                  <dd>Lorem ipsum dolor sit amet.</dd>
+                </dl>
+                <div class="magazine_days"><span>2037.04.14</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="magazine_img">
+                <a href="#">
+                  <span class="magazine_list_icon list_knowhow"></span>
+                </a>
+              </div>
+              <div class="magazine_label">
+                <span>APS-C</span>
+              </div>
+              <div class="magazine_text">
+                <dl>
+                  <dt>&lsqb;Lorem ipsum dolor sit amet.&rsqb;</dt>
+                  <dd>Lorem ipsum dolor sit amet.</dd>
+                </dl>
+                <div class="magazine_days"><span>2037.04.14</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="magazine_img">
+                <a href="#">
+                  <span class="magazine_list_icon list_video"></span>
+                </a>
+              </div>
+              <div class="magazine_label">
+                <span>APS-C</span>
+                <span>렌즈</span>
+              </div>
+              <div class="magazine_text">
+                <dl>
+                  <dt>&lsqb;Lorem ipsum dolor sit amet.&rsqb;</dt>
+                  <dd>Lorem ipsum dolor sit amet.</dd>
+                </dl>
+                <div class="magazine_days"><span>2037.04.14</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="magazine_img">
+                <a href="#">
+                  <span class="magazine_list_icon list_video"></span>
+                </a>
+              </div>
+              <div class="magazine_label">
+                <span>풀프레임</span>
+                <span>렌즈</span>
+                <span>액세서리</span>
+              </div>
+              <div class="magazine_text">
+                <dl>
+                  <dt>&lsqb;Lorem ipsum dolor sit amet.&rsqb;</dt>
+                  <dd>Lorem ipsum dolor sit amet.</dd>
+                </dl>
+                <div class="magazine_days"><span>2037.04.14</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="magazine_img">
+                <a href="#">
+                  <span class="magazine_list_icon list_knowhow"></span>
+                </a>
+              </div>
+              <div class="magazine_label">
+                <span>렌즈</span>
+              </div>
+              <div class="magazine_text">
+                <dl>
+                  <dt>&lsqb;Lorem ipsum dolor sit amet.&rsqb;</dt>
+                  <dd>Lorem ipsum dolor sit amet.</dd>
+                </dl>
+                <div class="magazine_days"><span>2037.04.14</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="magazine_img">
+                <a href="#">
+                  <span class="magazine_list_icon list_video"></span>
+                </a>
+              </div>
+              <div class="magazine_label">
+                <span>RX &amp; ZV</span>
+              </div>
+              <div class="magazine_text">
+                <dl>
+                  <dt>&lsqb;Lorem ipsum dolor sit amet.&rsqb;</dt>
+                  <dd>Lorem ipsum dolor sit amet.</dd>
+                </dl>
+                <div class="magazine_days"><span>2037.04.14</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="magazine_img">
+                <a href="#">
+                  <span class="magazine_list_icon list_post"></span>
+                </a>
+              </div>
+              <div class="magazine_label">
+                <span>렌즈</span>
+              </div>
+              <div class="magazine_text">
+                <dl>
+                  <dt>&lsqb;Lorem ipsum dolor sit amet.&rsqb;</dt>
+                  <dd>Lorem ipsum dolor sit amet.</dd>
+                </dl>
+                <div class="magazine_days"><span>2037.04.14</span></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+    <!-- ==================== viewBox ======================= -->
+    <!-- =================== next prev btn ==================== -->
+        <div class="magazine_list_btn">
+          <ul class="clearfix">
+            <li>
+              <button type="button" class="prev_btn">
+                <span class="blind">이전 게시물 페이지</span>
+              </button>
+            </li>
+            <li class="list_number"><a href="#">1</a></li>
+            <li class="list_number"><a href="#">2</a></li>
+            <li class="list_number"><a href="#">3</a></li>
+            <li class="list_number"><a href="#">4</a></li>
+            <li class="list_number"><a href="#">5</a></li>
+            <li class="list_number"><a href="#">6</a></li>
+            <li class="list_number"><a href="#">7</a></li>
+            <li class="list_number"><a href="#">8</a></li>
+            <li class="list_number"><a href="#">9</a></li>
+            <li class="list_number"><a href="#">10</a></li>
+            <li class="list_number"><a href="#">...</a></li>
+            <li class="list_number"><a href="#">22</a></li>
+            <li>
+              <button type="button" class="next_btn">
+                <span class="blind">다음 게시물 페이지</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <!-- =================== next prev btn ==================== -->
+    </section>
+    <!-- ============ #footBox ============ -->
+    <footer id="footBox"></footer>
+    <!-- ============ // #footBox ============ -->
+  </div>
+  <!-- script -->
+  <script>
+  </script>
+</body>
+</html>

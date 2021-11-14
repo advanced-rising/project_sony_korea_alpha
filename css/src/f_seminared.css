@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* f_seminared.css */
+
+#container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* ================= #viewBox ================ */
+#viewBox {
+  width: 100%;
+  height: 400px;
+  padding-top: 200px;
+  background-color: var(--back-black);
+  color: var(--back-white);
+  text-shadow: 0px 0px 8px rgb(0 0 0 / 80%);
+}
+#viewBox h2 {
+  width: 800px;
+  height: auto;
+  margin: auto;
+  text-align: center;
+}
+#viewBox p {
+  width: 800px;
+  height: auto;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+#viewBox p:last-of-type {
+  padding: 0px 100px;
+}
+/* ================= // #viewBox ================ */
+.board {
+  width: 1200px;
+  height: auto;
+  margin:auto;
+  margin-top: 80px;
+}
+table {
+  border-right: hidden;
+  border-left: hidden;
+  margin-bottom: 80px;
+}
+/* ================ thead =============== */
+.board thead {
+  width: auto;
+  height: auto;
+}
+.board th {
+  width: auto;
+  height: 60px;
+}
+.board thead th:nth-child(1) {
+  width: 800px;
+  color: var(--main-color);
+}
+.board thead th:nth-child(2) {
+  width: 200px;
+}
+.board thead th:nth-child(3) {
+  width: 200px;
+}
+/* ================ thead =============== */
+/* ================ tbody =============== */
+.board td {
+  width: auto;
+  height: 40px;
+  padding: 10px 20px;
+}
+.boardBullet {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.boardTxt {
+  margin-left: 5px;
+  font-size: 1rem;
+}
+.board td:nth-child(2) {
+  text-align: center;
+}
+.board td:nth-child(3) {
+  text-align: center;
+}
+/* ================ tbody =============== */

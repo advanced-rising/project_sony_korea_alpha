@@ -1,0 +1,67 @@
+/**
+ * nalpha common javascript
+ */
+function goStoreProduct(productId) {
+	if (isMobile()) {
+		window.open('about:blank').location.href = "//store.sony.co.kr/handler/mobile/ViewProduct-Start?productId=" + productId;
+	} else {		
+		window.open('about:blank').location.href = "//store.sony.co.kr/handler/ViewProduct-Start?productId=" + productId;
+	}
+}
+
+function isMobile() {
+	try {
+		if (sessionStorage.desktop) { // desktop storage 
+	        return false;
+		} else if (localStorage.mobile) {// mobile storage
+	        return true;
+		}
+	} catch(e) {
+		console.log(e);
+	}
+	var mobile = ['iphone','ipad','android','blackberry','nokia','opera mini','windows mobile','windows phone','iemobile','tablet','mobi']; 
+    var ua = navigator.userAgent.toLowerCase();
+    for (var i in mobile) {
+    	if (ua.indexOf(mobile[i]) > -1) {
+    		return true;
+    	}
+    }
+}
+
+function goMap(mobileUrl) {
+	if (isMobile()) {
+		window.open(mobileUrl);
+		return false;
+	}
+	return true;
+}
+
+function onlyNumber(){
+	if(((event.keyCode < 48) || (event.keyCode > 57))
+			&& event.keyCode != 8 && event.keyCode != 9
+			&& ((event.keyCode < 96) || (event.keyCode > 105))
+			&& event.keyCode != 46 && event.keyCode != 13
+			&& event.keyCode != 37 && event.keyCode != 39
+			&& event.keyCode != 35 && event.keyCode != 36){
+		event.returnValue = false;
+	}
+}
+
+//통합검색 엔터키
+function fnSearchEnterKey(event,str){
+	if(event.keyCode == 13){
+		fnNAlphaSearch(str);
+	}
+}
+
+//통합검색
+function fnNAlphaSearch(str){
+	if(str.trim() == ""){
+		alert("검색어를 입력해주세요.");
+		return false;
+	}else{
+		$("#mainSearchForm input[name=searchKeyWord]").val(str); 
+		$("#mainSearchForm").attr("action","/alpha/handler/NAlphaSearch-TotalSearch");
+		$("#mainSearchForm").submit();
+	}
+}

@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* h_support_as.css */
+
+#container {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: var(--back-white);
+}
+/* ====================================== */
+.viewBox {
+  width: 100%;
+  height: 400px;
+  padding-top: 80px;
+  background-color: var(--back-lightblue);
+}
+.view_wrap {
+  position: relative;
+  width: 1280px;
+  height: 100%;
+  margin: auto;
+  color: var(--back-black);
+}
+.view_wrap h3 {
+  margin-bottom: 20px;
+  font-size: 2.25rem;
+}
+.view_wrap span {
+  font-size: 1.125rem;
+}
+.view_wrap button {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: auto;
+  height: 50px;
+  padding: 0 20px;
+  color: var(--back-white);
+  background-color: var(--back-blue);
+}
+/* ====================================== */

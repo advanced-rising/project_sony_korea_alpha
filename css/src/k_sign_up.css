@@ -1,0 +1,139 @@
+@charset "utf-8";
+/* k_sign_up.css */
+
+#container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 160px;
+}
+.signUpWrap {
+  width: 1000px;
+  height: auto;
+  margin: auto;
+  box-sizing: content-box;
+  padding: 40px 80px;
+  background-color: var(--back-lightblue);
+}
+/* ======================================== */
+.signUp_area {
+  width: 940px;
+  height: auto;
+  margin: auto;
+}
+.signUp_notice_title {
+  width: 100%;
+  height: auto;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.signUp_notice_txt {
+  width: auto;
+  height: auto;
+  padding-right: 200px;
+  font-size: 0.8rem;
+}
+.signUp {
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+}
+.signUp li {
+  float: left;
+  width: 300px;
+  height: 200px;
+  margin-right: 20px;
+  background-color: var(--deep-gray01);
+}
+.signUp li:last-of-type {
+  margin-right: 0;
+}
+.signUp li .icon {
+  width: 100%;
+  height: 80%;
+  background-repeat: no-repeat;
+  background-size: 140px;
+  background-position: center;
+}
+.signUp li .txt {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  color: var(--back-white);
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+.person {
+  background-image: url("../../img/signup/ico_mem_person.png");
+}
+.company {
+  background-image: url("../../img/signup/ico_mem_company.png");
+}
+.foreigner {
+  background-image: url("../../img/signup/ico_mem_foreigners.png");
+}
+/* ===================================== */
+.sns_signUp_area {
+  width: 940px;
+  height: auto;
+  margin: auto;
+}
+.sns_title {
+  width: 100%;
+  height: auto;
+  margin-top: 80px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.sns_txt {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+.sns_signUp {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+.sns_signUp li {
+  float: left;
+  width: 300px;
+  height: 40px;
+  margin-right: 20px;
+}
+.sns_signUp li:last-of-type {
+  margin-right: 0;
+}
+.sns_notice {
+  font-size: 0.8rem;
+  margin-top: 20px;
+}
+.sns_signUp li .icon {
+  float: left;
+  width: 40px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.sns_signUp li .txt {
+  line-height: 40px;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.sns_naver .icon {
+  background-image: url("../../img/signup/ico_naver.png");
+}
+.sns_naver { background-color: #25A800;}
+.sns_kakao .icon {
+  background-image: url("../../img/signup/ico_kakao.png");
+}
+.sns_kakao { background-color: #F9DD00;}
+.sns_facebook .icon {
+  background-image: url("../../img/signup/ico_fb.png");
+}
+.sns_facebook { background-color: #314D8C;}
+.sns_facebook .txt { color: var(--back-white);}

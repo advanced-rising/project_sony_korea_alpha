@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* a_sonykorea_alpha.css */
+/* common design */
+@import url("../a_sonykorea_alpha/a_base.css");
+@import url("../a_sonykorea_alpha/b_smartphone_v.css");
+@import url("../a_sonykorea_alpha/c_smartphone_h.css");
+@import url("../a_sonykorea_alpha/d_tablet.css");
+@import url("../a_sonykorea_alpha/e_pc1280.css");
+@import url("../a_sonykorea_alpha/f_pc1440.css");
+@import url("../a_sonykorea_alpha/g_pc1920.css");
+@import url("../a_sonykorea_alpha/h_pc2560.css");
+
