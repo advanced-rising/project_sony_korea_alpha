@@ -1,6 +1,77 @@
-// @include mobile-v{}
-// @include mobile-h{}
-// @include tablet{}
+/* =============== #scroll_nav =================== */
+#scroll_nav {
+  position: fixed;
+  top: 80px;
+  right: 0;
+  z-index: 900;
+  width: 60px;
+  height: 100%;
+  background-color: var(--back-whiteblack);
+}
+.jump_menu {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  width: 100%;
+}
+.jump_menu > li {
+  padding-right: 18px;
+  margin-bottom: 2px;
+  text-align: right;
+}
+.click_jump {
+  position: relative;
+  display: inline-block;
+  height: 22px;
+  padding: 4px 0;
+}
+.click_jump a {
+  background: transparent;
+  color: inherit;
+}
+.click_jump span {
+  display: none;
+  position: absolute;
+  top: -4px;
+  right: 36px;
+  padding-right: 13px;
+  color: var(--main-color);
+  font-size: 14px;
+  white-space: nowrap;
+  line-height: 1;
+} 
+.click_jump::after {
+  display: inline-block;
+  content: "";
+  width: 23px;
+  height: 2px;
+  background-color: var(--back-white);
+  vertical-align: top;
+}
+.jump_menu li:hover .click_jump > span {
+  display: block;
+}
+.jump_menu li:hover .click_jump:after,
+.jump_menu li.active .click_jump:after {
+  width: 31px;
+  background: var(--main-color);
+}
+/* =============== // #scroll_nav ============== */
+@include mobile-v{
+    /* =============== #scroll_nav ============== */
+    #scroll_nav {display: none;}
+    /* =============== // #scroll_nav ============== */
+}
+@include mobile-h{
+    /* =============== #scroll_nav ============== */
+    #scroll_nav {display: none;}
+    /* =============== // #scroll_nav ============== */
+}
+@include tablet{
+    /* =============== #scroll_nav ============== */
+    #scroll_nav {display: none;}
+    /* =============== // #scroll_nav ============== */
+}
 // @include laptop{}
 // @include pc1280{}
 // @include pc1440{}

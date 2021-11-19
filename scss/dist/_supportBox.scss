@@ -1,8 +1,154 @@
-// @include mobile-v{}
-// @include mobile-h{}
-// @include tablet{}
+/* =============== #supportBox ================= */
+#supportBox {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 40px 0;
+  background-color: var(--back-lightblue);
+}
+#supportBox h2 {
+  width: 100%;
+  height: 80px;
+  margin: auto;
+}
+#supportBox ul {
+  width: 1020px;
+  height: auto;
+  margin: auto;
+  margin-top: 40px;
+}
+#supportBox ul li {
+  float: left;
+  width: 500px;
+  height: 120px;
+  padding: 20px;
+  background-color: var(--color-color2);
+}
+#supportBox ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#supportBox ul li:nth-child(1) { background-color: var(--main-color); }
+#supportBox ul li:nth-child(2) { background-color: var(--deep-gray01); }
+#supportBox ul li:nth-child(3) { background-color: var(--light-gray01); }
+#supportBox ul li:nth-child(4) { background-color: var(--back-black); }
+#supportBox ul li:nth-child(odd) { margin-right: 20px; }
+#supportBox ul li:nth-child(n + 3) { margin-top: 20px; }
+.support_icon {
+  float: left;
+  width: 80px;
+  height: 80px;
+  background-image: url("../../img/main/icon/ico_guide.png");
+  background-repeat: no-repeat;
+  background-size: 250%;
+}
+.support_txt {
+  position: relative;
+  float: left;
+  width: calc( 100% - 80px );
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  font-size: 1.5rem;
+  color: var(--back-white);
+  font-weight: bold;
+}
+.support_txt::before {
+  position: absolute;
+  bottom: 45%;
+  right: 20px;
+  transform: translateY(50%);
+  content: "";
+  width: 3px;
+  height: 15px;
+  transform: rotate(135deg);
+  background-color: var(--back-white);
+}
+.support_txt::after {
+  position: absolute;
+  bottom: 34%;
+  right: 20px;
+  transform: translateY(50%);
+  content: "";
+  width: 3px;
+  height: 15px;
+  transform: rotate(45deg);
+  background-color: var(--back-white);
+}
+/* ========== .support_icon ============ */
+#supportBox li:nth-child(1) .support_icon {
+  background-position: 0 0;
+}
+#supportBox li:nth-child(2) .support_icon {
+  background-position: 100% 0;
+}
+#supportBox li:nth-child(3) .support_icon {
+  background-position: 0 100%;
+}
+#supportBox li:nth-child(4) .support_icon {
+  background-position: 110% 103%;
+  filter: invert(99%) sepia(22%) saturate(2%) hue-rotate(105deg) brightness(106%) contrast(100%);
+}
+/* ========== // .support_icon ============ */
+/* =============== // #supportBox ============== */
+@include mobile-v{
+    /* =============== #supportBox ============== */
+  /* #supportBox {} */
+  #supportBox ul {
+    width: 280px;
+  }
+  #supportBox ul li {
+    clear: both;
+    float: left;
+    width: 280px;
+    height: 120px;
+    padding: 20px 5px;
+    margin-top: 20px;
+    background-color: var(--color-color2);
+  }
+  #supportBox ul li:first-child {margin-top: 0;}
+  /* =============== // #supportBox ============== */
+}
+@include mobile-h{
+    /* =============== #supportBox ============== */
+  /* #supportBox {} */
+  #supportBox ul {
+    width: 280px;
+  }
+  #supportBox ul li {
+    clear: both;
+    float: left;
+    width: 280px;
+    height: 120px;
+    padding: 20px 5px;
+    margin-top: 20px;
+    background-color: var(--color-color2);
+  }
+  #supportBox ul li:first-child {margin-top: 0;}
+  /* =============== // #supportBox ============== */
+}
+@include tablet{
+    /* =============== #supportBox ============== */
+  /* #supportBox {} */
+  #supportBox ul {
+    width: 688px;
+  }
+  #supportBox ul li {
+    width: 334px;
+    height: 120px;
+  }
+  /* =============== // #supportBox ============== */
+}
 // @include laptop{}
 // @include pc1280{}
 // @include pc1440{}
 // @include pc1920{}
-// @include pcfull{}
+@include pcfull{
+   /* =============== #supportBox ============== */
+   #supportBox {
+    width: 2560px;
+  }
+  
+  /* =============== // #supportBox ============== */
+}

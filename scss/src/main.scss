@@ -9,6 +9,10 @@
 	@include size();
 	margin: auto;
 }
+#container {
+  position: relative;
+  top: 0; left: 0;
+}
 .content_title {
   width: 80%;
   height: auto;

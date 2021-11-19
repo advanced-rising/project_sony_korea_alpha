@@ -28,9 +28,17 @@ $root:16;
   padding:px($t) px($r) px($b) px($l);
   padding:rem($t) rem($r) rem($b) rem($l);
 }
+// ============================================
+
+// =========== border color ===================
 @mixin border($w:1,$s:solid,$c:$color-white){
   border:px($w) $s $c;
   border:rem($w) $s $c;
+  @content;
+}
+@mixin border-top($w:1,$s:solid,$c:$color-white){
+  border-top:px($w) $s $c;
+  border-top:rem($w) $s $c;
   @content;
 }
 @mixin border-right($w:1,$s:solid,$c:$color-white){
@@ -48,15 +56,15 @@ $root:16;
   border-left:rem($w) $s $c;
   @content;
 }
+// ============================================
+
+// ================ vw ========================
 // 기준 디바이스 크기를 입력, vw계산기 생성
 $device: 600;
 @mixin vw($unit,$size,$d:$device){
   #{$unit}:px($size);
-  #{$unit}:#{$size/$d*100}vw;
-  // min: {
-  //   #{$unit}:px($size);
-  //   #{$unit}:rem($size);
-  // }
+  #{$unit}: math.div($size , $d)*100vw;
+  @content;
 }
 // ============================================
 
