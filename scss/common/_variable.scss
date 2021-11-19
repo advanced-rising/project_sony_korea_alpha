@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* variable.css */
+
+:root {
+  font-size: 16px;
+}
+// color ============================
+$color-color0: #fff;
+$color-color1: #eee;
+$color-color2: #ddd;
+$color-color3: #999;
+$color-color4: #777;
+$color-color5: #555;
+
+$color-orange: #e75300;
+$color-white: #ffffff;
+$color-black: #03010f;
+$color-deep-black: rgba(0,0,0,0.5);
+$color-light-black: #03010fdd;
+$color-white-black: #03010faa;
+$color-light-blue: #f1f5f9;
+$color-light-gray: #6f6f75;
+$color-deep-gray: #333335;
+$color-blue: #3264ec;
+// ==================================
+
+// font =============================
+$font-family-en:"Apple SD Gothic Neo", "Noto sans KR";
+$font-family-kr:"Apple SD Gothic Neo","맑은 고딕","Malgun Gothic","돋움","Dotum","Noto sans KR";
+$font-family-common:sans-serif;
+$font-weight-thin:300;
+$font-weight-normal:400;
+$font-weight-bold:500;
+$font-weight-bolder:700;
+$font-weight: (300, 400, 500, 700);
+$font-size:(
+  title2:40,
+  title3:36,
+  title4:28,
+  title5:22,
+  content1:22,
+  content2:18,
+  content3:16,
+  content4:12,
+  content5:10,
+  option1:12,
+  option2:10,
+  option3:9,
+  button1:22,
+  button2:18,
+  );
+
+  
+// ==================================
+
+// media query ======================
+$breakpoint-moblie-h:480px;
+$breakpoint-tablet:768px;
+$breakpoint-laptop:1024px;
+$breakpoint-pc1280:1280px;
+$breakpoint-pc1440:1440px;
+$breakpoint-pc1920:1920px;
+$breakpoint-pc2560:2560px;
+// ==================================

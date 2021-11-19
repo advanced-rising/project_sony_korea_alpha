@@ -1,0 +1,101 @@
+// main.scss
+/* main.scss */
+
+@import "../common/variable";
+@import "../common/mixin";
+
+/* ======== common design ================= */
+#wrap {
+	@include size();
+	margin: auto;
+}
+.content_title {
+  width: 80%;
+  height: auto;
+  margin: auto;
+}
+.content_title > h3 {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  padding-left: 60px;
+  padding-right: 20px;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.content_icon::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 20px;
+  width: 20px;
+  height: 40px;
+  background-color: var(--main-color);
+  transform: translateY(-50%);
+}
+.content_icon::after {
+  content: "";
+  position: absolute;
+  bottom: 13px;
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+}
+.content_title p {
+  width: 90%;
+  height: auto;
+  padding: 0 20px;
+  font-size: 1.375rem;
+  margin-left: 40px;
+}
+.header_dot {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.header_dot > span {
+  position: relative;
+  width: auto;
+  height: auto;
+}
+.header_dot > span::after {
+  position: absolute;
+  bottom: 13px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+}
+/* ========// common design =============== */
+/* ============= #headBox ================= */
+@import "../dist/headBox";
+/* ============= // #headBox ============== */
+/* ============= #viewBox ================= */
+@import "../dist/viewBox";
+/* ============= // #viewBox ============== */
+/* ============= #productBox ============== */
+@import "../dist/productBox";
+/* ============= // #productBox =========== */
+/* ============= #magazineBox ============= */
+@import "../dist/magazineBox";
+/* ============= // #magazineBox ========== */
+/* ============= #videoBox ================ */
+@import "../dist/videoBox";
+/* ============= // #videoBox ============= */
+/* ============= #esBox =================== */
+@import "../dist/esBox";
+/* ============= // #esBox ================ */
+/* ============= #scroll_nav ============== */
+@import "../dist/scroll_nav";
+/* ============= // #scroll_nav =========== */
+/* ============= #supportBox ============== */
+@import "../dist/supportBox";
+/* ============= // #supportBox =========== */
+/* ============= #footBox ================= */
+@import "../dist/footBox";
+/* ============= // #footBox ============== */

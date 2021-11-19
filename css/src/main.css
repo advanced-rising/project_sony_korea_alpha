@@ -1,0 +1,782 @@
+/* main.scss */
+/* variable.css */
+:root {
+  font-size: 16px;
+}
+
+/* ======== common design ================= */
+#wrap {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.content_title {
+  width: 80%;
+  height: auto;
+  margin: auto;
+}
+
+.content_title > h3 {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  padding-left: 60px;
+  padding-right: 20px;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.content_icon::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 20px;
+  width: 20px;
+  height: 40px;
+  background-color: var(--main-color);
+  transform: translateY(-50%);
+}
+
+.content_icon::after {
+  content: "";
+  position: absolute;
+  bottom: 13px;
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+}
+
+.content_title p {
+  width: 90%;
+  height: auto;
+  padding: 0 20px;
+  font-size: 1.375rem;
+  margin-left: 40px;
+}
+
+.header_dot {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.header_dot > span {
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+.header_dot > span::after {
+  position: absolute;
+  bottom: 13px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+}
+
+/* ========// common design =============== */
+/* ============= #headBox ================= */
+/* =============== #headBox ============== */
+#headBox {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 80px;
+  margin: auto;
+  background-color: var(--back-black);
+}
+
+.head_wrap {
+  width: auto;
+  height: 100%;
+  margin: auto;
+  background-color: inherit;
+}
+
+h1 {
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  margin-left: 10px;
+}
+
+h1 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#navigation {
+  position: relative;
+  width: auto;
+  height: auto;
+  margin-top: 10px;
+  color: var(--back-white);
+}
+
+/* ================ .gnb =================== */
+.gnb_btn {
+  display: none;
+}
+
+.gnb_close {
+  display: none;
+}
+
+.gnb {
+  float: left;
+  width: auto;
+  height: 60px;
+  margin-top: 10px;
+}
+
+.gnb ul {
+  width: auto;
+  height: 100%;
+}
+
+.gnb > ul > li {
+  float: left;
+  width: 90px;
+  height: 100%;
+  margin-right: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+
+.last_gnbMenu {
+  margin-right: 0px;
+}
+
+.gnb > ul > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.gnb > ul > li a:focus,
+.gnb > ul > li a:hover {
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.sub_menu {
+  display: none;
+  width: 300%;
+  height: 100%;
+}
+
+.sub_menu li {
+  width: 300%;
+  height: auto;
+  text-align: start;
+  padding: 5px 20px;
+  color: var(--back-white);
+  background-color: var(--back-lightblack);
+}
+
+.sub_menu li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gnb li:hover .sub_menu {
+  display: block;
+}
+
+.sub_menu > li a:hover {
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.moblie_login {
+  display: none;
+}
+
+.mobile_signUp {
+  display: none;
+}
+
+/* ================ // .gnb =================== */
+/* ================ .unb =================== */
+.unb {
+  float: right;
+  width: auto;
+  height: 40px;
+  margin-top: 10px;
+  margin-right: 60px;
+}
+
+.unb > ul {
+  width: auto;
+  height: 100%;
+}
+
+.login_txt, .signUp_txt {
+  position: relative;
+  float: left;
+  width: auto;
+  height: 100%;
+  margin: 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+
+.login_txt {
+  word-spacing: -4px;
+}
+
+.login_txt::after {
+  position: absolute;
+  top: 16px;
+  right: -10px;
+  content: "";
+  width: 1px;
+  height: 10px;
+  background-color: var(--back-white);
+}
+
+.unb > ul > li a:hover,
+.unb > ul > li a:focus {
+  font-weight: bold;
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.search_area {
+  float: right;
+  width: 40px;
+  height: 100%;
+  margin-right: 0px;
+}
+
+.search_open_btn {
+  width: 100%;
+  height: 100%;
+}
+
+.search_open_btn img {
+  width: 100%;
+  height: 100%;
+  filter: invert(99%) sepia(22%) saturate(2%) hue-rotate(105deg) brightness(106%) contrast(100%);
+}
+
+.search_area .search {
+  width: 100%;
+  height: 100%;
+}
+
+.search_area .search span {
+  width: 100%;
+  height: 100%;
+}
+
+.search_open_btn:hover img {
+  filter: invert(48%) sepia(63%) saturate(6360%) hue-rotate(8deg) brightness(97%) contrast(101%);
+}
+
+/* ================ // .unb =================== */
+/* ================ .search_modal ============ */
+.search_modal {
+  display: none;
+}
+
+.search_engin {
+  overflow-x: hidden;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 1000px;
+  height: 600px;
+  outline: 1px solid var(--main-color);
+  background-color: var(--back-white);
+}
+
+#search_icon {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  width: 90%;
+  height: 40px;
+  margin: auto;
+  border: 1px solid var(--back-black);
+}
+
+.search_engin ul {
+  overflow-y: auto;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  margin-top: 20px;
+  width: 900px;
+  height: 400px;
+  box-sizing: content-box;
+  padding-right: 10rem;
+  text-align: start;
+}
+
+.search_engin li {
+  width: 90%;
+  height: auto;
+  list-style: disc;
+  line-height: 40px;
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  color: var(--back-black);
+}
+
+.search_engin li:nth-child(even) {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.search_engin li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.search_topBox {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 40px;
+}
+
+.search_engin input {
+  width: 600px;
+  height: 40px;
+  padding: 5px;
+}
+
+.search_close_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url("../../img/cross_black.svg");
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.search_modal_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: var(--back-lightblack);
+}
+
+/* ================ // .search_modal ============ */
+/* =============== // #headBox ============== */
+@media all and (max-width: 479px) {
+  /* =============== #headBox ============== */
+  /* #headBox {} */
+  .head_wrap {
+    height: auto;
+  }
+
+  /* =================== .gnb ============== */
+  .gnb_btn {
+    display: block;
+    position: relative;
+    float: right;
+    width: 40px;
+    height: 36px;
+    margin: 10px 20px 0 20px;
+    border-bottom: 4px solid #fff;
+  }
+
+  .gnb_btn::before, .gnb_btn::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--back-white);
+  }
+
+  .gnb_btn::before {
+    top: 4px;
+    left: 0;
+  }
+
+  .gnb_btn::after {
+    bottom: 10px;
+    left: 0;
+  }
+
+  .gnb_close {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-image: url("../../img/cross_white.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .gnb {
+    display: none;
+    width: 100%;
+    height: auto;
+    background-color: var(--back-black);
+  }
+
+  .gnb > ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .gnb > ul > li {
+    width: 100%;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+
+  .moblie_login {
+    display: block;
+  }
+
+  .mobile_signUp {
+    display: block;
+  }
+
+  /* ================== // .gnb ================= */
+  .unb {
+    position: absolute;
+    top: 0;
+    right: 80px;
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-right: 0;
+  }
+
+  .login_txt {
+    display: none;
+  }
+
+  .signUp_txt {
+    display: none;
+  }
+
+  /* ================ .search_modal ============ */
+  .search_engin {
+    width: 300px;
+    height: 540px;
+  }
+
+  #search_icon {
+    width: 90%;
+  }
+
+  .search_engin ul {
+    width: 100%;
+    height: 340px;
+    left: 0;
+    padding: 0 10px;
+  }
+
+  /* ============= // .search_modal ============ */
+  /* =============== // #headBox ============== */
+}
+@media all and (min-width: 480px) and (max-width: 767px) {
+  /* =============== #headBox ============== */
+  /* #headBox {} */
+  .head_wrap {
+    height: auto;
+  }
+
+  /* =================== .gnb ============== */
+  .gnb_btn {
+    display: block;
+    position: relative;
+    float: right;
+    width: 40px;
+    height: 36px;
+    margin: 10px 20px 0 20px;
+    border-bottom: 4px solid #fff;
+  }
+
+  .gnb_btn::before, .gnb_btn::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--back-white);
+  }
+
+  .gnb_btn::before {
+    top: 4px;
+    left: 0;
+  }
+
+  .gnb_btn::after {
+    bottom: 10px;
+    left: 0;
+  }
+
+  .gnb_close {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-image: url("../../img/cross_white.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .gnb {
+    display: none;
+    width: 100%;
+    height: auto;
+    background-color: var(--back-black);
+  }
+
+  .gnb > ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .gnb > ul > li {
+    width: 100%;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+
+  .moblie_login {
+    display: block;
+  }
+
+  .mobile_signUp {
+    display: block;
+  }
+
+  /* ================ .search_modal ============ */
+  .search_engin {
+    width: 400px;
+    height: 540px;
+  }
+
+  #search_icon {
+    width: 90%;
+  }
+
+  .search_engin ul {
+    width: 100%;
+    height: 340px;
+    left: 0;
+    padding: 0 10px;
+  }
+
+  /* ============= // .search_modal ============ */
+  /* =============== // #headBox ============== */
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  /* =============== #headBox ============== */
+  /* #headBox {} */
+  .head_wrap {
+    height: auto;
+  }
+
+  /* =================== .gnb ============== */
+  .gnb_btn {
+    display: block;
+    position: relative;
+    float: right;
+    width: 40px;
+    height: 36px;
+    margin: 10px 20px 0 20px;
+    border-bottom: 4px solid #fff;
+  }
+
+  .gnb_btn::before, .gnb_btn::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--back-white);
+  }
+
+  .gnb_btn::before {
+    top: 4px;
+    left: 0;
+  }
+
+  .gnb_btn::after {
+    bottom: 10px;
+    left: 0;
+  }
+
+  .gnb_close {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-image: url("../../img/cross_white.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .gnb {
+    display: none;
+    width: 100%;
+    height: auto;
+    background-color: var(--back-black);
+  }
+
+  .gnb > ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .gnb > ul > li {
+    width: 100%;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+
+  .moblie_login {
+    display: block;
+  }
+
+  .mobile_signUp {
+    display: block;
+  }
+
+  /* ================== // .gnb ================= */
+  .unb {
+    position: absolute;
+    top: 0;
+    right: 80px;
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-right: 0;
+  }
+
+  .login_txt {
+    display: none;
+  }
+
+  .signUp_txt {
+    display: none;
+  }
+
+  /* ================ .search_modal ============ */
+  .search_engin {
+    width: 680px;
+    height: 620px;
+  }
+
+  #search_icon {
+    width: 90%;
+  }
+
+  .search_engin ul {
+    width: 100%;
+    height: 400px;
+    left: 3%;
+    padding: 0 10px;
+  }
+
+  /* ============= // .search_modal ============ */
+  /* =============== // #headBox ============== */
+}
+@media all and (min-width: 1280px) and (max-width: 1439px) {
+  /* #headBox {} */
+  .gnb {
+    margin-left: 80px;
+    margin-left: 6.25vw;
+  }
+
+  /* =============== // #headBox ============== */
+}
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  /* #headBox {} */
+  .gnb {
+    margin-left: 200px;
+    margin-left: 13.888888vw;
+  }
+
+  /* =============== // #headBox ============== */
+}
+@media all and (min-width: 1920px) and (max-width: 2559px) {
+  /* #headBox {} */
+  .gnb {
+    margin-left: 450px;
+    margin-left: 23.4375vw;
+  }
+
+  /* =============== // #headBox ============== */
+}
+@media all and (min-width: 2560px) {
+  /* #headBox {} */
+  .head_wrap {
+    width: 2560px;
+  }
+
+  .gnb {
+    margin-left: 750px;
+    margin-left: 22.296875vw;
+  }
+
+  /* =============== // #headBox ============== */
+}
+/* ============= // #headBox ============== */
+/* ============= #viewBox ================= */
+/* ============= // #viewBox ============== */
+/* ============= #productBox ============== */
+/* ============= // #productBox =========== */
+/* ============= #magazineBox ============= */
+/* ============= // #magazineBox ========== */
+/* ============= #videoBox ================ */
+/* ============= // #videoBox ============= */
+/* ============= #esBox =================== */
+/* ============= // #esBox ================ */
+/* ============= #scroll_nav ============== */
+/* ============= // #scroll_nav =========== */
+/* ============= #supportBox ============== */
+/* ============= // #supportBox =========== */
+/* ============= #footBox ================= */
+/* ============= // #footBox ============== */
+
+/*# sourceMappingURL=main.css.map */
