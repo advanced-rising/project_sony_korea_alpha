@@ -1,9 +1,9 @@
 /* ===============  #productBox ================== */
 #productBox {
   width: 100%;
-  padding: 40px 0;
+  @include padding(40,0,40,0);
   margin: auto;
-  background-color: var(--back-lightblue);
+  background-color: $color-light-blue;
 }
 .product_img {
   width: 100%;
@@ -22,7 +22,6 @@
   height: 100%;
   margin-top: 40px;
 }
-/* .product_list li {} */
 .product_list li:last-child {
   position: absolute;
   top: 0;

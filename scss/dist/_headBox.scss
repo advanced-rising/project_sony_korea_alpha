@@ -485,17 +485,17 @@ h1 {
   }
 }
 @include pc1440{
-   .gnb {
+  .gnb {
     @include vw(margin-left,200,1440);
   }
 }
 @include pc1920{
-   .gnb {
+  .gnb {
     @include vw(margin-left,450,1920);
   }
 }
 @include pcfull{
-   .head_wrap {
+  .head_wrap {
     width: 2560px;
   }
   .gnb {

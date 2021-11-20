@@ -803,27 +803,24 @@ h1 h1 a {
 }
 /* ============= // #headBox ============== */
 /* ============= #viewBox ================= */
-/* =============== #viewBox ============== */
 #viewBox {
   position: relative;
   width: 100%;
+  height: auto;
   margin: auto;
   padding-top: 80px;
+  padding-top: 5rem;
 }
-
-/* =============== .viewBox_img ================ */
 .view_area {
   width: 100%;
   height: 100%;
   margin: auto;
 }
-
 .view_area ul {
   position: relative;
   width: 100%;
   height: 100%;
 }
-
 .viewBox_img {
   display: none;
   position: absolute;
@@ -831,326 +828,297 @@ h1 h1 a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
-
 .viewBox_img.action {
   display: block;
   z-index: 10;
 }
-
 .viewBox_img:nth-child(1) {
   background-image: url("../../img/main/viewBox/img_main72_sjcn.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
 }
-
 .viewBox_img:nth-child(2) {
   background-image: url("../../img/main/viewBox/img_main72_g2ry.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
 }
-
 .viewBox_img:nth-child(3) {
   background-image: url("../../img/main/viewBox/img_main70_ucuy.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
 }
-
-/* .viewBox_img:nth-child(4) {
-  background-image: url("../../img/main/viewBox/");
-} */
 .viewBox_img dl {
   position: absolute;
-  bottom: 12vw;
+  bottom: 40px;
+  bottom: 2.5rem;
   left: 0;
-  width: 100vw;
+  width: 80%;
   height: auto;
   margin-top: 80px;
+  margin-top: 5rem;
   padding: 20px;
+  padding: 1.25rem;
   text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
-  color: var(--back-white);
+  text-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.8);
+  color: #ffffff;
 }
-
-.viewBox_img dt {
+.viewBox_img dl dt {
   width: auto;
   height: auto;
+  font-size: 24px;
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 700;
 }
-
-.viewBox_img dt span {
+.viewBox_img dl dt span {
   width: auto;
   height: auto;
 }
-
-.viewBox_img dd {
+.viewBox_img dl dd {
   width: auto;
   height: auto;
-  font-size: 0.8rem;
+  font-size: 14px;
+  font-size: 0.875rem;
 }
 
-/* =============== // .viewBox_img ================ */
-/* =============== .view_indicator ============ */
-.view_indicator {
+#viewBox .view_indicator {
   z-index: 100;
   position: absolute;
   bottom: 20px;
-  left: 50%;
+  bottom: 1.25rem;
   width: 940px;
+  width: 58.75rem;
   height: 60px;
+  height: 3.75rem;
+  left: 50%;
   margin: auto;
   transform: translateX(-50%);
 }
-
-.view_indicator ul {
+#viewBox .view_indicator ul {
   width: auto;
   height: 100%;
 }
-
-.view_indicator ul li {
+#viewBox .view_indicator ul li {
   float: left;
+  width: auto;
   height: 100%;
   margin-right: 20px;
-  border-top: 5px solid var(--back-white);
+  margin-right: 1.25rem;
+  border-top: 5px solid #03010f;
+  border-top: 0.3125rem solid #03010f;
 }
-
-.view_indicator ul li:last-child {
+#viewBox .view_indicator ul li:last-child {
   margin-right: 0px;
 }
-
-.view_indicator li.action {
-  border-color: var(--main-color);
+#viewBox .view_indicator ul li.action {
+  border-color: #e75300;
 }
-
-.view_indicator button {
+#viewBox .view_indicator ul li button {
   width: 100%;
   height: 100%;
   text-transform: uppercase;
-  color: var(--back-white);
+  color: #ffffff;
 }
 
-/* =============== // .view_indicator ============ */
-/* =============== // #viewBox =================== */
 @media all and (max-width: 479px) {
-  /* =============== #viewBox ============== */
   #viewBox {
     height: 568px;
+    height: 35.5rem;
   }
-
-  .viewBox_img dl {
-    top: 10vw;
+  .view_area .viewBox_img dl {
+    top: 200px;
+    top: 12.5rem;
   }
-
-  .viewBox_img dt {
+  .view_area .viewBox_img dl dt {
+    font-size: 24px;
     font-size: 1.5rem;
   }
-
-  .viewBox_img dd {
-    font-size: 0.8rem;
+  .view_area .viewBox_img dl dd {
+    font-size: 14px;
+    font-size: 0.875rem;
   }
-
-  .view_indicator {
+  .view_area .view_indicator {
     width: 220px;
+    width: 13.75rem;
   }
-
-  /* .view_indicator ul {} */
-  .view_indicator ul li {
+  .view_area .view_indicator ul li {
     width: 40px;
+    width: 2.5rem;
   }
-
-  .view_indicator span {
+  .view_area .view_indicator ul li span {
     display: none;
   }
-
-  /* =============== // #viewBox ============== */
 }
 @media all and (min-width: 480px) and (max-width: 767px) {
-  /* =============== #viewBox ============== */
   #viewBox {
     height: 568px;
+    height: 35.5rem;
   }
-
-  .viewBox_img dl {
-    top: 10vw;
+  .view_area .viewBox_img dl {
+    top: 200px;
+    top: 12.5rem;
   }
-
-  .viewBox_img dt {
+  .view_area .viewBox_img dl dt {
+    font-size: 24px;
     font-size: 1.5rem;
   }
-
-  .viewBox_img dd {
-    font-size: 0.8rem;
+  .view_area .viewBox_img dl dd {
+    font-size: 14px;
+    font-size: 0.875rem;
   }
-
-  .view_indicator {
+  .view_area .view_indicator {
     width: 300px;
+    width: 18.75rem;
   }
-
-  /* .view_indicator ul {} */
-  .view_indicator ul li {
+  .view_area .view_indicator ul li {
     width: 60px;
+    width: 3.75rem;
   }
-
-  .view_indicator span {
+  .view_area .view_indicator ul li span {
     display: none;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
-  /* =============== #viewBox ============== */
   #viewBox {
     height: 1000px;
+    height: 62.5rem;
   }
-
   .view_area dl {
-    bottom: 18vw;
+    bottom: 200px;
+    bottom: 12.5rem;
   }
-
-  .view_area dt {
+  .view_area dl dt {
+    font-size: 48px;
     font-size: 3rem;
   }
-
-  .view_area dd {
+  .view_area dl dd {
+    font-size: 24px;
     font-size: 1.5rem;
   }
-
-  /* =============== .view_indicator ============ */
-  .view_indicator {
+  .view_area .view_indicator {
     width: 700px;
+    width: 43.75rem;
   }
-
-  /* .view_indicator ul {} */
-  .view_indicator ul li {
+  .view_area .view_indicator ul li {
     width: 160px;
+    width: 10rem;
   }
-
-  .view_indicator span {
+  .view_area .view_indicator ul li .view_indicator span {
     display: none;
   }
-
-  /* =============== // .view_indicator ============ */
-  /* =============== // #viewBox ============== */
 }
 @media all and (min-width: 1280px) and (max-width: 1439px) {
-  /* =============== #viewBox ============== */
   #viewBox {
     height: 1000px;
+    height: 62.5rem;
   }
-
-  .view_area dt {
+  .view_area dl dt {
+    font-size: 48px;
     font-size: 3rem;
   }
-
-  .view_area dd {
+  .view_area dl dd {
+    font-size: 24px;
     font-size: 1.5rem;
   }
-
-  .view_indicator {
+  .view_area .view_indicator {
     width: 960px;
+    width: 60rem;
   }
-
-  /* .view_indicator ul {} */
-  .view_indicator ul li {
+  .view_area .view_indicator ul li {
     width: 220px;
+    width: 13.75rem;
     height: 60px;
+    height: 3.75rem;
   }
-
-  /* =============== // #viewBox ============== */
 }
 @media all and (min-width: 1440px) and (max-width: 1919px) {
-  /* =============== #viewBox ============== */
   #viewBox {
     height: 1000px;
+    height: 62.5rem;
   }
-
-  .view_area dt {
+  .view_area dl dt {
+    font-size: 48px;
     font-size: 3rem;
   }
-
-  .view_area dd {
+  .view_area dl dd {
+    font-size: 24px;
     font-size: 1.5rem;
   }
-
-  .view_indicator {
+  .view_area .view_indicator {
     width: 960px;
+    width: 60rem;
   }
-
-  /* .view_indicator ul {} */
-  .view_indicator ul li {
+  .view_area .view_indicator ul li {
     width: 220px;
+    width: 13.75rem;
     height: 60px;
+    height: 3.75rem;
   }
-
-  /* =============== // #viewBox ============== */
 }
 @media all and (min-width: 1920px) and (max-width: 2559px) {
-  /* =============== #viewBox ============== */
   #viewBox {
     height: 1000px;
+    height: 62.5rem;
   }
-
-  .view_area dl {
-    bottom: 8vw;
-  }
-
-  .view_area dt {
+  .view_area dl dt {
+    font-size: 48px;
     font-size: 3rem;
   }
-
-  .view_area dd {
+  .view_area dl dd {
+    font-size: 24px;
     font-size: 1.5rem;
   }
-
-  .view_indicator {
+  .view_area .view_indicator {
     width: 960px;
+    width: 60rem;
   }
-
-  /* .view_indicator ul {} */
-  .view_indicator ul li {
+  .view_area .view_indicator ul li {
     width: 220px;
+    width: 13.75rem;
     height: 60px;
+    height: 3.75rem;
   }
-
-  /* =============== // #viewBox ============== */
 }
 @media all and (min-width: 2560px) {
-  /* =============== #viewBox ============== */
   #viewBox {
     height: 1000px;
+    height: 62.5rem;
   }
-
   .view_area {
     width: 2560px;
+    width: 160rem;
   }
-
-  .view_area dl {
-    bottom: 5vw;
-  }
-
-  .view_area dt {
+  .view_area dl dt {
+    font-size: 48px;
     font-size: 3rem;
   }
-
-  .view_area dd {
+  .view_area dl dd {
+    font-size: 24px;
     font-size: 1.5rem;
   }
-
-  .view_indicator {
+  .view_area .view_indicator {
     width: 960px;
+    width: 60rem;
   }
-
-  /* .view_indicator ul {} */
-  .view_indicator ul li {
+  .view_area .view_indicator ul li {
     width: 220px;
+    width: 13.75rem;
     height: 60px;
+    height: 3.75rem;
   }
-
-  /* =============== // #viewBox ============== */
 }
 /* ============= // #viewBox ============== */
 /* ============= #productBox ============== */
 /* ===============  #productBox ================== */
 #productBox {
   width: 100%;
-  padding: 40px 0;
+  padding: 40px 0px 40px 0px;
+  padding: 2.5rem 0rem 2.5rem 0rem;
   margin: auto;
-  background-color: var(--back-lightblue);
+  background-color: #f1f5f9;
 }
 
 .product_img {
@@ -1173,7 +1141,6 @@ h1 h1 a {
   margin-top: 40px;
 }
 
-/* .product_list li {} */
 .product_list li:last-child {
   position: absolute;
   top: 0;

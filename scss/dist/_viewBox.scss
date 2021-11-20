@@ -1,277 +1,274 @@
-/* =============== #viewBox ============== */
 #viewBox {
   position: relative;
-  width: 100%;
+  @include size();
   margin: auto;
-  padding-top: 80px;
-}
-/* =============== .viewBox_img ================ */
-.view_area {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-}
-.view_area ul {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.viewBox_img {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.viewBox_img.action {
-  display: block;
-  z-index: 10;
-}
-.viewBox_img:nth-child(1) {
-  background-image:url("../../img/main/viewBox/img_main72_sjcn.jpg");
-}
-.viewBox_img:nth-child(2) {
-  background-image: url("../../img/main/viewBox/img_main72_g2ry.jpg");
-}
-.viewBox_img:nth-child(3) {
-  background-image: url("../../img/main/viewBox/img_main70_ucuy.jpg");
-}
-/* .viewBox_img:nth-child(4) {
-  background-image: url("../../img/main/viewBox/");
-} */
-.viewBox_img dl {
-  position: absolute;
-  bottom: 12vw;
-  left: 0;
-  width: 100vw;
-  height: auto;
-  margin-top: 80px;
-  padding: 20px;
-  text-shadow: 0px 0px 8px rgb(0 0 0 / 80%);
-  color: var(--back-white);
-}
-.viewBox_img dt {
-  width: auto;
-  height: auto;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.viewBox_img dt span {
-  width: auto;
-  height: auto;
-}
-.viewBox_img dd {
-  width: auto;
-  height: auto;
-  font-size: 0.8rem;
-}
-/* =============== // .viewBox_img ================ */
-/* =============== .view_indicator ============ */
-.view_indicator {
-  z-index: 100;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  width: 940px;
-  height: 60px;
-  margin: auto;
-  transform: translateX(-50%);
-}
-.view_indicator ul {
-  width: auto;
-  height: 100%;
-}
-.view_indicator ul li {
-  float: left;
-  height: 100%;
-  margin-right: 20px;
-  border-top: 5px solid var(--back-white);
-}
-.view_indicator ul li:last-child {margin-right: 0px;}
-.view_indicator li.action { border-color: var(--main-color);}
-.view_indicator button {
-  width: 100%;
-  height: 100%;
-  text-transform: uppercase;
-  color: var(--back-white);
-}
-/* =============== // .view_indicator ============ */
-/* =============== // #viewBox =================== */
-@include mobile-v{
-  /* =============== #viewBox ============== */
-  #viewBox {
-    height: 568px;
-  }
-  .viewBox_img dl {
-    top: 10vw;
-  }
-  .viewBox_img dt {
-    font-size: 1.5rem;
-  }
-  .viewBox_img dd {
-    font-size: 0.8rem;
+  @include unit(padding-top,80);
+  @at-root .view_area {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    ul {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      @at-root  .viewBox_img {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        &.action {
+          display: block;
+          z-index: 10;
+        }
+        &:nth-child(1) {
+          @include img("main/viewBox/img_main72_sjcn.jpg");
+        }
+        &:nth-child(2) {
+          @include img("main/viewBox/img_main72_g2ry.jpg");
+        }
+        &:nth-child(3) {
+          @include img("main/viewBox/img_main70_ucuy.jpg");
+        }
+        dl {
+          position: absolute;
+          @include unit(bottom,40);
+          left: 0;
+          width: 80%;
+          height: auto;
+          @include unit(margin-top,80);
+          @include unit(padding,20);
+          @include text-shadow(0,0,8,rgb(0 0 0 / 80%));
+          color: $color-white;
+          dt {
+            width: auto;
+            height: auto;
+            @include unit(font-size,24);
+            font-weight: 700;
+            span {
+              width: auto;
+              height: auto;
+            }
+          }
+          dd {
+            width: auto;
+            height: auto;
+            @include unit(font-size,14);
+          }
+        }
+      }
+    }
   }
   .view_indicator {
-    width: 220px;
+    z-index: 100;
+    position: absolute;
+    @include unit(bottom,20);
+    @include unit(width,940);
+    @include unit(height,60);
+    left: 50%;
+    margin: auto;
+    transform: translateX(-50%);
+    ul {
+      width: auto;
+      height: 100%;
+      li {
+        float: left;
+        width: auto;
+        height: 100%;
+        @include unit(margin-right,20);
+        @include border-top($w:5,$c:$color-black);
+        &:last-child {margin-right: 0px;}
+        &.action { border-color: $color-orange;}
+        button {
+          width: 100%;
+          height: 100%;
+          text-transform: uppercase;
+          color: $color-white;
+        }
+      }
+    }
   }
-  /* .view_indicator ul {} */
-  .view_indicator ul li {
-    width: 40px;
+}
+@include mobile-v{
+  #viewBox {
+    @include unit(height,568);
+    @at-root .view_area {
+      .viewBox_img {
+        dl {
+          @include unit(top,200);
+          dt {
+            @include unit(font-size,24);
+          }
+          dd {
+            @include unit(font-size,14);
+          }
+        }
+      }
+      .view_indicator {
+        @include unit(width,220);
+        ul {
+          li {
+            @include unit(width,40);
+            span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
   }
-  .view_indicator span {
-    display: none;
-  }
-  /* =============== // #viewBox ============== */
 }
 @include mobile-h{
-  /* =============== #viewBox ============== */
   #viewBox {
-    height: 568px;
-  }
-  .viewBox_img dl {
-    top: 10vw;
-  }
-  .viewBox_img dt {
-    font-size: 1.5rem;
-  }
-  .viewBox_img dd {
-    font-size: 0.8rem;
-  }
-  .view_indicator {
-    width: 300px;
-  }
-  /* .view_indicator ul {} */
-  .view_indicator ul li {
-    width: 60px;
-  }
-  .view_indicator span {
-    display: none;
+    @include unit(height,568);
+    @at-root .view_area {
+      .viewBox_img {
+        dl {
+          @include unit(top,200);
+          dt {
+            @include unit(font-size,24);
+          }
+          dd {
+            @include unit(font-size,14);
+          }
+        }
+      }
+      .view_indicator {
+        @include unit(width,300);
+        ul {
+          li {
+            @include unit(width,60);
+            span {
+              display: none;
+            }
+          }
+        }
+      }  
+    }
   }
 }
 @include tablet{
-  /* =============== #viewBox ============== */
   #viewBox {
-    height: 1000px;
+    @include unit(height,1000);
+    @at-root .view_area {
+      dl {
+        @include unit(bottom,200);
+        dt {
+          @include unit(font-size,48);
+        }
+        dd {
+          @include unit(font-size,24);
+        }
+      }
+      .view_indicator {
+        @include unit(width,700);
+        ul {
+          li {
+            @include unit(width,160);
+            .view_indicator span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
   }
-  .view_area dl {
-    bottom: 18vw;
-  }
-  .view_area dt {
-    font-size: 3rem;
-  }
-  .view_area dd {
-    font-size: 1.5rem;
-  }
-  /* =============== .view_indicator ============ */
-  .view_indicator {
-    width: 700px;
-  }
-  /* .view_indicator ul {} */
-  .view_indicator ul li {
-    width: 160px;
-  }
-  .view_indicator span {
-    display: none;
-  }
-  /* =============== // .view_indicator ============ */
-  /* =============== // #viewBox ============== */
 }
-// @include laptop{}
 @include pc1280{
-  /* =============== #viewBox ============== */
   #viewBox {
-    height: 1000px;
+    @include unit(height,1000);
+    @at-root .view_area {
+      dl{
+        dt {
+          @include unit(font-size,48);
+        }
+        dd {
+          @include unit(font-size,24);
+        }
+      }
+      .view_indicator {
+        @include unit(width,960);
+        ul {
+          li {
+            @include unit(width,220);
+            @include unit(height,60);
+          }
+        }
+      }
+    }
   }
-  .view_area dt {
-    font-size: 3rem;
-  }
-  .view_area dd {
-    font-size: 1.5rem;
-  }
-  .view_indicator {
-    width: 960px;
-  }
-  /* .view_indicator ul {} */
-  .view_indicator ul li {
-    width: 220px;
-    height: 60px;
-  }
-  
-  /* =============== // #viewBox ============== */
 }
 @include pc1440{
-   /* =============== #viewBox ============== */
-   #viewBox {
-    height: 1000px;
+  #viewBox {
+    @include unit(height,1000);
+    @at-root .view_area {
+      dl {
+        dt {
+          @include unit(font-size,48);
+        }
+        dd {
+          @include unit(font-size,24);
+        }
+      }
+      .view_indicator {
+        @include unit(width,960);
+        ul {
+          li {
+            @include unit(width,220);
+            @include unit(height,60);
+          }
+        }
+      }
+    }
   }
-  .view_area dt {
-    font-size: 3rem;
-  }
-  .view_area dd {
-    font-size: 1.5rem;
-  }
-  .view_indicator {
-    width: 960px;
-  }
-  /* .view_indicator ul {} */
-  .view_indicator ul li {
-    width: 220px;
-    height: 60px;
-  }
-  /* =============== // #viewBox ============== */
 }
 @include pc1920{
-  /* =============== #viewBox ============== */
   #viewBox {
-    height: 1000px;
+    @include unit(height,1000);
+    @at-root .view_area {
+      dl {
+        dt {
+          @include unit(font-size,48);
+        }
+        dd {
+          @include unit(font-size,24);
+        }
+      }
+      .view_indicator {
+        @include unit(width,960);
+        ul {
+          li {
+            @include unit(width,220);
+            @include unit(height,60);
+          }
+        }
+      }
+    }
   }
-  .view_area dl {
-    bottom: 8vw;
-  }
-  .view_area dt {
-    font-size: 3rem;
-  }
-  .view_area dd {
-    font-size: 1.5rem;
-  }
-  .view_indicator {
-    width: 960px;
-  }
-  /* .view_indicator ul {} */
-  .view_indicator ul li {
-    width: 220px;
-    height: 60px;
-  }
-  /* =============== // #viewBox ============== */
 }
 @include pcfull{
-   /* =============== #viewBox ============== */
-   #viewBox {
-    height: 1000px;
+  #viewBox {
+    @include unit(height,1000);
+    @at-root .view_area {
+      @include unit(width,2560);
+      dl {
+        dt {
+          @include unit(font-size,48);
+        }
+        dd {
+          @include unit(font-size,24);
+        }
+      }
+      .view_indicator {
+        @include unit(width,960);
+        ul {
+          li {
+            @include unit(width,220);
+            @include unit(height,60);
+          }
+        }
+      }
+    }
   }
-  .view_area {
-    width: 2560px;
-  }
-  .view_area dl {
-    bottom: 5vw;
-  }
-  .view_area dt {
-    font-size: 3rem;
-  }
-  .view_area dd {
-    font-size: 1.5rem;
-  }
-  .view_indicator {
-    width: 960px;
-  }
-  /* .view_indicator ul {} */
-  .view_indicator ul li {
-    width: 220px;
-    height: 60px;
-  }
-  /* =============== // #viewBox ============== */
 }

@@ -28,6 +28,10 @@ $root:16;
   padding:px($t) px($r) px($b) px($l);
   padding:rem($t) rem($r) rem($b) rem($l);
 }
+@mixin text-shadow($x,$y,$r,$c){
+  text-shadow:px($x) px($y) px($r) $c;
+  text-shadow:rem($x) rem($y) rem($r) $c;
+}
 // ============================================
 
 // =========== border color ===================
