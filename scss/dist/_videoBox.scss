@@ -1,333 +1,308 @@
 /* =============== #videoBox ===================== */
 #videoBox {
-  width: 100%;
-  height: auto;
+  @include size();
   margin: auto;
-  padding: 40px 0;
-  background-color: var(--back-lightblue);
-}
-.video_list {
-  position: relative;
-  width: 100%;
-  height: 520px;
-  margin: auto;
-  margin-top: 40px;
-}
-/* ============ .next_btn ============= */
-.next_btn {
-  position: absolute;
-  top: 50%;
-  right: 10%;
-  width: 80px;
-  height: 80px;
-  transform: translateY(-50%);
-}
-.next_btn span::after {
-  position: absolute;
-  top: 42%;
-  right: 50%;
-  content: "";
-  display: block;
-  width: 3px;
-  height: 50px;
-  background-color: var(--back-black);
-  transform: rotate(45deg);
-}
-.next_btn span::before {
-  position: absolute;
-  top: 0;
-  right: 50%;
-  content: "";
-  display: block;
-  width: 3px;
-  height: 50px;
-  background-color: var(--back-black);
-  transform: rotate(135deg);
-}
-/* ============ // .next_btn ============= */
-/* ============ .prev_btn ============= */
-.prev_btn {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  width: 80px;
-  height: 80px;
-  transform: translateY(-50%);
-}
-.prev_btn span::after {
-  position: absolute;
-  top: 42%;
-  right: 50%;
-  content: "";
-  display: block;
-  width: 3px;
-  height: 50px;
-  background-color: var(--back-black);
-  transform: rotate(135deg);
-}
-.prev_btn span::before {
-  position: absolute;
-  top: 0;
-  right: 50%;
-  content: "";
-  display: block;
-  width: 3px;
-  height: 50px;
-  background-color: var(--back-black);
-  transform: rotate(45deg);
-}
-/* ============ // .prev_btn ============= */
-.video_list ul {
-  width: auto;
-  height: auto;
-}
-.video {
-  position: absolute;
-  margin: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.video01 {
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  width: 760px;
-  height: 520px;
-  background-image: url("../../img/main/video/97_xomc.jpg")
-}
-.video02 {
-  top: 20px;
-  left: 100px;
-  right: 0;
-  z-index: 90;
-  width: 720px;
-  height: 480px;
-  background-image: url("../../img/main/video/97_e08u.jpg")
-}
-.video03 {
-  top: 40px;
-  left: 200px;
-  right: 0;
-  z-index: 80;
-  width: 680px;
-  height: 440px;
-  background-image: url("../../img/main/video/96_g2ry.jpg")
-}
-.video04 {
-  top: 40px;
-  left: 0;
-  right: 200px;
-  z-index: 80;
-  width: 680px;
-  height: 440px;
-  background-image: url("../../img/main/video/95_g2ry.jpg")
-}
-.video05 {
-  top: 20px;
-  left: 0;
-  right: 100px;
-  z-index: 90;
-  width: 720px;
-  height: 480px;
-  background-image: url("../../img/main/video/93_e77u.jpg")
-}
-.video_play_btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  width: 100px;
-  height: 100px;
-  margin: auto;
-  border-radius: 100%;
-  border: 3px solid var(--main-color);
-  background-color: var(--back-whiteblack);
-  transform: translate(-50%, -50%);
-}
-.video_play_btn::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 54%;
-  border: solid var(--main-color);
-  border-radius: 10px;
-  border-width: 32px 0 32px 40px;
-  border-top-color: transparent;
-  border-bottom-color: transparent;
-  transform: translate(-50%, -50%);
+  @include padding(40,0,40,0);
+  background-color: $color-light-blue;
+  @at-root .video_list {
+    position: relative;
+    width: 100%;
+    @include unit(height,520);
+    margin: auto;
+    @include unit(margin-top,40);
+    .next_btn {
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      @include unit(width,80);
+      @include unit(height,80);
+      transform: translateY(-50%);
+      span::after {
+        position: absolute;
+        top: 42%;
+        right: 50%;
+        content: "";
+        display: block;
+        @include unit(width,3);
+        @include unit(height,50);
+        background-color: $color-black;
+        transform: rotate(45deg);
+      }
+      span::before {
+        position: absolute;
+        top: 0;
+        right: 50%;
+        content: "";
+        display: block;
+        @include unit(width,3);
+        @include unit(height,50);
+        background-color: $color-black;
+        transform: rotate(135deg);
+      }
+    }
+    .prev_btn {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      @include unit(width,80);
+      @include unit(height,80);
+      transform: translateY(-50%);
+    }
+    .prev_btn span::after {
+      position: absolute;
+      top: 42%;
+      right: 50%;
+      content: "";
+      display: block;
+      @include unit(width,3);
+      @include unit(height,50);
+      background-color: $color-black;
+      transform: rotate(135deg);
+    }
+    .prev_btn span::before {
+      position: absolute;
+      top: 0;
+      right: 50%;
+      content: "";
+      display: block;
+      @include unit(width,3);
+      @include unit(height,50);
+      background-color: $color-black;
+      transform: rotate(45deg);
+    }
+    ul {
+      width: auto;
+      height: auto;
+      .video {
+        position: absolute;
+        margin: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        .video01 {
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 100;
+          @include unit(width,760);
+          @include unit(height,520);
+          background-image: url("../../img/main/video/97_xomc.jpg")
+        }
+        .video02 {
+          @include unit(top,20);
+          @include unit(left,100);
+          right: 0;
+          z-index: 90;
+          @include unit(width,720);
+          @include unit(height,480);
+          background-image: url("../../img/main/video/97_e08u.jpg")
+        }
+        .video03 {
+          @include unit(top,40);
+          @include unit(left,200);
+          right: 0;
+          z-index: 80;
+          @include unit(width,680);
+          @include unit(height,440);
+          background-image: url("../../img/main/video/96_g2ry.jpg")
+        }
+        .video04 {
+          @include unit(top,40);
+          @include unit(right,200);
+          z-index: 80;
+          @include unit(width,680);
+          @include unit(height,440);
+          background-image: url("../../img/main/video/95_g2ry.jpg")
+        }
+        .video05 {
+          @include unit(top,20);
+          @include unit(right,100);
+          z-index: 90;
+          @include unit(width,720);
+          @include unit(height,480);
+          background-image: url("../../img/main/video/93_e77u.jpg")
+        }
+        .video_play_btn {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          display: block;
+          @include unit(width,100);
+          @include unit(height,100);
+          margin: auto;
+          border-radius: 100%;
+          @include border($w:3,$c:$color-orange);
+          background-color: $color-white-black;
+          transform: translate(-50%, -50%);
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 54%;
+            border: solid $color-orange;
+            @include unit(border-radius,10);
+            @include border-width(32,0,32,40);
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+  }
 }
 .video iframe {display: none;}
 .video_play_btn:hover + iframe { display: block;}
 .video_indicator { display: none;}
-/* =============== // #videoBox ================== */
 @include mobile-v{
-  /* =============== #videoBox ============== */
-  /* #videoBox {} */
   .video_list {
-    height: 320px;
+    @include unit(height,320);
+    button {
+      display: none;
+    }
+    .video {
+      display: none;
+      @include unit(width,320);
+      @include unit(height,200);
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      &.action {
+        display: block;
+        z-index: 10;
+      }
+    }
+    .video_indicator {
+      display: block;
+      @include unit(width,360);
+      @include unit(height,40);
+      margin: auto;
+      @include unit(margin-top,40);
+      @include padding(0,20,0,20);
+      ul {
+        width: 100%;
+        height: 100%;
+        li {
+          float: left;
+          @include unit(width,40);
+          height: 100%;
+          border-radius: 100%;
+          @include unit(margin-right,20);
+          background-color: $color-light-gray;
+          &:last-child {
+            margin-right: 0;
+          }
+          &.action {
+            @include unit(width,80);
+            @include unit(height,50);
+            background-color: $color-deep-gray;
+          }
+        }
+      }
+    }
   }
-  .video_list button { display: none;}
-  .video {
-    display: none;
-    width: 320px;
-    height: 200px;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-  }
-  .video.action {
-    display: block;
-    z-index: 10;
-  }
-  .video_indicator {
-    display: block;
-    width: 360px;
-    height: 40px;
-    margin: auto;
-    margin-top: 40px;
-    padding: 0 20px;
-  }
-  .video_indicator ul {
-    width: 100%;
-    height: 100%;
-  }
-  .video_indicator ul li {
-    float: left;
-    width: 40px;
-    height: 100%;
-    border-radius: 100%;
-    margin-right: 20px;
-    background-color: var(--light-gray01);
-  }
-  .video_indicator ul li:last-child { margin-right: 0;}
-  .video_indicator ul li.action {
-    width: 80px;
-    border-radius: 50px;
-    background-color: var(--deep-gray01);
-  }
-  /* =============== // #videoBox ============== */
 }
 @include mobile-h{
-  /* =============== #videoBox ============== */
-  /* #videoBox {} */
   .video_list {
-    height: 320px;
-  }
-  .video_list button { display: none;}
-  .video {
-    display: none;
-    width: 320px;
-    height: 200px;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-  }
-  .video.action {
-    display: block;
-    z-index: 10;
+    @include unit(height,320);
+    button {
+      display: none;
+    }
+    .video {
+      display: none;
+      @include unit(width,320);
+      @include unit(height,200);
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      &.action {
+        display: block;
+        z-index: 10;
+      }
+    }  
   }
   .video_indicator {
     display: block;
-    width: 360px;
-    height: 40px;
+    @include unit(width,360);
+    @include unit(height,40);
     margin: auto;
-    margin-top: 40px;
-    padding: 0 20px;
+    @include unit(margin-top,40);
+    @include padding(0,20,0,20);
+    ul {
+      width: 100%;
+      height: 100%;
+      li {
+        float: left;
+        @include unit(width,40);
+        height: 100%;
+        border-radius: 100%;
+        @include unit(margin-right,20);
+        background-color: $color-light-gray;
+        &:last-child {
+          margin-right: 0;
+        }
+        &.action {
+          @include unit(width,80);
+          @include unit(border-radius,50);
+          background-color: $color-deep-gray;
+        }
+      }
+    }
   }
-  .video_indicator ul {
-    width: 100%;
-    height: 100%;
-  }
-  .video_indicator ul li {
-    float: left;
-    width: 40px;
-    height: 100%;
-    border-radius: 100%;
-    margin-right: 20px;
-    background-color: var(--light-gray01);
-  }
-  .video_indicator ul li:last-child { margin-right: 0;}
-  .video_indicator ul li.action {
-    width: 80px;
-    border-radius: 50px;
-    background-color: var(--deep-gray01);
-  }
-  /* =============== // #videoBox ============== */
 }
 @include tablet{
-  /* =============== #videoBox ============== */
-  /* #videoBox {} */
-  .video_list button { display: none;}
-  .video {
-    display: none;
-    width: 760px;
-    height: 520px;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-  }
-  .video.action {
-    display: block;
-    z-index: 10;
+  .video_list {
+    button {
+      display: none;
+    }
+    .video {
+      display: none;
+      @include unit(width,760);
+      @include unit(height,520);
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      &.action {
+        display: block;
+        z-index: 10;
+      }
+    }
   }
   .video_indicator {
     display: block;
-    width: 420px;
-    height: 50px;
+    @include unit(width,420);
+    @include unit(height,50);
     margin: auto;
-    margin-top: 40px;
-    padding: 0 20px;
+    @include unit(margin-top,40);
+    @include padding(0,20,0,20);
+    ul {
+      width: 100%;
+      height: 100%;
+      li {
+        float: left;
+        @include unit(width,50);
+        height: 100%;
+        border-radius: 100%;
+        @include unit(margin-right,20);
+        background-color: $color-light-gray;
+        &:last-child {
+          margin-right: 0;
+        }
+        &.action {
+          @include unit(width,100);
+          @include unit(border-radius,50);
+          background-color: $color-deep-gray;
+        }
+      }
+    }
   }
-  .video_indicator ul {
-    width: 100%;
-    height: 100%;
-  }
-  .video_indicator ul li {
-    float: left;
-    width: 50px;
-    height: 100%;
-    border-radius: 100%;
-    margin-right: 20px;
-    background-color: var(--light-gray01);
-  }
-  .video_indicator ul li:last-child { margin-right: 0;}
-  .video_indicator ul li.action {
-    width: 100px;
-    border-radius: 50px;
-    background-color: var(--deep-gray01);
-  }
-  /* =============== // #videoBox ============== */
-}
-// @include laptop{}
-@include pc1280{
-    /* =============== #videoBox ============== */
-  /* #videoBox {} */
-  
-  /* =============== // #videoBox ============== */
-}
-@include pc1440{
-    /* =============== #videoBox ============== */
-  /* #videoBox {} */
-  
-  /* =============== // #videoBox ============== */
-}
-@include pc1920{
-    /* =============== #videoBox ============== */
-  /* #videoBox {} */
-  
-  /* =============== // #videoBox ============== */
 }
 @include pcfull{
-   /* =============== #videoBox ============== */
-   #videoBox {
-    width: 2560px;
+  #videoBox {
+    @include unit(width,2560);
   }
-  
-  /* =============== // #videoBox ============== */
 }

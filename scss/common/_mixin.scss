@@ -34,7 +34,7 @@ $root:16;
 }
 // ============================================
 
-// =========== border color ===================
+// =========== border =========================
 @mixin border($w:1,$s:solid,$c:$color-white){
   border:px($w) $s $c;
   border:rem($w) $s $c;
@@ -58,6 +58,11 @@ $root:16;
 @mixin border-left($w:1,$s:solid,$c:$color-white){
   border-left:px($w) $s $c;
   border-left:rem($w) $s $c;
+  @content;
+}
+@mixin border-width($t,$r,$b,$l){
+  border-width: px($t) px($r) px($b) px($l);
+  border-width: rem($t) rem($r) rem($b) rem($l);
   @content;
 }
 // ============================================
