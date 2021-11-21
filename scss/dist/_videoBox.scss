@@ -5,7 +5,7 @@
   background-color: $color-light-blue;
   @at-root .video_list {
     position: relative;
-    width: 100%;
+    @include unit(width,1200);
     @include unit(height,520);
     margin: auto;
     @include unit(margin-top,40);
@@ -98,7 +98,7 @@
       }
       .video02 {
         @include unit(top,20);
-        @include unit(right,200);
+        @include unit(right,180);
         z-index: 90;
         @include unit(width,720);
         @include unit(height,480);
@@ -106,7 +106,7 @@
       }
       .video03 {
         @include unit(top,40);
-        @include unit(right,100);
+        @include unit(right,140);
         z-index: 80;
         @include unit(width,680);
         @include unit(height,440);
@@ -114,7 +114,7 @@
       }
       .video04 {
         @include unit(top,40);
-        @include unit(left,100);
+        @include unit(left,140);
         z-index: 80;
         @include unit(width,680);
         @include unit(height,440);
@@ -122,7 +122,7 @@
       }
       .video05 {
         @include unit(top,20);
-        @include unit(left,200);
+        @include unit(left,180);
         z-index: 90;
         @include unit(width,720);
         @include unit(height,480);
@@ -162,8 +162,9 @@
 .video_indicator { display: none;}
 @include mobile-v{
   .video_list {
+    @include unit(width,320);
     @include unit(height,320);
-    button {
+    .video_btn {
       display: none;
     }
     .video {
@@ -177,57 +178,10 @@
       &.action {
         display: block;
         z-index: 10;
-      }
-    }
-    .video_indicator {
-      display: block;
-      @include unit(width,360);
-      @include unit(height,40);
-      margin: auto;
-      @include unit(margin-top,40);
-      @include padding(0,20,0,20);
-      ul {
-        width: 100%;
-        height: 100%;
-        li {
-          float: left;
-          @include unit(width,40);
-          height: 100%;
-          border-radius: 100%;
-          @include unit(margin-right,20);
-          background-color: $color-light-gray;
-          &:last-child {
-            margin-right: 0;
-          }
-          &.action {
-            @include unit(width,80);
-            @include unit(height,50);
-            background-color: $color-deep-gray;
-          }
-        }
-      }
-    }
-  }
-}
-@include mobile-h{
-  .video_list {
-    @include unit(height,320);
-    button {
-      display: none;
-    }
-    .video {
-      display: none;
-      @include unit(width,320);
+        @include unit(width,320);
       @include unit(height,200);
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1;
-      &.action {
-        display: block;
-        z-index: 10;
       }
-    }  
+    }
   }
   .video_indicator {
     display: block;
@@ -244,7 +198,59 @@
         @include unit(width,40);
         height: 100%;
         border-radius: 100%;
-        @include unit(margin-right,20);
+        @include unit(margin-right,10);
+        background-color: $color-light-gray;
+        &:last-child {
+          margin-right: 0;
+        }
+        &.action {
+          @include unit(width,80);
+          @include unit(border-radius,50);
+          background-color: $color-deep-gray;
+        }
+      }
+    }
+  }
+}
+@include mobile-h{
+  .video_list {
+    @include unit(width,320);
+    @include unit(height,320);
+    .video_btn {
+      display: none;
+    }
+    .video {
+      display: none;
+      @include unit(width,320);
+      @include unit(height,200);
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      &.action {
+        display: block;
+        z-index: 10;
+        @include unit(width,320);
+        @include unit(height,200);
+      }
+    }
+  }
+  .video_indicator {
+    display: block;
+    @include unit(width,360);
+    @include unit(height,40);
+    margin: auto;
+    @include unit(margin-top,40);
+    @include padding(0,20,0,20);
+    ul {
+      width: 100%;
+      height: 100%;
+      li {
+        float: left;
+        @include unit(width,40);
+        height: 100%;
+        border-radius: 100%;
+        @include unit(margin-right,10);
         background-color: $color-light-gray;
         &:last-child {
           margin-right: 0;
@@ -260,7 +266,8 @@
 }
 @include tablet{
   .video_list {
-    button {
+    @include unit(width,700);
+    .video_btn {
       display: none;
     }
     .video {
@@ -274,6 +281,8 @@
       &.action {
         display: block;
         z-index: 10;
+        @include unit(width,760);
+        @include unit(width,520);
       }
     }
   }
@@ -308,7 +317,8 @@
 }
 @include laptop{
   .video_list {
-    button {
+    @include unit(width,1000);
+    .video_btn {
       display: none;
     }
     .video {

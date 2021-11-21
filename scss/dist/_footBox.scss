@@ -1,328 +1,344 @@
-/* =============== #footBox ============== */
 #footBox {
-  width: 100%;
-  height: auto;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: var(--back-black);
+  @include size();
+  @include padding(40,0,40,0);
+  background-color: $color-black;
+  @at-root .foot_area {
+    @include unit(width,1140);
+    height: auto;
+    margin: auto;
+    .other_site {
+      @include unit(width,376);
+      height: auto;
+      @at-root .siteNav {
+        @include size();
+        > ul {
+          width: 100%;
+          height: 100%;
+          > li {
+            width: 100%;
+            @include unit(height,60);
+            @include unit(margin-bottom,40);
+            background-color: $color-deep-gray;
+            color: $color-white;
+            &:last-child { margin-bottom: 0;}
+            button {
+              .other_txt {
+                @include unit(letter-spacing,2);
+                color: $color-white;
+                text-transform: uppercase;
+              }
+            }
+          }
+          @at-root .family_site {
+              button {
+              width: 100%;
+              height: 100%;
+              @include padding(10,20,10,20);
+              span {
+                @include display-block();
+                text-align: start;
+                @include unit(line-height,40);
+              }
+            }
+            .sub_family {
+              display: none;
+              position: absolute;
+              @include unit-calc-plus(top,-100%,-100);
+              left: 0;
+              width: 100%;
+              height: auto;
+              @include unit(padding-bottom,40);
+              li {
+                width: 100%;
+                @include unit(height,50);
+                height: 50px;
+                @include padding(10,20,10,20);
+                background-color: $color-black;
+                a {
+                  @include display-block();
+                  text-decoration: none;
+                }
+                span {
+                  @include display-block();
+                  @include unit(line-height,25);
+                }
+              }
+            }
+            &:hover .sub_family { display: block;}
+          }
+          .global_site button {
+            width: 100%;
+            height: 100%;
+            @include padding(10,20,10,20);
+            span {
+              display: block;
+              text-align: start;
+            }
+          }
+          .global_site:hover button span,
+          .global_site:focus button span {
+            font-weight: 700;
+            color: $color-orange;
+          }
+          .sub_family li:hover,
+          .sub_family li:focus,
+          .family_site:hover button span {
+            font-weight: 700;
+            color: $color-orange;
+          }
+        }
+      }
+      .sns_site {
+        width: 100%;
+        @include unit(height,46);
+        @include unit(margin-top,40);
+        ul {
+          @include size();
+          li {
+            float: left;
+            @include unit(width,46);
+            @include unit(height,46);
+            @include unit(margin-right,20);
+            border-radius: 100%;
+            &:last-child {margin-right: 0;}
+            a {
+              @include display-block();
+              .company_sns_icon {
+                @include display-block();
+                background-repeat: no-repeat;
+                background-size: 230%;
+                background-position: left top;
+              }
+              .facebook {
+                background-image: url("../../img/common/ico_sns_facebook.png");
+              }
+              .instar {
+                background-image: url("../../img/common/ico_sns_instar.png");
+              }
+              .youtube {
+                background-image: url("../../img/common/ico_sns_youtube.png");
+              }
+              .sonyblog {
+                background-image: url("../../img/common/ico_sns_blog.png");
+              }
+              .naverpost {
+                background-image: url("../../img/common/ico_sns_post.png");
+              }
+              .naverband {
+                background-image: url("../../img/common/ico_sns_band.png");
+              }
+            }
+          }
+        }
+      }
+    }
+    .company_info {
+      width: auto;
+      height: 100%;
+      margin: auto;
+      li {
+        position: relative;
+        float: left;
+        width: auto;
+        height: 100%;
+        @include padding(0,10,0,10);
+        color: $color-white;
+        a {
+          display: block;
+          width: auto;
+          height: auto;
+          text-decoration: none;
+        }
+        &::after {
+          position: absolute;
+          @include unit(top,8);
+          left: 0;
+          content: "";
+          @include unit(width,1);
+          @include unit(height,10);
+          background-color: $color-white;
+        }
+        &:first-child::after {
+          display: none;
+        }
+        &:hover {
+          font-weight: 700;
+        }
+        &:nth-child(2):hover {
+          color: $color-orange;
+        } 
+      }
+      address {
+        @include size();
+        @include unit(margin-top,60);
+        color: $color-white;
+      }
+      .copyright {
+        @include unit(margin-top,40);
+        font-weight: 700;
+        color: $color-white;
+      }
+    }
+  }
 }
-.foot_area {
-  width: 1140px;
-  width: 89.0625vw;
-  height: auto;
-  margin: auto;
-}
-.company_info {
-  width: auto;
-  height: 100%;
-  margin: auto;
-}
-.company_info li {
-  position: relative;
-  float: left;
-  width: auto;
-  height: 100%;
-  padding: 0 10px;
-  color: var(--back-white);
-}
-.company_info li a {
-  display: block;
-  width: auto;
-  height: auto;
-  text-decoration: none;
-}
-.company_info li::after {
-  position: absolute;
-  top: 8px;
-  left: 0;
-  content: "";
-  width: 1px;
-  height: 10px;
-  background-color: var(--back-white);
-}
-.company_info li:first-child::after {
-  display: none;
-}
-.company_info li:hover {
-  font-weight: bold;
-}
-.company_info li:nth-child(2):hover {
-  color: var(--main-color);
-} 
-address {
-  width: 100%;
-  height: auto;
-  margin-top: 60px;
-  color: var(--back-white);
-}
-.copyright {
-  margin-top: 40px;
-  font-weight: bold;
-  color: var(--back-white);
-}
-/* ============================ */
-.other_site {
-  width: 376px;
-  height: auto;
-}
-.siteNav {
-  width: 100%;
-  height: auto;
-}
-.siteNav > ul {
-  width: 100%;
-  height: 100%;
-}
-.siteNav > ul > li {
-  width: 100%;
-  height: 60px;
-  margin-bottom: 40px;
-  background-color: var(--deep-gray01);
-  color: var(--back-white);
-}
-.siteNav > ul > li:last-of-type { margin-bottom: 0;}
-/* ========== family site =============== */
-.family_site button {
-  width: 100%;
-  height: 100%;
-  padding: 10px 20px;
-}
-.family_site button span {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-align: start;
-  line-height: 40px;
-}
-.sub_family {
-  display: none;
-  position: absolute;
-  top: calc(-100% + -100px);
-  left: 0;
-  width: 100%;
-  height: auto;
-  padding-bottom: 40px;
-}
-.sub_family li {
-  width: 100%;
-  height: 50px;
-  padding: 10px 20px;
-  background-color: var(--back-black);
-}
-.sub_family li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-}
-.sub_family li span {
-  display: block;
-  width: 100%;
-  height: 100%;
-  line-height: 25px;
-}
-.family_site:hover .sub_family { display: block;}
 
-.sub_family li:hover,
-.sub_family li:focus,
-.family_site:hover button span {
-  font-weight: bold;
-  color: var(--main-color);
-}
-/* ========== // family site =============== */
-/* ========== global site =============== */
-.global_site button {
-  width: 100%;
-  height: 100%;
-  padding: 10px 20px;
-}
-.global_site button span {
-  display: block;
-  text-align: start;
-}
-.global_site:hover button span,
-.global_site:focus button span {
-  font-weight: bold;
-  color: var(--main-color);
-}
-.other_txt {
-  letter-spacing: 2px;
-  color: var(--back-white);
-  text-transform: uppercase;
-}
-/* ========== // global site =============== */
-/* ============= sns_site ================== */
-.sns_site {
-  width: 100%;
-  height: 46px;
-  margin-top: 40px;
-}
-.sns_site ul {
-  width: 100%;
-  height: auto;
-}
-.sns_site li {
-  float: left;
-  width: 46px;
-  height: 46px;
-  margin-right: 20px;
-  border-radius: 100%;
-}
-.sns_site li:last-child {margin-right: 0;}
-.sns_site li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-/* ========== // sns_site ================== */
-/* ========== sns_site icon ================== */
-.company_sns_icon {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: 230%;
-  background-position: left top;
-}
-.facebook {
-  background-image: url("../../img/common/ico_sns_facebook.png");
-}
-.instar {
-  background-image: url("../../img/common/ico_sns_instar.png");
-}
-.youtube {
-  background-image: url("../../img/common/ico_sns_youtube.png");
-}
-.sonyblog {
-  background-image: url("../../img/common/ico_sns_blog.png");
-}
-.naverpost {
-  background-image: url("../../img/common/ico_sns_post.png");
-}
-.naverband {
-  background-image: url("../../img/common/ico_sns_band.png");
-}
-/* ========== // sns_site icon ================== */
-/* =============== // #footBox ============== */
 @include mobile-v{
-   /* =============== #footBox ============== */
-  /* #footBox {} */
   .foot_area {
-    width: 280px;
+    @include unit(width,280);
+    .other_site {
+      float: left;
+      @include size();
+      margin: auto;
+      @include unit(margin-bottom,20);
+      .siteNav {
+        & > ul {
+          @include size();
+          & > li {
+            @include size();
+          }
+        }
+      }
+      .sns_site {
+        @include unit(width,178);
+        @include unit(height,112);
+        margin: auto;
+        @include margin(20,0,20,0);
+        li {
+          @include unit(margin-top,20);
+          &:nth-child(-n + 3) {
+            margin-top: 0;
+          }
+          &:nth-child(3n) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .company_info {
+      float: left;
+    }
   }
-  .other_site {
-    float: left;
-    width: 100%;
-    margin: auto;
-    margin-bottom: 20px;
-  }
-  .company_info {
-    float: left;
-  }
-  .siteNav > ul {
-    width: 100%;
-  }
-  .siteNav > ul > li {
-    width: 100%;
-  }
-  .sns_site {
-    width: 178px;
-    height: 112px;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  .sns_site li {
-    margin-top: 20px;
-  }
-  .sns_site li:nth-child(-n + 3) {
-    margin-top: 0;
-  }
-  .sns_site li:nth-child(3n) {
-    margin-right: 0;
-  }
-  /* =============== // #footBox ============== */
 }
 @include mobile-h{
-  /* =============== #footBox ============== */
-  /* #footBox {} */
   .foot_area {
-    width: 380px;
+    @include unit(width,320);
+    .other_site {
+      float: left;
+      @include size();
+      margin: auto;
+      @include unit(margin-bottom,20);
+      .siteNav {
+        & > ul {
+          @include size();
+          & > li {
+            @include size();
+          }
+        }
+      }
+      .sns_site {
+        @include unit(width,178);
+        @include unit(height,112);
+        margin: auto;
+        @include margin(20,0,20,0);
+        ul {
+          margin: auto;
+          li {
+            @include unit(margin-top,20);
+            &:nth-child(-n + 3) {
+              margin-top: 0;
+            }
+            &:nth-child(3n) {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+    .company_info {
+      float: left;
+    }
   }
-  .other_site {
-    float: left;
-    width: 100%;
-    margin: auto;
-    margin-bottom: 20px;
-  }
-  .company_info {
-    float: left;
-  }
-  .siteNav > ul {
-    width: 100%;
-  }
-  .siteNav > ul > li {
-    width: 100%;
-  }
-  .sns_site {
-    width: 178px;
-    height: 112px;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  .sns_site li {
-    margin-top: 20px;
-  }
-  .sns_site li:nth-child(-n + 3) {
-    margin-top: 0;
-  }
-  .sns_site li:nth-child(3n) {
-    margin-right: 0;
-  }
-  /* =============== // #footBox ============== */
 }
 @include tablet{
-    /* =============== #footBox ============== */
-  /* #footBox {} */
   .foot_area {
-    width: 700px;
+    @include unit(width,700);
     margin: auto;
+    .other_site {
+      float: left;
+      @include size();
+      margin: auto;
+      @include unit(margin-bottom,20);
+      .siteNav {
+        & > ul {
+          float: left;
+          @include unit(width,376);
+          & > li {
+            @include size();
+          }
+        }
+      }
+      .sns_site {
+        float: right;
+        @include unit(width,178);
+        @include unit(height,112);
+        margin: auto;
+        @include margin(20,0,20,0);
+        li {
+          @include unit(margin-top,20);
+          &:nth-child(-n + 3) {
+            margin-top: 0;
+          }
+          &:nth-child(3n) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .company_info {
+      float: left;
+    }
   }
-  .company_info {
-    float: left;
-  }
-  .other_site {
-    float: left;
-    width: 100%;
-    margin: auto;
-    margin-bottom: 20px;
-  }
-  .siteNav > ul {
-    float: left;
-    width: 376px;
-  }
-  .siteNav > ul > li {
-    width: 100%;
-  }
-  .sns_site {
-    float: right;
-    width: 178px;
-    height: 112px;
-    margin-top: 20px;
-  }
-  .sns_site li {
-    margin-top: 20px;
-  }
-  .sns_site li:nth-child(-n + 3) {
-    margin-top: 0;
-  }
-  .sns_site li:nth-child(3n) {
-    margin-right: 0;
-  }
-  /* =============== // #footBox ============== */
 }
-// @include laptop{}
+@include laptop{
+  .foot_area {
+    @include unit(width,700);
+    margin: auto;
+    .other_site {
+      float: left;
+      @include size();
+      margin: auto;
+      @include unit(margin-bottom,20);
+      .siteNav {
+        & > ul {
+          float: left;
+          @include unit(width,376);
+          & > li {
+            @include size();
+          }
+        }
+      }
+      .sns_site {
+        float: right;
+        @include unit(width,178);
+        @include unit(height,112);
+        margin: auto;
+        @include margin(20,0,20,0);
+        li {
+          @include unit(margin-top,20);
+          &:nth-child(-n + 3) {
+            margin-top: 0;
+          }
+          &:nth-child(3n) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .company_info {
+      float: left;
+    }
+  }
+}
 @include pc1280{
     /* =============== #footBox ============== */
   /* #footBox {} */

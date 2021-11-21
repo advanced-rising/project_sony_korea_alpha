@@ -175,6 +175,33 @@
     }
   }
 }
+@include laptop{
+  #viewBox {
+    @include unit(height,1000);
+    @at-root .view_area {
+      dl {
+        @include unit(bottom,200);
+        dt {
+          @include unit(font-size,48);
+        }
+        dd {
+          @include unit(font-size,24);
+        }
+      }
+      .view_indicator {
+        @include unit(width,700);
+        ul {
+          li {
+            @include unit(width,100);
+            .view_indicator span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 @include pc1280{
   #viewBox {
     @include unit(height,1000);
