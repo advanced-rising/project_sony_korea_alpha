@@ -2191,7 +2191,6 @@ h1 h1 a {
 }
 /* ============= // #videoBox ============= */
 /* ============= #esBox =================== */
-/* =============== #esBox ======================== */
 #esBox {
   width: 100%;
   height: auto;
@@ -2235,336 +2234,244 @@ h1 h1 a {
   margin-right: 20px;
   margin-right: 1.25rem;
 }
-
-.es_bar {
-  position: absolute;
-  bottom: 0;
-  left: 50%-10px;
-  left: 50%-10/16rem;
-  left: calc(50% - 10px);
-  width: 20px;
-  height: 660px;
-  background-color: var(--back-lightblue);
-}
-
-.event_img, .seminar_img {
+.es_inner ul li .event_img,
+.es_inner ul li .seminar_img {
   width: 100%;
   height: 220px;
+  height: 13.75rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   box-sizing: border-box;
 }
-
-.event_txt, .seminar_txt {
+.es_inner ul li .event_txt,
+.es_inner ul li .seminar_txt {
   width: 100%;
   height: 100px;
+  height: 6.25rem;
   padding: 10px;
+  padding: 0.625rem;
+  font-size: 16px;
   font-size: 1rem;
   word-break: break-all;
-  color: var(--back-white);
-  background-color: var(--deep-gray01);
+  color: #ffffff;
+  background-color: #333335;
 }
-
-.put_in_btn {
+.es_inner ul li .event_txt .put_in_btn,
+.es_inner ul li .seminar_txt .put_in_btn {
   width: auto;
   line-height: 25px;
+  line-height: 1.5625rem;
   margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   text-align: center;
-  font-size: 0.8rem;
-  padding: 2px 10px;
-  color: var(--back-white);
+  font-size: 12px;
+  font-size: 0.75rem;
+  padding: 2px 10px 2px 10px;
+  padding: 0.125rem 0.625rem 0.125rem 0.625rem;
+  color: #ffffff;
+}
+.es_inner ul li .event_txt .apply,
+.es_inner ul li .seminar_txt .apply {
+  background-color: #e75300;
+}
+.es_inner ul li .event_txt .not_apply,
+.es_inner ul li .seminar_txt .not_apply {
+  background-color: #03010f;
 }
 
-.apply {
-  background-color: var(--main-color);
+.es_area .es_bar {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 10px);
+  left: calc(50% - 0.625rem);
+  width: 20px;
+  width: 1.25rem;
+  height: 660px;
+  height: 41.25rem;
+  background-color: #f1f5f9;
 }
-
-.not_apply {
-  background-color: var(--back-black);
-}
-
-/* =============== .event_img ============ */
-.event_area li:nth-child(1) .event_img {
+.es_area .event_area li:nth-child(1) .event_img {
   background-image: url("../../img/main/event/20211022_02_ex7m_list.jpg");
 }
-
-.event_area li:nth-child(2) .event_img {
+.es_area .event_area li:nth-child(2) .event_img {
   background-image: url("../../img/main/event/20211019_01_dpjh_list.jpg");
 }
-
-.event_area li:nth-child(3) .event_img {
+.es_area .event_area li:nth-child(3) .event_img {
   background-image: url("../../img/main/event/20211001_01_wo13_list.jpg");
 }
-
-.event_area li:nth-child(4) .event_img {
+.es_area .event_area li:nth-child(4) .event_img {
   background-image: url("../../img/main/event/20210707_01_apxu_list.jpg");
 }
-
-/* =============== // .event_img ============ */
-/* =============== .seminar_img ============ */
-.seminar_area li:nth-child(1) .seminar_img {
+.es_area .seminar_area li:nth-child(1) .seminar_img {
   background-image: url("../../img/main/seminar/20211027_01_u1rt_list.jpg");
 }
-
-.seminar_area li:nth-child(2) .seminar_img {
+.es_area .seminar_area li:nth-child(2) .seminar_img {
   background-image: url("../../img/main/seminar/20211022_01_x31b_list.jpg");
 }
-
-.seminar_area li:nth-child(3) .seminar_img {
+.es_area .seminar_area li:nth-child(3) .seminar_img {
   background-image: url("../../img/main/seminar/20211014_01_g2ry_list.jpg");
 }
-
-.seminar_area li:nth-child(4) .seminar_img {
+.es_area .seminar_area li:nth-child(4) .seminar_img {
   background-image: url("../../img/main/seminar/210901_alpha_p4yz_01.png");
 }
 
-/* =============== // .seminar_img ============ */
-/* =============== // #esBox ============== */
-/* =============== // #esBox ===================== */
 @media all and (max-width: 479px) {
-  /* =============== #esBox ============== */
-  /* #esBox {} */
   .es_area {
-    position: relative;
     width: 320px;
+    width: 20rem;
   }
-
-  .es_content {
+  .es_area .es_content {
     float: left;
     width: 320px;
-    height: auto;
+    width: 20rem;
     margin: auto;
     margin-left: 20px;
+    margin-left: 1.25rem;
   }
-
-  .es_content h3 {
+  .es_area .es_content h3 {
     width: 100%;
-    height: 80px;
     margin: auto;
   }
-
-  .es_inner {
+  .es_area .es_content .es_inner {
     overflow-x: auto;
     width: 100%;
     height: auto;
     margin: auto;
   }
-
-  .es_inner ul {
+  .es_area .es_content .es_inner ul {
     width: 400%;
   }
-
-  .es_inner ul li {
-    float: left;
+  .es_area .es_content .es_inner ul li {
     width: 240px;
-    height: auto;
+    width: 15rem;
     margin-top: 0;
     margin-right: 20px;
+    margin-right: 1.25rem;
   }
-
-  .es_inner ul li:last-child {
+  .es_area .es_content .es_inner ul li:last-child {
     margin-right: 0;
   }
-
-  .es_bar {
+  .es_area .es_bar {
     display: none;
   }
 
-  .event_img, .seminar_img {
+  .event_img,
+.seminar_img {
     width: 100%;
     height: 220px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    box-sizing: border-box;
+    height: 13.75rem;
   }
 
   .event_txt, .seminar_txt {
     width: 100%;
     height: 100px;
+    height: 6.25rem;
     padding: 10px;
+    padding: 0.625rem;
+    font-size: 16px;
     font-size: 1rem;
-    word-break: break-all;
-    color: var(--back-white);
-    background-color: var(--deep-gray01);
   }
-
-  .put_in_btn {
-    width: auto;
-    line-height: 25px;
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 0.8rem;
-    padding: 2px 10px;
-    color: var(--back-white);
-  }
-
-  /* =============== // #esBox ============== */
 }
 @media all and (min-width: 480px) and (max-width: 767px) {
-  /* =============== #esBox ============== */
-  /* #esBox {} */
   .es_area {
-    position: relative;
     width: 320px;
+    width: 20rem;
   }
-
-  .es_content {
+  .es_area .es_content {
     float: left;
     width: 320px;
-    height: auto;
+    width: 20rem;
     margin: auto;
     margin-left: 20px;
+    margin-left: 1.25rem;
   }
-
-  .es_content h3 {
+  .es_area .es_content h3 {
     width: 100%;
-    height: 80px;
     margin: auto;
   }
-
-  .es_inner {
+  .es_area .es_content .es_inner {
     overflow-x: auto;
     width: 100%;
     height: auto;
     margin: auto;
   }
-
-  .es_inner ul {
+  .es_area .es_content .es_inner ul {
     width: 400%;
   }
-
-  .es_inner ul li {
-    float: left;
+  .es_area .es_content .es_inner ul li {
     width: 240px;
-    height: auto;
+    width: 15rem;
     margin-top: 0;
     margin-right: 20px;
+    margin-right: 1.25rem;
   }
-
-  .es_inner ul li:last-child {
+  .es_area .es_content .es_inner ul li:last-child {
     margin-right: 0;
   }
-
-  .es_bar {
+  .es_area .es_bar {
     display: none;
   }
 
-  .event_img, .seminar_img {
+  .event_img,
+.seminar_img {
     width: 100%;
     height: 220px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    box-sizing: border-box;
+    height: 13.75rem;
   }
 
   .event_txt, .seminar_txt {
     width: 100%;
     height: 100px;
+    height: 6.25rem;
     padding: 10px;
+    padding: 0.625rem;
+    font-size: 16px;
     font-size: 1rem;
-    word-break: break-all;
-    color: var(--back-white);
-    background-color: var(--deep-gray01);
   }
-
-  .put_in_btn {
-    width: auto;
-    line-height: 25px;
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 0.8rem;
-    padding: 2px 10px;
-    color: var(--back-white);
-  }
-
-  /* =============== // #esBox ============== */
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
-  /* =============== #esBox ============== */
-  /* #esBox {} */
   .es_area {
-    position: relative;
     width: 768px;
+    width: 48rem;
   }
 
   .es_content {
-    float: left;
     width: 768px;
-    height: auto;
+    width: 48rem;
     margin: auto;
     margin-left: 20px;
+    margin-left: 1.25rem;
   }
-
   .es_content h3 {
-    width: 100%;
-    height: 80px;
     margin: auto;
   }
-
-  .es_inner {
+  .es_content .es_inner {
     overflow-x: auto;
     width: 100%;
     height: auto;
     margin: auto;
   }
-
-  .es_inner ul {
+  .es_content .es_inner ul {
     width: 200%;
   }
-
-  .es_inner ul li {
+  .es_content .es_inner ul li {
     float: left;
     width: 240px;
-    height: auto;
+    width: 15rem;
     margin-top: 0;
     margin-right: 20px;
+    margin-right: 1.25rem;
   }
-
-  .es_inner ul li:last-child {
+  .es_content .es_inner ul li:last-child {
     margin-right: 0;
   }
 
   .es_bar {
     display: none;
   }
-
-  .event_img, .seminar_img {
-    width: 100%;
-    height: 220px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    box-sizing: border-box;
-  }
-
-  .event_txt, .seminar_txt {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    font-size: 1rem;
-    word-break: break-all;
-    color: var(--back-white);
-    background-color: var(--deep-gray01);
-  }
-
-  .put_in_btn {
-    width: auto;
-    line-height: 25px;
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 0.8rem;
-    padding: 2px 10px;
-    color: var(--back-white);
-  }
-
-  /* =============== // #esBox ============== */
 }
 @media all and (min-width: 1280px) and (max-width: 1439px) {
-  /* =============== #esBox ============== */
-  /* #esBox {} */
   .event_area {
     float: left;
   }
@@ -2574,8 +2481,6 @@ h1 h1 a {
   }
 }
 @media all and (min-width: 1440px) and (max-width: 1919px) {
-  /* =============== #esBox ============== */
-  /* #esBox {} */
   .event_area {
     float: left;
   }
@@ -2585,8 +2490,6 @@ h1 h1 a {
   }
 }
 @media all and (min-width: 1920px) and (max-width: 2559px) {
-  /* =============== #esBox ============== */
-  /* #esBox {} */
   .event_area {
     float: left;
   }
@@ -2596,8 +2499,6 @@ h1 h1 a {
   }
 }
 @media all and (min-width: 2560px) {
-  /* =============== #esBox ============== */
-  /* #esBox {} */
   .event_area {
     float: left;
   }
