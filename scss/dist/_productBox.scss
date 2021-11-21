@@ -202,7 +202,46 @@
     transform: translate(0, 0);
   }
 }
-// @include laptop{}
+@include laptop{
+  #productBox {
+    height: auto;
+    @at-root .product_list {
+      @include unit(width,620);
+      ul {
+        @include unit(padding-bottom,80);
+        li {
+          float: left;
+          @include unit(width,300);
+          @include unit(height,300);
+          @include unit(margin-top,20);
+          @include unit(margin-right,20);
+        }
+      }
+    }
+  }
+  .product_list li:nth-child(-n + 2) {
+    margin-top: 0;
+  }
+  .product_list li:nth-child(2n) {
+    margin-right: 0;
+  }
+  .product_list li:last-child .product_img {
+    display: none;
+  }
+  .product_list li:last-child {
+    top: auto;
+    bottom: 0;
+    @include size();
+    margin-right: 0;
+  }
+  .more_product {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translate(0, 0);
+  }
+}
 @include pc1280{
   .product_list {
     @include unit(width,1100);

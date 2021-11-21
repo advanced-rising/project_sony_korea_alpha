@@ -218,6 +218,36 @@
   } 
   .es_bar { display: none;}
 }
+@include laptop {
+  .es_area {
+    @include unit(width,768);
+  }
+  .es_content {
+    @include unit(width,768);
+    margin: auto;
+    @include unit(margin-left,20);
+    h3 {
+      margin: auto;
+    }
+    .es_inner {
+      overflow-x: auto;
+      width: 100%;
+      height: auto;
+      margin: auto;
+      ul {
+        width: 200%;
+        li {
+          float: left;
+          @include unit(width,240);
+          margin-top: 0;
+          @include unit(margin-right,20);
+          &:last-child {margin-right: 0;}
+        }
+      }
+    }
+  } 
+  .es_bar { display: none;}
+}
 @include pc1280{
   .event_area {
     float: left;

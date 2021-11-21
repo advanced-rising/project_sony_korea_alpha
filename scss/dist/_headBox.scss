@@ -18,7 +18,7 @@ h1 {
   @include unit(height,60);
   margin: auto;
   @include unit(margin-left,10);
-  h1 a {
+  a {
     @include display-block();
   }
 }
@@ -50,6 +50,7 @@ h1 {
         text-align: center;
         text-transform: uppercase;
         @include unit(line-height,40);
+        color: $color-white;
         > a {
           @include display-block();
           text-decoration: none;
@@ -63,7 +64,8 @@ h1 {
           display: none;
           @include size();
           li {
-            @include size();
+            @include unit(width,300);
+            height: auto;
             text-align: start;
             @include padding(5,20,5,20);
             color: $color-white;
@@ -77,7 +79,7 @@ h1 {
             }
           }
         }
-        li:hover .sub_menu { display: block;}
+        &:hover .sub_menu { display: block;}
       }
       .last_gnbMenu {margin-right: 0px;}
       .moblie_login { display: none;}
@@ -93,6 +95,9 @@ h1 {
     > ul {
       width: auto;
       height: 100%;
+      li {
+        color: $color-white;
+      }
       .login_txt, 
       .signUp_txt {
         position: relative;

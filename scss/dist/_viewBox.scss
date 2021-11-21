@@ -33,7 +33,7 @@
         }
         dl {
           position: absolute;
-          @include unit(bottom,40);
+          @include unit(bottom,200);
           left: 0;
           width: 80%;
           height: auto;
@@ -64,9 +64,9 @@
     z-index: 100;
     position: absolute;
     @include unit(bottom,20);
+    left: 50%;
     @include unit(width,940);
     @include unit(height,60);
-    left: 50%;
     margin: auto;
     transform: translateX(-50%);
     ul {
@@ -74,10 +74,10 @@
       height: 100%;
       li {
         float: left;
-        width: auto;
+        @include unit(width,200);
         height: 100%;
         @include unit(margin-right,20);
-        @include border-top($w:5,$c:$color-black);
+        @include border-top($w:5,$c:$color-white);
         &:last-child {margin-right: 0px;}
         &.action { border-color: $color-orange;}
         button {

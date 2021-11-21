@@ -11,7 +11,7 @@ $root:16;
 @function rem($size){
   @return math.div($size , $root) + rem;
 }
-@mixin unitp-calc-plus($unit,$percent,$size){
+@mixin unit-calc-plus($unit,$percent,$size){
   #{$unit}:calc($percent + px($size));
   #{$unit}:calc($percent + rem($size));
 }

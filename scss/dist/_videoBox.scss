@@ -1,4 +1,3 @@
-/* =============== #videoBox ===================== */
 #videoBox {
   @include size();
   margin: auto;
@@ -10,67 +9,75 @@
     @include unit(height,520);
     margin: auto;
     @include unit(margin-top,40);
-    .next_btn {
+    .video_btn {
+      z-index: 110;
       position: absolute;
       top: 50%;
-      right: 10%;
-      @include unit(width,80);
+      left: 50%;
+      transform: translate(-50%,-50%);
+      @include unit(width,1100);
       @include unit(height,80);
-      transform: translateY(-50%);
-      span::after {
-        position: absolute;
-        top: 42%;
-        right: 50%;
-        content: "";
-        display: block;
-        @include unit(width,3);
-        @include unit(height,50);
-        background-color: $color-black;
-        transform: rotate(45deg);
-      }
-      span::before {
+      .next_btn {
         position: absolute;
         top: 0;
-        right: 50%;
-        content: "";
-        display: block;
-        @include unit(width,3);
-        @include unit(height,50);
-        background-color: $color-black;
-        transform: rotate(135deg);
+        right: 0;
+        @include unit(width,80);
+        height: 100%;
+        &::after {
+          position: absolute;
+          top: 42%;
+          right: 50%;
+          content: "";
+          display: block;
+          @include unit(width,3);
+          @include unit(height,50);
+          background-color: $color-black;
+          transform: rotate(45deg);
+        }
+        &::before {
+          position: absolute;
+          top: 0;
+          right: 50%;
+          content: "";
+          display: block;
+          @include unit(width,3);
+          @include unit(height,50);
+          background-color: $color-black;
+          transform: rotate(135deg);
+        }
+      }
+      .prev_btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include unit(width,80);
+        height: 100%;
+        &::after {
+          position: absolute;
+          top: 42%;
+          right: 50%;
+          content: "";
+          display: block;
+          @include unit(width,3);
+          @include unit(height,50);
+          background-color: $color-black;
+          transform: rotate(135deg);
+        }
+        &::before {
+          position: absolute;
+          top: 0;
+          right: 50%;
+          content: "";
+          display: block;
+          @include unit(width,3);
+          @include unit(height,50);
+          background-color: $color-black;
+          transform: rotate(45deg);
+        }
       }
     }
-    .prev_btn {
-      position: absolute;
-      top: 50%;
-      left: 10%;
-      @include unit(width,80);
-      @include unit(height,80);
-      transform: translateY(-50%);
-    }
-    .prev_btn span::after {
-      position: absolute;
-      top: 42%;
-      right: 50%;
-      content: "";
-      display: block;
-      @include unit(width,3);
-      @include unit(height,50);
-      background-color: $color-black;
-      transform: rotate(135deg);
-    }
-    .prev_btn span::before {
-      position: absolute;
-      top: 0;
-      right: 50%;
-      content: "";
-      display: block;
-      @include unit(width,3);
-      @include unit(height,50);
-      background-color: $color-black;
-      transform: rotate(45deg);
-    }
     ul {
+      position: relative;
       width: auto;
       height: auto;
       .video {
@@ -78,75 +85,73 @@
         margin: auto;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center;
-        .video01 {
-          top: 0;
-          left: 0;
-          right: 0;
-          z-index: 100;
-          @include unit(width,760);
-          @include unit(height,520);
-          background-image: url("../../img/main/video/97_xomc.jpg")
-        }
-        .video02 {
-          @include unit(top,20);
-          @include unit(left,100);
-          right: 0;
-          z-index: 90;
-          @include unit(width,720);
-          @include unit(height,480);
-          background-image: url("../../img/main/video/97_e08u.jpg")
-        }
-        .video03 {
-          @include unit(top,40);
-          @include unit(left,200);
-          right: 0;
-          z-index: 80;
-          @include unit(width,680);
-          @include unit(height,440);
-          background-image: url("../../img/main/video/96_g2ry.jpg")
-        }
-        .video04 {
-          @include unit(top,40);
-          @include unit(right,200);
-          z-index: 80;
-          @include unit(width,680);
-          @include unit(height,440);
-          background-image: url("../../img/main/video/95_g2ry.jpg")
-        }
-        .video05 {
-          @include unit(top,20);
-          @include unit(right,100);
-          z-index: 90;
-          @include unit(width,720);
-          @include unit(height,480);
-          background-image: url("../../img/main/video/93_e77u.jpg")
-        }
-        .video_play_btn {
+        background-position: center; 
+      }
+      .video01 {
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        @include unit(width,760);
+        @include unit(height,520);
+        background-image: url("../../img/main/video/97_xomc.jpg")
+      }
+      .video02 {
+        @include unit(top,20);
+        @include unit(right,200);
+        z-index: 90;
+        @include unit(width,720);
+        @include unit(height,480);
+        background-image: url("../../img/main/video/97_e08u.jpg")
+      }
+      .video03 {
+        @include unit(top,40);
+        @include unit(right,100);
+        z-index: 80;
+        @include unit(width,680);
+        @include unit(height,440);
+        background-image: url("../../img/main/video/96_g2ry.jpg")
+      }
+      .video04 {
+        @include unit(top,40);
+        @include unit(left,100);
+        z-index: 80;
+        @include unit(width,680);
+        @include unit(height,440);
+        background-image: url("../../img/main/video/95_g2ry.jpg")
+      }
+      .video05 {
+        @include unit(top,20);
+        @include unit(left,200);
+        z-index: 90;
+        @include unit(width,720);
+        @include unit(height,480);
+        background-image: url("../../img/main/video/93_e77u.jpg")
+      }
+      .video_play_btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        @include unit(width,100);
+        @include unit(height,100);
+        margin: auto;
+        border-radius: 100%;
+        @include border($w:3,$c:$color-orange);
+        background-color: $color-white-black;
+        transform: translate(-50%, -50%);
+        &::after {
+          content: "";
+          display: block;
           position: absolute;
           top: 50%;
-          left: 50%;
-          display: block;
-          @include unit(width,100);
-          @include unit(height,100);
-          margin: auto;
-          border-radius: 100%;
-          @include border($w:3,$c:$color-orange);
-          background-color: $color-white-black;
+          left: 54%;
+          border: solid $color-orange;
+          @include unit(border-radius,10);
+          @include border-width(32,0,32,40);
+          border-top-color: transparent;
+          border-bottom-color: transparent;
           transform: translate(-50%, -50%);
-          &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 54%;
-            border: solid $color-orange;
-            @include unit(border-radius,10);
-            @include border-width(32,0,32,40);
-            border-top-color: transparent;
-            border-bottom-color: transparent;
-            transform: translate(-50%, -50%);
-          }
         }
       }
     }
@@ -254,6 +259,54 @@
   }
 }
 @include tablet{
+  .video_list {
+    button {
+      display: none;
+    }
+    .video {
+      display: none;
+      @include unit(width,760);
+      @include unit(height,520);
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      &.action {
+        display: block;
+        z-index: 10;
+      }
+    }
+  }
+  .video_indicator {
+    display: block;
+    @include unit(width,420);
+    @include unit(height,50);
+    margin: auto;
+    @include unit(margin-top,40);
+    @include padding(0,20,0,20);
+    ul {
+      width: 100%;
+      height: 100%;
+      li {
+        float: left;
+        @include unit(width,50);
+        height: 100%;
+        border-radius: 100%;
+        @include unit(margin-right,20);
+        background-color: $color-light-gray;
+        &:last-child {
+          margin-right: 0;
+        }
+        &.action {
+          @include unit(width,100);
+          @include unit(border-radius,50);
+          background-color: $color-deep-gray;
+        }
+      }
+    }
+  }
+}
+@include laptop{
   .video_list {
     button {
       display: none;

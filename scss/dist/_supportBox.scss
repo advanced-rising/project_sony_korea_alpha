@@ -1,82 +1,89 @@
 /* =============== #supportBox ================= */
 #supportBox {
-  width: 100%;
-  height: auto;
+  @include size();
   margin: auto;
-  padding: 40px 0;
-  background-color: var(--back-lightblue);
+  @include padding(40,0,40,0);
+  background-color: $color-light-blue;
+  h2 {
+    width: 100%;
+    @include unit(height,80);
+    margin: auto;
+  }
+  ul {
+    @include unit(width,1020);
+    height: auto;
+    margin: auto;
+    @include unit(margin-top,40);
+    li {
+      float: left;
+      @include unit(width,500);
+      @include unit(height,120);
+      @include unit(padding,20);
+      &:nth-child(1) {
+        background-color: $color-orange;
+      }
+      &:nth-child(2) {
+        background-color: $color-deep-gray;
+      }
+      &:nth-child(3) {
+        background-color: $color-light-gray;
+      }
+      &:nth-child(4) {
+        background-color: $color-black;
+      }
+      &:nth-child(odd) {
+        margin-right: 20px;
+      }
+      &:nth-child(n + 3) {
+        margin-top: 20px;
+      }
+      a {
+        @include display-block();
+        @at-root .support_icon {
+          float: left;
+          @include unit(width,80);
+          @include unit(height,80);
+          background-image: url("../../img/main/icon/ico_guide.png");
+          background-repeat: no-repeat;
+          background-size: 250%;
+          @at-root .support_txt {
+            position: relative;
+            float: left;
+            @include unit-calc-minus(width,100%,80);
+            @include unit(height,80);
+            text-align: center;
+            @include unit(line-height,80);
+            @include unit(font-size,24);
+            font-weight: 700;
+            color: $color-white;
+            &::before {
+              position: absolute;
+              bottom: 45%;
+              @include unit(right,20);
+              transform: translateY(50%);
+              content: "";
+              @include unit(width,3);
+              @include unit(height,15);
+              transform: rotate(135deg);
+              background-color: $color-white;
+            }
+            &::after {
+              position: absolute;
+              bottom: 34%;
+              @include unit(right,20);
+              transform: translateY(50%);
+              content: "";
+              @include unit(width,3);
+              @include unit(height,15);
+              transform: rotate(45deg);
+              background-color: $color-white;
+            }
+          }
+        }
+      }
+    }
+  }
 }
-#supportBox h2 {
-  width: 100%;
-  height: 80px;
-  margin: auto;
-}
-#supportBox ul {
-  width: 1020px;
-  height: auto;
-  margin: auto;
-  margin-top: 40px;
-}
-#supportBox ul li {
-  float: left;
-  width: 500px;
-  height: 120px;
-  padding: 20px;
-  background-color: var(--color-color2);
-}
-#supportBox ul li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-#supportBox ul li:nth-child(1) { background-color: var(--main-color); }
-#supportBox ul li:nth-child(2) { background-color: var(--deep-gray01); }
-#supportBox ul li:nth-child(3) { background-color: var(--light-gray01); }
-#supportBox ul li:nth-child(4) { background-color: var(--back-black); }
-#supportBox ul li:nth-child(odd) { margin-right: 20px; }
-#supportBox ul li:nth-child(n + 3) { margin-top: 20px; }
-.support_icon {
-  float: left;
-  width: 80px;
-  height: 80px;
-  background-image: url("../../img/main/icon/ico_guide.png");
-  background-repeat: no-repeat;
-  background-size: 250%;
-}
-.support_txt {
-  position: relative;
-  float: left;
-  width: calc( 100% - 80px );
-  height: 80px;
-  text-align: center;
-  line-height: 80px;
-  font-size: 1.5rem;
-  color: var(--back-white);
-  font-weight: bold;
-}
-.support_txt::before {
-  position: absolute;
-  bottom: 45%;
-  right: 20px;
-  transform: translateY(50%);
-  content: "";
-  width: 3px;
-  height: 15px;
-  transform: rotate(135deg);
-  background-color: var(--back-white);
-}
-.support_txt::after {
-  position: absolute;
-  bottom: 34%;
-  right: 20px;
-  transform: translateY(50%);
-  content: "";
-  width: 3px;
-  height: 15px;
-  transform: rotate(45deg);
-  background-color: var(--back-white);
-}
-/* ========== .support_icon ============ */
 #supportBox li:nth-child(1) .support_icon {
   background-position: 0 0;
 }
@@ -90,65 +97,45 @@
   background-position: 110% 103%;
   filter: invert(99%) sepia(22%) saturate(2%) hue-rotate(105deg) brightness(106%) contrast(100%);
 }
-/* ========== // .support_icon ============ */
-/* =============== // #supportBox ============== */
 @include mobile-v{
-    /* =============== #supportBox ============== */
-  /* #supportBox {} */
   #supportBox ul {
-    width: 280px;
+    @include unit(width,280);
+    li {
+      clear: both;
+      float: left;
+      @include unit(width,280);
+      @include unit(height,120);
+      @include padding(20,5,20,5);
+      @include unit(margin-top,20);
+      &:first-child {margin-top: 0;}
+    }
   }
-  #supportBox ul li {
-    clear: both;
-    float: left;
-    width: 280px;
-    height: 120px;
-    padding: 20px 5px;
-    margin-top: 20px;
-    background-color: var(--color-color2);
-  }
-  #supportBox ul li:first-child {margin-top: 0;}
-  /* =============== // #supportBox ============== */
 }
 @include mobile-h{
-    /* =============== #supportBox ============== */
-  /* #supportBox {} */
   #supportBox ul {
-    width: 280px;
+    @include unit(width,280);
+    li {
+      clear: both;
+      float: left;
+      @include unit(width,280);
+      @include unit(height,120);
+      @include padding(20,5,20,5);
+      @include unit(margin-top,20);
+      &:first-child {margin-top: 0;}
+    }
   }
-  #supportBox ul li {
-    clear: both;
-    float: left;
-    width: 280px;
-    height: 120px;
-    padding: 20px 5px;
-    margin-top: 20px;
-    background-color: var(--color-color2);
-  }
-  #supportBox ul li:first-child {margin-top: 0;}
-  /* =============== // #supportBox ============== */
 }
 @include tablet{
-    /* =============== #supportBox ============== */
-  /* #supportBox {} */
   #supportBox ul {
-    width: 688px;
+    @include unit(width,688);
+    li {
+      @include unit(width,334);
+      @include unit(height,120);
+    }
   }
-  #supportBox ul li {
-    width: 334px;
-    height: 120px;
-  }
-  /* =============== // #supportBox ============== */
 }
-// @include laptop{}
-// @include pc1280{}
-// @include pc1440{}
-// @include pc1920{}
 @include pcfull{
-   /* =============== #supportBox ============== */
-   #supportBox {
-    width: 2560px;
+  #supportBox {
+    @include unit(width,2560);
   }
-  
-  /* =============== // #supportBox ============== */
 }
