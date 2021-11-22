@@ -193,23 +193,24 @@
       .siteNav {
         & > ul {
           @include size();
-          & > li {
-            @include size();
-          }
         }
       }
       .sns_site {
+        position: relative;
         @include unit(width,178);
         @include unit(height,112);
         margin: auto;
-        @include margin(20,0,20,0);
-        li {
-          @include unit(margin-top,20);
-          &:nth-child(-n + 3) {
-            margin-top: 0;
-          }
-          &:nth-child(3n) {
-            margin-right: 0;
+        @include unit(margin-top,20);
+        @include unit(margin-bottom,20);
+        ul {
+          li {
+            @include unit(margin-top,20);
+            &:nth-child(-n + 3) {
+              margin-top: 0;
+            }
+            &:nth-child(3n) {
+              margin-right: 0;
+            }
           }
         }
       }
@@ -230,18 +231,15 @@
       .siteNav {
         & > ul {
           @include size();
-          & > li {
-            @include size();
-          }
         }
       }
       .sns_site {
         @include unit(width,178);
         @include unit(height,112);
         margin: auto;
-        @include margin(20,0,20,0);
+        @include unit(margin-top,20);
+        @include unit(margin-bottom,20);
         ul {
-          margin: auto;
           li {
             @include unit(margin-top,20);
             &:nth-child(-n + 3) {
@@ -272,9 +270,6 @@
         & > ul {
           float: left;
           @include unit(width,376);
-          & > li {
-            @include size();
-          }
         }
       }
       .sns_site {
@@ -282,14 +277,17 @@
         @include unit(width,178);
         @include unit(height,112);
         margin: auto;
-        @include margin(20,0,20,0);
-        li {
-          @include unit(margin-top,20);
-          &:nth-child(-n + 3) {
-            margin-top: 0;
-          }
-          &:nth-child(3n) {
-            margin-right: 0;
+        @include unit(margin-top,20);
+        @include unit(margin-bottom,20);
+        ul {
+          li {
+            @include unit(margin-top,20);
+            &:nth-child(-n + 3) {
+              margin-top: 0;
+            }
+            &:nth-child(3n) {
+              margin-right: 0;
+            }
           }
         }
       }

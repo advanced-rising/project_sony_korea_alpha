@@ -192,7 +192,7 @@
         @include unit(width,700);
         ul {
           li {
-            @include unit(width,100);
+            @include unit(width,160);
             .view_indicator span {
               display: none;
             }
