@@ -136,18 +136,25 @@ h1 a {
   display: none;
 }
 .gnb {
-  float: left;
+  display: block;
   width: auto;
   height: 60px;
   height: 3.75rem;
+  padding-top: 10px;
+  padding-top: 0.625rem;
   margin-top: 10px;
   margin-top: 0.625rem;
+  margin-right: 200px;
+  margin-right: 12.5rem;
+  text-align: center;
 }
 .gnb > ul {
+  display: inline-block;
   width: auto;
   height: 100%;
 }
 .gnb > ul > li {
+  position: relative;
   float: left;
   width: 90px;
   width: 5.625rem;
@@ -173,14 +180,19 @@ h1 a {
 }
 .sub_menu {
   display: none;
-  width: 100%;
-  height: auto;
+  position: absolute;
+  top: 50px;
+  top: 3.125rem;
+  left: -20px;
+  left: -1.25rem;
 }
 .sub_menu li {
-  width: 300px;
-  width: 18.75rem;
+  width: auto;
+  min-width: 140px;
+  min-width: 8.75rem;
   height: auto;
   text-align: start;
+  white-space: nowrap;
   padding: 5px 20px 5px 20px;
   padding: 0.3125rem 1.25rem 0.3125rem 1.25rem;
   color: #ffffff;
@@ -210,7 +222,9 @@ h1 a {
 }
 
 .unb {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: auto;
   height: 40px;
   height: 2.5rem;
@@ -906,32 +920,9 @@ h1 a {
     height: auto;
   }
 }
-@media all and (min-width: 1280px) and (max-width: 1439px) {
-  .gnb {
-    margin-left: 80px;
-    margin-left: 6.25vw;
-  }
-}
-@media all and (min-width: 1440px) and (max-width: 1919px) {
-  .gnb {
-    margin-left: 200px;
-    margin-left: 13.8888888889vw;
-  }
-}
-@media all and (min-width: 1920px) and (max-width: 2559px) {
-  .gnb {
-    margin-left: 450px;
-    margin-left: 23.4375vw;
-  }
-}
 @media all and (min-width: 2560px) {
   .head_wrap {
     width: 2560px;
-  }
-
-  .gnb {
-    margin-left: 750px;
-    margin-left: 29.296875vw;
   }
 }
 /* ============= // #headBox ============== */
@@ -988,7 +979,8 @@ h1 a {
   position: absolute;
   bottom: 200px;
   bottom: 12.5rem;
-  left: 0;
+  left: 10px;
+  left: 0.5208333333vw;
   width: 80%;
   height: auto;
   margin-top: 80px;
@@ -1063,8 +1055,8 @@ h1 a {
     height: 35.5rem;
   }
   .view_area .viewBox_img dl {
-    top: 200px;
-    top: 12.5rem;
+    top: 20px;
+    top: 1.25rem;
   }
   .view_area .viewBox_img dl dt {
     font-size: 24px;
@@ -1074,15 +1066,16 @@ h1 a {
     font-size: 14px;
     font-size: 0.875rem;
   }
-  .view_area .view_indicator {
+
+  #viewBox .view_indicator {
     width: 220px;
     width: 13.75rem;
   }
-  .view_area .view_indicator ul li {
+  #viewBox .view_indicator ul li {
     width: 40px;
     width: 2.5rem;
   }
-  .view_area .view_indicator ul li span {
+  #viewBox .view_indicator ul li span {
     display: none;
   }
 }
@@ -1092,8 +1085,8 @@ h1 a {
     height: 35.5rem;
   }
   .view_area .viewBox_img dl {
-    top: 200px;
-    top: 12.5rem;
+    top: 100px;
+    top: 6.25rem;
   }
   .view_area .viewBox_img dl dt {
     font-size: 24px;
@@ -1103,15 +1096,16 @@ h1 a {
     font-size: 14px;
     font-size: 0.875rem;
   }
-  .view_area .view_indicator {
+
+  #viewBox .view_indicator {
     width: 300px;
     width: 18.75rem;
   }
-  .view_area .view_indicator ul li {
+  #viewBox .view_indicator ul li {
     width: 60px;
     width: 3.75rem;
   }
-  .view_area .view_indicator ul li span {
+  #viewBox .view_indicator ul li span {
     display: none;
   }
 }
@@ -1132,15 +1126,16 @@ h1 a {
     font-size: 24px;
     font-size: 1.5rem;
   }
-  .view_area .view_indicator {
+
+  #viewBox .view_indicator {
     width: 700px;
     width: 43.75rem;
   }
-  .view_area .view_indicator ul li {
+  #viewBox .view_indicator ul li {
     width: 160px;
     width: 10rem;
   }
-  .view_area .view_indicator ul li .view_indicator span {
+  #viewBox .view_indicator ul li span {
     display: none;
   }
 }
@@ -3146,6 +3141,7 @@ h1 a {
   height: auto;
 }
 .siteNav {
+  position: relative;
   width: 100%;
   height: auto;
 }
@@ -3218,7 +3214,7 @@ h1 a {
   line-height: 25px;
   line-height: 1.5625rem;
 }
-.family_site:hover .sub_family {
+.family_site .sub_family.active {
   display: block;
 }
 
@@ -3453,11 +3449,16 @@ h1 a {
     margin-bottom: 20px;
     margin-bottom: 1.25rem;
   }
-  .foot_area .other_site .siteNav > ul {
+  .siteNav > ul {
     float: left;
     width: 376px;
     width: 23.5rem;
   }
+  .siteNav .sub_family {
+    top: calc(-100% + -276px);
+    top: calc(-100% + -17.25rem);
+  }
+
   .foot_area .other_site .sns_site {
     float: right;
     width: 178px;
@@ -3498,15 +3499,16 @@ h1 a {
     margin-bottom: 20px;
     margin-bottom: 1.25rem;
   }
-  .foot_area .other_site .siteNav > ul {
+  .siteNav > ul {
     float: left;
     width: 376px;
     width: 23.5rem;
   }
-  .foot_area .other_site .siteNav > ul > li {
-    width: 100%;
-    height: auto;
+  .siteNav .sub_family {
+    top: calc(-100% + -276px);
+    top: calc(-100% + -17.25rem);
   }
+
   .foot_area .other_site .sns_site {
     float: right;
     width: 178px;
@@ -3532,8 +3534,6 @@ h1 a {
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1439px) {
-  /* =============== #footBox ============== */
-  /* #footBox {} */
   .company_info {
     float: left;
   }
@@ -3542,10 +3542,7 @@ h1 a {
     float: right;
   }
 }
-/* =============== // #footBox =============== */
 @media all and (min-width: 1440px) and (max-width: 1919px) {
-  /* =============== #footBox ============== */
-  /* #footBox {} */
   .foot_area {
     width: 1140px;
   }
@@ -3558,10 +3555,7 @@ h1 a {
     float: right;
   }
 }
-/* =============== // #footBox ============== */
 @media all and (min-width: 1920px) and (max-width: 2559px) {
-  /* =============== #footBox ============== */
-  /* #footBox {} */
   .foot_area {
     width: 1140px;
   }
@@ -3574,10 +3568,7 @@ h1 a {
     float: right;
   }
 }
-/* =============== // #footBox ============== */
 @media all and (min-width: 2560px) {
-  /* =============== #footBox ============== */
-  /* #footBox {} */
   .foot_wrap {
     width: 2560px;
     margin: auto;

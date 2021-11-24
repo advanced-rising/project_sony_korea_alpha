@@ -10,6 +10,7 @@
       @include unit(width,376);
       height: auto;
       @at-root .siteNav {
+        position: relative;
         @include size();
         > ul {
           width: 100%;
@@ -63,8 +64,10 @@
                   @include unit(line-height,25);
                 }
               }
+              &.active {
+                display: block;
+              }
             }
-            &:hover .sub_family { display: block;}
           }
           .global_site button {
             width: 100%;
@@ -266,10 +269,13 @@
       @include size();
       margin: auto;
       @include unit(margin-bottom,20);
-      .siteNav {
+      @at-root .siteNav {
         & > ul {
           float: left;
           @include unit(width,376);
+        }
+        .sub_family {
+          @include unit-calc-plus(top,-100%,-276);
         }
       }
       .sns_site {
@@ -306,13 +312,13 @@
       @include size();
       margin: auto;
       @include unit(margin-bottom,20);
-      .siteNav {
+      @at-root .siteNav {
         & > ul {
           float: left;
           @include unit(width,376);
-          & > li {
-            @include size();
-          }
+        }
+        .sub_family {
+          @include unit-calc-plus(top,-100%,-276);
         }
       }
       .sns_site {
@@ -338,8 +344,6 @@
   }
 }
 @include pc1280{
-    /* =============== #footBox ============== */
-  /* #footBox {} */
   .company_info {
     float: left;
   }
@@ -347,24 +351,7 @@
     float: right;
   }
 }
-  /* =============== // #footBox =============== */
 @include pc1440{
-    /* =============== #footBox ============== */
-   /* #footBox {} */
-   .foot_area {
-    width: 1140px;
-  }
-  .company_info {
-    float: left;
-  }
-  .other_site {
-    float: right;
-  }
-}
-  /* =============== // #footBox ============== */
-@include pc1920{
-    /* =============== #footBox ============== */
-  /* #footBox {} */
   .foot_area {
     width: 1140px;
   }
@@ -375,10 +362,18 @@
     float: right;
   }
 }
-  /* =============== // #footBox ============== */
+@include pc1920{
+  .foot_area {
+    width: 1140px;
+  }
+  .company_info {
+    float: left;
+  }
+  .other_site {
+    float: right;
+  }
+}
 @include pcfull{
-    /* =============== #footBox ============== */
-  /* #footBox {} */
   .foot_wrap {
     width: 2560px;
     margin: auto;

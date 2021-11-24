@@ -34,7 +34,8 @@
         dl {
           position: absolute;
           @include unit(bottom,200);
-          left: 0;
+          @include vw(left,10,1920);
+          // left: 0;
           width: 80%;
           height: auto;
           @include unit(margin-top,80);
@@ -96,7 +97,7 @@
     @at-root .view_area {
       .viewBox_img {
         dl {
-          @include unit(top,200);
+          @include unit(top,20);
           dt {
             @include unit(font-size,24);
           }
@@ -105,14 +106,14 @@
           }
         }
       }
-      .view_indicator {
-        @include unit(width,220);
-        ul {
-          li {
-            @include unit(width,40);
-            span {
-              display: none;
-            }
+    }
+    .view_indicator {
+      @include unit(width,220);
+      ul {
+        li {
+          @include unit(width,40);
+          span {
+            display: none;
           }
         }
       }
@@ -125,7 +126,7 @@
     @at-root .view_area {
       .viewBox_img {
         dl {
-          @include unit(top,200);
+          @include unit(top,100);
           dt {
             @include unit(font-size,24);
           }
@@ -134,18 +135,18 @@
           }
         }
       }
-      .view_indicator {
-        @include unit(width,300);
-        ul {
-          li {
-            @include unit(width,60);
-            span {
-              display: none;
-            }
+    }
+    .view_indicator {
+      @include unit(width,300);
+      ul {
+        li {
+          @include unit(width,60);
+          span {
+            display: none;
           }
         }
-      }  
-    }
+      }
+    } 
   }
 }
 @include tablet{
@@ -161,14 +162,14 @@
           @include unit(font-size,24);
         }
       }
-      .view_indicator {
-        @include unit(width,700);
-        ul {
-          li {
-            @include unit(width,160);
-            .view_indicator span {
-              display: none;
-            }
+    }
+    .view_indicator {
+      @include unit(width,700);
+      ul {
+        li {
+          @include unit(width,160);
+          span {
+            display: none;
           }
         }
       }

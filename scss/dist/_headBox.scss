@@ -35,14 +35,19 @@ h1 {
     display: none;
   }
   @at-root .gnb {
-    float: left;
+    display: block;
     width: auto;
     @include unit(height,60);
+    @include unit(padding-top,10);
     @include unit(margin-top,10);
+    @include unit(margin-right,200);
+    text-align: center;
     > ul {
+      display: inline-block;
       width: auto;
       height: 100%;
       > li {
+        position: relative;
         float: left;
         @include unit(width,90);
         height: 100%;
@@ -62,11 +67,15 @@ h1 {
         }
         @at-root .sub_menu {
           display: none;
-          @include size();
+          position: absolute;
+          @include unit(top,50);
+          @include unit(left,-20);
           li {
-            @include unit(width,300);
+            width: auto;
+            @include unit(min-width,140);
             height: auto;
             text-align: start;
+            white-space: nowrap;
             @include padding(5,20,5,20);
             color: $color-white;
             background-color: $color-light-black;
@@ -87,7 +96,9 @@ h1 {
     }
   }
   @at-root .unb {
-    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
     width: auto;
     @include unit(height,40);
     @include unit(margin-top,10);
@@ -567,26 +578,8 @@ h1 {
     @include size($w:90%);
   }
 }
-@include pc1280{
-  .gnb {
-    @include vw(margin-left,80,1280);
-  }
-}
-@include pc1440{
-  .gnb {
-    @include vw(margin-left,200,1440);
-  }
-}
-@include pc1920{
-  .gnb {
-    @include vw(margin-left,450,1920);
-  }
-}
 @include pcfull{
   .head_wrap {
     width: 2560px;
-  }
-  .gnb {
-    @include vw(margin-left,750,2560);
   }
 }
