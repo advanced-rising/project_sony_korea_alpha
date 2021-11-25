@@ -3,12 +3,8 @@
 
 @import "../common/variable";
 @import "../common/mixin";
-
 /* ======== common design ================= */
-#wrap {
-	@include size();
-	margin: auto;
-}
+
 /* ========// common design =============== */
 /* ============= #headBox ================= */
 @import "../dist/headBox";

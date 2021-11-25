@@ -872,10 +872,11 @@ h1 a {
   font-size: 18px;
   font-size: 1.125rem;
 }
-#viewBox .magazine {
+
+.magazine {
   background-image: url("../../img/magazine/bg_magazine.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: center;
   background-size: cover;
 }
 
@@ -904,6 +905,328 @@ h1 a {
   width: 11.25rem;
   height: 120px;
   height: 7.5rem;
+}
+.magazine_nav ul li div {
+  width: 100%;
+  height: 100%;
+}
+.magazine_nav_icon {
+  display: block;
+  width: 80px;
+  width: 5rem;
+  height: 80px;
+  height: 5rem;
+  margin: auto;
+  border-radius: 50%;
+  border: 3px solid #e75300;
+  border: 0.1875rem solid #e75300;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  background-position: 100% 100%;
+}
+
+.magazine_nav_txt {
+  display: block;
+  margin: auto;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 40px;
+  line-height: 2.5rem;
+}
+
+.magazine_nav ul li:nth-child(1) .magazine_nav_icon {
+  background-image: url("../../img/magazine/ico_cate_all.png");
+}
+.magazine_nav ul li:nth-child(2) .magazine_nav_icon {
+  background-image: url("../../img/magazine/ico_cate_news.png");
+}
+.magazine_nav ul li:nth-child(3) .magazine_nav_icon {
+  background-image: url("../../img/magazine/ico_cate_video.png");
+  background-position: 102% 100%;
+}
+.magazine_nav ul li:nth-child(4) .magazine_nav_icon {
+  background-image: url("../../img/magazine/ico_cate_knowhow.png");
+  background-position: 101% 100%;
+}
+.magazine_nav .magazine_search {
+  position: relative;
+  width: 720px;
+  width: 45rem;
+  height: 60px;
+  height: 3.75rem;
+  margin-top: 40px;
+  margin-top: 2.5rem;
+  background-color: #6f6f75;
+}
+#select_product {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  font-size: 1.125rem;
+  padding-left: 20px;
+  padding-left: 1.25rem;
+  appearance: none;
+  box-sizing: border-box;
+  border: 1px solid #333335;
+  border: 0.0625rem solid #333335;
+}
+
+.magazine_nav .magazine_search .triangle_icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  right: 2.5rem;
+  border: solid #03010f;
+  border-width: 12px 8px 0px 8px;
+  border-width: 0.75rem 0.5rem 0rem 0.5rem;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  transform: translateY(-50%);
+}
+
+.magazine_list {
+  width: 1200px;
+  width: 75rem;
+  height: auto;
+  margin: auto;
+  margin-top: 200px;
+  margin-top: 12.5rem;
+  margin-bottom: 80px;
+  margin-bottom: 5rem;
+}
+.magazine_list ul {
+  width: 100%;
+  height: auto;
+}
+.magazine_list ul li {
+  position: relative;
+  float: left;
+  weight: 380px;
+  weight: 23.75rem;
+  height: 500px;
+  height: 31.25rem;
+  margin-right: 40px;
+  margin-right: 2.5rem;
+  margin-top: 40px;
+  margin-top: 2.5rem;
+}
+.magazine_list ul li:nth-child(4n) {
+  margin-right: 0;
+}
+.magazine_list ul li:nth-child(-n+4) {
+  margin-top: 0;
+}
+.magazine_img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 320px;
+  height: 20rem;
+  background-color: #6f6f75;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.magazine_img a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.magazine_img a .magazine_list_icon {
+  position: absolute;
+  top: 20px;
+  top: 1.25rem;
+  left: 20px;
+  left: 1.25rem;
+  width: 80px;
+  width: 5rem;
+  height: 80px;
+  height: 5rem;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  border: 0.1875rem solid #ffffff;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  background-position: 0 0;
+}
+.magazine_img a .list_post {
+  background-image: url("../../img/magazine/ico_cate_news.png");
+}
+.magazine_img a .list_video {
+  background-image: url("../../img/magazine/ico_cate_video.png");
+}
+.magazine_img a .list_knowhow {
+  background-image: url("../../img/magazine/ico_cate_knowhow.png");
+}
+
+.magazine_list ul li:nth-child(1) .magazine_img {
+  background-image: url("../../img/magazine/210628_news_alpha.jpg");
+}
+.magazine_list ul li:nth-child(2) .magazine_img {
+  background-image: url("../../img/magazine/210422_news_alpha.jpg");
+}
+.magazine_list ul li:nth-child(3) .magazine_img {
+  background-image: url("../../img/magazine/210305_news_alpha.jpg");
+}
+.magazine_list ul li:nth-child(4) .magazine_img {
+  background-image: url("../../img/magazine/201229_news_alpha.jpg");
+}
+.magazine_list ul li:nth-child(5) .magazine_img {
+  background-image: url("../../img/magazine/201211_news_alpha.jpg");
+}
+.magazine_list ul li:nth-child(6) .magazine_img {
+  background-image: url("../../img/magazine/201112_08_thumb.jpg");
+}
+.magazine_list ul li:nth-child(7) .magazine_img {
+  background-image: url("../../img/magazine/201112_07_thumb.jpg");
+}
+.magazine_list ul li:nth-child(8) .magazine_img {
+  background-image: url("../../img/magazine/201112_06_thumb.jpg");
+}
+.magazine_list ul li:nth-child(9) .magazine_img {
+  background-image: url("../../img/magazine/201112_05_thumb.jpg");
+}
+.magazine_list ul li:nth-child(10) .magazine_img {
+  background-image: url("../../img/magazine/201112_04_thumb.jpg");
+}
+.magazine_list ul li:nth-child(11) .magazine_img {
+  background-image: url("../../img/magazine/201112_03_thumb.jpg");
+}
+.magazine_list ul li:nth-child(12) .magazine_img {
+  background-image: url("../../img/magazine/201112_02_thumb.jpg");
+}
+.magazine_list ul li .magazine_label {
+  width: 100%;
+  height: 40px;
+  height: 2.5rem;
+  margin-top: 10px;
+  margin-top: 0.625rem;
+  padding: 10px;
+  padding: 0.625rem;
+}
+.magazine_list ul li .magazine_label span {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 5px 10px 5px 10px;
+  padding: 0.3125rem 0.625rem 0.3125rem 0.625rem;
+  color: #ffffff;
+  background-color: #03010f;
+}
+.magazine_list ul li .magazine_text {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  padding: 0.625rem;
+}
+.magazine_list ul li .magazine_text dl {
+  width: 100%;
+  height: auto;
+}
+.magazine_list ul li .magazine_text dl dt {
+  width: 100%;
+  height: auto;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+.magazine_list ul li .magazine_text dl dd {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-top: 0.625rem;
+}
+.magazine_list ul li .magazine_text .magazine_days {
+  position: absolute;
+  bottom: 10px;
+  bottom: 0.625rem;
+  left: 10px;
+  left: 0.625rem;
+  weight: 40px;
+  weight: 2.5rem;
+  height: 20px;
+  height: 1.25rem;
+}
+
+.magazine_list_btn {
+  weight: 722px;
+  weight: 45.125rem;
+  min-width: 720px;
+  min-width: 45rem;
+  height: auto;
+  margin: auto;
+  text-align: center;
+}
+.magazine_list_btn ul {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+}
+.magazine_list_btn ul li {
+  float: left;
+  width: 40px;
+  width: 2.5rem;
+  height: 40px;
+  height: 2.5rem;
+  line-height: 40px;
+  line-height: 2.5rem;
+  text-align: center;
+  background-color: #ffffff;
+}
+.magazine_list_btn ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+.magazine_list_btn ul li:first-child {
+  margin-right: 40px;
+  margin-right: 2.5rem;
+}
+.magazine_list_btn ul li:last-child {
+  margin-left: 40px;
+  margin-left: 2.5rem;
+}
+.magazine_list_btn ul li .prev_btn {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.magazine_list_btn ul li .prev_btn ::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  border: solid #e75300;
+  border-width: 12px 18px 12px 0px;
+  border-width: 0.75rem 1.125rem 0.75rem 0rem;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.magazine_list_btn ul li .prev_btn .next_btn {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.magazine_list_btn ul li .prev_btn .next_btn ::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  border: solid #e75300;
+  border-width: 12px 0px 12px 18px;
+  border-width: 0.75rem 0rem 0.75rem 1.125rem;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
 }
 
 #footBox {

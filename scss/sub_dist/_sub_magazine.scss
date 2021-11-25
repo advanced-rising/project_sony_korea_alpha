@@ -1,0 +1,285 @@
+#viewBox {
+  width: 100%;
+  @include unit(height,680);
+  @include unit(padding-top,300);
+  @include text-shadow(0,0,8,rgb(0 0 0 / 80%));
+  color: $color-white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  h2 {
+    @include unit(width,800);
+    height: auto;
+    margin: auto;
+    @include unit(font-size,54);
+    text-align: center;
+  }
+  p {
+    @include unit(width,800);
+    height: auto;
+    margin: auto;
+    @include unit(margin-top,20);
+    text-align: center;
+    @include unit(font-size,18);
+  }
+}
+.magazine {
+  @include img("magazine/bg_magazine.jpg",$p:center);
+}
+#magazineBox {
+  width: 100%;
+  @include unit(height,2600);
+  @include unit(padding-top,80);
+  background-color: $color-white;
+  @at-root .magazine_nav {
+    @include unit(width,720);
+    @include unit(height,120);
+    margin: auto;
+    ul {
+      width: 100%;
+      height: 100%;
+      li {
+        float: left;
+        @include unit(width,180);
+        @include unit(height,120);
+        div {
+          width: 100%;
+          height: 100%;
+          @at-root .magazine_nav_icon {
+            display: block;
+            @include unit(width,80);
+            @include unit(height,80);
+            margin: auto;
+            border-radius: 50%;
+            @include border($w:3,$c:$color-orange);
+            background-color: $color-white;
+            background-repeat: no-repeat;
+            background-size: 300%;
+            background-position: 100% 100%;
+          }
+          @at-root .magazine_nav_txt {
+            display: block;
+            margin: auto;
+            @include unit(font-size,18);
+            font-weight: 700;
+            text-align: center;
+            @include unit(line-height,40);
+          }
+        }
+        &:nth-child(1) .magazine_nav_icon {
+          background-image: url("../../img/magazine/ico_cate_all.png");
+        }
+        &:nth-child(2) .magazine_nav_icon {
+          background-image: url("../../img/magazine/ico_cate_news.png");
+        }
+        &:nth-child(3) .magazine_nav_icon {
+          background-image: url("../../img/magazine/ico_cate_video.png");
+          background-position: 102% 100%;
+        }
+        &:nth-child(4) .magazine_nav_icon {
+          background-image: url("../../img/magazine/ico_cate_knowhow.png");
+          background-position: 101% 100%;
+        }
+      }
+    }
+    .magazine_search {
+      position: relative;
+      @include unit(width,720);
+      @include unit(height,60);
+      @include unit(margin-top,40);
+      background-color: $color-light-gray;
+      @at-root #select_product {
+        width: 100%;
+        height: 100%;
+        @include unit(font-size,18);
+        @include unit(padding-left,20);
+        appearance: none;
+        box-sizing: border-box;
+        @include border($w:1,$c:$color-deep-gray);
+      }
+      .triangle_icon {
+        display: block;
+        position: absolute;
+        top: 50%;
+        @include unit(right,40);
+        border: solid $color-black;
+        @include border-width(12,8,0,8);
+        border-left-color: transparent;
+        border-right-color: transparent;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  @at-root .magazine_list {
+    @include unit(width,1200);
+    height: auto;
+    margin: auto;
+    @include unit(margin-top,200);
+    @include unit(margin-bottom,80);
+    ul {
+      @include size();
+      li {
+        position: relative;
+        float: left;
+        @include unit(weight,380);
+        @include unit(height,500);
+        @include unit(margin-right,40);
+        @include unit(margin-top,40);
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+        &:nth-child(-n+4) {
+          margin-top: 0;
+        }
+        @at-root .magazine_img {
+          position: relative;
+          top: 0;
+          left: 0;
+          width: 100%;
+          @include unit(height,320);
+          background-color: $color-light-gray;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          a {
+            @include display-block();
+            .magazine_list_icon {
+              position: absolute;
+              @include unit(top,20);
+              @include unit(left,20);
+              @include unit(width,80);
+              @include unit(height,80);
+              border-radius: 50%;
+              @include border($w:3,$c:$color-white);
+              background-color: transparent;
+              background-repeat: no-repeat;
+              background-size: 300%;
+              background-position: 0 0;
+            }
+            .list_post {
+              background-image: url("../../img/magazine/ico_cate_news.png");
+            }
+            .list_video {
+              background-image: url("../../img/magazine/ico_cate_video.png");
+            }
+            .list_knowhow {
+              background-image: url("../../img/magazine/ico_cate_knowhow.png");
+            }
+          }
+        }
+        &:nth-child(1) .magazine_img { background-image: url("../../img/magazine/210628_news_alpha.jpg"); }
+        &:nth-child(2) .magazine_img { background-image: url("../../img/magazine/210422_news_alpha.jpg"); }
+        &:nth-child(3) .magazine_img { background-image: url("../../img/magazine/210305_news_alpha.jpg"); }
+        &:nth-child(4) .magazine_img { background-image: url("../../img/magazine/201229_news_alpha.jpg"); }
+        &:nth-child(5) .magazine_img { background-image: url("../../img/magazine/201211_news_alpha.jpg"); }
+        &:nth-child(6) .magazine_img { background-image: url("../../img/magazine/201112_08_thumb.jpg"); }
+        &:nth-child(7) .magazine_img { background-image: url("../../img/magazine/201112_07_thumb.jpg"); }
+        &:nth-child(8) .magazine_img { background-image: url("../../img/magazine/201112_06_thumb.jpg"); }
+        &:nth-child(9) .magazine_img { background-image: url("../../img/magazine/201112_05_thumb.jpg"); }
+        &:nth-child(10) .magazine_img { background-image: url("../../img/magazine/201112_04_thumb.jpg"); }
+        &:nth-child(11) .magazine_img { background-image: url("../../img/magazine/201112_03_thumb.jpg"); }
+        &:nth-child(12) .magazine_img { background-image: url("../../img/magazine/201112_02_thumb.jpg"); }
+        // ==================================================================
+        .magazine_label {
+          width: 100%;
+          @include unit(height,40);
+          @include unit(margin-top,10);
+          @include unit(padding,10);
+          span {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            @include padding(5,10,5,10);
+            color: $color-white;
+            background-color: $color-black;
+          }
+        }
+        .magazine_text {
+          @include size();
+          @include unit(padding,10);
+          dl {
+            @include size();
+            dt {
+              @include size();
+              @include unit(font-size,18);
+            }
+            dd {
+              @include size();
+              @include unit(margin-top,10);
+            }
+          }
+          .magazine_days {
+            position: absolute;
+            @include unit(bottom,10);
+            @include unit(left,10);
+            @include unit(weight,40);
+            @include unit(height,20);
+          }
+        }
+      }
+    }
+  }
+  @at-root .magazine_list_btn {
+    @include unit(weight,722);
+    @include unit(min-width,720);
+    height: auto;
+    margin: auto;
+    text-align: center;
+    ul {
+      display: inline-block;
+      width: auto;
+      height: 100%;
+      li {
+        float: left;
+        @include unit(width,40);
+        @include unit(height,40);
+        @include unit(line-height,40);
+        text-align: center;
+        background-color: $color-white;
+        a {
+          @include display-block();
+          text-decoration: none;
+        }
+        &:first-child {
+          @include unit(margin-right,40);
+        }
+        &:last-child {
+          @include unit(margin-left,40);
+        }
+        .prev_btn {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          ::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            border: solid $color-orange;
+            @include border-width(12,18,12,0);
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+          }
+          .next_btn {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            ::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              display: block;
+              border: solid $color-orange;
+              @include border-width(12,0,12,18);
+              border-top-color: transparent;
+              border-bottom-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+}
