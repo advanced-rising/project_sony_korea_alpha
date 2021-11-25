@@ -1,4 +1,9 @@
 /* common.css */
+/* variable.css */
+:root {
+  font-size: 16px;
+}
+
 /* IR: image replace */
 .blind_wrap a > span,
 .blind_wrap button > span,
@@ -50,6 +55,103 @@
   padding-top: 20px;
   padding-bottom: 10px;
   background-color: #ddd;
+}
+
+/* common design.scss */
+#container {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.content_title {
+  width: 80%;
+  height: auto;
+  margin: auto;
+}
+
+.content_title > h3 {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  padding-left: 60px;
+  padding-left: 3.75rem;
+  padding-right: 20px;
+  padding-right: 1.25rem;
+  font-size: 48px;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.content_icon::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 20px;
+  left: 1.25rem;
+  width: 20px;
+  width: 1.25rem;
+  height: 40px;
+  height: 2.5rem;
+  background-color: #e75300;
+  transform: translateY(-50%);
+}
+
+.content_icon::after {
+  content: "";
+  position: absolute;
+  bottom: 13px;
+  bottom: 0.8125rem;
+  width: 10px;
+  width: 0.625rem;
+  height: 10px;
+  height: 0.625rem;
+  margin-left: 10px;
+  margin-left: 0.625rem;
+  border-radius: 50%;
+  background-color: #e75300;
+}
+
+.content_title p {
+  width: 90%;
+  height: auto;
+  padding-left: 20px;
+  padding-left: 1.25rem;
+  padding-right: 20px;
+  padding-right: 1.25rem;
+  font-size: 22px;
+  font-size: 1.375rem;
+  margin-left: 40px;
+  margin-left: 2.5rem;
+}
+
+.header_dot {
+  text-align: center;
+  font-size: 48px;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.header_dot > span {
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+.header_dot > span::after {
+  position: absolute;
+  bottom: 13px;
+  bottom: 0.8125rem;
+  content: "";
+  width: 10px;
+  width: 0.625rem;
+  height: 10px;
+  height: 0.625rem;
+  margin-left: 5px;
+  margin-left: 0.3125rem;
+  border-radius: 50%;
+  background-color: #e75300;
 }
 
 /*# sourceMappingURL=common.css.map */

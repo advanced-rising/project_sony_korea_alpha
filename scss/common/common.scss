@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* common.css */
-
+@import "./variable";
+@import "./mixin";
 /* IR: image replace */
 .blind_wrap a > span,
 .blind_wrap button > span,
@@ -31,4 +32,73 @@
     bottom:10px;
   }
   background-color: #ddd;
+}
+// common design.scss
+/* common design.scss */
+#container {
+  position: relative;
+  top: 0; left: 0;
+}
+.content_title {
+  width: 80%;
+  height: auto;
+  margin: auto;
+}
+.content_title > h3 {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  @include unit(padding-left,60);
+  @include unit(padding-right,20);
+  @include unit(font-size,48);
+  text-transform: uppercase;
+}
+.content_icon::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  @include unit(left,20);
+  @include unit(width,20);
+  @include unit(height,40);
+  background-color: $color-orange;
+  transform: translateY(-50%);
+}
+.content_icon::after {
+  content: "";
+  position: absolute;
+  @include unit(bottom,13);
+  @include unit(width,10);
+  @include unit(height,10);
+  @include unit(margin-left,10);
+  border-radius: 50%;
+  background-color: $color-orange;
+}
+.content_title p {
+  width: 90%;
+  height: auto;
+  @include unit(padding-left,20);
+  @include unit(padding-right,20);
+  @include unit(font-size,22);
+  @include unit(margin-left,40);
+}
+.header_dot {
+  text-align: center;
+  @include unit(font-size,48);
+  text-transform: uppercase;
+}
+.header_dot > span {
+  position: relative;
+  width: auto;
+  height: auto;
+}
+.header_dot > span::after {
+  position: absolute;
+  @include unit(bottom,13);
+  content: "";
+  @include unit(width,10);
+  @include unit(height,10);
+  @include unit(margin-left,5);
+  border-radius: 50%;
+  background-color: $color-orange;
 }
