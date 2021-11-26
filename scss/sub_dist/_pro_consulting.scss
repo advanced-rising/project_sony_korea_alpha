@@ -1,0 +1,160 @@
+#viewBox {
+  width: 100%;
+  @include unit(height,680);
+  @include unit(padding-top,300);
+  @include text-shadow(0,0,8,rgba(0 0 0 / 80%));
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color-white;
+  h2 {
+    @include unit(width,800);
+    height: auto;
+    margin: auto;
+    text-align: center;
+    @include unit(font-size,54px);
+  }
+  p {
+    @include unit(width,800);
+    height: auto;
+    margin: auto;
+    @include unit(margin-top,20);
+    @include unit(font-size,18);
+    text-align: center;
+  }
+}
+.counsulting {
+  @include img("proconsulting/bg_pro_sips.jpg");
+}
+.counsultingServiceBox {
+  @include size();
+  .consultingService_list {
+    @include unit(width,1240);
+    height: auto;
+    margin: auto;
+    h3 {
+      width: 100%;
+      @include unit(height,40);
+      margin: auto;
+      @include unit(margin-top,80);
+      @include unit(margin-bottom,40);
+      text-align: center;
+    }
+    ul {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      li {
+        float: left;
+        @include unit(width,400);
+        @include unit(height,120);
+        @include unit(margin-top,20);
+        @include unit(margin-right,20);
+        @include unit(border-radius,5);
+        @include outline($c:$color-black);
+        background-color: $color-white;
+        &:nth-child(-n + 3) {
+          margin-top: 0;
+        }
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+        @at-root .counsulting_services {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          @include padding(10,20,10,20);
+          @include unit(font-size,12);
+          span {
+            &:nth-child(-n+2) {
+              float: left;
+              display: block;
+              @include size();
+              color: $color-orange;
+            }
+            &:nth-child(1) {
+              @include size();
+              @include unit(margin-top,5);
+              @include unit(font-size,16);
+              font-weight: 700;
+            }
+            &:nth-child(2) {
+              @include unit(width,200);
+              @include unit(height,30);
+              @include unit(font-size,16);
+              color: $color-black;
+            }
+          }
+          .service_icon {
+            position: absolute;
+            top: 50%;
+            @include unit(right,40);
+            @include unit(width,80);
+            @include unit(height,80);
+            border-radius: 50%;
+            @include img("proconsulting/ico_sips_new.png",$s:380% auto);
+            transform: translateY(-50%);
+          }
+        }
+        &:nth-child(1) .service_icon { background-position: left top;}
+        &:nth-child(2) .service_icon { background-position: center top;}
+        &:nth-child(3) .service_icon { background-position: right top;}
+        &:nth-child(4) .service_icon { background-position: left bottom;}
+        &:nth-child(5) .service_icon { background-position: center bottom;}
+        &:nth-child(6) .service_icon { background-position: right bottom;}
+      }
+    }
+  }
+}
+.consultingService_sips {
+  @include size();
+  margin: auto;
+  @include unit(margin-top,80);
+  .consultingService_info {
+    @include size();
+    margin: auto;
+    @include unit(margin-top,80);
+    text-align: center;
+    h3 {
+      @include unit(margin-bottom,20);
+    }
+    & > p {
+      width: auto;
+      height: auto;
+      @include margin(20,20,40,20);
+    }
+    & > div {
+      position: relative;
+      @include unit(width,880);
+      height: auto;
+      margin: auto;
+      background-color: $color-black;
+      span {
+        position: relative;
+        float: left;
+        display: block;
+        @include unit(width,300);
+        @include unit(height,40);
+        @include unit(line-height,40);
+        @include unit(margin-right,20);
+        color: $color-white;
+        background-color: $color-deep-gray;
+        ::after {
+          content: "";
+          position: absolute;
+          @include unit(top,6);
+          @include unit(right,-10);
+          @include unit(width,1);
+          @include unit(height,28);
+          background-color: $color-black;
+        }
+        :last-child { margin-right: 0;}
+        :last-child::after { display: none;}
+      }
+    }
+    .email_hp {
+      width: 100%;
+      height: 100%;
+      @include padding(40,90,40,90);
+    }
+  }
+}

@@ -42,7 +42,7 @@ $root:16;
 }
 // ============================================
 
-// =========== border =========================
+// =========== border , outline =========================
 @mixin border($w:1,$s:solid,$c:$color-white){
   border:px($w) $s $c;
   border:rem($w) $s $c;
@@ -71,6 +71,11 @@ $root:16;
 @mixin border-width($t,$r,$b,$l){
   border-width: px($t) px($r) px($b) px($l);
   border-width: rem($t) rem($r) rem($b) rem($l);
+  @content;
+}
+@mixin outline($w:1,$s:solid,$c:$color-white){
+  outline:px($w) $s $c;
+  outline:rem($w) $s $c;
   @content;
 }
 // ============================================
