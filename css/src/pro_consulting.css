@@ -15,7 +15,7 @@
 }
 .head_wrap {
   width: auto;
-  height: 100%;
+  height: auto;
   margin: auto;
   background-color: inherit;
 }
@@ -1083,8 +1083,8 @@ h1 a {
   height: 12.5rem;
   margin-right: 20px;
   margin-right: 1.25rem;
-  margin-bottom: 20px;
-  margin-bottom: 1.25rem;
+  margin-top: 20px;
+  margin-top: 1.25rem;
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -1094,7 +1094,7 @@ h1 a {
   margin-right: 0;
 }
 .consultingService_sips ul li:nth-child(-n+2) {
-  margin-bottom: 0;
+  margin-top: 0;
 }
 .consultingService_sips ul li a {
   position: relative;
@@ -1102,14 +1102,14 @@ h1 a {
   width: 100%;
   height: 100%;
 }
-.consultingService_sips ul li a ::after {
+.consultingService_sips ul li a::after {
   content: "";
   display: block;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.consultingService_sips ul li a :hover {
+.consultingService_sips ul li a:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .consultingService_sips ul li a span {
@@ -1128,7 +1128,7 @@ h1 a {
   font-size: 1.125rem;
   transition: all 100ms linear;
 }
-.consultingService_sips ul li a :hover span {
+.consultingService_sips ul li a:hover span {
   font-size: 20px;
   font-size: 1.25rem;
   color: #e75300;

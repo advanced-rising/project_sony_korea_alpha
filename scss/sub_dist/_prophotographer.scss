@@ -1,7 +1,3 @@
-@charset "UTF-8";
-/* c_pro_overseas.css */
-
-/* ================= #viewBox ================ */
 #viewBox {
   width: 100%;
   @include unit(height,680);
@@ -32,120 +28,111 @@
 .domestic {
   background-image: url("../../img/prophotographer/main_janghaena.jpg");
 }
-/* ================= // #viewBox ================ */
 #proBox {
   @include unit(width,1280);
   height: 100%;
   margin: auto;
   @include unit(padding-top,80);
   background-color: $color-white;
-}
-#proBox ul {
-  width: 100%;
-  height: 100%;
-  padding: 0 50px;
-}
-#proBox li {
-  float: left;
-  width: 380px;
-  height: 480px;
-  margin-top: 20px;
-  margin-right: 20px;
-  border-radius: 20px;
-  background-color: var(--color-color3);
-}
+  ul {
+    width: 100%;
+    height: 100%;
+    @include padding(0,50,0,50);
+    li {
+      float: left;
+      @include unit(width,380);
+      @include unit(height,480);
+      @include unit(margin-top,20);
+      @include unit(margin-right,20);
+      @include unit(border-radius,20);
+      background-color: $color-light-gray;
+      &:nth-child(-n + 3) { margin-top: 0px; }
+      &:nth-child(3n) { margin-right: 0px; }
+      @at-root .pro_img {
+        width: 100%;
+        @include unit(height,300);
+        @include unit(border-top-left-radius,20);
+        @include unit(border-top-right-radius,20);
+        background-color: $color-deep-gray;
+      }
+      @at-root .pro_txt {
+        width: 100%;
+        @include unit(height,40);
+        text-align: center;
+        text-decoration: none;
+        @include unit(line-height,40);
+        font-weight: 700;
+        @include unit(font-size,18);
+        text-transform: capitalize;
+        color: $color-white;
+        background-color: $color-black;
+      }
+      @at-root .pro_profile {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        @include unit(height,140);
+        box-sizing: border-box;
+        @include unit(padding,20);
+        @include unit(border-bottom-left-radius,20);
+        @include unit(border-bottom-right-radius,20);
+        background-color: $color-black;
+        .profile_img {
+          position: absolute;
+          z-index: 10;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          @include unit(width,100);
+          @include unit(height,100);
+          border-radius: 50%;
+          transition: all 100ms linear 100ms;
+          a {
+            @include display-block();
+          }
+        }
+        .img_txt {
+          position: absolute;
+          z-index: 9;
+          @include unit(top,20);
+          bottom: 0;
+          @include unit(right,-350);
+          margin: auto;
+          @include unit(margin-right,40);
+          @include unit(width,310);
+          @include unit(height,80);
+          @include padding(10,10,10,60);
+          @include unit(border-radius,20);
+          transition: 1000s;
+          background-clip:padding-box;
+          color: $color-black;
+          background-color: $color-white;
+          transition: all 100ms linear;
+          a {
+            @include display-block();
+            text-decoration: none;
+            p {
+              text-align: end;
+            }
+          }
+        }
+        &:hover .profile_img {
+          transition: all 100ms linear;
+          @include unit(right,250);
+        }
+        &:hover .img_txt {
+          transition: all 100ms linear 100ms;
+          margin-right: 0;
+          @include unit(right,20);
+        }
+      }
+    }
+  }
+} 
 
-#proBox li:nth-child(-n + 3) { margin-top: 0px; }
-#proBox li:nth-child(3n) { margin-right: 0px; }
-.pro_img {
-  width: 100%;
-  height: 300px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  background-color: var(--color-color2);
-}
-.pro_img a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-}
-.pro_txt {
-  width: 100%;
-  height: 40px;
-  text-align: center;
-  text-decoration: none;
-  line-height: 40px;
-  font-weight: bold;
-  font-size: 1.2rem;
-  text-transform: capitalize;
-  color: var(--back-white);
-  background-color: var(--back-black);
-}
-.pro_profile {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 140px;
-  box-sizing: border-box;
-  padding: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  background-color: var(--back-black);
-}
-.profile_img {
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  transition: all 100ms linear 100ms;
-}
-.profile_img a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.img_txt {
-  position: absolute;
-  z-index: 9;
-  top: 20px;
-  bottom: 0;
-  right: -350px;
-  margin: auto;
-  margin-right: 40px;
-  width: 310px;
-  height: 80px;
-  padding: 10px;
-  padding-left: 60px;
-  text-align: end;
-  border-radius: 20px;
-  transition: 1000s;
-  background-clip:padding-box;
-  background-color: var(--back-white);
-  color: var(--back-black);
-  transition: all 100ms linear;
-}
-.img_txt a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-}
-.pro_profile:hover .profile_img {
-  transition: all 100ms linear;
-  right: 250px;
-}
-.pro_profile:hover .img_txt {
-  transition: all 100ms linear 100ms;
-  margin-right: 0;
-  right: 20px;
-}
+
 /* ======== pro_img, profile_img ========= */
 .pro_img, .profile_img {
   background-repeat: no-repeat;

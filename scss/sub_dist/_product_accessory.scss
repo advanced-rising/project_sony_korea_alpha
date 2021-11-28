@@ -1,0 +1,101 @@
+.acc {
+  background-image: url("../../img/product/acc/bg_acc.jpg");
+}
+.accessory {
+  @include unit(width,1220);
+  height: 100%;
+  margin: auto;
+  background-color: $color-white;
+  > ul {
+    width: 100%;
+    height: 100%;
+    > li {
+      width: 100%;
+      @include unit(height,520);
+      @include margin(80,0,80,0);
+      &:last-child {
+        @include unit(margin-bottom,80);
+      }
+      @at-root .accessoryTitle {
+        @include unit(width,400);
+        @include unit(height,80);
+        margin: auto;
+        text-align: center;
+        @include unit(line-height,80);
+        @include unit(font-size,32);
+        font-weight: 700;
+      }
+      @at-root .accessoryBtn {
+        position: relative;
+        @include unit(top,130);
+        width: auto;
+        height: auto;
+        div {
+          position: absolute;
+          top: 0;
+          @include unit(width,80);
+          @include unit(height,80);
+          background-color: $color-light-gray;
+        }
+        .prevBtn { left: 0; }
+        .nextBtn { right: 0; }
+      }
+      @at-root .accessoryList {
+        overflow: hidden;
+        @include unit(width,980);
+        @include unit(height,300);
+        margin: auto;
+        @include unit(margin-top,20);
+        ul {
+          width: 500%;
+          height: auto;
+          li {
+            float: left;
+            @include unit(width,300);
+            @include unit(height,300);
+            @include unit(margin-right,40);
+            background-color: $color-light-gray;
+            &:nth-child(3) { margin-right: 0;}
+            a {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+      @at-root .accessoryIndicator {
+        width: auto;
+        height: 20px;
+        margin: auto;
+        @include unit(margin-top,20);
+        text-align: center;
+        > ul {
+          display: inline-block;
+          width: auto;
+          height: auto;
+          li {
+            float: left;
+            @include unit(width,20);
+            @include unit(height,20);
+            @include unit(margin-right,10);
+            border-radius: 50%;
+            background-color: $color-light-gray;
+            &:last-child { margin-right: 0;}
+          }
+        }
+      }
+      @at-root .accessoryStore {
+        @include unit(width,400);
+        @include unit(height,60);
+        margin: auto;
+        @include unit(margin-top,20);
+        background-color: $color-orange;
+        button {
+          @include display-block();
+          color: $color-white;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

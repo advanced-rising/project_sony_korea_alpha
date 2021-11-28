@@ -162,22 +162,22 @@
         @include unit(width,520);
         @include unit(height,200);
         @include unit(margin-right,20);
-        @include unit(margin-bottom,20);
+        @include unit(margin-top,20);
         background-size: 100%;
         background-position: center;
         background-repeat: no-repeat;
         transition: all 100ms linear;
         &:nth-child(2n) { margin-right: 0; }
-        &:nth-child(-n+2) { margin-bottom: 0;}
+        &:nth-child(-n+2) { margin-top: 0;}
         a {
           position: relative;
           @include display-block();
-          ::after {
+          &::after {
             content: "";
             @include display-block();
             background-color: $color-deep-black;
           }
-          :hover { background-color: $color-deep-black ;}
+        &:hover { background-color: $color-deep-black ;}
           span {
             position: absolute;
             @include unit(top,40);
@@ -189,7 +189,7 @@
             @include unit(font-size,18);
             transition: all 100ms linear;
           }
-          :hover span { @include unit(font-size,20); color: $color-orange;}
+        &:hover span { @include unit(font-size,20); color: $color-orange;}
         }
         &:nth-child(1) { background-image: url("../../img/proconsulting/img_sips01.jpg"); }
         &:nth-child(2) { background-image: url("../../img/proconsulting/img_sips02.jpg"); }

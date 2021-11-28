@@ -1,4 +1,4 @@
-/* prophotographer.scss */
+/* product_accessory */
 /* variable.css */
 :root {
   font-size: 16px;
@@ -873,585 +873,147 @@ h1 a {
   font-size: 1.125rem;
 }
 
-.overseas {
-  background-image: url("../../img/prophotographer/bg_pro_overseas.jpg");
+.acc {
+  background-image: url("../../img/product/acc/bg_acc.jpg");
 }
 
-.domestic {
-  background-image: url("../../img/prophotographer/main_janghaena.jpg");
-}
-
-#proBox {
-  width: 1280px;
-  width: 80rem;
+.accessory {
+  width: 1220px;
+  width: 76.25rem;
   height: 100%;
   margin: auto;
-  padding-top: 80px;
-  padding-top: 5rem;
   background-color: #ffffff;
 }
-#proBox ul {
-  width: 100%;
-  height: 100%;
-  padding: 0px 50px 0px 50px;
-  padding: 0rem 3.125rem 0rem 3.125rem;
-}
-#proBox ul li {
-  float: left;
-  width: 380px;
-  width: 23.75rem;
-  height: 480px;
-  height: 30rem;
-  margin-top: 20px;
-  margin-top: 1.25rem;
-  margin-right: 20px;
-  margin-right: 1.25rem;
-  border-radius: 20px;
-  border-radius: 1.25rem;
-  background-color: #6f6f75;
-}
-#proBox ul li:nth-child(-n+3) {
-  margin-top: 0px;
-}
-#proBox ul li:nth-child(3n) {
-  margin-right: 0px;
-}
-.pro_img {
-  width: 100%;
-  height: 300px;
-  height: 18.75rem;
-  border-top-left-radius: 20px;
-  border-top-left-radius: 1.25rem;
-  border-top-right-radius: 20px;
-  border-top-right-radius: 1.25rem;
-  background-color: #333335;
-}
-
-.pro_txt {
-  width: 100%;
-  height: 40px;
-  height: 2.5rem;
-  text-align: center;
-  text-decoration: none;
-  line-height: 40px;
-  line-height: 2.5rem;
-  font-weight: 700;
-  font-size: 18px;
-  font-size: 1.125rem;
-  text-transform: capitalize;
-  color: #ffffff;
-  background-color: #03010f;
-}
-
-.pro_profile {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 140px;
-  height: 8.75rem;
-  box-sizing: border-box;
-  padding: 20px;
-  padding: 1.25rem;
-  border-bottom-left-radius: 20px;
-  border-bottom-left-radius: 1.25rem;
-  border-bottom-right-radius: 20px;
-  border-bottom-right-radius: 1.25rem;
-  background-color: #03010f;
-}
-.pro_profile .profile_img {
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  width: 100px;
-  width: 6.25rem;
-  height: 100px;
-  height: 6.25rem;
-  border-radius: 50%;
-  transition: all 100ms linear 100ms;
-}
-.pro_profile .profile_img a {
-  display: block;
+.accessory > ul {
   width: 100%;
   height: 100%;
 }
-.pro_profile .img_txt {
-  position: absolute;
-  z-index: 9;
-  top: 20px;
-  top: 1.25rem;
-  bottom: 0;
-  right: -350px;
-  right: -21.875rem;
-  margin: auto;
-  margin-right: 40px;
-  margin-right: 2.5rem;
-  width: 310px;
-  width: 19.375rem;
+.accessory > ul > li {
+  width: 100%;
+  height: 520px;
+  height: 32.5rem;
+  margin: 80px 0px 80px 0px;
+  margin: 5rem 0rem 5rem 0rem;
+}
+.accessory > ul > li:last-child {
+  margin-bottom: 80px;
+  margin-bottom: 5rem;
+}
+.accessoryTitle {
+  width: 400px;
+  width: 25rem;
   height: 80px;
   height: 5rem;
-  padding: 10px 10px 10px 60px;
-  padding: 0.625rem 0.625rem 0.625rem 3.75rem;
-  border-radius: 20px;
-  border-radius: 1.25rem;
-  transition: 1000s;
-  background-clip: padding-box;
-  color: #03010f;
-  background-color: #ffffff;
-  transition: all 100ms linear;
+  margin: auto;
+  text-align: center;
+  line-height: 80px;
+  line-height: 5rem;
+  font-size: 32px;
+  font-size: 2rem;
+  font-weight: 700;
 }
-.pro_profile .img_txt a {
+
+.accessoryBtn {
+  position: relative;
+  top: 130px;
+  top: 8.125rem;
+  width: auto;
+  height: auto;
+}
+.accessoryBtn div {
+  position: absolute;
+  top: 0;
+  width: 80px;
+  width: 5rem;
+  height: 80px;
+  height: 5rem;
+  background-color: #6f6f75;
+}
+.accessoryBtn .prevBtn {
+  left: 0;
+}
+.accessoryBtn .nextBtn {
+  right: 0;
+}
+
+.accessoryList {
+  overflow: hidden;
+  width: 980px;
+  width: 61.25rem;
+  height: 300px;
+  height: 18.75rem;
+  margin: auto;
+  margin-top: 20px;
+  margin-top: 1.25rem;
+}
+.accessoryList ul {
+  width: 500%;
+  height: auto;
+}
+.accessoryList ul li {
+  float: left;
+  width: 300px;
+  width: 18.75rem;
+  height: 300px;
+  height: 18.75rem;
+  margin-right: 40px;
+  margin-right: 2.5rem;
+  background-color: #6f6f75;
+}
+.accessoryList ul li:nth-child(3) {
+  margin-right: 0;
+}
+.accessoryList ul li a {
+  width: 100%;
+  height: 100%;
+}
+
+.accessoryIndicator {
+  width: auto;
+  height: 20px;
+  margin: auto;
+  margin-top: 20px;
+  margin-top: 1.25rem;
+  text-align: center;
+}
+.accessoryIndicator > ul {
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+.accessoryIndicator > ul li {
+  float: left;
+  width: 20px;
+  width: 1.25rem;
+  height: 20px;
+  height: 1.25rem;
+  margin-right: 10px;
+  margin-right: 0.625rem;
+  border-radius: 50%;
+  background-color: #6f6f75;
+}
+.accessoryIndicator > ul li:last-child {
+  margin-right: 0;
+}
+
+.accessoryStore {
+  width: 400px;
+  width: 25rem;
+  height: 60px;
+  height: 3.75rem;
+  margin: auto;
+  margin-top: 20px;
+  margin-top: 1.25rem;
+  background-color: #e75300;
+}
+.accessoryStore button {
   display: block;
   width: 100%;
   height: 100%;
-  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
 }
-.pro_profile .img_txt a p {
-  text-align: end;
-}
-.pro_profile:hover .profile_img {
-  transition: all 100ms linear;
-  right: 250px;
-  right: 15.625rem;
-}
-.pro_profile:hover .img_txt {
-  transition: all 100ms linear 100ms;
-  margin-right: 0;
-  right: 20px;
-  right: 1.25rem;
-}
-
-/* ======== pro_img, profile_img ========= */
-.pro_img, .profile_img {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-/* pro_img ========================================== */
-#proBox ul li:nth-child(1) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Ail.jpg");
-}
-
-#proBox ul li:nth-child(2) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Alysius.jpg");
-}
-
-#proBox ul li:nth-child(3) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Andre.jpg");
-}
-
-#proBox ul li:nth-child(4) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Ben.jpg");
-}
-
-#proBox ul li:nth-child(5) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Billy.jpg");
-}
-
-#proBox ul li:nth-child(6) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Bryan.jpg");
-}
-
-#proBox ul li:nth-child(7) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Bryanvan.jpg");
-}
-
-#proBox ul li:nth-child(8) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Bui.jpg");
-}
-
-#proBox ul li:nth-child(9) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Cheng.jpg");
-}
-
-#proBox ul li:nth-child(10) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Conrad.jpg");
-}
-
-#proBox ul li:nth-child(11) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Craig.jpg");
-}
-
-#proBox ul li:nth-child(12) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Daniel.jpg");
-}
-
-#proBox ul li:nth-child(13) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Darren.jpg");
-}
-
-#proBox ul li:nth-child(14) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-David.jpg");
-}
-
-#proBox ul li:nth-child(15) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-DB.jpg");
-}
-
-#proBox ul li:nth-child(16) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Dheeraj.jpg");
-}
-
-#proBox ul li:nth-child(17) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Diinesh.jpg");
-}
-
-#proBox ul li:nth-child(18) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Dow.jpg");
-}
-
-#proBox ul li:nth-child(19) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Dusit.jpg");
-}
-
-#proBox ul li:nth-child(20) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Eddie.jpg");
-}
-
-#proBox ul li:nth-child(21) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Eric.jpg");
-}
-
-#proBox ul li:nth-child(22) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Fajar.jpg");
-}
-
-#proBox ul li:nth-child(23) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Fakrul.jpg");
-}
-
-#proBox ul li:nth-child(24) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Gary.jpg");
-}
-
-#proBox ul li:nth-child(25) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Hoang.jpg");
-}
-
-#proBox ul li:nth-child(26) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Hussain.jpg");
-}
-
-#proBox ul li:nth-child(27) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Jiggie.jpg");
-}
-
-#proBox ul li:nth-child(28) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Jonathan.jpg");
-}
-
-#proBox ul li:nth-child(29) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Kelvin.jpg");
-}
-
-#proBox ul li:nth-child(30) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Kriengkrai.jpg");
-}
-
-#proBox ul li:nth-child(31) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Leung.jpg");
-}
-
-#proBox ul li:nth-child(32) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Liang.jpg");
-}
-
-#proBox ul li:nth-child(33) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Mark.jpg");
-}
-
-#proBox ul li:nth-child(34) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Nguyen.jpg");
-}
-
-#proBox ul li:nth-child(35) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-NguyenDoc.jpg");
-}
-
-#proBox ul li:nth-child(36) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-NguyenThanh.jpg");
-}
-
-#proBox ul li:nth-child(37) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Nicholas.jpg");
-}
-
-#proBox ul li:nth-child(38) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Nick.jpg");
-}
-
-#proBox ul li:nth-child(39) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Nicky.jpg");
-}
-
-#proBox ul li:nth-child(40) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Po.jpg");
-}
-
-#proBox ul li:nth-child(41) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Prakash.jpg");
-}
-
-#proBox ul li:nth-child(42) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Rosli.jpg");
-}
-
-#proBox ul li:nth-child(43) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Sam.jpg");
-}
-
-#proBox ul li:nth-child(44) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Sarah.jpg");
-}
-
-#proBox ul li:nth-child(45) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Sixpence.jpg");
-}
-
-#proBox ul li:nth-child(46) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Stanley.jpg");
-}
-
-#proBox ul li:nth-child(47) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Stefan.jpg");
-}
-
-#proBox ul li:nth-child(48) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Tavepong.jpg");
-}
-
-#proBox ul li:nth-child(49) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Tripeaksimagery.jpg");
-}
-
-#proBox ul li:nth-child(50) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Urasha.jpg");
-}
-
-#proBox ul li:nth-child(51) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Vin.jpg");
-}
-
-#proBox ul li:nth-child(52) .pro_img {
-  background-image: url("../../img/prophotographer/overseas/list-Will.jpg");
-}
-
-/* // pro_img ========================================== */
-/* pro_profile ======================================== */
-#proBox ul li:nth-child(1) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Ail.png");
-}
-
-#proBox ul li:nth-child(2) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Alysius.png");
-}
-
-#proBox ul li:nth-child(3) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Andre.png");
-}
-
-#proBox ul li:nth-child(4) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Ben.png");
-}
-
-#proBox ul li:nth-child(5) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Billy.png");
-}
-
-#proBox ul li:nth-child(6) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Bryan.png");
-}
-
-#proBox ul li:nth-child(7) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Bryanvan.png");
-}
-
-#proBox ul li:nth-child(8) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Bui.png");
-}
-
-#proBox ul li:nth-child(9) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Cheng.png");
-}
-
-#proBox ul li:nth-child(10) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Conrad.png");
-}
-
-#proBox ul li:nth-child(11) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Craig.png");
-}
-
-#proBox ul li:nth-child(12) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Daniel.png");
-}
-
-#proBox ul li:nth-child(13) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Darren.png");
-}
-
-#proBox ul li:nth-child(14) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-David.png");
-}
-
-#proBox ul li:nth-child(15) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-DB.png");
-}
-
-#proBox ul li:nth-child(16) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Dheeraj.png");
-}
-
-#proBox ul li:nth-child(17) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Diinesh.png");
-}
-
-#proBox ul li:nth-child(18) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Dow.png");
-}
-
-#proBox ul li:nth-child(19) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Dusit.png");
-}
-
-#proBox ul li:nth-child(20) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Eddie.png");
-}
-
-#proBox ul li:nth-child(21) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Eric.png");
-}
-
-#proBox ul li:nth-child(22) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Fajar.png");
-}
-
-#proBox ul li:nth-child(23) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Fakrul.png");
-}
-
-#proBox ul li:nth-child(24) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Gary.png");
-}
-
-#proBox ul li:nth-child(25) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Hoang.png");
-}
-
-#proBox ul li:nth-child(26) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Hussain.png");
-}
-
-#proBox ul li:nth-child(27) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Jiggie.png");
-}
-
-#proBox ul li:nth-child(28) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Jonathan.png");
-}
-
-#proBox ul li:nth-child(29) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Kelvin.png");
-}
-
-#proBox ul li:nth-child(30) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Kriengkrai.png");
-}
-
-#proBox ul li:nth-child(31) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Leung.png");
-}
-
-#proBox ul li:nth-child(32) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Liang.png");
-}
-
-#proBox ul li:nth-child(33) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Mark.png");
-}
-
-#proBox ul li:nth-child(34) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Nguyen.png");
-}
-
-#proBox ul li:nth-child(35) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-NguyenDoc.png");
-}
-
-#proBox ul li:nth-child(36) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-NguyenThanh.png");
-}
-
-#proBox ul li:nth-child(37) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Nicholas.png");
-}
-
-#proBox ul li:nth-child(38) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Nick.png");
-}
-
-#proBox ul li:nth-child(39) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Nicky.png");
-}
-
-#proBox ul li:nth-child(40) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Po.png");
-}
-
-#proBox ul li:nth-child(41) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Prakash.png");
-}
-
-#proBox ul li:nth-child(42) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Rosli.png");
-}
-
-#proBox ul li:nth-child(43) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Sam.png");
-}
-
-#proBox ul li:nth-child(44) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Sarah.png");
-}
-
-#proBox ul li:nth-child(45) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Sixpence.png");
-}
-
-#proBox ul li:nth-child(46) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Stanley.png");
-}
-
-#proBox ul li:nth-child(47) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Stefan.png");
-}
-
-#proBox ul li:nth-child(48) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Tavepong.png");
-}
-
-#proBox ul li:nth-child(49) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Tripeaksimagery.png");
-}
-
-#proBox ul li:nth-child(50) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Urasha.png");
-}
-
-#proBox ul li:nth-child(51) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Vin.png");
-}
-
-#proBox ul li:nth-child(52) .pro_profile .profile_img {
-  background-image: url("../../img/prophotographer/overseas/pro-Will.png");
-}
 
-/* // pro_profile ======================================== */
-/* ======== pro_img, pro_profile ========= */
 #footBox {
   width: 100%;
   height: auto;
@@ -1918,4 +1480,4 @@ h1 a {
   }
 }
 
-/*# sourceMappingURL=prophotographer.css.map */
+/*# sourceMappingURL=product_accessory.css.map */
