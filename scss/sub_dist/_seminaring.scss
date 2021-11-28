@@ -1,0 +1,110 @@
+.seminaring {
+  background-image: url("../../img/seminar/bg_seminar.jpg");
+}
+.contentList {
+  @include unit(margin-bottom,80);
+  ul {
+    @include unit(width,1168);
+    height: auto;
+    margin: auto;
+    @include unit(margin-top,80);
+    li {
+      position: relative;
+      float: left;
+      @include unit(width,564);
+      @include unit(height,400);
+      @include unit(margin-top,40);
+      @include unit(margin-right,40);
+      &:nth-child(2n) {
+        margin-right: 0px;
+      }
+      &:nth-child(-n + 2) {
+        margin-top: 0px;
+      }
+      @at-root .duringDate {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include unit(width,340);
+        @include unit(height,80);
+        text-align: center;
+        background-color: $color-orange;
+        span {
+          display: inline-block;
+          width: auto;
+          height: auto;
+          @include unit(line-height,40);
+          @include unit(font-size,16);
+          font-weight: 700;
+          color: $color-white;
+        }
+      }
+      @at-root .contentImg {
+        position: absolute;
+        @include unit(top,40);
+        right: 0;
+        @include unit(width,540);
+        @include unit(height,260);
+        background-color: $color-light-gray;
+        a {
+          @include display-block();
+        }
+      }
+      .contentTxt {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        @include unit(width,540);
+        @include unit(height,130);
+        box-sizing: border-box;
+        @include padding(10,20,10,20);
+        color: $color-white;
+        background-color: $color-deep-gray;
+        > span {
+          display: block;
+          width: auto;
+          height: auto;
+          @include unit(margin-top,5);
+          text-align: start;
+          @include unit(font-size,18);
+          color: $color-white;
+        }
+        @at-root .appealBtn {
+          @include unit(width,100);
+          @include unit(height,30);
+          @include padding(3,5,3,5);
+          @include unit(margin-top,10);
+          background-color: $color-orange;
+          > span {
+            @include display-block();
+            color: $color-white;
+            font-weight: bold;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ==== event img ========================= */
+.contentImg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.contentList li:nth-child(1) .contentImg {
+  background-image: url("../../img/seminar/20211029_02_pr2i_list.jpg");
+}
+.contentList li:nth-child(2) .contentImg {
+  background-image: url("../../img/seminar/20211029_01_j39a_list.jpg");
+}
+.contentList li:nth-child(3) .contentImg {
+  background-image: url("../../img/seminar/20211027_01_u1rt_list.jpg");
+}
+.contentList li:nth-child(4) .contentImg {
+  background-image: url("../../img/seminar/20211022_01_x31b_list.jpg");
+}
+/* ==== event img ========================= */
+

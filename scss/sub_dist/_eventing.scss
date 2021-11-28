@@ -1,0 +1,108 @@
+.eventing {
+  background-image: url("../../img/event/20211027_01_u1rt_main.jpg");
+}
+.contentList {
+  @include unit(margin-bottom,80);
+  ul {
+    @include unit(width,1168);
+    height: auto;
+    margin: auto;
+    @include unit(margin-top,80);
+    li {
+      position: relative;
+      float: left;
+      @include unit(width,564);
+      @include unit(height,400);
+      @include unit(margin-top,40);
+      @include unit(margin-right,40);
+      &:nth-child(2n) {
+        margin-right: 0px;
+      }
+      &:nth-child(-n + 2) {
+        margin-top: 0px;
+      }
+      @at-root .duringDate {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include unit(width,340);
+        @include unit(height,80);
+        background-color: $color-orange;
+        span {
+          display: block;
+          text-align: center;
+          @include unit(line-height,80);
+          @include unit(font-size,18);
+          font-weight: 700;
+          color: $color-white;
+        }
+      }
+      @at-root .contentImg {
+        position: absolute;
+        @include unit(top,40);
+        right: 0;
+        @include unit(width,540);
+        @include unit(height,260);
+        background-color: $color-light-gray;
+        a {
+          @include display-block();
+        }
+      }
+      @at-root .contentImg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      @at-root .contentTxt {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        @include unit(width,540);
+        @include unit(height,100);
+        box-sizing: border-box;
+        @include padding(10,20,10,20);
+        color: $color-white;
+        background-color: $color-deep-gray;
+        p {
+          display: inline-block;
+          width: auto;
+          height: auto;
+          @include unit(font-size,18);
+          font-weight: 700;
+        }
+        span {
+          display: block;
+          width: auto;
+          height: auto;
+          @include unit(font-size,16);
+        }
+      }
+    }
+  }
+}
+.contentList li:nth-child(1) .contentImg {
+  background-image: url("../../img/event/20211022_02_ex7m_list.jpg");
+}
+.contentList li:nth-child(2) .contentImg {
+  background-image: url("../../img/event/20211019_01_dpjh_list.jpg");
+}
+.contentList li:nth-child(3) .contentImg {
+  background-image: url("../../img/event/20211001_01_wo13_list.jpg");
+}
+.contentList li:nth-child(4) .contentImg {
+  background-image: url("../../img/event/20210707_01_apxu_list.jpg");
+}
+.contentList li:nth-child(5) .contentImg {
+  background-image: url("../../img/event/20210617_01_wo3z_list.jpg");
+}
+.contentList li:nth-child(6) .contentImg {
+  background-image: url("../../img/event/20210517_01_smnz_list.jpg");
+}
+.contentList li:nth-child(7) .contentImg {
+  background-image: url("../../img/event/20210101_02_loi8_list.jpg");
+}
+
+/* ==== event img ========================= */
+
+/* ==== event img ========================= */

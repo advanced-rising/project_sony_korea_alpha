@@ -1,0 +1,56 @@
+#viewBox {
+  width: 100%;
+  @include unit(height,800);
+  @include unit(padding-top,150);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: $color-white;
+  @include text-shadow(0,0,8,rgb(0 0 0 / 80%));
+  > ul {
+    @include unit(width,1200);
+    @include unit(height,500);
+    margin: auto;
+    @at-root .view_title {
+      float: left;
+      @include unit(width,700);
+      @include unit(height,200);
+      @include unit(padding-top,100);
+      @include unit(padding-right,200);
+      h2 {
+        @include unit(font-size,36);
+        @include unit(padding-left,20);
+      }
+    }
+    @at-root .view_txt {
+      position: relative;
+      float: left;
+      @include unit(width,700);
+      @include unit(height,300);
+      @include unit(padding-left,20);
+      @include unit(padding-right,200);
+      p {
+        width: auto;
+        height: auto;
+        @include unit(font-size,18);
+      }
+      @at-root .view_btn {
+        position: absolute;
+        bottom: 0;
+        @include unit(left,20);
+        @include unit(width,400);
+        @include unit(height,60);
+        background-color: $color-orange;
+        button {
+          @include display-block();
+          span {
+            text-align: center;
+            @include unit(line-height,60);
+            color: $color-white;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
