@@ -7,26 +7,28 @@
   background-color: $color-black;
   @at-root .head_wrap {
     width: auto;
-    height: auto;
+    height: 100%;
     margin: auto;
+    @include unit(padding-top,10);
     background-color: inherit;
+    @at-root h1 {
+      float: left;
+      @include unit(width,60);
+      @include unit(height,60);
+      margin: auto;
+      @include unit(margin-left,10);
+      a {
+        @include display-block();
+      }
+    }
   }
 }
-h1 {
-  float: left;
-  @include unit(width,60);
-  @include unit(height,60);
-  margin: auto;
-  @include unit(margin-left,10);
-  a {
-    @include display-block();
-  }
-}
+
 #navigation {
   position: relative;
   width: auto;
   height: auto;
-  @include unit(margin-top,10);
+  @include unit(margin-left,100);
   color: $color-black;
   .gnb_btn {
     display: none;
@@ -35,11 +37,9 @@ h1 {
     display: none;
   }
   @at-root .gnb {
-    display: block;
     width: auto;
     @include unit(height,60);
     @include unit(padding-top,10);
-    @include unit(margin-top,10);
     @include unit(margin-right,200);
     text-align: center;
     > ul {
@@ -244,339 +244,408 @@ h1 {
 
 @include mobile-v{
   .head_wrap {
-    height: auto;
+    height: 100%;
   }  
-  .gnb_btn {
-    display: block;
-    position: relative;
-    float: right;
-    @include unit(width,40);
-    @include unit(height,36);
-    @include margin(10,20,0,20);
-    @include border-bottom($s:4,$c:$color-white);
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
+  #navigation {
+    margin-left: 0;
+    .gnb_btn {
       display: block;
-      width: 100%;
-      @include unit(height,4);
-      background-color: $color-white;
-    }
-    &::before {
-      @include unit(top,4);
-      left: 0;
-    }
-    &::after {
-      @include unit(bottom,10);
-      bottom: 10px;
-      left: 0;
-    }
-  }
-  .gnb_close {
-    display: none;
-    position: absolute;
-    @include unit(top,10);
-    @include unit(right,20);
-    @include unit(width,40);
-    @include unit(height,40);
-    @include img("cross_white.svg",$p:center)
-  }
-  .gnb {
-    display: none;
-    @include size();
-    background-color: $color-black;
-    > ul {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      > li {
+      position: relative;
+      float: right;
+      @include unit(width,40);
+      @include unit(height,36);
+      @include margin(10,20,0,20);
+      @include border-bottom($w:4,$c:$color-white);
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
         width: 100%;
-        @include unit(height,60);
-        @include unit(font-size,18);
+        @include unit(height,4);
+        background-color: $color-white;
+      }
+      &::before {
+        @include unit(top,4);
+        left: 0;
+      }
+      &::after {
+        @include unit(bottom,10);
+        bottom: 10px;
+        left: 0;
       }
     }
-  } 
-  .moblie_login { display: block;}
-  .mobile_signUp { display: block;}
-  .unb {
-    position: absolute;
-    top: 0;
-    @include unit(right,80);
-    float: right;
-    @include unit(width,40);
-    @include unit(height,40);
-    @include unit(margin-top,10);
-    margin-right: 0;
-  }
-  .login_txt { display: none;}
-  .signUp_txt { display: none;}
-  .search_engin {
-    @include unit(width,300);
-    @include unit(height,540);
-    ul {
-      width: 100%;
-      @include unit(height,340);
-      @include unit(padding-right,10);
-      @include unit(padding-left,10);
-      left: 0;
+    .gnb_close {
+      display: none;
+      position: absolute;
+      @include unit(top,10);
+      @include unit(right,20);
+      @include unit(width,40);
+      @include unit(height,40);
+      @include img("cross_white.svg",$p:center)
     }
-  }
-  #search_icon {
-    @include size($w:90%);
+    .gnb {
+      display: none;
+      position: fixed;
+      @include unit(top,80);
+      width: 100%;
+      height: 100vw;
+      background-color: $color-black;
+      > ul {
+        width: 100%;
+        height: 100%;
+        > li {
+          display: block;
+          width: 100%;
+          @include unit(height,60);
+          @include unit(font-size,18);
+          @at-root .sub_menu {
+            display: none;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            li {
+              display: block;
+              text-align: center;
+            }
+          }
+        }
+      }
+    } 
+    .moblie_login { display: block;}
+    .mobile_signUp { display: block;}
+    .unb {
+      position: absolute;
+      top: 0;
+      @include unit(right,80);
+      float: right;
+      @include unit(width,40);
+      @include unit(height,40);
+      @include unit(margin-top,10);
+      margin-right: 0;
+    }
+    .login_txt { display: none;}
+    .signUp_txt { display: none;}
+    .search_engin {
+      @include unit(width,300);
+      @include unit(height,540);
+      ul {
+        width: 100%;
+        @include unit(height,340);
+        @include unit(padding-right,10);
+        @include unit(padding-left,10);
+        left: 0;
+      }
+    }
+    #search_icon {
+      @include size($w:90%);
+    }
   }
 }
 @include mobile-h{
   .head_wrap {
-    height: auto;
+    height: 100%;
   }  
-  .gnb_btn {
-    display: block;
-    position: relative;
-    float: right;
-    @include unit(width,40);
-    @include unit(height,36);
-    @include margin(10,20,0,20);
-    @include border-bottom($s:4,$c:$color-white);
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
+  #navigation {
+    margin-left: 0;
+    .gnb_btn {
       display: block;
-      width: 100%;
-      @include unit(height,4);
-      background-color: $color-white;
-    }
-    &::before {
-      @include unit(top,4);
-      left: 0;
-    }
-    &::after {
-      @include unit(bottom,10);
-      bottom: 10px;
-      left: 0;
-    }
-  }
-  .gnb_close {
-    display: none;
-    position: absolute;
-    @include unit(top,10);
-    @include unit(right,20);
-    @include unit(width,40);
-    @include unit(height,40);
-    @include img("cross_white.svg",$p:center)
-  }
-  .gnb {
-    display: none;
-    @include size();
-    background-color: $color-black;
-    > ul {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      > li {
+      position: relative;
+      float: right;
+      @include unit(width,40);
+      @include unit(height,36);
+      @include margin(10,20,0,20);
+      @include border-bottom($s:4,$c:$color-white);
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
         width: 100%;
-        @include unit(height,60);
-        @include unit(font-size,18);
+        @include unit(height,4);
+        background-color: $color-white;
+      }
+      &::before {
+        @include unit(top,4);
+        left: 0;
+      }
+      &::after {
+        @include unit(bottom,10);
+        bottom: 10px;
+        left: 0;
       }
     }
-  } 
-  .moblie_login { display: block;}
-  .mobile_signUp { display: block;}
-  .unb {
-    position: absolute;
-    top: 0;
-    @include unit(right,80);
-    float: right;
-    @include unit(width,40);
-    @include unit(height,40);
-    @include unit(margin-top,10);
-    margin-right: 0;
-  }
-  .login_txt { display: none;}
-  .signUp_txt { display: none;}
-  .search_engin {
-    @include unit(width,400);
-    @include unit(height,540);
-    ul {
-      width: 100%;
-      @include unit(height,340);
-      @include unit(padding-right,10);
-      @include unit(padding-left,10);
-      left: 0;
+    .gnb_close {
+      display: none;
+      position: absolute;
+      @include unit(top,10);
+      @include unit(right,20);
+      @include unit(width,40);
+      @include unit(height,40);
+      @include img("cross_white.svg",$p:center)
     }
-  }
-  #search_icon {
-    @include size($w:90%);
+    .gnb {
+      display: none;
+      position: fixed;
+      @include unit(top,80);
+      width: 100%;
+      height: 100vw;
+      background-color: $color-black;
+      > ul {
+        width: 100%;
+        height: 100%;
+        > li {
+          display: block;
+          width: 100%;
+          @include unit(height,60);
+          @include unit(font-size,18);
+          @at-root .sub_menu {
+            display: none;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            li {
+              display: block;
+              text-align: center;
+            }
+          }
+        }
+      }
+    } 
+    .moblie_login { display: block;}
+    .mobile_signUp { display: block;}
+    .unb {
+      position: absolute;
+      top: 0;
+      @include unit(right,80);
+      float: right;
+      @include unit(width,40);
+      @include unit(height,40);
+      @include unit(margin-top,10);
+      margin-right: 0;
+    }
+    .login_txt { display: none;}
+    .signUp_txt { display: none;}
+    .search_engin {
+      @include unit(width,400);
+      @include unit(height,540);
+      ul {
+        width: 100%;
+        @include unit(height,340);
+        @include unit(padding-right,10);
+        @include unit(padding-left,10);
+        left: 0;
+      }
+    }
+    #search_icon {
+      @include size($w:90%);
+    }
   }
 }
 @include tablet{
   .head_wrap {
-    height: auto;
+    height: 100%;
   }  
-  .gnb_btn {
-    display: block;
-    position: relative;
-    float: right;
-    @include unit(width,40);
-    @include unit(height,36);
-    @include margin(10,20,0,20);
-    @include border-bottom($s:4,$c:$color-white);
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
+  #navigation {
+    margin-left: 0;
+    .gnb_btn {
       display: block;
-      width: 100%;
-      @include unit(height,4);
-      background-color: $color-white;
-    }
-    &::before {
-      @include unit(top,4);
-      left: 0;
-    }
-    &::after {
-      @include unit(bottom,10);
-      bottom: 10px;
-      left: 0;
-    }
-  }
-  .gnb_close {
-    display: none;
-    position: absolute;
-    @include unit(top,10);
-    @include unit(right,20);
-    @include unit(width,40);
-    @include unit(height,40);
-    @include img("cross_white.svg",$p:center)
-  }
-  .gnb {
-    display: none;
-    @include size();
-    background-color: $color-black;
-    > ul {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      > li {
+      position: relative;
+      float: right;
+      @include unit(width,40);
+      @include unit(height,36);
+      @include margin(10,20,0,20);
+      @include border-bottom($w:4,$c:$color-white);
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
         width: 100%;
-        @include unit(height,60);
-        @include unit(font-size,18);
+        @include unit(height,4);
+        background-color: $color-white;
+      }
+      &::before {
+        @include unit(top,4);
+        left: 0;
+      }
+      &::after {
+        @include unit(bottom,10);
+        bottom: 10px;
+        left: 0;
       }
     }
-  } 
-  .moblie_login { display: block;}
-  .mobile_signUp { display: block;}
-  .unb {
-    position: absolute;
-    top: 0;
-    @include unit(right,80);
-    float: right;
-    @include unit(width,40);
-    @include unit(height,40);
-    @include unit(margin-top,10);
-    margin-right: 0;
-  }
-  .login_txt { display: none;}
-  .signUp_txt { display: none;}
-  .search_engin {
-    @include unit(width,680);
-    @include unit(height,620);
-    ul {
-      width: 100%;
-      @include unit(height,340);
-      @include unit(padding-right,10);
-      @include unit(padding-left,10);
-      left: 0;
+    .gnb_close {
+      display: none;
+      position: absolute;
+      @include unit(top,10);
+      @include unit(right,20);
+      @include unit(width,40);
+      @include unit(height,40);
+      @include img("cross_white.svg",$p:center)
     }
-  }
-  #search_icon {
-    @include size($w:90%);
+    .gnb {
+      display: none;
+      position: fixed;
+      @include unit(top,80);
+      width: 100%;
+      height: 100vw;
+      background-color: $color-black;
+      > ul {
+        width: 100%;
+        height: 100%;
+        > li {
+          display: block;
+          width: 100%;
+          @include unit(height,60);
+          @include unit(font-size,18);
+          @at-root .sub_menu {
+            display: none;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            li {
+              display: block;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    .moblie_login { display: block;}
+    .mobile_signUp { display: block;}
+    .unb {
+      position: absolute;
+      top: 0;
+      @include unit(right,80);
+      float: right;
+      @include unit(width,40);
+      @include unit(height,40);
+      @include unit(margin-top,10);
+      margin-right: 0;
+    }
+    .login_txt { display: none;}
+    .signUp_txt { display: none;}
+    .search_engin {
+      @include unit(width,680);
+      @include unit(height,620);
+      ul {
+        width: 100%;
+        @include unit(height,340);
+        @include unit(padding-right,10);
+        @include unit(padding-left,10);
+        left: 0;
+      }
+    }
+    #search_icon {
+      @include size($w:90%);
+    }
   }
 }
 @include laptop{
   .head_wrap {
-    height: auto;
-  }  
-  .gnb_btn {
-    display: block;
-    position: relative;
-    float: right;
-    @include unit(width,40);
-    @include unit(height,36);
-    @include margin(10,20,0,20);
-    @include border-bottom($s:4,$c:$color-white);
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
+    height: 100%;
+  }
+  #navigation {
+    margin-left: 0;
+    .gnb_btn {
       display: block;
-      width: 100%;
-      @include unit(height,4);
-      background-color: $color-white;
-    }
-    &::before {
-      @include unit(top,4);
-      left: 0;
-    }
-    &::after {
-      @include unit(bottom,10);
-      bottom: 10px;
-      left: 0;
-    }
-  }
-  .gnb_close {
-    display: none;
-    position: absolute;
-    @include unit(top,10);
-    @include unit(right,20);
-    @include unit(width,40);
-    @include unit(height,40);
-    @include img("cross_white.svg",$p:center)
-  }
-  .gnb {
-    display: none;
-    @include size();
-    background-color: $color-black;
-    > ul {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      > li {
+      position: relative;
+      float: right;
+      @include unit(width,40);
+      @include unit(height,36);
+      @include margin(10,20,0,20);
+      @include border-bottom($w:4,$c:$color-white);
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
         width: 100%;
-        @include unit(height,60);
-        @include unit(font-size,18);
+        @include unit(height,4);
+        background-color: $color-white;
+      }
+      &::before {
+        @include unit(top,4);
+        left: 0;
+      }
+      &::after {
+        @include unit(bottom,10);
+        bottom: 10px;
+        left: 0;
       }
     }
-  } 
-  .moblie_login { display: block;}
-  .mobile_signUp { display: block;}
-  .unb {
-    position: absolute;
-    top: 0;
-    @include unit(right,80);
-    float: right;
-    @include unit(width,40);
-    @include unit(height,40);
-    @include unit(margin-top,10);
-    margin-right: 0;
-  }
-  .login_txt { display: none;}
-  .signUp_txt { display: none;}
-  .search_engin {
-    @include unit(width,680);
-    @include unit(height,620);
-    ul {
+    .gnb_close {
+      display: none;
+      position: absolute;
+      @include unit(top,10);
+      @include unit(right,20);
+      @include unit(width,40);
+      @include unit(height,40);
+      @include img("cross_white.svg",$p:center)
+    }
+    .gnb {
+      display: none;
+      position: fixed;
+      @include unit(top,80);
       width: 100%;
-      @include unit(height,340);
-      @include unit(padding-right,10);
-      @include unit(padding-left,10);
-      left: 0;
+      height: 100vw;
+      background-color: $color-black;
+      > ul {
+        width: 100%;
+        height: 100%;
+        > li {
+          display: block;
+          width: 100%;
+          @include unit(height,60);
+          @include unit(font-size,18);
+          @at-root .sub_menu {
+            display: none;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            li {
+              display: block;
+              text-align: center;
+            }
+          }
+        }
+      }
+    } 
+    .moblie_login { display: block;}
+    .mobile_signUp { display: block;}
+    .unb {
+      position: absolute;
+      top: 0;
+      @include unit(right,80);
+      float: right;
+      @include unit(width,40);
+      @include unit(height,40);
+      @include unit(margin-top,10);
+      margin-right: 0;
+    }
+    .login_txt { display: none;}
+    .signUp_txt { display: none;}
+    .search_engin {
+      @include unit(width,680);
+      @include unit(height,620);
+      ul {
+        width: 100%;
+        @include unit(height,340);
+        @include unit(padding-right,10);
+        @include unit(padding-left,10);
+        left: 0;
+      }
+    }
+    #search_icon {
+      @include size($w:90%);
     }
   }
-  #search_icon {
-    @include size($w:90%);
-  }
+  
 }
 @include pcfull{
   .head_wrap {

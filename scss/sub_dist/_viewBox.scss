@@ -3,6 +3,7 @@
   @include unit(height,680);
   @include unit(padding-top,300);
   color: $color-white;
+  background-color: $color-black;
   @include text-shadow(0,0,8,rgb(0 0 0 / 80%));
   background-repeat: no-repeat;
   background-size: cover;

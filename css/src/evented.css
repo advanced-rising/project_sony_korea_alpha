@@ -1,4 +1,4 @@
-/* product.scss */
+/* evented.scss */
 /* variable.css */
 :root {
   font-size: 16px;
@@ -15,11 +15,12 @@
 }
 .head_wrap {
   width: auto;
-  height: auto;
+  height: 100%;
   margin: auto;
+  padding-top: 10px;
+  padding-top: 0.625rem;
   background-color: inherit;
 }
-
 h1 {
   float: left;
   width: 60px;
@@ -40,8 +41,8 @@ h1 a {
   position: relative;
   width: auto;
   height: auto;
-  margin-top: 10px;
-  margin-top: 0.625rem;
+  margin-left: 100px;
+  margin-left: 6.25rem;
   color: #03010f;
 }
 #navigation .gnb_btn {
@@ -51,14 +52,11 @@ h1 a {
   display: none;
 }
 .gnb {
-  display: block;
   width: auto;
   height: 60px;
   height: 3.75rem;
   padding-top: 10px;
   padding-top: 0.625rem;
-  margin-top: 10px;
-  margin-top: 0.625rem;
   margin-right: 200px;
   margin-right: 12.5rem;
   text-align: center;
@@ -325,10 +323,13 @@ h1 a {
 
 @media all and (max-width: 479px) {
   .head_wrap {
-    height: auto;
+    height: 100%;
   }
 
-  .gnb_btn {
+  #navigation {
+    margin-left: 0;
+  }
+  #navigation .gnb_btn {
     display: block;
     position: relative;
     float: right;
@@ -338,10 +339,10 @@ h1 a {
     height: 2.25rem;
     margin: 10px 20px 0px 20px;
     margin: 0.625rem 1.25rem 0rem 1.25rem;
-    border-bottom: 1px 4 #ffffff;
-    border-bottom: 0.0625rem 4 #ffffff;
+    border-bottom: 4px solid #ffffff;
+    border-bottom: 0.25rem solid #ffffff;
   }
-  .gnb_btn::before, .gnb_btn::after {
+  #navigation .gnb_btn::before, #navigation .gnb_btn::after {
     content: "";
     position: absolute;
     display: block;
@@ -350,19 +351,18 @@ h1 a {
     height: 0.25rem;
     background-color: #ffffff;
   }
-  .gnb_btn::before {
+  #navigation .gnb_btn::before {
     top: 4px;
     top: 0.25rem;
     left: 0;
   }
-  .gnb_btn::after {
+  #navigation .gnb_btn::after {
     bottom: 10px;
     bottom: 0.625rem;
     bottom: 10px;
     left: 0;
   }
-
-  .gnb_close {
+  #navigation .gnb_close {
     display: none;
     position: absolute;
     top: 10px;
@@ -378,35 +378,46 @@ h1 a {
     background-position: center;
     background-size: cover;
   }
-
-  .gnb {
+  #navigation .gnb {
     display: none;
+    position: fixed;
+    top: 80px;
+    top: 5rem;
     width: 100%;
-    height: auto;
+    height: 100vw;
     background-color: #03010f;
   }
-  .gnb > ul {
-    position: fixed;
+  #navigation .gnb > ul {
     width: 100%;
     height: 100%;
   }
-  .gnb > ul > li {
+  #navigation .gnb > ul > li {
+    display: block;
     width: 100%;
     height: 60px;
     height: 3.75rem;
     font-size: 18px;
     font-size: 1.125rem;
   }
-
-  .moblie_login {
+  .sub_menu {
+    display: none;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  .sub_menu li {
     display: block;
+    text-align: center;
   }
 
-  .mobile_signUp {
+  #navigation .moblie_login {
     display: block;
   }
-
-  .unb {
+  #navigation .mobile_signUp {
+    display: block;
+  }
+  #navigation .unb {
     position: absolute;
     top: 0;
     right: 80px;
@@ -420,22 +431,19 @@ h1 a {
     margin-top: 0.625rem;
     margin-right: 0;
   }
-
-  .login_txt {
+  #navigation .login_txt {
     display: none;
   }
-
-  .signUp_txt {
+  #navigation .signUp_txt {
     display: none;
   }
-
-  .search_engin {
+  #navigation .search_engin {
     width: 300px;
     width: 18.75rem;
     height: 540px;
     height: 33.75rem;
   }
-  .search_engin ul {
+  #navigation .search_engin ul {
     width: 100%;
     height: 340px;
     height: 21.25rem;
@@ -445,18 +453,20 @@ h1 a {
     padding-left: 0.625rem;
     left: 0;
   }
-
-  #search_icon {
+  #navigation #search_icon {
     width: 90%;
     height: auto;
   }
 }
 @media all and (min-width: 480px) and (max-width: 767px) {
   .head_wrap {
-    height: auto;
+    height: 100%;
   }
 
-  .gnb_btn {
+  #navigation {
+    margin-left: 0;
+  }
+  #navigation .gnb_btn {
     display: block;
     position: relative;
     float: right;
@@ -469,7 +479,7 @@ h1 a {
     border-bottom: 1px 4 #ffffff;
     border-bottom: 0.0625rem 4 #ffffff;
   }
-  .gnb_btn::before, .gnb_btn::after {
+  #navigation .gnb_btn::before, #navigation .gnb_btn::after {
     content: "";
     position: absolute;
     display: block;
@@ -478,19 +488,18 @@ h1 a {
     height: 0.25rem;
     background-color: #ffffff;
   }
-  .gnb_btn::before {
+  #navigation .gnb_btn::before {
     top: 4px;
     top: 0.25rem;
     left: 0;
   }
-  .gnb_btn::after {
+  #navigation .gnb_btn::after {
     bottom: 10px;
     bottom: 0.625rem;
     bottom: 10px;
     left: 0;
   }
-
-  .gnb_close {
+  #navigation .gnb_close {
     display: none;
     position: absolute;
     top: 10px;
@@ -506,35 +515,46 @@ h1 a {
     background-position: center;
     background-size: cover;
   }
-
-  .gnb {
+  #navigation .gnb {
     display: none;
+    position: fixed;
+    top: 80px;
+    top: 5rem;
     width: 100%;
-    height: auto;
+    height: 100vw;
     background-color: #03010f;
   }
-  .gnb > ul {
-    position: fixed;
+  #navigation .gnb > ul {
     width: 100%;
     height: 100%;
   }
-  .gnb > ul > li {
+  #navigation .gnb > ul > li {
+    display: block;
     width: 100%;
     height: 60px;
     height: 3.75rem;
     font-size: 18px;
     font-size: 1.125rem;
   }
-
-  .moblie_login {
+  .sub_menu {
+    display: none;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  .sub_menu li {
     display: block;
+    text-align: center;
   }
 
-  .mobile_signUp {
+  #navigation .moblie_login {
     display: block;
   }
-
-  .unb {
+  #navigation .mobile_signUp {
+    display: block;
+  }
+  #navigation .unb {
     position: absolute;
     top: 0;
     right: 80px;
@@ -548,22 +568,19 @@ h1 a {
     margin-top: 0.625rem;
     margin-right: 0;
   }
-
-  .login_txt {
+  #navigation .login_txt {
     display: none;
   }
-
-  .signUp_txt {
+  #navigation .signUp_txt {
     display: none;
   }
-
-  .search_engin {
+  #navigation .search_engin {
     width: 400px;
     width: 25rem;
     height: 540px;
     height: 33.75rem;
   }
-  .search_engin ul {
+  #navigation .search_engin ul {
     width: 100%;
     height: 340px;
     height: 21.25rem;
@@ -573,18 +590,20 @@ h1 a {
     padding-left: 0.625rem;
     left: 0;
   }
-
-  #search_icon {
+  #navigation #search_icon {
     width: 90%;
     height: auto;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
   .head_wrap {
-    height: auto;
+    height: 100%;
   }
 
-  .gnb_btn {
+  #navigation {
+    margin-left: 0;
+  }
+  #navigation .gnb_btn {
     display: block;
     position: relative;
     float: right;
@@ -594,10 +613,10 @@ h1 a {
     height: 2.25rem;
     margin: 10px 20px 0px 20px;
     margin: 0.625rem 1.25rem 0rem 1.25rem;
-    border-bottom: 1px 4 #ffffff;
-    border-bottom: 0.0625rem 4 #ffffff;
+    border-bottom: 4px solid #ffffff;
+    border-bottom: 0.25rem solid #ffffff;
   }
-  .gnb_btn::before, .gnb_btn::after {
+  #navigation .gnb_btn::before, #navigation .gnb_btn::after {
     content: "";
     position: absolute;
     display: block;
@@ -606,19 +625,18 @@ h1 a {
     height: 0.25rem;
     background-color: #ffffff;
   }
-  .gnb_btn::before {
+  #navigation .gnb_btn::before {
     top: 4px;
     top: 0.25rem;
     left: 0;
   }
-  .gnb_btn::after {
+  #navigation .gnb_btn::after {
     bottom: 10px;
     bottom: 0.625rem;
     bottom: 10px;
     left: 0;
   }
-
-  .gnb_close {
+  #navigation .gnb_close {
     display: none;
     position: absolute;
     top: 10px;
@@ -634,35 +652,46 @@ h1 a {
     background-position: center;
     background-size: cover;
   }
-
-  .gnb {
+  #navigation .gnb {
     display: none;
+    position: fixed;
+    top: 80px;
+    top: 5rem;
     width: 100%;
-    height: auto;
+    height: 100vw;
     background-color: #03010f;
   }
-  .gnb > ul {
-    position: fixed;
+  #navigation .gnb > ul {
     width: 100%;
     height: 100%;
   }
-  .gnb > ul > li {
+  #navigation .gnb > ul > li {
+    display: block;
     width: 100%;
     height: 60px;
     height: 3.75rem;
     font-size: 18px;
     font-size: 1.125rem;
   }
-
-  .moblie_login {
+  .sub_menu {
+    display: none;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  .sub_menu li {
     display: block;
+    text-align: center;
   }
 
-  .mobile_signUp {
+  #navigation .moblie_login {
     display: block;
   }
-
-  .unb {
+  #navigation .mobile_signUp {
+    display: block;
+  }
+  #navigation .unb {
     position: absolute;
     top: 0;
     right: 80px;
@@ -676,22 +705,19 @@ h1 a {
     margin-top: 0.625rem;
     margin-right: 0;
   }
-
-  .login_txt {
+  #navigation .login_txt {
     display: none;
   }
-
-  .signUp_txt {
+  #navigation .signUp_txt {
     display: none;
   }
-
-  .search_engin {
+  #navigation .search_engin {
     width: 680px;
     width: 42.5rem;
     height: 620px;
     height: 38.75rem;
   }
-  .search_engin ul {
+  #navigation .search_engin ul {
     width: 100%;
     height: 340px;
     height: 21.25rem;
@@ -701,18 +727,20 @@ h1 a {
     padding-left: 0.625rem;
     left: 0;
   }
-
-  #search_icon {
+  #navigation #search_icon {
     width: 90%;
     height: auto;
   }
 }
 @media all and (min-width: 1024px) and (max-width: 1279px) {
   .head_wrap {
-    height: auto;
+    height: 100%;
   }
 
-  .gnb_btn {
+  #navigation {
+    margin-left: 0;
+  }
+  #navigation .gnb_btn {
     display: block;
     position: relative;
     float: right;
@@ -722,10 +750,10 @@ h1 a {
     height: 2.25rem;
     margin: 10px 20px 0px 20px;
     margin: 0.625rem 1.25rem 0rem 1.25rem;
-    border-bottom: 1px 4 #ffffff;
-    border-bottom: 0.0625rem 4 #ffffff;
+    border-bottom: 4px solid #ffffff;
+    border-bottom: 0.25rem solid #ffffff;
   }
-  .gnb_btn::before, .gnb_btn::after {
+  #navigation .gnb_btn::before, #navigation .gnb_btn::after {
     content: "";
     position: absolute;
     display: block;
@@ -734,19 +762,18 @@ h1 a {
     height: 0.25rem;
     background-color: #ffffff;
   }
-  .gnb_btn::before {
+  #navigation .gnb_btn::before {
     top: 4px;
     top: 0.25rem;
     left: 0;
   }
-  .gnb_btn::after {
+  #navigation .gnb_btn::after {
     bottom: 10px;
     bottom: 0.625rem;
     bottom: 10px;
     left: 0;
   }
-
-  .gnb_close {
+  #navigation .gnb_close {
     display: none;
     position: absolute;
     top: 10px;
@@ -762,35 +789,46 @@ h1 a {
     background-position: center;
     background-size: cover;
   }
-
-  .gnb {
+  #navigation .gnb {
     display: none;
+    position: fixed;
+    top: 80px;
+    top: 5rem;
     width: 100%;
-    height: auto;
+    height: 100vw;
     background-color: #03010f;
   }
-  .gnb > ul {
-    position: fixed;
+  #navigation .gnb > ul {
     width: 100%;
     height: 100%;
   }
-  .gnb > ul > li {
+  #navigation .gnb > ul > li {
+    display: block;
     width: 100%;
     height: 60px;
     height: 3.75rem;
     font-size: 18px;
     font-size: 1.125rem;
   }
-
-  .moblie_login {
+  .sub_menu {
+    display: none;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  .sub_menu li {
     display: block;
+    text-align: center;
   }
 
-  .mobile_signUp {
+  #navigation .moblie_login {
     display: block;
   }
-
-  .unb {
+  #navigation .mobile_signUp {
+    display: block;
+  }
+  #navigation .unb {
     position: absolute;
     top: 0;
     right: 80px;
@@ -804,22 +842,19 @@ h1 a {
     margin-top: 0.625rem;
     margin-right: 0;
   }
-
-  .login_txt {
+  #navigation .login_txt {
     display: none;
   }
-
-  .signUp_txt {
+  #navigation .signUp_txt {
     display: none;
   }
-
-  .search_engin {
+  #navigation .search_engin {
     width: 680px;
     width: 42.5rem;
     height: 620px;
     height: 38.75rem;
   }
-  .search_engin ul {
+  #navigation .search_engin ul {
     width: 100%;
     height: 340px;
     height: 21.25rem;
@@ -829,8 +864,7 @@ h1 a {
     padding-left: 0.625rem;
     left: 0;
   }
-
-  #search_icon {
+  #navigation #search_icon {
     width: 90%;
     height: auto;
   }
@@ -842,35 +876,145 @@ h1 a {
 }
 #viewBox {
   width: 100%;
-  height: 680px;
-  height: 42.5rem;
-  padding-top: 300px;
-  padding-top: 18.75rem;
+  height: 800px;
+  height: 50rem;
+  padding-top: 150px;
+  padding-top: 9.375rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: #ffffff;
   text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
   text-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.8);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-#viewBox h2 {
-  width: 800px;
-  width: 50rem;
-  height: auto;
+#viewBox > ul {
+  width: 1200px;
+  width: 75rem;
+  height: 500px;
+  height: 31.25rem;
   margin: auto;
-  text-align: center;
-  font-size: 54px;
-  font-size: 3.375rem;
 }
-#viewBox p {
-  width: 800px;
-  width: 50rem;
+.view_title {
+  float: left;
+  width: 700px;
+  width: 43.75rem;
+  height: 200px;
+  height: 12.5rem;
+  padding-top: 100px;
+  padding-top: 6.25rem;
+  padding-right: 200px;
+  padding-right: 12.5rem;
+}
+.view_title h2 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  padding-left: 20px;
+  padding-left: 1.25rem;
+}
+
+.view_txt {
+  position: relative;
+  float: left;
+  width: 700px;
+  width: 43.75rem;
+  height: 300px;
+  height: 18.75rem;
+  padding-left: 20px;
+  padding-left: 1.25rem;
+  padding-right: 200px;
+  padding-right: 12.5rem;
+}
+.view_txt p {
+  width: auto;
   height: auto;
-  margin: auto;
-  margin-top: 20px;
-  margin-top: 1.25rem;
-  text-align: center;
   font-size: 18px;
   font-size: 1.125rem;
+}
+.view_btn {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  left: 1.25rem;
+  width: 400px;
+  width: 25rem;
+  height: 60px;
+  height: 3.75rem;
+  background-color: #e75300;
+}
+.view_btn button {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.view_btn button span {
+  text-align: center;
+  line-height: 60px;
+  line-height: 3.75rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.board {
+  width: 1200px;
+  width: 75rem;
+  height: auto;
+  margin: auto;
+  margin-top: 80px;
+  margin-top: 5rem;
+}
+.board table {
+  border-right: hidden;
+  border-left: hidden;
+  margin-bottom: 80px;
+  margin-bottom: 5rem;
+}
+.board table thead {
+  width: auto;
+  height: auto;
+}
+.board table thead th {
+  width: auto;
+  height: 60px;
+  height: 3.75rem;
+}
+.board table thead th:nth-child(1) {
+  width: 800px;
+  width: 50rem;
+  color: #e75300;
+}
+.board table thead th:nth-child(2) {
+  width: 200px;
+  width: 12.5rem;
+}
+.board table thead th:nth-child(3) {
+  width: 200px;
+  width: 12.5rem;
+}
+.board table td {
+  width: auto;
+  height: 40px;
+  height: 2.5rem;
+  padding: 10px 20px 10px 20px;
+  padding: 0.625rem 1.25rem 0.625rem 1.25rem;
+}
+.boardBullet {
+  font-weight: 700;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.boardTxt {
+  margin-left: 5px;
+  margin-left: 0.3125rem;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.board table td:nth-child(2) {
+  text-align: center;
+}
+.board table td:nth-child(3) {
+  text-align: center;
 }
 
 #footBox {

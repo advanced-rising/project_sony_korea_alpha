@@ -1,4 +1,4 @@
-/* eventing.scss */
+/* seminared.scss */
 /* variable.css */
 :root {
   font-size: 16px;
@@ -954,145 +954,69 @@ h1 a {
   font-weight: 700;
 }
 
-.eventing {
-  background-image: url("../../img/event/20211027_01_u1rt_main.jpg");
-}
-
-.contentList {
-  margin-bottom: 80px;
-  margin-bottom: 5rem;
-}
-.contentList ul {
-  width: 1168px;
-  width: 73rem;
+.board {
+  width: 1200px;
+  width: 75rem;
   height: auto;
   margin: auto;
   margin-top: 80px;
   margin-top: 5rem;
 }
-.contentList ul li {
-  position: relative;
-  float: left;
-  width: 564px;
-  width: 35.25rem;
-  height: 400px;
-  height: 25rem;
-  margin-top: 40px;
-  margin-top: 2.5rem;
-  margin-right: 40px;
-  margin-right: 2.5rem;
+.board table {
+  border-right: hidden;
+  border-left: hidden;
+  margin-bottom: 80px;
+  margin-bottom: 5rem;
 }
-.contentList ul li:nth-child(2n) {
-  margin-right: 0px;
+.board table thead {
+  width: auto;
+  height: auto;
 }
-.contentList ul li:nth-child(-n+2) {
-  margin-top: 0px;
+.board table thead th {
+  width: auto;
+  height: 60px;
+  height: 3.75rem;
 }
-.duringDate {
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 340px;
-  width: 21.25rem;
-  height: 80px;
-  height: 5rem;
-  background-color: #e75300;
+.board table thead th:nth-child(1) {
+  width: 800px;
+  width: 50rem;
+  color: #e75300;
 }
-.duringDate span {
-  display: block;
-  text-align: center;
-  line-height: 80px;
-  line-height: 5rem;
-  font-size: 18px;
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: #ffffff;
+.board table thead th:nth-child(2) {
+  width: 200px;
+  width: 12.5rem;
 }
-
-.contentImg {
-  position: absolute;
-  top: 40px;
-  top: 2.5rem;
-  right: 0;
-  width: 540px;
-  width: 33.75rem;
-  height: 260px;
-  height: 16.25rem;
-  background-color: #6f6f75;
+.board table thead th:nth-child(3) {
+  width: 200px;
+  width: 12.5rem;
 }
-.contentImg a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.contentImg {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.contentTxt {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 540px;
-  width: 33.75rem;
-  height: 100px;
-  height: 6.25rem;
-  box-sizing: border-box;
+.board table td {
+  width: auto;
+  height: 40px;
+  height: 2.5rem;
   padding: 10px 20px 10px 20px;
   padding: 0.625rem 1.25rem 0.625rem 1.25rem;
-  color: #ffffff;
-  background-color: #333335;
 }
-.contentTxt p {
-  display: inline-block;
-  width: auto;
-  height: auto;
-  font-size: 18px;
-  font-size: 1.125rem;
+.boardBullet {
   font-weight: 700;
-}
-.contentTxt span {
-  display: block;
-  width: auto;
-  height: auto;
   font-size: 16px;
   font-size: 1rem;
 }
 
-.contentList li:nth-child(1) .contentImg {
-  background-image: url("../../img/event/20211022_02_ex7m_list.jpg");
+.boardTxt {
+  margin-left: 5px;
+  margin-left: 0.3125rem;
+  font-size: 16px;
+  font-size: 1rem;
 }
 
-.contentList li:nth-child(2) .contentImg {
-  background-image: url("../../img/event/20211019_01_dpjh_list.jpg");
+.board table td:nth-child(2) {
+  text-align: center;
+}
+.board table td:nth-child(3) {
+  text-align: center;
 }
 
-.contentList li:nth-child(3) .contentImg {
-  background-image: url("../../img/event/20211001_01_wo13_list.jpg");
-}
-
-.contentList li:nth-child(4) .contentImg {
-  background-image: url("../../img/event/20210707_01_apxu_list.jpg");
-}
-
-.contentList li:nth-child(5) .contentImg {
-  background-image: url("../../img/event/20210617_01_wo3z_list.jpg");
-}
-
-.contentList li:nth-child(6) .contentImg {
-  background-image: url("../../img/event/20210517_01_smnz_list.jpg");
-}
-
-.contentList li:nth-child(7) .contentImg {
-  background-image: url("../../img/event/20210101_02_loi8_list.jpg");
-}
-
-/* ==== event img ========================= */
-/* ==== event img ========================= */
 #footBox {
   width: 100%;
   height: auto;
@@ -1559,4 +1483,4 @@ h1 a {
   }
 }
 
-/*# sourceMappingURL=eventing.css.map */
+/*# sourceMappingURL=seminared.css.map */

@@ -1,0 +1,170 @@
+.onlineAcademy {
+  background-image: url("../../img/academy/onLineAcademy/bg_online_top.jpg");
+}
+.online_area {
+  @include size();
+  @include unit(padding-bottom,80);
+  background-color: $color-white;
+  .tab_menu {
+    width: 100%;
+    @include unit(height,40);
+    margin: auto;
+    text-align: center;
+    @include border-bottom($c:$color-black);
+    ul {
+      display: inline-block;
+      width: auto;
+      height: 100%;
+      margin: auto;
+      @include unit(padding-top,10);
+      li {
+        display: table-cell;
+        @include unit(width,120);
+        height: 100%;
+        text-align: center;
+        background-color: $color-white;
+        button {
+          width: auto;
+          height: 100%;
+        }
+        span {
+          display: block;
+          width: auto;
+          height: 100%;
+          box-sizing: border-box;
+        }
+        &.action span {
+          @include border-bottom($w:3,$c:$color-orange);
+        }
+      }
+    }
+  }
+  @at-root .online_video {
+    @include unit(width,820);
+    height: auto;
+    margin: auto;
+    @include unit(margin-top,80);
+    ul {
+      width: 100%;
+      height: 100%;
+      li {
+        float: left;
+        width: 400px;
+        height: 300px;
+        margin-top: 20px;
+        margin-right: 20px;
+        border: 1px solid $color-black;
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+        &:nth-child(-n + 2) {
+          margin-top: 0;
+        }
+        @at-root .video_img {
+          position: relative;
+          width: 100%;
+          @include unit(height,200);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          a {
+            @include display-block();
+            @at-root .play_btn {
+              display: block;
+              position: absolute;
+              top: 50%;
+              left: 0;
+              right: 0;
+              @include unit(width,50);
+              @include unit(height,50);
+              margin: auto;
+              border-radius: 50%;
+              background-color: $color-light-blue;
+              transform: translateY(-50%);
+              &::before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: 45%;
+                margin: auto;
+                margin-top: -16px;
+                margin-left: -5px;
+                border-radius: 5px;
+                border: solid $color-orange;
+                border-width: 16px 0 16px 20px;
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+              }
+            }
+          }
+        }
+        @at-root .video_txt {
+          width: 100%;
+          @include unit(height,100);
+          @include padding(10,20,10,20);
+          color: $color-white;
+          background-color: $color-deep-gray;
+        }
+        &:nth-child(1) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_40.jpg);}
+        &:nth-child(2) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_39.jpg);}
+        &:nth-child(3) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_38.jpg);}
+        &:nth-child(4) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_37.jpg);}
+        &:nth-child(5) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_36.jpg);}
+        &:nth-child(6) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_35.jpg);}
+        &:nth-child(7) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_34.jpg);}
+        &:nth-child(8) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_33.jpg);}
+        &:nth-child(9) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_32.jpg);}
+        &:nth-child(10) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_31.jpg);}
+        &:nth-child(11) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_30.jpg);}
+        &:nth-child(12) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_29.jpg);}
+        &:nth-child(13) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_28.jpg);}
+        &:nth-child(14) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_27.jpg);}
+        &:nth-child(15) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_26.jpg);}
+        &:nth-child(16) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_25.jpg);}
+        &:nth-child(17) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_24.jpg);}
+        &:nth-child(18) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_23.jpg);}
+        &:nth-child(19) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_22.jpg);}
+        &:nth-child(20) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_21.jpg);}
+        &:nth-child(21) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_20.jpg);}
+        &:nth-child(22) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_19.jpg);}
+        &:nth-child(23) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_18.jpg);}
+        &:nth-child(24) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_17.jpg);}
+        &:nth-child(25) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_16.jpg);}
+        &:nth-child(26) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_15.jpg);}
+        &:nth-child(27) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_14.jpg);}
+        &:nth-child(28) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_13.jpg);}
+        &:nth-child(29) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_12.jpg);}
+        &:nth-child(30) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_11.jpg);}
+        &:nth-child(31) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_10.jpg);}
+        &:nth-child(32) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_09.jpg);}
+        &:nth-child(33) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_08.jpg);}
+        &:nth-child(34) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_07.jpg);}
+        &:nth-child(35) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_06.jpg);}
+        &:nth-child(36) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_05.jpg);}
+        &:nth-child(37) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_04.jpg);}
+        &:nth-child(38) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_03.jpg);}
+        &:nth-child(39) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_02.jpg);}
+        &:nth-child(40) .video_img { background-image: url(../../img/academy/onLineAcademy/photo_01.jpg);}
+        &:nth-child(41) .video_img { background-image: url(../../img/academy/onLineAcademy/product_18.jpg);}
+        &:nth-child(42) .video_img { background-image: url(../../img/academy/onLineAcademy/product_17.jpg);}
+        &:nth-child(43) .video_img { background-image: url(../../img/academy/onLineAcademy/product_16.jpg);}
+        &:nth-child(44) .video_img { background-image: url(../../img/academy/onLineAcademy/product_15.jpg);}
+        &:nth-child(45) .video_img { background-image: url(../../img/academy/onLineAcademy/product_14.jpg);}
+        &:nth-child(46) .video_img { background-image: url(../../img/academy/onLineAcademy/product_13.jpg);}
+        &:nth-child(47) .video_img { background-image: url(../../img/academy/onLineAcademy/product_12.jpg);}
+        &:nth-child(48) .video_img { background-image: url(../../img/academy/onLineAcademy/product_11.jpg);}
+        &:nth-child(49) .video_img { background-image: url(../../img/academy/onLineAcademy/product_10.jpg);}
+        &:nth-child(50) .video_img { background-image: url(../../img/academy/onLineAcademy/product_09.jpg);}
+        &:nth-child(51) .video_img { background-image: url(../../img/academy/onLineAcademy/product_08.jpg);}
+        &:nth-child(52) .video_img { background-image: url(../../img/academy/onLineAcademy/product_07.jpg);}
+        &:nth-child(53) .video_img { background-image: url(../../img/academy/onLineAcademy/product_06.jpg);}
+        &:nth-child(54) .video_img { background-image: url(../../img/academy/onLineAcademy/product_05.jpg);}
+        &:nth-child(55) .video_img { background-image: url(../../img/academy/onLineAcademy/product_04.jpg);}
+        &:nth-child(56) .video_img { background-image: url(../../img/academy/onLineAcademy/product_03.jpg);}
+        &:nth-child(57) .video_img { background-image: url(../../img/academy/onLineAcademy/product_02.jpg);}
+        &:nth-child(58) .video_img { background-image: url(../../img/academy/onLineAcademy/product_01.jpg);}
+      }
+    }
+  }
+}// .online_area

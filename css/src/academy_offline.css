@@ -1,4 +1,4 @@
-/* eventing.scss */
+/* academy_offline.scss */
 /* variable.css */
 :root {
   font-size: 16px;
@@ -876,223 +876,265 @@ h1 a {
 }
 #viewBox {
   width: 100%;
-  height: 800px;
-  height: 50rem;
-  padding-top: 150px;
-  padding-top: 9.375rem;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  height: 680px;
+  height: 42.5rem;
+  padding-top: 300px;
+  padding-top: 18.75rem;
   color: #ffffff;
+  background-color: #03010f;
   text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
   text-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.8);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-#viewBox > ul {
-  width: 1200px;
-  width: 75rem;
-  height: 500px;
-  height: 31.25rem;
-  margin: auto;
-}
-.view_title {
-  float: left;
-  width: 700px;
-  width: 43.75rem;
-  height: 200px;
-  height: 12.5rem;
-  padding-top: 100px;
-  padding-top: 6.25rem;
-  padding-right: 200px;
-  padding-right: 12.5rem;
-}
-.view_title h2 {
-  font-size: 36px;
-  font-size: 2.25rem;
-  padding-left: 20px;
-  padding-left: 1.25rem;
-}
-
-.view_txt {
-  position: relative;
-  float: left;
-  width: 700px;
-  width: 43.75rem;
-  height: 300px;
-  height: 18.75rem;
-  padding-left: 20px;
-  padding-left: 1.25rem;
-  padding-right: 200px;
-  padding-right: 12.5rem;
-}
-.view_txt p {
-  width: auto;
+#viewBox h2 {
+  width: 800px;
+  width: 50rem;
   height: auto;
+  margin: auto;
+  text-align: center;
+  font-size: 54px;
+  font-size: 3.375rem;
+}
+#viewBox p {
+  width: 800px;
+  width: 50rem;
+  height: auto;
+  margin: auto;
+  margin-top: 20px;
+  margin-top: 1.25rem;
+  text-align: center;
   font-size: 18px;
   font-size: 1.125rem;
 }
-.view_btn {
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  left: 1.25rem;
+
+.offlineAcademy {
+  background: url("../../img/academy/offLineAcademy/bg_offline_top.jpg");
+}
+
+.offline_area {
+  width: 100%;
+  height: auto;
+  margin-bottom: 80px;
+  margin-bottom: 5rem;
+  background-color: #ffffff;
+}
+.offline_area .tab_menu {
+  width: 100%;
+  height: 40px;
+  height: 2.5rem;
+  margin: auto;
+  border-bottom: 1px solid #03010f;
+  border-bottom: 0.0625rem solid #03010f;
+  text-align: center;
+}
+.offline_area .tab_menu ul {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+  margin: auto;
+  padding-top: 10px;
+  padding-top: 0.625rem;
+}
+.offline_area .tab_menu ul li {
+  display: table-cell;
+  width: 100px;
+  width: 6.25rem;
+  height: 100%;
+  text-align: center;
+  background-color: #ffffff;
+}
+.offline_area .tab_menu ul li button {
+  width: auto;
+  height: 100%;
+}
+.offline_area .tab_menu ul li span {
+  display: block;
+  width: auto;
+  height: 100%;
+  box-sizing: border-box;
+}
+.offline_area .tab_menu ul li.action span {
+  border-bottom: 3px solid #e75300;
+  border-bottom: 0.1875rem solid #e75300;
+}
+.offline_area .offline_content {
+  width: 100%;
+  height: auto;
+}
+.offline_area .offline_content .offline_title {
+  position: relative;
   width: 400px;
   width: 25rem;
-  height: 60px;
-  height: 3.75rem;
-  background-color: #e75300;
+  height: 80px;
+  height: 5rem;
+  margin: auto;
+  margin-top: 80px;
+  margin-top: 5rem;
 }
-.view_btn button {
+.offline_area .offline_content .offline_title span {
   display: block;
   width: 100%;
   height: 100%;
-}
-.view_btn button span {
   text-align: center;
-  line-height: 60px;
-  line-height: 3.75rem;
-  color: #ffffff;
+  line-height: 80px;
+  line-height: 5rem;
+  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
 }
-
-.eventing {
-  background-image: url("../../img/event/20211027_01_u1rt_main.jpg");
+.offline_area .offline_content .offline_title button {
+  position: absolute;
+  width: 40px;
+  width: 2.5rem;
+  height: 40px;
+  height: 2.5rem;
+  transform: translateY(-50%);
+}
+.offline_area .offline_content .offline_title .prev_btn {
+  top: 50%;
+  left: 0;
+}
+.offline_area .offline_content .offline_title .prev_btn::after {
+  position: absolute;
+  bottom: 20%;
+  right: 0;
+  transform: translateY(50%);
+  content: "";
+  width: 3px;
+  width: 0.1875rem;
+  height: 15px;
+  height: 0.9375rem;
+  transform: rotate(135deg);
+  background-color: #03010f;
+}
+.offline_area .offline_content .offline_title .prev_btn::before {
+  position: absolute;
+  bottom: 41%;
+  right: 0;
+  transform: translateY(50%);
+  content: "";
+  width: 3px;
+  width: 0.1875rem;
+  height: 15px;
+  height: 0.9375rem;
+  transform: rotate(45deg);
+  background-color: #03010f;
+}
+.offline_area .offline_content .offline_title .next_btn {
+  top: 50%;
+  right: 0;
+}
+.offline_area .offline_content .offline_title .next_btn::after {
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  transform: translateY(50%);
+  content: "";
+  width: 3px;
+  width: 0.1875rem;
+  height: 15px;
+  height: 0.9375rem;
+  transform: rotate(45deg);
+  background-color: #03010f;
+}
+.offline_area .offline_content .offline_title .next_btn::before {
+  position: absolute;
+  bottom: 41%;
+  left: 0;
+  transform: translateY(50%);
+  content: "";
+  width: 3px;
+  width: 0.1875rem;
+  height: 15px;
+  height: 0.9375rem;
+  transform: rotate(135deg);
+  background-color: #03010f;
 }
 
-.contentList {
-  margin-bottom: 80px;
-  margin-bottom: 5rem;
-}
-.contentList ul {
-  width: 1168px;
-  width: 73rem;
+.offline_list {
+  width: 900px;
+  width: 56.25rem;
   height: auto;
   margin: auto;
   margin-top: 80px;
   margin-top: 5rem;
 }
-.contentList ul li {
+.offline_list li {
   position: relative;
-  float: left;
-  width: 564px;
-  width: 35.25rem;
-  height: 400px;
-  height: 25rem;
-  margin-top: 40px;
-  margin-top: 2.5rem;
-  margin-right: 40px;
-  margin-right: 2.5rem;
-}
-.contentList ul li:nth-child(2n) {
-  margin-right: 0px;
-}
-.contentList ul li:nth-child(-n+2) {
-  margin-top: 0px;
-}
-.duringDate {
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 340px;
-  width: 21.25rem;
-  height: 80px;
-  height: 5rem;
-  background-color: #e75300;
-}
-.duringDate span {
-  display: block;
-  text-align: center;
-  line-height: 80px;
-  line-height: 5rem;
-  font-size: 18px;
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-.contentImg {
-  position: absolute;
-  top: 40px;
-  top: 2.5rem;
-  right: 0;
-  width: 540px;
-  width: 33.75rem;
-  height: 260px;
-  height: 16.25rem;
-  background-color: #6f6f75;
-}
-.contentImg a {
-  display: block;
   width: 100%;
-  height: 100%;
-}
-
-.contentImg {
+  height: 200px;
+  height: 12.5rem;
+  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-
-.contentTxt {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 540px;
-  width: 33.75rem;
-  height: 100px;
-  height: 6.25rem;
+.offline_list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
-  padding: 10px 20px 10px 20px;
-  padding: 0.625rem 1.25rem 0.625rem 1.25rem;
-  color: #ffffff;
-  background-color: #333335;
+  padding: 10px;
+  padding: 0.625rem;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.contentTxt p {
-  display: inline-block;
-  width: auto;
-  height: auto;
-  font-size: 18px;
-  font-size: 1.125rem;
-  font-weight: 700;
-}
-.contentTxt span {
+.offline_list li a span {
+  position: absolute;
   display: block;
   width: auto;
   height: auto;
-  font-size: 16px;
-  font-size: 1rem;
+  text-align: center;
+  font-weight: 700;
+  color: #ffffff;
+}
+.offline_list li a span:nth-child(1) {
+  top: 80px;
+  top: 5rem;
+  right: 20%;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+.offline_list li a span:nth-child(2) {
+  width: 100px;
+  width: 6.25rem;
+  padding: 5px 20px 5px 20px;
+  padding: 0.3125rem 1.25rem 0.3125rem 1.25rem;
+  bottom: 10px;
+  bottom: 0.625rem;
+  right: 20px;
+  right: 1.25rem;
+  border: 3px solid #e75300;
+  border: 0.1875rem solid #e75300;
+  background-color: #03010fdd;
 }
 
-.contentList li:nth-child(1) .contentImg {
-  background-image: url("../../img/event/20211022_02_ex7m_list.jpg");
+.offline_list li:nth-child(1) {
+  background-image: url("../../img/academy/offLineAcademy/off-content_01.jpg");
 }
 
-.contentList li:nth-child(2) .contentImg {
-  background-image: url("../../img/event/20211019_01_dpjh_list.jpg");
+.offline_list li:nth-child(2) {
+  background-image: url("../../img/academy/offLineAcademy/off-content_02.jpg");
 }
 
-.contentList li:nth-child(3) .contentImg {
-  background-image: url("../../img/event/20211001_01_wo13_list.jpg");
+.offline_list li:nth-child(3) {
+  background-image: url("../../img/academy/offLineAcademy/off-content_03.jpg");
 }
 
-.contentList li:nth-child(4) .contentImg {
-  background-image: url("../../img/event/20210707_01_apxu_list.jpg");
+.offline_list li:nth-child(4) {
+  background-image: url("../../img/academy/offLineAcademy/off-content_04.jpg");
 }
 
-.contentList li:nth-child(5) .contentImg {
-  background-image: url("../../img/event/20210617_01_wo3z_list.jpg");
+.offline_list li:nth-child(5) {
+  background-image: url("../../img/academy/offLineAcademy/off-content_05.jpg");
 }
 
-.contentList li:nth-child(6) .contentImg {
-  background-image: url("../../img/event/20210517_01_smnz_list.jpg");
+.offline_list li:nth-child(6) {
+  background-image: url("../../img/academy/offLineAcademy/off-content_06.jpg");
 }
 
-.contentList li:nth-child(7) .contentImg {
-  background-image: url("../../img/event/20210101_02_loi8_list.jpg");
-}
-
-/* ==== event img ========================= */
-/* ==== event img ========================= */
 #footBox {
   width: 100%;
   height: auto;
@@ -1559,4 +1601,4 @@ h1 a {
   }
 }
 
-/*# sourceMappingURL=eventing.css.map */
+/*# sourceMappingURL=academy_offline.css.map */

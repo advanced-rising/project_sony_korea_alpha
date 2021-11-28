@@ -1,0 +1,183 @@
+.offlineAcademy {
+  background: url("../../img/academy/offLineAcademy/bg_offline_top.jpg");
+}
+.offline_area {
+  @include size();
+  @include unit(margin-bottom,80);
+  background-color: $color-white;
+  .tab_menu {
+    width: 100%;
+    @include unit(height,40);
+    margin: auto;
+    @include border-bottom($c:$color-black);
+    text-align:center;
+    ul {
+      display: inline-block;
+      width: auto;
+      height: 100%;
+      margin: auto;
+      @include unit(padding-top,10);
+      li {
+        display: table-cell;
+        @include unit(width,100);
+        height: 100%;
+        text-align: center;
+        background-color: $color-white;
+        button {
+          width: auto;
+          height: 100%;
+        }
+        span {
+          display: block;
+          width: auto;
+          height: 100%;
+          box-sizing: border-box;
+        }
+        &.action span {
+          @include border-bottom($w:3,$c:$color-orange);
+        }
+      }
+    }
+  }
+  .offline_content {
+    @include size();
+    .offline_title {
+      position: relative;
+      @include unit(width,400);
+      @include unit(height,80);
+      margin: auto;
+      @include unit(margin-top,80);
+      span {
+        @include display-block();
+        text-align: center;
+        @include unit(line-height,80);
+        @include unit(font-size,24);
+        font-weight: 700;
+      }
+      button {
+        position: absolute;
+        @include unit(width,40);
+        @include unit(height,40);
+        transform: translateY(-50%); 
+      }
+      .prev_btn {
+        top: 50%;
+        left: 0;
+        &::after {
+          position: absolute;
+          bottom: 20%;
+          right: 0;
+          transform: translateY(50%);
+          content: "";
+          @include unit(width,3);
+          @include unit(height,15);
+          transform: rotate(135deg);
+          background-color: $color-black;
+        }
+        &::before {
+          position: absolute;
+          bottom: 41%;
+          right: 0;
+          transform: translateY(50%);
+          content: "";
+          @include unit(width,3);
+          @include unit(height,15);
+          transform: rotate(45deg);
+          background-color: $color-black;
+        }
+      }
+      .next_btn {
+        top: 50%;
+        right: 0;
+        &::after {
+          position: absolute;
+          bottom: 20%;
+          left: 0;
+          transform: translateY(50%);
+          content: "";
+          @include unit(width,3);
+          @include unit(height,15);
+          transform: rotate(45deg);
+          background-color: $color-black;
+        }
+        &::before {
+          position: absolute;
+          bottom: 41%;
+          left: 0;
+          transform: translateY(50%);
+          content: "";
+          @include unit(width,3);
+          @include unit(height,15);
+          transform: rotate(135deg);
+          background-color: $color-black;
+        }
+      }
+    }
+
+  }// .offline_content
+}// .offline_area
+
+.offline_list {
+  @include unit(width,900);
+  height: auto;
+  margin: auto;
+  @include unit(margin-top,80);
+  li {
+    position: relative;
+    width: 100%;
+    @include unit(height,200);
+    @include unit(margin-bottom,40);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      @include unit(padding,10);
+      padding: 10px;
+      background-color: $color-deep-black;
+      span {
+        position: absolute;
+        display: block;
+        width: auto;
+        height: auto;
+        text-align: center;
+        font-weight: 700;
+        color: $color-white;
+        &:nth-child(1) {
+          @include unit(top,80);
+          right: 20%;
+          @include unit(font-size,18);
+        }
+        &:nth-child(2) {
+          @include unit(width,100);
+          @include padding(5,20,5,20);
+          @include unit(bottom,10);
+          @include unit(right,20);
+          @include border($w:3,$c:$color-orange);
+          background-color: $color-light-black;
+        }
+      }
+    }
+  }
+}
+.offline_list li:nth-child(1) {
+  background-image: url("../../img/academy/offLineAcademy/off-content_01.jpg");
+}
+.offline_list li:nth-child(2) {
+  background-image: url("../../img/academy/offLineAcademy/off-content_02.jpg");
+}
+.offline_list li:nth-child(3) {
+  background-image: url("../../img/academy/offLineAcademy/off-content_03.jpg");
+}
+.offline_list li:nth-child(4) {
+  background-image: url("../../img/academy/offLineAcademy/off-content_04.jpg");
+}
+.offline_list li:nth-child(5) {
+  background-image: url("../../img/academy/offLineAcademy/off-content_05.jpg");
+}
+.offline_list li:nth-child(6) {
+  background-image: url("../../img/academy/offLineAcademy/off-content_06.jpg");
+}
