@@ -74,21 +74,37 @@ h1 a {
   height: 100%;
   margin-right: 17px;
   margin-right: 1.0625rem;
+  line-height: 50px;
+  line-height: 3.125rem;
+  color: #ffffff;
+}
+.gnb > ul > li > button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-size: 1rem;
+  text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  line-height: 40px;
-  line-height: 2.5rem;
-  color: #ffffff;
+  color: inherit;
+}
+.gnb > ul > li > button:focus, .gnb > ul > li > button:hover {
+  color: #e75300;
 }
 .gnb > ul > li > a {
   display: block;
   width: 100%;
   height: 100%;
+  font-size: 16px;
+  font-size: 1rem;
   text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: inherit;
 }
-.gnb > ul > li a:focus,
-.gnb > ul > li a:hover {
-  font-weight: bold;
+.gnb > ul > li > a:focus, .gnb > ul > li > a:hover {
+  font-weight: 700;
   color: #e75300;
 }
 .sub_menu {
@@ -206,7 +222,6 @@ h1 a {
 
 .unb > ul li a:hover,
 .unb > ul li a:focus {
-  font-weight: 700;
   color: #e75300;
   text-decoration: none;
 }
@@ -876,82 +891,36 @@ h1 a {
 }
 #viewBox {
   width: 100%;
-  height: 800px;
-  height: 50rem;
-  padding-top: 150px;
-  padding-top: 9.375rem;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  height: 480px;
+  height: 30rem;
+  padding-top: 200px;
+  padding-top: 12.5rem;
   color: #ffffff;
+  background-color: #03010f;
   text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
   text-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.8);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-#viewBox > ul {
-  width: 1200px;
-  width: 75rem;
-  height: 500px;
-  height: 31.25rem;
-  margin: auto;
-}
-.view_title {
-  float: left;
-  width: 700px;
-  width: 43.75rem;
-  height: 200px;
-  height: 12.5rem;
-  padding-top: 100px;
-  padding-top: 6.25rem;
-  padding-right: 200px;
-  padding-right: 12.5rem;
-}
-.view_title h2 {
-  font-size: 36px;
-  font-size: 2.25rem;
-  padding-left: 20px;
-  padding-left: 1.25rem;
-}
-
-.view_txt {
-  position: relative;
-  float: left;
-  width: 700px;
-  width: 43.75rem;
-  height: 300px;
-  height: 18.75rem;
-  padding-left: 20px;
-  padding-left: 1.25rem;
-  padding-right: 200px;
-  padding-right: 12.5rem;
-}
-.view_txt p {
-  width: auto;
+#viewBox h2 {
+  width: 800px;
+  width: 50rem;
   height: auto;
+  margin: auto;
+  text-align: center;
+  font-size: 54px;
+  font-size: 3.375rem;
+}
+#viewBox p {
+  width: 800px;
+  width: 50rem;
+  height: auto;
+  margin: auto;
+  margin-top: 20px;
+  margin-top: 1.25rem;
+  text-align: center;
   font-size: 18px;
   font-size: 1.125rem;
-}
-.view_btn {
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  left: 1.25rem;
-  width: 400px;
-  width: 25rem;
-  height: 60px;
-  height: 3.75rem;
-  background-color: #e75300;
-}
-.view_btn button {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.view_btn button span {
-  text-align: center;
-  line-height: 60px;
-  line-height: 3.75rem;
-  color: #ffffff;
-  font-weight: 700;
 }
 
 .board {

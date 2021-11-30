@@ -1,41 +1,19 @@
-#viewBox {
-  width: 100%;
-  @include unit(height,680);
-  @include unit(padding-top,300);
-  @include text-shadow(0,0,8,rgb(0 0 0 / 80%));
-  color: $color-white;
-  background-repeat: no-repeat;
-  background-size: cover;
-  h2 {
-    @include unit(width,800);
-    height: auto;
-    margin: auto;
-    @include unit(font-size,54);
-    text-align: center;
-  }
-  p {
-    @include unit(width,800);
-    height: auto;
-    margin: auto;
-    @include unit(margin-top,20);
-    text-align: center;
-    @include unit(font-size,18);
-  }
-}
 .magazine {
   @include img("magazine/bg_magazine.jpg",$p:center);
 }
 #magazineBox {
-  width: 100%;
-  @include unit(height,2600);
+  @include size();
   @include unit(padding-top,80);
+  @include unit(margin-bottom,80);
   background-color: $color-white;
   @at-root .magazine_nav {
-    @include unit(width,720);
+    width: auto;
     @include unit(height,120);
     margin: auto;
+    text-align: center;
     ul {
-      width: 100%;
+      display: inline-block;
+      width: auto;
       height: 100%;
       li {
         float: left;
@@ -53,7 +31,7 @@
             @include border($w:3,$c:$color-orange);
             background-color: $color-white;
             background-repeat: no-repeat;
-            background-size: 300%;
+            background-size: cover;
             background-position: 100% 100%;
           }
           @at-root .magazine_nav_txt {
@@ -81,10 +59,11 @@
         }
       }
     }
-    .magazine_search {
+    @at-root .magazine_search {
       position: relative;
       @include unit(width,720);
       @include unit(height,60);
+      margin: auto;
       @include unit(margin-top,40);
       background-color: $color-light-gray;
       @at-root #select_product {
@@ -110,7 +89,7 @@
     }
   }
   @at-root .magazine_list {
-    @include unit(width,1200);
+    @include unit(width,1640);
     height: auto;
     margin: auto;
     @include unit(margin-top,200);
@@ -120,15 +99,12 @@
       li {
         position: relative;
         float: left;
-        @include unit(weight,380);
+        @include unit(width,380);
         @include unit(height,500);
         @include unit(margin-right,40);
         @include unit(margin-top,40);
         &:nth-child(4n) {
           margin-right: 0;
-        }
-        &:nth-child(-n+4) {
-          margin-top: 0;
         }
         @at-root .magazine_img {
           position: relative;
@@ -211,7 +187,7 @@
             position: absolute;
             @include unit(bottom,10);
             @include unit(left,10);
-            @include unit(weight,40);
+            @include unit(width,40);
             @include unit(height,20);
           }
         }
@@ -219,8 +195,7 @@
     }
   }
   @at-root .magazine_list_btn {
-    @include unit(weight,722);
-    @include unit(min-width,720);
+    @include unit(width,720);
     height: auto;
     margin: auto;
     text-align: center;
@@ -277,6 +252,144 @@
               border-top-color: transparent;
               border-bottom-color: transparent;
             }
+          }
+        }
+      }
+    }
+  }
+}
+@include mobile-v{
+  #magazineBox {
+    @at-root .magazine_nav {
+      @include unit(height,40);
+      ul {
+        li {
+          @include unit(width,60);
+          @include unit(height,40);
+          div {
+            @include full();
+            @at-root .magazine_nav_icon {
+              @include unit(width,40);
+              @include unit(height,40);
+            }
+          }
+        }
+      }
+      @at-root .magazine_search {
+        @include unit(width,300);
+        @include unit(margin-top,60);
+      }
+    }
+    @at-root .magazine_list {
+      @include unit(width,320);
+      height: auto;
+      ul {
+        li {
+          @include unit(width,320);
+          margin-right: 0;
+        }
+      }
+    }
+    @at-root .magazine_list_btn {
+      display: none;
+    }
+  }
+}
+@include mobile-h{
+  #magazineBox {
+    @at-root .magazine_nav {
+      @include unit(height,40);
+      ul {
+        li {
+          @include unit(width,60);
+          @include unit(height,40);
+          div {
+            @include full();
+            @at-root .magazine_nav_icon {
+              @include unit(width,40);
+              @include unit(height,40);
+            }
+          }
+        }
+      }
+      @at-root .magazine_search {
+        @include unit(width,300);
+        @include unit(margin-top,60);
+      }
+    }
+    @at-root .magazine_list {
+      @include unit(width,320);
+      height: auto;
+      ul {
+        li {
+          @include unit(width,320);
+          margin-right: 0;
+        }
+      }
+    }
+    @at-root .magazine_list_btn {
+      display: none;
+    }
+  }
+}
+@include tablet {
+  #magazineBox {
+    @at-root .magazine_list {
+      @include unit(width,680);
+      height: auto;
+      ul {
+        li {
+          @include unit(width,320);
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@include laptop {
+  #magazineBox {
+    @at-root .magazine_list {
+      @include unit(width,680);
+      height: auto;
+      ul {
+        li {
+          @include unit(width,320);
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@include pc1280 {
+  #magazineBox {
+    @at-root .magazine_list {
+      @include unit(width,680);
+      height: auto;
+      ul {
+        li {
+          @include unit(width,320);
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@include pc1440 {
+  #magazineBox {
+    @at-root .magazine_list {
+      @include unit(width,1240);
+      ul {
+        li {
+          @include unit(width,280);
+          @include unit(height,400);
+          @at-root .magazine_img {
+            @include unit(height,240);
           }
         }
       }

@@ -52,19 +52,36 @@
         @include unit(width,90);
         height: 100%;
         @include unit(margin-right,17);
-        text-align: center;
-        text-transform: uppercase;
-        @include unit(line-height,40);
+        @include unit(line-height,50);
+        
         color: $color-white;
+        > button {
+          @include display-block();
+          @include unit(font-size,16);
+          text-decoration: none;
+          text-align: center;
+          text-transform: uppercase;
+          color: inherit;
+          &:focus,
+          &:hover {
+            // font-weight: 700;
+            color: $color-orange;
+          }
+        }
         > a {
           @include display-block();
+          @include unit(font-size,16);
           text-decoration: none;
+          text-align: center;
+          text-transform: uppercase;
+          color: inherit;
+          &:focus,
+          &:hover {
+            font-weight: 700;
+            color: $color-orange;
+          }
         }
-        a:focus,
-        a:hover {
-          font-weight: bold;
-          color: $color-orange;
-        }
+        
         @at-root .sub_menu {
           display: none;
           position: absolute;
@@ -151,7 +168,6 @@
       }
       li a:hover,
       li a:focus {
-        font-weight: 700;
         color: $color-orange;
         text-decoration: none;
       }

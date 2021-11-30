@@ -74,21 +74,37 @@ h1 a {
   height: 100%;
   margin-right: 17px;
   margin-right: 1.0625rem;
+  line-height: 50px;
+  line-height: 3.125rem;
+  color: #ffffff;
+}
+.gnb > ul > li > button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-size: 1rem;
+  text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  line-height: 40px;
-  line-height: 2.5rem;
-  color: #ffffff;
+  color: inherit;
+}
+.gnb > ul > li > button:focus, .gnb > ul > li > button:hover {
+  color: #e75300;
 }
 .gnb > ul > li > a {
   display: block;
   width: 100%;
   height: 100%;
+  font-size: 16px;
+  font-size: 1rem;
   text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: inherit;
 }
-.gnb > ul > li a:focus,
-.gnb > ul > li a:hover {
-  font-weight: bold;
+.gnb > ul > li > a:focus, .gnb > ul > li > a:hover {
+  font-weight: 700;
   color: #e75300;
 }
 .sub_menu {
@@ -206,7 +222,6 @@ h1 a {
 
 .unb > ul li a:hover,
 .unb > ul li a:focus {
-  font-weight: 700;
   color: #e75300;
   text-decoration: none;
 }
@@ -877,9 +892,13 @@ h1 a {
 #viewBox {
   width: 100%;
   height: 680px;
-  height: 42.5rem;
-  padding-top: 300px;
-  padding-top: 18.75rem;
+  height: 35.4166666667vw;
+  min-height: 600px;
+  min-height: 37.5rem;
+  max-height: 680px;
+  max-height: 42.5rem;
+  padding-top: 280px;
+  padding-top: 17.5rem;
   color: #ffffff;
   background-color: #03010f;
   text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
@@ -888,8 +907,7 @@ h1 a {
   background-size: cover;
 }
 #viewBox h2 {
-  width: 800px;
-  width: 50rem;
+  width: 100%;
   height: auto;
   margin: auto;
   text-align: center;
@@ -897,8 +915,7 @@ h1 a {
   font-size: 3.375rem;
 }
 #viewBox p {
-  width: 800px;
-  width: 50rem;
+  width: 100%;
   height: auto;
   margin: auto;
   margin-top: 20px;

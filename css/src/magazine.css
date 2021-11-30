@@ -74,21 +74,37 @@ h1 a {
   height: 100%;
   margin-right: 17px;
   margin-right: 1.0625rem;
+  line-height: 50px;
+  line-height: 3.125rem;
+  color: #ffffff;
+}
+.gnb > ul > li > button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-size: 1rem;
+  text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  line-height: 40px;
-  line-height: 2.5rem;
-  color: #ffffff;
+  color: inherit;
+}
+.gnb > ul > li > button:focus, .gnb > ul > li > button:hover {
+  color: #e75300;
 }
 .gnb > ul > li > a {
   display: block;
   width: 100%;
   height: 100%;
+  font-size: 16px;
+  font-size: 1rem;
   text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: inherit;
 }
-.gnb > ul > li a:focus,
-.gnb > ul > li a:hover {
-  font-weight: bold;
+.gnb > ul > li > a:focus, .gnb > ul > li > a:hover {
+  font-weight: 700;
   color: #e75300;
 }
 .sub_menu {
@@ -206,7 +222,6 @@ h1 a {
 
 .unb > ul li a:hover,
 .unb > ul li a:focus {
-  font-weight: 700;
   color: #e75300;
   text-decoration: none;
 }
@@ -877,27 +892,30 @@ h1 a {
 #viewBox {
   width: 100%;
   height: 680px;
-  height: 42.5rem;
-  padding-top: 300px;
-  padding-top: 18.75rem;
+  height: 35.4166666667vw;
+  min-height: 600px;
+  min-height: 37.5rem;
+  max-height: 680px;
+  max-height: 42.5rem;
+  padding-top: 280px;
+  padding-top: 17.5rem;
+  color: #ffffff;
+  background-color: #03010f;
   text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
   text-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.8);
-  color: #ffffff;
   background-repeat: no-repeat;
   background-size: cover;
 }
 #viewBox h2 {
-  width: 800px;
-  width: 50rem;
+  width: 100%;
   height: auto;
   margin: auto;
+  text-align: center;
   font-size: 54px;
   font-size: 3.375rem;
-  text-align: center;
 }
 #viewBox p {
-  width: 800px;
-  width: 50rem;
+  width: 100%;
   height: auto;
   margin: auto;
   margin-top: 20px;
@@ -916,21 +934,23 @@ h1 a {
 
 #magazineBox {
   width: 100%;
-  height: 2600px;
-  height: 162.5rem;
+  height: auto;
   padding-top: 80px;
   padding-top: 5rem;
+  margin-bottom: 80px;
+  margin-bottom: 5rem;
   background-color: #ffffff;
 }
 .magazine_nav {
-  width: 720px;
-  width: 45rem;
+  width: auto;
   height: 120px;
   height: 7.5rem;
   margin: auto;
+  text-align: center;
 }
 .magazine_nav ul {
-  width: 100%;
+  display: inline-block;
+  width: auto;
   height: 100%;
 }
 .magazine_nav ul li {
@@ -956,7 +976,7 @@ h1 a {
   border: 0.1875rem solid #e75300;
   background-color: #ffffff;
   background-repeat: no-repeat;
-  background-size: 300%;
+  background-size: cover;
   background-position: 100% 100%;
 }
 
@@ -985,12 +1005,13 @@ h1 a {
   background-image: url("../../img/magazine/ico_cate_knowhow.png");
   background-position: 101% 100%;
 }
-.magazine_nav .magazine_search {
+.magazine_search {
   position: relative;
   width: 720px;
   width: 45rem;
   height: 60px;
   height: 3.75rem;
+  margin: auto;
   margin-top: 40px;
   margin-top: 2.5rem;
   background-color: #6f6f75;
@@ -1008,7 +1029,7 @@ h1 a {
   border: 0.0625rem solid #333335;
 }
 
-.magazine_nav .magazine_search .triangle_icon {
+.magazine_search .triangle_icon {
   display: block;
   position: absolute;
   top: 50%;
@@ -1023,8 +1044,8 @@ h1 a {
 }
 
 .magazine_list {
-  width: 1200px;
-  width: 75rem;
+  width: 1640px;
+  width: 102.5rem;
   height: auto;
   margin: auto;
   margin-top: 200px;
@@ -1039,8 +1060,8 @@ h1 a {
 .magazine_list ul li {
   position: relative;
   float: left;
-  weight: 380px;
-  weight: 23.75rem;
+  width: 380px;
+  width: 23.75rem;
   height: 500px;
   height: 31.25rem;
   margin-right: 40px;
@@ -1050,9 +1071,6 @@ h1 a {
 }
 .magazine_list ul li:nth-child(4n) {
   margin-right: 0;
-}
-.magazine_list ul li:nth-child(-n+4) {
-  margin-top: 0;
 }
 .magazine_img {
   position: relative;
@@ -1181,17 +1199,15 @@ h1 a {
   bottom: 0.625rem;
   left: 10px;
   left: 0.625rem;
-  weight: 40px;
-  weight: 2.5rem;
+  width: 40px;
+  width: 2.5rem;
   height: 20px;
   height: 1.25rem;
 }
 
 .magazine_list_btn {
-  weight: 722px;
-  weight: 45.125rem;
-  min-width: 720px;
-  min-width: 45rem;
+  width: 720px;
+  width: 45rem;
   height: auto;
   margin: auto;
   text-align: center;
@@ -1263,6 +1279,152 @@ h1 a {
   border-bottom-color: transparent;
 }
 
+@media all and (max-width: 479px) {
+  .magazine_nav {
+    height: 40px;
+    height: 2.5rem;
+  }
+  .magazine_nav ul li {
+    width: 60px;
+    width: 3.75rem;
+    height: 40px;
+    height: 2.5rem;
+  }
+  .magazine_nav ul li div {
+    width: 100%;
+    height: 100%;
+  }
+  .magazine_nav_icon {
+    width: 40px;
+    width: 2.5rem;
+    height: 40px;
+    height: 2.5rem;
+  }
+
+  .magazine_search {
+    width: 300px;
+    width: 18.75rem;
+    margin-top: 60px;
+    margin-top: 3.75rem;
+  }
+
+  .magazine_list {
+    width: 320px;
+    width: 20rem;
+    height: auto;
+  }
+  .magazine_list ul li {
+    width: 320px;
+    width: 20rem;
+    margin-right: 0;
+  }
+
+  .magazine_list_btn {
+    display: none;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .magazine_nav {
+    height: 40px;
+    height: 2.5rem;
+  }
+  .magazine_nav ul li {
+    width: 60px;
+    width: 3.75rem;
+    height: 40px;
+    height: 2.5rem;
+  }
+  .magazine_nav ul li div {
+    width: 100%;
+    height: 100%;
+  }
+  .magazine_nav_icon {
+    width: 40px;
+    width: 2.5rem;
+    height: 40px;
+    height: 2.5rem;
+  }
+
+  .magazine_search {
+    width: 300px;
+    width: 18.75rem;
+    margin-top: 60px;
+    margin-top: 3.75rem;
+  }
+
+  .magazine_list {
+    width: 320px;
+    width: 20rem;
+    height: auto;
+  }
+  .magazine_list ul li {
+    width: 320px;
+    width: 20rem;
+    margin-right: 0;
+  }
+
+  .magazine_list_btn {
+    display: none;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .magazine_list {
+    width: 680px;
+    width: 42.5rem;
+    height: auto;
+  }
+  .magazine_list ul li {
+    width: 320px;
+    width: 20rem;
+  }
+  .magazine_list ul li:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+  .magazine_list {
+    width: 680px;
+    width: 42.5rem;
+    height: auto;
+  }
+  .magazine_list ul li {
+    width: 320px;
+    width: 20rem;
+  }
+  .magazine_list ul li:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1439px) {
+  .magazine_list {
+    width: 680px;
+    width: 42.5rem;
+    height: auto;
+  }
+  .magazine_list ul li {
+    width: 320px;
+    width: 20rem;
+  }
+  .magazine_list ul li:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .magazine_list {
+    width: 1240px;
+    width: 77.5rem;
+  }
+  .magazine_list ul li {
+    width: 280px;
+    width: 17.5rem;
+    height: 400px;
+    height: 25rem;
+  }
+  .magazine_img {
+    height: 240px;
+    height: 15rem;
+  }
+}
 #footBox {
   width: 100%;
   height: auto;

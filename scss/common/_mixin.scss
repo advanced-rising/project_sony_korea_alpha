@@ -28,6 +28,10 @@ $root:16;
   height: $h;
   @content;
 }
+@mixin full($s:100%){
+  width:$s;
+  height: $s;
+}
 @mixin margin($t:0,$r:0,$b:0,$l:0){
   margin:px($t) px($r) px($b) px($l);
   margin:rem($t) rem($r) rem($b) rem($l);

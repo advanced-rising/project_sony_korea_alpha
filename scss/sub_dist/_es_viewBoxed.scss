@@ -1,22 +1,22 @@
 #viewBox {
   width: 100%;
-  @include vw(height,680,1920);
-  @include unit(min-height,600);
-  @include unit(max-height,680);
-  @include unit(padding-top,280);
+  @include unit(height,480);
+  @include unit(padding-top,200);
   color: $color-white;
   background-color: $color-black;
   @include text-shadow(0,0,8,rgb(0 0 0 / 80%));
   background-repeat: no-repeat;
   background-size: cover;
   h2 {
-    @include size();
+    @include unit(width,800);
+    height: auto;
     margin: auto;
     text-align: center;
     @include unit(font-size,54);
   }
   p {
-    @include size();
+    @include unit(width,800);
+    height: auto;
     margin: auto;
     @include unit(margin-top,20);
     text-align: center;
