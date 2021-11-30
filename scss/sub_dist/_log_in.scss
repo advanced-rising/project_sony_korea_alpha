@@ -1,0 +1,187 @@
+.loginBox {
+  width: 100%;
+  height: 100%;
+  @include unit(margin-bottom,80);
+  @include unit(padding-top,160);
+  .login_area {
+    @include unit(width,800);
+    height: auto;
+    margin: auto;
+    @include padding(40,180,40,180);
+    background-color: $color-light-blue;
+    form {
+      @include size();
+      @at-root .login_part {
+        @include size();
+        ul {
+          @include size();
+          li {
+            @include size();
+            margin: auto;
+            @include unit(margin-bottom,20);
+            @at-root .login_title {
+              text-align: center;
+              @include unit(line-height,60);
+              @include unit(font-size,24);
+              font-weight: 700;
+            }
+            @at-root #userId, #userPw {
+              width: 100%;
+              @include unit(height,50);
+              @include padding(10,20,10,20);
+              @include border($w:2,$c:$color-light-gray);
+            }
+            @at-root button[type="submit"] {
+              width: 100%;
+              @include unit(height,50);
+              color: $color-white;
+              font-weight: 700;
+              background-color: $color-orange;
+            }
+          }
+        }
+        @at-root .forget_area {
+          width: 100%;
+          @include unit(height,40);
+          margin: auto;
+          div {
+            @include unit(width,220);
+            height: auto;
+            margin: auto;
+            a {
+              position: relative;
+              float: left;
+              @include unit(width,100);
+              height: auto;
+              @include unit(margin-right,10);
+              @include unit(font-size,14);
+              text-align: center;
+              &::after {
+                position: absolute;
+                @include unit(top,4);
+                @include unit(right,-5);
+                content: "";
+                @include unit(width,1);
+                @include unit(height,10);
+                background-color: $color-black;
+              }
+              &:last-child { margin-right: 0; }
+              &:last-child::after { display: none;}
+            }
+          }
+        }
+      }
+      hr {
+        @include size();
+        @include border($c:$color-light-gray);
+      }
+    }
+    @at-root .sns_login {
+      @include size();
+      @include unit(margin-top,40);
+      ul {
+        @include size();
+        li {
+          width: 100%;
+          @include unit(height,60);
+          @include unit(margin-bottom,20);
+          box-sizing: border-box;
+          @include border($c:$color-light-gray);
+          &:last-of-type { margin-bottom: 0;}
+          a {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            box-sizing: border-box;
+            @include padding(15,20,15,20);
+            color: $color-white;
+            @at-root .sns_icon {
+              display: inline-block;
+              position: absolute;
+              @include unit(top,15);
+              @include unit(left,20);
+              @include unit(width,30);
+              @include unit(height,30);
+              background-image: url("../../img/login/ico_sns_log.png");
+              background-repeat: no-repeat;
+              @include unit(background-size,108);
+              &::after {
+                position: absolute;
+                @include unit(top,6);
+                @include unit(right,-20);
+                content: "";
+                @include unit(width,1);
+                @include unit(height,20);
+                background-color: $color-deep-gray;
+              }
+            }
+            .sns_txt {
+              display: block;
+              width: auto;
+              height: auto;
+              @include unit(font-size,16);
+              @include unit(line-height,28);
+              color: $color-black;
+            }
+            .naver_icon {background-position: left top;}
+            .kakao_icon {background-position: center top;}
+            .facebook_icon {background-position: right top;}
+          }
+        }
+      }
+    }
+  }
+  @at-root .signUp_go {
+    @include unit(width,800);
+    height: auto;
+    margin: auto;
+    @include unit(margin-top,40);
+    @include unit(padding,20);
+    @include border($c:$color-deep-gray);
+    @include img("login/bg_joinbox.jpg");
+    p {
+      @include size();
+      @include unit(padding,20);
+      text-align: center;
+      color: $color-white;
+      &:nth-child(1) {@include unit(font-size,18); font-weight: 700;}
+      &:nth-child(2) {@include unit(font-size,14);}
+    }
+    a {
+      display: block;
+      @include unit(width,140);
+      @include unit(height,40);
+      margin: auto;
+      text-align: center;
+      @include unit(line-height,40);
+      color: $color-white;
+      font-weight: 700;
+      text-decoration: none;
+      @include border($w:3,$c:$color-orange);
+      &:hover,
+      &:focus {
+        @include unit(font-size,18);
+        color: $color-orange;
+      }
+    }
+  }
+  .sign_notice {
+    @include unit(width,800);
+    height: auto;
+    margin: auto;
+    @include unit(margin-top,20);
+    @include unit(font-size,16);
+    li {
+      @include unit(padding-left,10);
+      word-break: keep-all;
+      &::before {
+        content: "-";
+        display: inline;
+        @include margin(0,4,0,-5);
+      }
+    }
+  }
+}
+

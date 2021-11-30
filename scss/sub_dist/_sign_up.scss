@@ -1,0 +1,125 @@
+#container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  @include unit(padding-top,140);
+  @include unit(margin-bottom,80);
+  @at-root .signUpWrap {
+    @include unit(width,1000);
+    height: auto;
+    margin: auto;
+    box-sizing: content-box;
+    @include padding(40,80,40,80);
+    background-color: $color-light-blue;
+    @at-root .signUp_area {
+      @include unit(width,940);
+      height: auto;
+      margin: auto;
+      @at-root .signUp_notice_title {
+        @include size();
+        @include unit(font-size,32);
+        @include unit(margin-bottom,20);
+      }
+      @at-root .signUp_notice_txt {
+        width: auto;
+        height: auto;
+        @include unit(padding-right,200);
+        @include unit(font-size,14);
+      }
+      @at-root .signUp {
+        @include size();
+        @include unit(margin-top,40);
+        li {
+          float: left;
+          @include unit(width,300);
+          @include unit(height,200);
+          @include unit(margin-right,20);
+          background-color: $color-deep-gray;
+          &:last-of-type {
+            margin-right: 0;
+          }
+          @at-root .icon {
+            width: 100%;
+            height: 80%;
+            background-repeat: no-repeat;
+            @include unit(background-size,140);
+            background-position: center;
+          }
+          .person {
+            background-image: url("../../img/signup/ico_mem_person.png");
+          }
+          .company {
+            background-image: url("../../img/signup/ico_mem_company.png");
+          }
+          .foreigner {
+            background-image: url("../../img/signup/ico_mem_foreigners.png");
+          }
+          @at-root .txt {
+            width: 100%;
+            height: 20%;
+            text-align: center;
+            font-weight: 700;
+            @include unit(font-size,18);
+            text-transform: capitalize;
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+}
+.sns_signUp_area {
+  @include unit(width,940);
+  height: auto;
+  margin: auto;
+  .sns_title {
+    @include size();
+    @include unit(margin-top,80);
+    @include unit(font-size,16);
+    font-weight: 700;
+  }
+  .sns_txt {
+    @include size();
+    @include unit(margin-right,10);
+    @include unit(font-size,12);
+  }
+  @at-root .sns_signUp {
+    @include size();
+    @include unit(margin-top,20);
+    li {
+      float: left;
+      @include unit(width,300);
+      @include unit(height,40);
+      @include unit(margin-right,20);
+      &:last-of-type {
+        margin-right: 0;
+      }
+      .icon {
+        float: left;
+        @include unit(width,40);
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .txt {
+        @include unit(line-height,40);
+        text-align: center;
+        @include unit(font-size,12);
+        font-weight: 700;
+      }
+    }
+    .sns_naver .icon {background-image: url("../../img/signup/ico_naver.png");}
+    .sns_naver { background-color: #25A800;}
+    .sns_kakao .icon {background-image: url("../../img/signup/ico_kakao.png");}
+    .sns_kakao { background-color: #F9DD00;}
+    .sns_kakao .txt { color: $color-black; }
+    .sns_facebook .icon {background-image: url("../../img/signup/ico_fb.png");}
+    .sns_facebook { background-color: #314D8C;}
+    .sns_facebook .txt { color: $color-white;}
+  }
+  @at-root .sns_notice {
+    @include unit(font-size,12);
+    @include unit(margin-top,20);
+  }
+}
