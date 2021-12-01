@@ -9,10 +9,11 @@
     @include unit(margin-top,80);
     text-align: center;
     h3 {
+      width: 100%;
       @include unit(margin-bottom,20);
     }
     p {
-      width: auto;
+      width: 100%;
       height: auto;
       @include margin(20,20,40,20);
     }
@@ -104,7 +105,7 @@
           .service_icon {
             position: absolute;
             top: 50%;
-            @include unit(right,40);
+            @include unit(right,20);
             @include unit(width,80);
             @include unit(height,80);
             border-radius: 50%;
@@ -181,11 +182,13 @@
 @include mobile-v{
   .consultingService_info {
     text-align: center;
+    p {
+      margin: 0;
+    }
     .email_hp {
-      display: inline-block;
-      width: auto;
-      height: auto;
+      margin: auto;
       span {
+        width: 100%;
         @include unit(margin-top,20);
         &::after {
           display: none;
@@ -194,16 +197,30 @@
     }
   } 
   .consultingService_list {
+    width: 100%;
+    margin: auto;
+    text-align: center;
     h3 {
       width: auto;
     }
     ul {
+      display: inline-block;
+      width: auto;
+      height: auto;
+      margin: auto;
       li {
         clear: both;
+        @include unit(width,400);
         &:nth-child(-n+3) {
           @include unit(margin-top,20);
         }
       } 
+    }
+    @at-root .consulting_services {
+      span {
+        display: block;
+        text-align: start;
+      }
     }
   }
   .consultingService_sips {
@@ -215,16 +232,205 @@
       padding: 0;
       li {
         clear: both;
-        @include unit(width,300);
+        @include unit(width,400);
         @include unit(height,150);
         margin-right: 0;
         &:nth-child(-n + 2) {
           @include unit(margin-top,20);
         }
+        a {
+          span {
+            width: auto;
+          }
+        }
       }
     }
   }
 }
-@include mobile-h{}
-@include tablet{}
-@include laptop{}
+@include mobile-h{
+  .consultingService_info {
+    text-align: center;
+    p {
+      margin: 0;
+    }
+    .email_hp {
+      margin: auto;
+      span {
+        width: 100%;
+        @include unit(margin-top,20);
+        &::after {
+          display: none;
+        }
+      }
+    }
+  } 
+  .consultingService_list {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    h3 {
+      width: auto;
+    }
+    ul {
+      display: inline-block;
+      width: auto;
+      height: auto;
+      margin: auto;
+      li {
+        clear: both;
+        @include unit(width,400);
+        &:nth-child(-n+3) {
+          @include unit(margin-top,20);
+        }
+      } 
+    }
+    @at-root .consulting_services {
+      span {
+        display: block;
+        text-align: start;
+      }
+    }
+  }
+  .consultingService_sips {
+    text-align: center;
+    ul {
+      display: inline-block;
+      width: auto;
+      height: auto;
+      padding: 0;
+      li {
+        clear: both;
+        @include unit(width,400);
+        @include unit(height,150);
+        margin-right: 0;
+        &:nth-child(-n + 2) {
+          @include unit(margin-top,20);
+        }
+        a {
+          span {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+@include tablet{
+  .consultingService_info {
+    text-align: center;
+    @include unit(padding-left,20);
+    @include unit(padding-right,20);
+    p {
+      margin: 0;
+    }
+    .email_hp {
+      margin: auto;
+      span {
+        width: 100%;
+        @include unit(margin-top,20);
+        &::after {
+          display: none;
+        }
+      }
+    }
+  } 
+  .consultingService_list {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    h3 {
+      width: auto;
+    }
+    ul {
+      display: inline-block;
+      width: auto;
+      height: auto;
+      margin: auto;
+      li {
+        clear: both;
+        @include unit(width,400);
+        &:nth-child(-n+3) {
+          @include unit(margin-top,20);
+        }
+      } 
+    }
+    @at-root .consulting_services {
+      span {
+        display: block;
+        text-align: start;
+      }
+    }
+  }
+  .consultingService_sips {
+    text-align: center;
+    ul {
+      display: inline-block;
+      width: auto;
+      height: auto;
+      padding: 0;
+      li {
+        clear: both;
+        @include unit(width,400);
+        @include unit(height,150);
+        margin-right: 0;
+        &:nth-child(-n + 2) {
+          @include unit(margin-top,20);
+        }
+        a {
+          span {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+@include laptop{
+  .consultingService_list {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    ul {
+      display: inline-block;
+      width: 820px;
+      height: auto;
+      li {
+        @include unit(width,400);
+        &:nth-child(3n) {
+          @include unit(margin-right,20);
+        }
+        &:nth-child(-n+3) {
+          @include unit(margin-top,20);
+        }
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+    }
+    @at-root .consulting_services {
+      span {
+        display: block;
+        text-align: start;
+      }
+    }
+  }
+  .consultingService_sips {
+    text-align: center;
+    ul {
+      display: inline-block;
+      @include unit(width,820);
+      height: auto;
+      padding: 0;
+      li {
+        
+        @include unit(width,400);
+        @include unit(height,150);
+        a {
+          span {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}

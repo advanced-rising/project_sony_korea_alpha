@@ -925,6 +925,12 @@ h1 a {
   font-size: 1.125rem;
 }
 
+@media all and (max-width: 479px) {
+  #viewBox {
+    padding-top: 100px;
+    padding-top: 6.25rem;
+  }
+}
 .consulting {
   background-image: url("../../img/proconsulting/bg_pro_sips.jpg");
   background-repeat: no-repeat;
@@ -945,11 +951,12 @@ h1 a {
   text-align: center;
 }
 .consultingService_info h3 {
+  width: 100%;
   margin-bottom: 20px;
   margin-bottom: 1.25rem;
 }
 .consultingService_info p {
-  width: auto;
+  width: 100%;
   height: auto;
   margin: 20px 20px 40px 20px;
   margin: 1.25rem 1.25rem 2.5rem 1.25rem;
@@ -1075,8 +1082,8 @@ h1 a {
 .consulting_services .service_icon {
   position: absolute;
   top: 50%;
-  right: 40px;
-  right: 2.5rem;
+  right: 20px;
+  right: 1.25rem;
   width: 80px;
   width: 5rem;
   height: 80px;
@@ -1214,12 +1221,14 @@ h1 a {
   .consultingService_info {
     text-align: center;
   }
+  .consultingService_info p {
+    margin: 0;
+  }
   .consultingService_info .email_hp {
-    display: inline-block;
-    width: auto;
-    height: auto;
+    margin: auto;
   }
   .consultingService_info .email_hp span {
+    width: 100%;
     margin-top: 20px;
     margin-top: 1.25rem;
   }
@@ -1227,15 +1236,32 @@ h1 a {
     display: none;
   }
 
+  .consultingService_list {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
   .consultingService_list h3 {
     width: auto;
   }
+  .consultingService_list ul {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: auto;
+  }
   .consultingService_list ul li {
     clear: both;
+    width: 400px;
+    width: 25rem;
   }
   .consultingService_list ul li:nth-child(-n+3) {
     margin-top: 20px;
     margin-top: 1.25rem;
+  }
+  .consulting_services span {
+    display: block;
+    text-align: start;
   }
 
   .consultingService_sips {
@@ -1249,8 +1275,8 @@ h1 a {
   }
   .consultingService_sips ul li {
     clear: both;
-    width: 300px;
-    width: 18.75rem;
+    width: 400px;
+    width: 25rem;
     height: 150px;
     height: 9.375rem;
     margin-right: 0;
@@ -1258,6 +1284,208 @@ h1 a {
   .consultingService_sips ul li:nth-child(-n+2) {
     margin-top: 20px;
     margin-top: 1.25rem;
+  }
+  .consultingService_sips ul li a span {
+    width: auto;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .consultingService_info {
+    text-align: center;
+  }
+  .consultingService_info p {
+    margin: 0;
+  }
+  .consultingService_info .email_hp {
+    margin: auto;
+  }
+  .consultingService_info .email_hp span {
+    width: 100%;
+    margin-top: 20px;
+    margin-top: 1.25rem;
+  }
+  .consultingService_info .email_hp span::after {
+    display: none;
+  }
+
+  .consultingService_list {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  .consultingService_list h3 {
+    width: auto;
+  }
+  .consultingService_list ul {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: auto;
+  }
+  .consultingService_list ul li {
+    clear: both;
+    width: 400px;
+    width: 25rem;
+  }
+  .consultingService_list ul li:nth-child(-n+3) {
+    margin-top: 20px;
+    margin-top: 1.25rem;
+  }
+  .consulting_services span {
+    display: block;
+    text-align: start;
+  }
+
+  .consultingService_sips {
+    text-align: center;
+  }
+  .consultingService_sips ul {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 0;
+  }
+  .consultingService_sips ul li {
+    clear: both;
+    width: 400px;
+    width: 25rem;
+    height: 150px;
+    height: 9.375rem;
+    margin-right: 0;
+  }
+  .consultingService_sips ul li:nth-child(-n+2) {
+    margin-top: 20px;
+    margin-top: 1.25rem;
+  }
+  .consultingService_sips ul li a span {
+    width: auto;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .consultingService_info {
+    text-align: center;
+    padding-left: 20px;
+    padding-left: 1.25rem;
+    padding-right: 20px;
+    padding-right: 1.25rem;
+  }
+  .consultingService_info p {
+    margin: 0;
+  }
+  .consultingService_info .email_hp {
+    margin: auto;
+  }
+  .consultingService_info .email_hp span {
+    width: 100%;
+    margin-top: 20px;
+    margin-top: 1.25rem;
+  }
+  .consultingService_info .email_hp span::after {
+    display: none;
+  }
+
+  .consultingService_list {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  .consultingService_list h3 {
+    width: auto;
+  }
+  .consultingService_list ul {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: auto;
+  }
+  .consultingService_list ul li {
+    clear: both;
+    width: 400px;
+    width: 25rem;
+  }
+  .consultingService_list ul li:nth-child(-n+3) {
+    margin-top: 20px;
+    margin-top: 1.25rem;
+  }
+  .consulting_services span {
+    display: block;
+    text-align: start;
+  }
+
+  .consultingService_sips {
+    text-align: center;
+  }
+  .consultingService_sips ul {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 0;
+  }
+  .consultingService_sips ul li {
+    clear: both;
+    width: 400px;
+    width: 25rem;
+    height: 150px;
+    height: 9.375rem;
+    margin-right: 0;
+  }
+  .consultingService_sips ul li:nth-child(-n+2) {
+    margin-top: 20px;
+    margin-top: 1.25rem;
+  }
+  .consultingService_sips ul li a span {
+    width: auto;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+  .consultingService_list {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  .consultingService_list ul {
+    display: inline-block;
+    width: 820px;
+    height: auto;
+  }
+  .consultingService_list ul li {
+    width: 400px;
+    width: 25rem;
+  }
+  .consultingService_list ul li:nth-child(3n) {
+    margin-right: 20px;
+    margin-right: 1.25rem;
+  }
+  .consultingService_list ul li:nth-child(-n+3) {
+    margin-top: 20px;
+    margin-top: 1.25rem;
+  }
+  .consultingService_list ul li:nth-child(2n) {
+    margin-right: 0;
+  }
+  .consulting_services span {
+    display: block;
+    text-align: start;
+  }
+
+  .consultingService_sips {
+    text-align: center;
+  }
+  .consultingService_sips ul {
+    display: inline-block;
+    width: 820px;
+    width: 51.25rem;
+    height: auto;
+    padding: 0;
+  }
+  .consultingService_sips ul li {
+    width: 400px;
+    width: 25rem;
+    height: 150px;
+    height: 9.375rem;
+  }
+  .consultingService_sips ul li a span {
+    width: auto;
   }
 }
 #footBox {

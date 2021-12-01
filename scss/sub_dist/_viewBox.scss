@@ -23,3 +23,9 @@
     @include unit(font-size,18);
   }
 }
+@include mobile-v{
+  #viewBox {
+    @include unit(padding-top,100);
+  }
+}
+@include mobile-h{}

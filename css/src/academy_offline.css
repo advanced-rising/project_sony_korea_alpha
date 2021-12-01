@@ -925,6 +925,12 @@ h1 a {
   font-size: 1.125rem;
 }
 
+@media all and (max-width: 479px) {
+  #viewBox {
+    padding-top: 100px;
+    padding-top: 6.25rem;
+  }
+}
 .offlineAcademy {
   background: url("../../img/academy/offLineAcademy/bg_offline_top.jpg");
 }
