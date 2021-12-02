@@ -6,13 +6,13 @@
 }
 #proBox {
   @include unit(width,1280);
-  height: 100%;
+  height: auto;
   margin: auto;
   @include unit(padding-top,80);
+  @include unit(padding-bottom,80);
   background-color: $color-white;
   ul {
-    width: 100%;
-    height: 100%;
+    @include size();
     @include padding(0,50,0,50);
     li {
       float: left;
@@ -22,8 +22,8 @@
       @include unit(margin-right,20);
       @include unit(border-radius,20);
       background-color: $color-light-gray;
-      &:nth-child(-n + 3) { margin-top: 0px; }
-      &:nth-child(3n) { margin-right: 0px; }
+      &:nth-child(-n + 3) { margin-top: 0; }
+      &:nth-child(3n) { margin-right: 0; }
       @at-root .pro_img {
         width: 100%;
         @include unit(height,300);
@@ -228,9 +228,93 @@
 
 /* ======== pro_img, pro_profile ========= */
 
-
-
-
+@include mobile-v {
+  #proBox {
+    @include unit(width,300);
+    ul {
+      padding: 0;
+      li {
+        clear: both;
+        @include unit(width,300);
+        @include unit(height,380);
+        margin-right: 0;
+        &:nth-child(-n + 3) {
+          @include unit(margin-top,20) 
+        }
+        @at-root .pro_img {
+          @include unit(height,200);
+        }
+        @at-root .pro_txt {
+          @include unit(height,40);
+        }
+      }
+    }
+  } 
+}
+@include mobile-h {
+  #proBox {
+    @include unit(width,300);
+    ul {
+      padding: 0;
+      li {
+        clear: both;
+        @include unit(width,300);
+        @include unit(height,380);
+        margin-right: 0;
+        &:nth-child(-n + 3) {
+          @include unit(margin-top,20) 
+        }
+        @at-root .pro_img {
+          @include unit(height,200);
+        }
+        @at-root .pro_txt {
+          @include unit(height,40);
+        }
+      }
+    }
+  } 
+}
+@include tablet {
+  #proBox {
+    @include unit(width,300);
+    ul {
+      padding: 0;
+      li {
+        clear: both;
+        @include unit(width,300);
+        @include unit(height,380);
+        margin-right: 0;
+        &:nth-child(-n + 3) {
+          @include unit(margin-top,20) 
+        }
+        @at-root .pro_img {
+          @include unit(height,200);
+        }
+        @at-root .pro_txt {
+          @include unit(height,40);
+        }
+      }
+    }
+  } 
+}
+@include laptop {
+  #proBox {
+    @include unit(width,940);
+    ul {
+      padding: 0;
+      li {
+        @include unit(width,300);
+        @include unit(height,380);
+        @at-root .pro_img {
+          @include unit(height,200);
+        }
+        @at-root .pro_txt {
+          @include unit(height,40);
+        }
+      }
+    }
+  } 
+}
 
 
 

@@ -942,15 +942,17 @@ h1 a {
 #proBox {
   width: 1280px;
   width: 80rem;
-  height: 100%;
+  height: auto;
   margin: auto;
   padding-top: 80px;
   padding-top: 5rem;
+  padding-bottom: 80px;
+  padding-bottom: 5rem;
   background-color: #ffffff;
 }
 #proBox ul {
   width: 100%;
-  height: 100%;
+  height: auto;
   padding: 0px 50px 0px 50px;
   padding: 0rem 3.125rem 0rem 3.125rem;
 }
@@ -969,10 +971,10 @@ h1 a {
   background-color: #6f6f75;
 }
 #proBox ul li:nth-child(-n+3) {
-  margin-top: 0px;
+  margin-top: 0;
 }
 #proBox ul li:nth-child(3n) {
-  margin-right: 0px;
+  margin-right: 0;
 }
 .pro_img {
   width: 100%;
@@ -1510,6 +1512,120 @@ h1 a {
 
 /* // pro_profile ======================================== */
 /* ======== pro_img, pro_profile ========= */
+@media all and (max-width: 479px) {
+  #proBox {
+    width: 300px;
+    width: 18.75rem;
+  }
+  #proBox ul {
+    padding: 0;
+  }
+  #proBox ul li {
+    clear: both;
+    width: 300px;
+    width: 18.75rem;
+    height: 380px;
+    height: 23.75rem;
+    margin-right: 0;
+  }
+  #proBox ul li:nth-child(-n+3) {
+    margin-top: 20px;
+    margin-top: 1.25rem;
+  }
+  .pro_img {
+    height: 200px;
+    height: 12.5rem;
+  }
+
+  .pro_txt {
+    height: 40px;
+    height: 2.5rem;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 767px) {
+  #proBox {
+    width: 300px;
+    width: 18.75rem;
+  }
+  #proBox ul {
+    padding: 0;
+  }
+  #proBox ul li {
+    clear: both;
+    width: 300px;
+    width: 18.75rem;
+    height: 380px;
+    height: 23.75rem;
+    margin-right: 0;
+  }
+  #proBox ul li:nth-child(-n+3) {
+    margin-top: 20px;
+    margin-top: 1.25rem;
+  }
+  .pro_img {
+    height: 200px;
+    height: 12.5rem;
+  }
+
+  .pro_txt {
+    height: 40px;
+    height: 2.5rem;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  #proBox {
+    width: 300px;
+    width: 18.75rem;
+  }
+  #proBox ul {
+    padding: 0;
+  }
+  #proBox ul li {
+    clear: both;
+    width: 300px;
+    width: 18.75rem;
+    height: 380px;
+    height: 23.75rem;
+    margin-right: 0;
+  }
+  #proBox ul li:nth-child(-n+3) {
+    margin-top: 20px;
+    margin-top: 1.25rem;
+  }
+  .pro_img {
+    height: 200px;
+    height: 12.5rem;
+  }
+
+  .pro_txt {
+    height: 40px;
+    height: 2.5rem;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+  #proBox {
+    width: 940px;
+    width: 58.75rem;
+  }
+  #proBox ul {
+    padding: 0;
+  }
+  #proBox ul li {
+    width: 300px;
+    width: 18.75rem;
+    height: 380px;
+    height: 23.75rem;
+  }
+  .pro_img {
+    height: 200px;
+    height: 12.5rem;
+  }
+
+  .pro_txt {
+    height: 40px;
+    height: 2.5rem;
+  }
+}
 #footBox {
   width: 100%;
   height: auto;
