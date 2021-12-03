@@ -2,7 +2,8 @@
   background-image: url("../../img/product/acc/bg_acc.jpg");
 }
 .accessory {
-  @include unit(width,1220);
+  width: 100%;
+  // @include unit(width,1220);
   height: auto;
   margin: auto;
   background-color: $color-white;
@@ -28,8 +29,10 @@
       @at-root .accessoryBtn {
         position: relative;
         @include unit(top,130);
-        width: auto;
+        width: 100%;
+        @include unit(max-width,1280);
         height: auto;
+        margin: auto;
         div {
           position: absolute;
           top: 0;
@@ -42,12 +45,13 @@
       }
       @at-root .accessoryList {
         overflow-x: auto;
+        overflow-y: hidden;
         @include unit(width,980);
         @include unit(height,300);
         margin: auto;
         @include unit(margin-top,20);
         ul {
-          width: 800%;
+          @include unit(width,1680);
           height: auto;
           li {
             float: left;
@@ -100,29 +104,17 @@
 }
 @include mobile-v {
   .accessory {
-    width: 300px;
+    width: 100%;
     > ul {
       > li {
-        @include unit(height,520);
         @at-root .accessoryTitle {
           width: 100%;
-          @include unit(height,80);
         }
         @at-root .accessoryBtn {
-          @include unit(top,130);
-          div {
-            display: none;
-          }
+          display: none;
         }
         @at-root .accessoryList {
-          width: auto;
-          ul { 
-            li {
-              float: left;
-              @include unit(width,300);
-              @include unit(height,300);
-            }
-          }
+          @include unit(width,300);
         }
         @at-root .accessoryStore {
           @include unit(width,300);
@@ -133,29 +125,14 @@
 }
 @include mobile-h {
   .accessory {
-    width: 460px;
+    width: 100%;
     > ul {
       > li {
-        @include unit(height,520);
         @at-root .accessoryTitle {
           width: 100%;
-          @include unit(height,80);
-        }
-        @at-root .accessoryBtn {
-          @include unit(top,130);
-          div {
-            display: none;
-          }
         }
         @at-root .accessoryList {
-          width: auto;
-          ul { 
-            li {
-              float: left;
-              @include unit(width,300);
-              @include unit(height,300);
-            }
-          }
+          @include unit(width,300);
         }
         @at-root .accessoryStore {
           @include unit(width,300);
@@ -166,35 +143,31 @@
 }
 @include tablet {
   .accessory {
-    width: 460px;
+    width: 100%;
     > ul {
       > li {
-        @include unit(height,520);
         @at-root .accessoryTitle {
           width: 100%;
-          @include unit(height,80);
-        }
-        @at-root .accessoryBtn {
-          @include unit(top,130);
-          div {
-            display: none;
-          }
         }
         @at-root .accessoryList {
-          width: auto;
-          ul { 
-            li {
-              float: left;
-              @include unit(width,300);
-              @include unit(height,300);
-            }
-          }
-        }
-        @at-root .accessoryStore {
-          @include unit(width,300);
+          @include unit(width,640);
         }
       }
     }
   }
 }
-@include laptop {}
+@include laptop {
+  .accessory {
+    width: 100%;
+    > ul {
+      > li {
+        @at-root .accessoryTitle {
+          width: 100%;
+        }
+        @at-root .accessoryList {
+          @include unit(width,640);
+        }
+      }
+    }
+  }
+}

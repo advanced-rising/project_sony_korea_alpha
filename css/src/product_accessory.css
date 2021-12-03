@@ -936,8 +936,7 @@ h1 a {
 }
 
 .accessory {
-  width: 1220px;
-  width: 76.25rem;
+  width: 100%;
   height: auto;
   margin: auto;
   background-color: #ffffff;
@@ -975,8 +974,11 @@ h1 a {
   position: relative;
   top: 130px;
   top: 8.125rem;
-  width: auto;
+  width: 100%;
+  max-width: 1280px;
+  max-width: 80rem;
   height: auto;
+  margin: auto;
 }
 .accessoryBtn div {
   position: absolute;
@@ -996,6 +998,7 @@ h1 a {
 
 .accessoryList {
   overflow-x: auto;
+  overflow-y: hidden;
   width: 980px;
   width: 61.25rem;
   height: 300px;
@@ -1005,7 +1008,8 @@ h1 a {
   margin-top: 1.25rem;
 }
 .accessoryList ul {
-  width: 800%;
+  width: 1680px;
+  width: 105rem;
   height: auto;
 }
 .accessoryList ul li {
@@ -1071,35 +1075,19 @@ h1 a {
 
 @media all and (max-width: 479px) {
   .accessory {
-    width: 300px;
-  }
-  .accessory > ul > li {
-    height: 520px;
-    height: 32.5rem;
+    width: 100%;
   }
   .accessoryTitle {
     width: 100%;
-    height: 80px;
-    height: 5rem;
   }
 
   .accessoryBtn {
-    top: 130px;
-    top: 8.125rem;
-  }
-  .accessoryBtn div {
     display: none;
   }
 
   .accessoryList {
-    width: auto;
-  }
-  .accessoryList ul li {
-    float: left;
     width: 300px;
     width: 18.75rem;
-    height: 300px;
-    height: 18.75rem;
   }
 
   .accessoryStore {
@@ -1109,35 +1097,15 @@ h1 a {
 }
 @media all and (min-width: 480px) and (max-width: 767px) {
   .accessory {
-    width: 460px;
-  }
-  .accessory > ul > li {
-    height: 520px;
-    height: 32.5rem;
+    width: 100%;
   }
   .accessoryTitle {
     width: 100%;
-    height: 80px;
-    height: 5rem;
-  }
-
-  .accessoryBtn {
-    top: 130px;
-    top: 8.125rem;
-  }
-  .accessoryBtn div {
-    display: none;
   }
 
   .accessoryList {
-    width: auto;
-  }
-  .accessoryList ul li {
-    float: left;
     width: 300px;
     width: 18.75rem;
-    height: 300px;
-    height: 18.75rem;
   }
 
   .accessoryStore {
@@ -1147,40 +1115,28 @@ h1 a {
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
   .accessory {
-    width: 460px;
-  }
-  .accessory > ul > li {
-    height: 520px;
-    height: 32.5rem;
+    width: 100%;
   }
   .accessoryTitle {
     width: 100%;
-    height: 80px;
-    height: 5rem;
-  }
-
-  .accessoryBtn {
-    top: 130px;
-    top: 8.125rem;
-  }
-  .accessoryBtn div {
-    display: none;
   }
 
   .accessoryList {
-    width: auto;
+    width: 640px;
+    width: 40rem;
   }
-  .accessoryList ul li {
-    float: left;
-    width: 300px;
-    width: 18.75rem;
-    height: 300px;
-    height: 18.75rem;
+}
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+  .accessory {
+    width: 100%;
+  }
+  .accessoryTitle {
+    width: 100%;
   }
 
-  .accessoryStore {
-    width: 300px;
-    width: 18.75rem;
+  .accessoryList {
+    width: 640px;
+    width: 40rem;
   }
 }
 #footBox {
