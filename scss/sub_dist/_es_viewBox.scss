@@ -12,7 +12,6 @@
     @include unit(height,500);
     margin: auto;
     @at-root .view_title {
-      float: left;
       @include unit(width,700);
       @include unit(height,200);
       @include unit(padding-top,100);
@@ -24,7 +23,6 @@
     }
     @at-root .view_txt {
       position: relative;
-      float: left;
       @include unit(width,700);
       @include unit(height,300);
       @include unit(padding-left,20);
@@ -51,6 +49,98 @@
           }
         }
       }
+    }
+  }
+}
+@include mobile-v {
+  #viewBox {
+    width: 100%;
+    @include unit(height,800);
+    @include unit(padding-top,140);
+    > ul {
+      @include size();
+      margin: auto;
+      @at-root .view_title {
+        float: left;
+        width: 100%;
+        @include unit(height,200);
+        text-align: center;
+        padding: 0;
+        h2 {
+          @include unit(font-size,36);
+          padding: 0;
+        }
+      }
+      @at-root .view_txt {
+        clear: both;
+        width: 100%;
+        @include unit(height,300);
+        @include padding(0,10,0,10);
+        p {
+          @include size();
+        }
+        @at-root .view_btn {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          @include unit(width,300);
+        }
+      }
+    }
+  }
+}
+@include mobile-h {
+  #viewBox {
+    width: 100%;
+    @include unit(height,800);
+    @include unit(padding-top,140);
+    > ul {
+      @include size();
+      margin: auto;
+      @at-root .view_title {
+        float: left;
+        width: 100%;
+        @include unit(height,200);
+        text-align: center;
+        padding: 0;
+        h2 {
+          @include unit(font-size,36);
+          padding: 0;
+        }
+      }
+      @at-root .view_txt {
+        clear: both;
+        width: 100%;
+        @include unit(height,300);
+        @include padding(0,10,0,10);
+        p {
+          @include size();
+        }
+        @at-root .view_btn {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          @include unit(width,300);
+        }
+      }
+    }
+  }
+}
+@include tablet {
+  #viewBox {
+    > ul {
+      @include unit(width,700);
+    }
+  }
+}
+@include laptop {
+  #viewBox {
+    > ul {
+      @include unit(width,1000);
     }
   }
 }

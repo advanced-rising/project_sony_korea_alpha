@@ -910,7 +910,6 @@ h1 a {
   margin: auto;
 }
 .view_title {
-  float: left;
   width: 700px;
   width: 43.75rem;
   height: 200px;
@@ -929,7 +928,6 @@ h1 a {
 
 .view_txt {
   position: relative;
-  float: left;
   width: 700px;
   width: 43.75rem;
   height: 300px;
@@ -969,6 +967,116 @@ h1 a {
   font-weight: 700;
 }
 
+@media all and (max-width: 479px) {
+  #viewBox {
+    width: 100%;
+    height: 800px;
+    height: 50rem;
+    padding-top: 140px;
+    padding-top: 8.75rem;
+  }
+  #viewBox > ul {
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  .view_title {
+    float: left;
+    width: 100%;
+    height: 200px;
+    height: 12.5rem;
+    text-align: center;
+    padding: 0;
+  }
+  .view_title h2 {
+    font-size: 36px;
+    font-size: 2.25rem;
+    padding: 0;
+  }
+
+  .view_txt {
+    clear: both;
+    width: 100%;
+    height: 300px;
+    height: 18.75rem;
+    padding: 0px 10px 0px 10px;
+    padding: 0rem 0.625rem 0rem 0.625rem;
+  }
+  .view_txt p {
+    width: 100%;
+    height: auto;
+  }
+  .view_btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 300px;
+    width: 18.75rem;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 767px) {
+  #viewBox {
+    width: 100%;
+    height: 800px;
+    height: 50rem;
+    padding-top: 140px;
+    padding-top: 8.75rem;
+  }
+  #viewBox > ul {
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  .view_title {
+    float: left;
+    width: 100%;
+    height: 200px;
+    height: 12.5rem;
+    text-align: center;
+    padding: 0;
+  }
+  .view_title h2 {
+    font-size: 36px;
+    font-size: 2.25rem;
+    padding: 0;
+  }
+
+  .view_txt {
+    clear: both;
+    width: 100%;
+    height: 300px;
+    height: 18.75rem;
+    padding: 0px 10px 0px 10px;
+    padding: 0rem 0.625rem 0rem 0.625rem;
+  }
+  .view_txt p {
+    width: 100%;
+    height: auto;
+  }
+  .view_btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 300px;
+    width: 18.75rem;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  #viewBox > ul {
+    width: 700px;
+    width: 43.75rem;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+  #viewBox > ul {
+    width: 1000px;
+    width: 62.5rem;
+  }
+}
 .seminaring {
   background-image: url("../../img/seminar/bg_seminar.jpg");
 }
@@ -990,8 +1098,8 @@ h1 a {
   float: left;
   width: 564px;
   width: 35.25rem;
-  height: 400px;
-  height: 25rem;
+  height: 450px;
+  height: 28.125rem;
   margin-top: 40px;
   margin-top: 2.5rem;
   margin-right: 40px;
@@ -1000,9 +1108,6 @@ h1 a {
 .contentList ul li:nth-child(2n) {
   margin-right: 0px;
 }
-.contentList ul li:nth-child(-n+2) {
-  margin-top: 0px;
-}
 .duringDate {
   z-index: 1;
   position: absolute;
@@ -1010,13 +1115,12 @@ h1 a {
   left: 0;
   width: 340px;
   width: 21.25rem;
-  height: 80px;
-  height: 5rem;
-  text-align: center;
+  height: auto;
   background-color: #e75300;
 }
 .duringDate span {
-  display: inline-block;
+  display: block;
+  text-align: center;
   width: auto;
   height: auto;
   line-height: 40px;
@@ -1037,6 +1141,9 @@ h1 a {
   height: 260px;
   height: 16.25rem;
   background-color: #6f6f75;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .contentImg a {
   display: block;
@@ -1044,21 +1151,22 @@ h1 a {
   height: 100%;
 }
 
-.contentList ul li .contentTxt {
+.contentTxt {
   position: absolute;
   bottom: 0;
   right: 0;
   width: 540px;
   width: 33.75rem;
-  height: 130px;
-  height: 8.125rem;
+  height: 150px;
+  height: 9.375rem;
   box-sizing: border-box;
   padding: 10px 20px 10px 20px;
   padding: 0.625rem 1.25rem 0.625rem 1.25rem;
+  text-align: start;
   color: #ffffff;
   background-color: #333335;
 }
-.contentList ul li .contentTxt > span {
+.contentTxt > span {
   display: block;
   width: auto;
   height: auto;
@@ -1090,12 +1198,6 @@ h1 a {
 }
 
 /* ==== event img ========================= */
-.contentImg {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 .contentList li:nth-child(1) .contentImg {
   background-image: url("../../img/seminar/20211029_02_pr2i_list.jpg");
 }
@@ -1113,6 +1215,197 @@ h1 a {
 }
 
 /* ==== event img ========================= */
+@media all and (max-width: 479px) {
+  .contentList {
+    text-align: center;
+  }
+  .contentList ul {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-top: 60px;
+    margin-top: 3.75rem;
+  }
+  .contentList ul li {
+    position: relative;
+    clear: both;
+    width: 300px;
+    width: 18.75rem;
+    margin-right: 0;
+  }
+  .duringDate {
+    width: 280px;
+    width: 17.5rem;
+  }
+
+  .contentImg {
+    position: absolute;
+    top: 40px;
+    top: 2.5rem;
+    right: 0;
+    width: 280px;
+    width: 17.5rem;
+    height: 260px;
+    height: 16.25rem;
+  }
+
+  .contentTxt {
+    width: 280px;
+    width: 17.5rem;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .contentList {
+    text-align: center;
+  }
+  .contentList ul {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-top: 60px;
+    margin-top: 3.75rem;
+  }
+  .contentList ul li {
+    position: relative;
+    clear: both;
+    width: 300px;
+    width: 18.75rem;
+    margin-right: 0;
+  }
+  .duringDate {
+    width: 280px;
+    width: 17.5rem;
+  }
+
+  .contentImg {
+    position: absolute;
+    top: 40px;
+    top: 2.5rem;
+    right: 0;
+    width: 280px;
+    width: 17.5rem;
+    height: 260px;
+    height: 16.25rem;
+  }
+
+  .contentTxt {
+    width: 280px;
+    width: 17.5rem;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .contentList {
+    text-align: center;
+  }
+  .contentList ul {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-top: 60px;
+    margin-top: 3.75rem;
+  }
+  .contentList ul li {
+    position: relative;
+    clear: both;
+    width: 300px;
+    width: 18.75rem;
+    margin-right: 0;
+  }
+  .duringDate {
+    width: 280px;
+    width: 17.5rem;
+  }
+
+  .contentImg {
+    position: absolute;
+    top: 40px;
+    top: 2.5rem;
+    right: 0;
+    width: 280px;
+    width: 17.5rem;
+    height: 260px;
+    height: 16.25rem;
+  }
+
+  .contentTxt {
+    width: 280px;
+    width: 17.5rem;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+  .contentList {
+    text-align: center;
+  }
+  .contentList ul {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-top: 60px;
+    margin-top: 3.75rem;
+  }
+  .contentList ul li {
+    position: relative;
+    clear: both;
+    width: 300px;
+    width: 18.75rem;
+    margin-right: 0;
+  }
+  .duringDate {
+    width: 280px;
+    width: 17.5rem;
+  }
+
+  .contentImg {
+    position: absolute;
+    top: 40px;
+    top: 2.5rem;
+    right: 0;
+    width: 280px;
+    width: 17.5rem;
+    height: 260px;
+    height: 16.25rem;
+  }
+
+  .contentTxt {
+    width: 280px;
+    width: 17.5rem;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1439px) {
+  .contentList {
+    text-align: center;
+  }
+  .contentList ul {
+    display: inline-block;
+    width: 980px;
+    height: auto;
+    margin-top: 60px;
+    margin-top: 3.75rem;
+  }
+  .contentList ul li {
+    position: relative;
+    width: 460px;
+    width: 28.75rem;
+  }
+  .duringDate {
+    width: 300px;
+    width: 18.75rem;
+  }
+
+  .contentImg {
+    position: absolute;
+    top: 40px;
+    top: 2.5rem;
+    right: 0;
+    width: 100%;
+    height: 260px;
+    height: 16.25rem;
+  }
+
+  .contentTxt {
+    width: 100%;
+  }
+}
 #footBox {
   width: 100%;
   height: auto;

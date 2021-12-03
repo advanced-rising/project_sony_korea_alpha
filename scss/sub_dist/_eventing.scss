@@ -18,20 +18,19 @@
       &:nth-child(2n) {
         margin-right: 0px;
       }
-      &:nth-child(-n + 2) {
-        margin-top: 0px;
-      }
       @at-root .duringDate {
         z-index: 1;
         position: absolute;
         top: 0;
         left: 0;
         @include unit(width,340);
-        @include unit(height,80);
+        height: auto;
         background-color: $color-orange;
         span {
           display: block;
           text-align: center;
+          width: auto;
+          height: auto;
           @include unit(line-height,80);
           @include unit(font-size,18);
           font-weight: 700;
@@ -45,14 +44,12 @@
         @include unit(width,540);
         @include unit(height,260);
         background-color: $color-light-gray;
-        a {
-          @include display-block();
-        }
-      }
-      @at-root .contentImg {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        a {
+          @include display-block();
+        }
       }
       @at-root .contentTxt {
         position: absolute;
@@ -62,6 +59,7 @@
         @include unit(height,100);
         box-sizing: border-box;
         @include padding(10,20,10,20);
+        text-align: start;
         color: $color-white;
         background-color: $color-deep-gray;
         p {
@@ -103,6 +101,119 @@
   background-image: url("../../img/event/20210101_02_loi8_list.jpg");
 }
 
-/* ==== event img ========================= */
-
-/* ==== event img ========================= */
+@include mobile-v {
+  .contentList {
+    text-align: center;
+    ul {
+      display: inline-block;
+      width: auto;
+      height: auto;
+      @include unit(margin-top,60);
+      li {
+        position: relative;
+        clear: both;
+        @include unit(width,300);
+        margin-right: 0;
+        @at-root .duringDate {
+          @include unit(width,280);
+        }
+        @at-root .contentImg {
+          position: absolute;
+          @include unit(top,40);
+          right: 0;
+          @include unit(width,280);
+          @include unit(height,260);
+        }
+        @at-root .contentTxt {
+          @include unit(width,280);
+        }
+      }
+    }
+  }
+}
+@include mobile-h {
+  .contentList {
+    text-align: center;
+    ul {
+      display: inline-block;
+      width: auto;
+      height: auto;
+      @include unit(margin-top,60);
+      li {
+        position: relative;
+        clear: both;
+        @include unit(width,300);
+        margin-right: 0;
+        @at-root .duringDate {
+          @include unit(width,280);
+        }
+        @at-root .contentImg {
+          position: absolute;
+          @include unit(top,40);
+          right: 0;
+          @include unit(width,280);
+          @include unit(height,260);
+        }
+        @at-root .contentTxt {
+          @include unit(width,280);
+        }
+      }
+    }
+  }
+}
+@include tablet {
+  .contentList {
+    text-align: center;
+    ul {
+      display: inline-block;
+      @include unit(width,740);
+      height: auto;
+      @include unit(margin-top,60);
+      li {
+        position: relative;
+        @include unit(width,350);
+        @at-root .duringDate {
+          @include unit(width,330);
+        }
+        @at-root .contentImg {
+          position: absolute;
+          @include unit(top,40);
+          right: 0;
+          @include unit(width,330);
+          @include unit(height,260);
+        }
+        @at-root .contentTxt {
+          @include unit(width,330);
+        }
+      }
+    }
+  }
+}
+@include laptop {
+  .contentList {
+    text-align: center;
+    ul {
+      display: inline-block;
+      @include unit(width,740);
+      height: auto;
+      @include unit(margin-top,60);
+      li {
+        position: relative;
+        @include unit(width,350);
+        @at-root .duringDate {
+          @include unit(width,330);
+        }
+        @at-root .contentImg {
+          position: absolute;
+          @include unit(top,40);
+          right: 0;
+          @include unit(width,330);
+          @include unit(height,260);
+        }
+        @at-root .contentTxt {
+          @include unit(width,330);
+        }
+      }
+    }
+  }
+}
