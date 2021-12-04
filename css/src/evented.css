@@ -1082,30 +1082,10 @@ h1 a {
   .board {
     width: 700px;
     width: 43.75rem;
-    height: auto;
-    margin: auto;
-    margin-top: 80px;
-    margin-top: 5rem;
-  }
-  .board table {
-    border-right: hidden;
-    border-left: hidden;
-    margin-bottom: 80px;
-    margin-bottom: 5rem;
-  }
-  .board table thead {
-    width: auto;
-    height: auto;
-  }
-  .board table thead tr th {
-    width: auto;
-    height: 60px;
-    height: 3.75rem;
   }
   .board table thead tr th:nth-child(1) {
     width: 450px;
     width: 28.125rem;
-    color: #e75300;
   }
   .board table thead tr th:nth-child(2) {
     width: 100px;
@@ -1114,30 +1094,6 @@ h1 a {
   .board table thead tr th:nth-child(3) {
     width: 150px;
     width: 9.375rem;
-  }
-  .board table tbody tr td {
-    width: auto;
-    height: 40px;
-    height: 2.5rem;
-  }
-  .boardBullet {
-    font-weight: 700;
-    font-size: 16px;
-    font-size: 1rem;
-  }
-
-  .boardTxt {
-    margin-left: 5px;
-    margin-left: 0.3125rem;
-    font-size: 16px;
-    font-size: 1rem;
-  }
-
-  .board table tbody tr td:nth-child(2) {
-    text-align: center;
-  }
-  .board table tbody tr td:nth-child(3) {
-    text-align: center;
   }
 }
 #footBox {

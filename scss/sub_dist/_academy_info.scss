@@ -2,16 +2,13 @@
   background-image: url("../../img/academy/introduceAcademy/bg_aca_intro.jpg");
 }
 .academy_area {
-  width: 100%;
-  height: 100%;
+  @include size();
   @include unit(padding-top,80);
   @at-root .academy_title {
-    width: 100%;
-    height: 100%;
+    @include size();
     @include unit(margin-bottom,40);
     h3 {
-      @include unit(width,500);
-      height: auto;
+      @include size();
       margin: auto;
       @include unit(font-size,36);
       text-align: center;
@@ -31,7 +28,6 @@
         @include unit(height,460);
         @include unit(margin-right,20);
         @include border($c:$color-black);
-        background-color:$color-light-gray;
         &:last-of-type { margin-right: 0;}
         @at-root .video_img {
           position: relative;
@@ -94,8 +90,7 @@
     button {
       @include display-block();
       span {
-        width: 100%;
-        height: 100%;
+        @include size();
         text-align: center;
         color: $color-white;
         font-weight: 700;
@@ -104,7 +99,7 @@
   }
   @at-root .introduce_pro_area {
     width: 100%;
-    height: 100%;
+    height: auto;
     .introduce_pro_title {
       width: 100%;
       height: auto;
@@ -120,22 +115,21 @@
       color: $color-white;
       @include text-shadow(0,0,8,rgb(0 0 0 / 80%));
       h3 {
-        width: 100%;
-        height: 100%;
+        @include size();
         text-align: center;
+        @include unit(font-size,24);
         @include unit(margin-bottom,50);
       }
       p {
-        width: 100%;
-        height: 100%;
-        @include unit(margin-bottom,20);
+        @include size();
+        @include unit(margin-bottom,40);
+        @include unit(font-size,16);
         text-align: center;
       }
     }
   }// .introduce_pro_area
   .introduce_pro_profile {
-    width: 100%;
-    height: auto;
+    @include size();
     @include unit(margin-bottom,80);
     h3 {
       @include unit(font-size,36);
@@ -210,8 +204,7 @@
   }
 }// .academy_area
 .academy_gps {
-  width: 100%;
-  height: auto;
+  @include size();
   @include unit(padding-top,40);
   @include unit(padding-bottom,40);
   @include img("academy/introduceAcademy/bg_aca_map.jpg",$s:200%);
@@ -222,8 +215,7 @@
     margin: auto;
     background-color: $color-white;
     ul {
-      width: auto;
-      height: auto;
+      @include size();
       @at-root .gps_txt {
         position: relative;
         float: left;
@@ -265,3 +257,260 @@
   }
 }
 
+
+
+@include mobile-v {
+  .academy_area {
+    @at-root .academy_title {
+      h3 {
+        @include unit(font-size,36);
+      }
+    }
+    .academy_video {
+      @include unit(width,300);
+      height: 100%;
+      margin: auto;
+      @include unit(margin-bottom,40);
+      text-align: center;
+      ul {
+        display: inline-block;
+        width: auto;
+        height: 100%;
+        li {
+          clear: both;
+          @include unit(width,300);
+          @include unit(height,460);
+          @include unit(margin-right,20);
+          @include border($c:$color-black);
+          &:last-of-type { margin-right: 0;}
+          @at-root .video_img {
+            position: relative;
+            width: 100%;
+            height: 80%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            &::before {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              right: 0;
+              margin: auto;
+              content: "";
+              display: inline-block;
+              @include unit(width,100);
+              @include unit(height,100);
+              background-color: $color-light-blue;
+              border-radius: 50%;
+              transform: translateY(-50%);
+            }
+            &::after {
+              content: "";
+              display: inline-block;
+              position: absolute;
+              top: 50%;
+              left: 51.3%;
+              margin: auto;
+              @include unit(border-radius,5);
+              border: solid $color-orange;
+              @include border-width(32,0,32,40);
+              border-top-color: transparent;
+              border-bottom-color: transparent;
+              transform: translate(-50%,-50%);
+            }
+          }
+          &:nth-child(1) .video_img {
+            background-image: url("../../img/academy/introduceAcademy/photo_37.jpg");
+          }
+          &:nth-child(2) .video_img {
+            background-image: url("../../img/academy/introduceAcademy/photo_35.jpg");
+          }
+          @at-root .video_txt {
+            width: 100%;
+            height: 20%;
+            @include unit(padding,20);
+            background-color: $color-white;
+          }
+        }
+      }
+    }// .academy_video
+    @at-root .more_page {
+      @include unit(width,300);
+      @include unit(height,60);
+      margin: auto;
+      @include unit(margin-top,40);
+      @include unit(margin-bottom,40);
+      background-color: $color-orange;
+      button {
+        @include display-block();
+        span {
+          @include size();
+          text-align: center;
+          color: $color-white;
+          font-weight: 700;
+        }
+      }
+    }
+    @at-root .introduce_pro_area {
+      width: 100%;
+      height: auto;
+      .introduce_pro_title {
+        width: 100%;
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin: auto;
+        @include unit(margin-top,80);
+        @include unit(margin-bottom,40);
+        background-image: url("../../img/academy/introduceAcademy/bg_aca_main_01.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 70%;
+        color: $color-white;
+        @include text-shadow(0,0,8,rgb(0 0 0 / 80%));
+        h3 {
+          @include size();
+          text-align: center;
+          @include unit(font-size,24);
+          @include unit(margin-bottom,50);
+        }
+        p {
+          @include size();
+          @include unit(margin-bottom,40);
+          @include unit(font-size,16);
+          text-align: center;
+        }
+      }
+    }// .introduce_pro_area
+    .introduce_pro_profile {
+      @include size();
+      @include unit(margin-bottom,80);
+      h3 {
+        @include unit(font-size,36);
+        text-align: center;
+        @include unit(margin-top,80);
+        @include unit(margin-bottom,40);
+      }
+      > ul {
+        @include unit(width,1180);
+        height: 100%;
+        margin: auto;
+        @include unit(margin-bottom,40);
+        > li {
+          float: left;
+          @include unit(width,380);
+          @include unit(height,500);
+          @include unit(margin-top,20);
+          @include unit(margin-right,20);
+          @include unit(border-radius,5);
+          @include border($c:$color-light-gray);
+          &:nth-child(-n + 3) {
+            margin-top: 0;
+          }
+          &:nth-child(3n) {
+            margin-right: 0px;
+          }
+          @at-root .profile {
+            width: 100%;
+            @include unit(height,200);
+            @include unit(padding-top,40);
+            @include unit(margin-bottom,80);
+            .profile_img {
+              display: block;
+              @include unit(width,150);
+              @include unit(height,150);
+              margin: auto;
+              @include unit(margin-bottom,20);
+              border-radius: 50%;
+              background-color: $color-light-gray;
+            }
+            .profile_name {
+              @include unit(width,100);
+              @include unit(height,40);
+              margin: auto;
+              text-align: center;
+              @include unit(line-height,40);
+              @include unit(font-size,24);
+              font-weight: 700;
+              color: $color-black;
+            }
+          }
+          hr {
+            width: 90%;
+            margin: auto;
+            @include border($c:$color-light-gray)
+          }
+          @at-root .profile_txt {
+            @include size();
+            @include padding(10,20,10,20);
+            ul {
+              @include size();
+              li {
+                width: 100%;
+                @include unit(height,25);
+                list-style: disc;
+                @include unit(margin-left,20);
+              }
+            }
+          }
+        }
+      }
+    }
+  }// .academy_area
+  .academy_gps {
+    @include size();
+    @include unit(padding-top,40);
+    @include unit(padding-bottom,40);
+    @include img("academy/introduceAcademy/bg_aca_map.jpg",$s:200%);
+    .gps_mapBox {
+      @include unit(width,1200);
+      height: auto;
+      @include unit(padding,20);
+      margin: auto;
+      background-color: $color-white;
+      ul {
+        @include size();
+        @at-root .gps_txt {
+          position: relative;
+          float: left;
+          @include unit(width,380);
+          @include unit(height,600);
+          @include unit(margin-right,20);
+          background-color: $color-white;
+          p {
+            @include unit(margin-bottom,30);
+            font-weight: 700;
+            @include unit(font-size,32);
+          }
+          dl {
+            @include unit(margin-bottom,30);
+            dt {
+              font-weight: 700;
+              @include unit(margin-bottom,10);
+            }
+          }
+          @at-root .gps_txt_img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            width: 100%;
+            @include unit(height,200);
+            height: 200px;
+            @include img("academy/introduceAcademy/img_map_store.jpg");
+          }
+        }
+        @at-root .gps_img {
+          float: left;
+          @include unit(width,760);
+          @include unit(height,600);
+          @include img("academy/introduceAcademy/img_map.jpg");
+        }
+      }
+    }
+  }
+}
+@include mobile-h {}
+@include tablet {}
+@include laptop {}

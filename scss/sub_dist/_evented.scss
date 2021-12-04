@@ -141,23 +141,12 @@
 @include tablet {
   .board {
     @include unit(width,700);
-    height: auto;
-    margin:auto;
-    @include unit(margin-top,80);
     table {
-      border-right: hidden;
-      border-left: hidden;
-      @include unit(margin-bottom,80);
       thead {
-        width: auto;
-        height: auto;
         tr {
           th {
-            width: auto;
-            @include unit(height,60);
             &:nth-child(1) {
               @include unit(width,450);
-              color: $color-orange;
             }
             &:nth-child(2) {
               @include unit(width,100);
@@ -168,29 +157,6 @@
           }
         }
       }
-      tbody {
-        tr {
-          td {
-            width: auto;
-            @include unit(height,40);
-            @at-root .boardBullet {
-              font-weight: 700;
-              @include unit(font-size,16);
-            }
-            @at-root .boardTxt {
-              @include unit(margin-left,5);
-              @include unit(font-size,16);
-            }
-            &:nth-child(2) {
-              text-align: center;
-            }
-            &:nth-child(3) {
-              text-align: center;
-            }
-          }
-        }
-      }
     }
   }
 }
-@include laptop {}

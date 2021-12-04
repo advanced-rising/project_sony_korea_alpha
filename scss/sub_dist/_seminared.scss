@@ -1,5 +1,5 @@
 .board {
-  @include unit(width,1200);
+  @include unit(width,1000);
   height: auto;
   margin:auto;
   @include unit(margin-top,80);
@@ -10,38 +10,152 @@
     thead {
       width: auto;
       height: auto;
-      th {
-        width: auto;
-        @include unit(height,60);
-        &:nth-child(1) {
-          @include unit(width,800);
-          color: $color-orange;
-        }
-        &:nth-child(2) {
-          @include unit(width,200);
-        }
-        &:nth-child(3) {
-          @include unit(width,200);
+      tr {
+        th {
+          width: auto;
+          @include unit(height,60);
+          &:nth-child(1) {
+            @include unit(width,600);
+            color: $color-orange;
+          }
+          &:nth-child(2) {
+            @include unit(width,200);
+          }
+          &:nth-child(3) {
+            @include unit(width,200);
+          }
         }
       }
     }
-    td {
-      width: auto;
-      @include unit(height,40);
-      @include padding(10,20,10,20);
-      @at-root .boardBullet {
-        font-weight: 700;
-        @include unit(font-size,16);
+    tbody {
+      tr {
+        td {
+          width: auto;
+          @include unit(height,40);
+          @include padding(10,20,10,20);
+          @at-root .boardBullet {
+            font-weight: 700;
+            @include unit(font-size,16);
+          }
+          @at-root .boardTxt {
+            @include unit(margin-left,5);
+            @include unit(font-size,16);
+          }
+          &:nth-child(2) {
+            text-align: center;
+          }
+          &:nth-child(3) {
+            text-align: center;
+          }
+        }
       }
-      @at-root .boardTxt {
-        @include unit(margin-left,5);
-        @include unit(font-size,16);
+    }
+  }
+}
+@include mobile-v {
+  .board {
+    width: 100%;
+    @include padding(0,20,0,20);
+    table {
+      width: 100%;
+      thead {
+        @include size();
+        tr {
+          th {
+            width: 100%;
+            @include unit(height,60);
+            &:nth-child(1) {
+              width: 100%;
+            }
+            &:nth-child(2) {
+              display: none;
+            }
+            &:nth-child(3) {
+              display: none;
+            }
+          }
+        }
       }
-      &:nth-child(2) {
-        text-align: center;
+      tbody {
+        tr {
+          td {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            border: 0;
+            &:nth-child(2) {
+              text-align: end;
+            }
+            &:nth-child(3) {
+              text-align: end;
+            }
+          }
+        }
       }
-      &:nth-child(3) {
-        text-align: center;
+    }
+  }
+}
+@include mobile-h {
+  .board {
+    width: 100%;
+    @include padding(0,20,00,20);
+    table {
+      width: 100%;
+      thead {
+        @include size();
+        tr {
+          th {
+            width: 100%;
+            @include unit(height,60);
+            &:nth-child(1) {
+              width: 100%;
+            }
+            &:nth-child(2) {
+              display: none;
+            }
+            &:nth-child(3) {
+              display: none;
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            border: 0;
+            &:nth-child(2) {
+              text-align: end;
+            }
+            &:nth-child(3) {
+              text-align: end;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include tablet {
+  .board {
+    @include unit(width,700);
+    table {
+      thead {
+        tr {
+          th {
+            &:nth-child(1) {
+              @include unit(width,450);
+            }
+            &:nth-child(2) {
+              @include unit(width,100);
+            }
+            &:nth-child(3) {
+              @include unit(width,150);
+            }
+          }
+        }
       }
     }
   }

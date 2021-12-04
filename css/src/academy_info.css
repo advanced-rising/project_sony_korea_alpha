@@ -937,19 +937,18 @@ h1 a {
 
 .academy_area {
   width: 100%;
-  height: 100%;
+  height: auto;
   padding-top: 80px;
   padding-top: 5rem;
 }
 .academy_title {
   width: 100%;
-  height: 100%;
+  height: auto;
   margin-bottom: 40px;
   margin-bottom: 2.5rem;
 }
 .academy_title h3 {
-  width: 500px;
-  width: 31.25rem;
+  width: 100%;
   height: auto;
   margin: auto;
   font-size: 36px;
@@ -979,7 +978,6 @@ h1 a {
   margin-right: 1.25rem;
   border: 1px solid #03010f;
   border: 0.0625rem solid #03010f;
-  background-color: #6f6f75;
 }
 .academy_area .academy_video ul li:last-of-type {
   margin-right: 0;
@@ -1058,7 +1056,7 @@ h1 a {
 }
 .more_page button span {
   width: 100%;
-  height: 100%;
+  height: auto;
   text-align: center;
   color: #ffffff;
   font-weight: 700;
@@ -1066,7 +1064,7 @@ h1 a {
 
 .introduce_pro_area {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .introduce_pro_area .introduce_pro_title {
   width: 100%;
@@ -1088,16 +1086,20 @@ h1 a {
 }
 .introduce_pro_area .introduce_pro_title h3 {
   width: 100%;
-  height: 100%;
+  height: auto;
   text-align: center;
+  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 50px;
   margin-bottom: 3.125rem;
 }
 .introduce_pro_area .introduce_pro_title p {
   width: 100%;
-  height: 100%;
-  margin-bottom: 20px;
-  margin-bottom: 1.25rem;
+  height: auto;
+  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
+  font-size: 16px;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -1228,7 +1230,7 @@ h1 a {
   background-color: #ffffff;
 }
 .academy_gps .gps_mapBox ul {
-  width: auto;
+  width: 100%;
   height: auto;
 }
 .gps_txt {
@@ -1286,6 +1288,346 @@ h1 a {
   background-size: cover;
 }
 
+@media all and (max-width: 479px) {
+  .academy_title h3 {
+    font-size: 36px;
+    font-size: 2.25rem;
+  }
+
+  .academy_area .academy_video {
+    width: 300px;
+    width: 18.75rem;
+    height: 100%;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+  .academy_area .academy_video ul {
+    display: inline-block;
+    width: auto;
+    height: 100%;
+  }
+  .academy_area .academy_video ul li {
+    clear: both;
+    width: 300px;
+    width: 18.75rem;
+    height: 460px;
+    height: 28.75rem;
+    margin-right: 20px;
+    margin-right: 1.25rem;
+    border: 1px solid #03010f;
+    border: 0.0625rem solid #03010f;
+  }
+  .academy_area .academy_video ul li:last-of-type {
+    margin-right: 0;
+  }
+  .video_img {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .video_img::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    content: "";
+    display: inline-block;
+    width: 100px;
+    width: 6.25rem;
+    height: 100px;
+    height: 6.25rem;
+    background-color: #f1f5f9;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+  .video_img::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 51.3%;
+    margin: auto;
+    border-radius: 5px;
+    border-radius: 0.3125rem;
+    border: solid #e75300;
+    border-width: 32px 0px 32px 40px;
+    border-width: 2rem 0rem 2rem 2.5rem;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    transform: translate(-50%, -50%);
+  }
+
+  .academy_area .academy_video ul li:nth-child(1) .video_img {
+    background-image: url("../../img/academy/introduceAcademy/photo_37.jpg");
+  }
+  .academy_area .academy_video ul li:nth-child(2) .video_img {
+    background-image: url("../../img/academy/introduceAcademy/photo_35.jpg");
+  }
+  .video_txt {
+    width: 100%;
+    height: 20%;
+    padding: 20px;
+    padding: 1.25rem;
+    background-color: #ffffff;
+  }
+
+  .more_page {
+    width: 300px;
+    width: 18.75rem;
+    height: 60px;
+    height: 3.75rem;
+    margin: auto;
+    margin-top: 40px;
+    margin-top: 2.5rem;
+    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
+    background-color: #e75300;
+  }
+  .more_page button {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .more_page button span {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  .introduce_pro_area {
+    width: 100%;
+    height: auto;
+  }
+  .introduce_pro_area .introduce_pro_title {
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: auto;
+    margin-top: 80px;
+    margin-top: 5rem;
+    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
+    background-image: url("../../img/academy/introduceAcademy/bg_aca_main_01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 70%;
+    color: #ffffff;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
+    text-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.8);
+  }
+  .introduce_pro_area .introduce_pro_title h3 {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 24px;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
+  }
+  .introduce_pro_area .introduce_pro_title p {
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
+    font-size: 16px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .academy_area .introduce_pro_profile {
+    width: 100%;
+    height: auto;
+    margin-bottom: 80px;
+    margin-bottom: 5rem;
+  }
+  .academy_area .introduce_pro_profile h3 {
+    font-size: 36px;
+    font-size: 2.25rem;
+    text-align: center;
+    margin-top: 80px;
+    margin-top: 5rem;
+    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
+  }
+  .academy_area .introduce_pro_profile > ul {
+    width: 1180px;
+    width: 73.75rem;
+    height: 100%;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
+  }
+  .academy_area .introduce_pro_profile > ul > li {
+    float: left;
+    width: 380px;
+    width: 23.75rem;
+    height: 500px;
+    height: 31.25rem;
+    margin-top: 20px;
+    margin-top: 1.25rem;
+    margin-right: 20px;
+    margin-right: 1.25rem;
+    border-radius: 5px;
+    border-radius: 0.3125rem;
+    border: 1px solid #6f6f75;
+    border: 0.0625rem solid #6f6f75;
+  }
+  .academy_area .introduce_pro_profile > ul > li:nth-child(-n+3) {
+    margin-top: 0;
+  }
+  .academy_area .introduce_pro_profile > ul > li:nth-child(3n) {
+    margin-right: 0px;
+  }
+  .profile {
+    width: 100%;
+    height: 200px;
+    height: 12.5rem;
+    padding-top: 40px;
+    padding-top: 2.5rem;
+    margin-bottom: 80px;
+    margin-bottom: 5rem;
+  }
+  .profile .profile_img {
+    display: block;
+    width: 150px;
+    width: 9.375rem;
+    height: 150px;
+    height: 9.375rem;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
+    border-radius: 50%;
+    background-color: #6f6f75;
+  }
+  .profile .profile_name {
+    width: 100px;
+    width: 6.25rem;
+    height: 40px;
+    height: 2.5rem;
+    margin: auto;
+    text-align: center;
+    line-height: 40px;
+    line-height: 2.5rem;
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #03010f;
+  }
+
+  .academy_area .introduce_pro_profile > ul > li hr {
+    width: 90%;
+    margin: auto;
+    border: 1px solid #6f6f75;
+    border: 0.0625rem solid #6f6f75;
+  }
+  .profile_txt {
+    width: 100%;
+    height: auto;
+    padding: 10px 20px 10px 20px;
+    padding: 0.625rem 1.25rem 0.625rem 1.25rem;
+  }
+  .profile_txt ul {
+    width: 100%;
+    height: auto;
+  }
+  .profile_txt ul li {
+    width: 100%;
+    height: 25px;
+    height: 1.5625rem;
+    list-style: disc;
+    margin-left: 20px;
+    margin-left: 1.25rem;
+  }
+
+  .academy_gps {
+    width: 100%;
+    height: auto;
+    padding-top: 40px;
+    padding-top: 2.5rem;
+    padding-bottom: 40px;
+    padding-bottom: 2.5rem;
+    background-image: url("../../img/academy/introduceAcademy/bg_aca_map.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 200%;
+  }
+  .academy_gps .gps_mapBox {
+    width: 1200px;
+    width: 75rem;
+    height: auto;
+    padding: 20px;
+    padding: 1.25rem;
+    margin: auto;
+    background-color: #ffffff;
+  }
+  .academy_gps .gps_mapBox ul {
+    width: 100%;
+    height: auto;
+  }
+  .gps_txt {
+    position: relative;
+    float: left;
+    width: 380px;
+    width: 23.75rem;
+    height: 600px;
+    height: 37.5rem;
+    margin-right: 20px;
+    margin-right: 1.25rem;
+    background-color: #ffffff;
+  }
+  .gps_txt p {
+    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
+    font-weight: 700;
+    font-size: 32px;
+    font-size: 2rem;
+  }
+  .gps_txt dl {
+    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
+  }
+  .gps_txt dl dt {
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
+  }
+  .gps_txt_img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    height: 200px;
+    height: 12.5rem;
+    height: 200px;
+    background-image: url("../../img/academy/introduceAcademy/img_map_store.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+
+  .gps_img {
+    float: left;
+    width: 760px;
+    width: 47.5rem;
+    height: 600px;
+    height: 37.5rem;
+    background-image: url("../../img/academy/introduceAcademy/img_map.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+}
 #footBox {
   width: 100%;
   height: auto;
