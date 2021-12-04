@@ -8,18 +8,33 @@
   background-repeat: no-repeat;
   background-size: cover;
   h2 {
-    @include unit(width,800);
+    width: 100%;
     height: auto;
     margin: auto;
+    @include padding(0,20,0,20);
     text-align: center;
     @include unit(font-size,54);
   }
   p {
-    @include unit(width,800);
+    width: 100%;
     height: auto;
     margin: auto;
     @include unit(margin-top,20);
     text-align: center;
     @include unit(font-size,18);
+  }
+}
+@include mobile-v {
+  #viewBox {
+    h2 {
+      @include unit(font-size,36);
+    }
+  }
+}
+@include mobile-h {
+  #viewBox {
+    h2 {
+      @include unit(font-size,36);
+    }
   }
 }

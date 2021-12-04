@@ -903,17 +903,17 @@ h1 a {
   background-size: cover;
 }
 #viewBox h2 {
-  width: 800px;
-  width: 50rem;
+  width: 100%;
   height: auto;
   margin: auto;
+  padding: 0px 20px 0px 20px;
+  padding: 0rem 1.25rem 0rem 1.25rem;
   text-align: center;
   font-size: 54px;
   font-size: 3.375rem;
 }
 #viewBox p {
-  width: 800px;
-  width: 50rem;
+  width: 100%;
   height: auto;
   margin: auto;
   margin-top: 20px;
@@ -923,6 +923,18 @@ h1 a {
   font-size: 1.125rem;
 }
 
+@media all and (max-width: 479px) {
+  #viewBox h2 {
+    font-size: 36px;
+    font-size: 2.25rem;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 767px) {
+  #viewBox h2 {
+    font-size: 36px;
+    font-size: 2.25rem;
+  }
+}
 .board {
   width: 1200px;
   width: 75rem;

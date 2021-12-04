@@ -903,17 +903,17 @@ h1 a {
   background-size: cover;
 }
 #viewBox h2 {
-  width: 800px;
-  width: 50rem;
+  width: 100%;
   height: auto;
   margin: auto;
+  padding: 0px 20px 0px 20px;
+  padding: 0rem 1.25rem 0rem 1.25rem;
   text-align: center;
   font-size: 54px;
   font-size: 3.375rem;
 }
 #viewBox p {
-  width: 800px;
-  width: 50rem;
+  width: 100%;
   height: auto;
   margin: auto;
   margin-top: 20px;
@@ -923,9 +923,21 @@ h1 a {
   font-size: 1.125rem;
 }
 
+@media all and (max-width: 479px) {
+  #viewBox h2 {
+    font-size: 36px;
+    font-size: 2.25rem;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 767px) {
+  #viewBox h2 {
+    font-size: 36px;
+    font-size: 2.25rem;
+  }
+}
 .board {
-  width: 1200px;
-  width: 75rem;
+  width: 1000px;
+  width: 62.5rem;
   height: auto;
   margin: auto;
   margin-top: 80px;
@@ -941,25 +953,25 @@ h1 a {
   width: auto;
   height: auto;
 }
-.board table thead th {
+.board table thead tr th {
   width: auto;
   height: 60px;
   height: 3.75rem;
 }
-.board table thead th:nth-child(1) {
-  width: 800px;
-  width: 50rem;
+.board table thead tr th:nth-child(1) {
+  width: 600px;
+  width: 37.5rem;
   color: #e75300;
 }
-.board table thead th:nth-child(2) {
+.board table thead tr th:nth-child(2) {
   width: 200px;
   width: 12.5rem;
 }
-.board table thead th:nth-child(3) {
+.board table thead tr th:nth-child(3) {
   width: 200px;
   width: 12.5rem;
 }
-.board table td {
+.board table tbody tr td {
   width: auto;
   height: 40px;
   height: 2.5rem;
@@ -979,13 +991,155 @@ h1 a {
   font-size: 1rem;
 }
 
-.board table td:nth-child(2) {
+.board table tbody tr td:nth-child(2) {
   text-align: center;
 }
-.board table td:nth-child(3) {
+.board table tbody tr td:nth-child(3) {
   text-align: center;
 }
 
+@media all and (max-width: 479px) {
+  .board {
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    padding: 0rem 1.25rem 0rem 1.25rem;
+  }
+  .board table {
+    width: 100%;
+  }
+  .board table thead {
+    width: 100%;
+    height: auto;
+  }
+  .board table thead tr th {
+    width: 100%;
+    height: 60px;
+    height: 3.75rem;
+  }
+  .board table thead tr th:nth-child(1) {
+    width: 100%;
+  }
+  .board table thead tr th:nth-child(2) {
+    display: none;
+  }
+  .board table thead tr th:nth-child(3) {
+    display: none;
+  }
+  .board table tbody tr td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+  }
+  .board table tbody tr td:nth-child(2) {
+    text-align: end;
+  }
+  .board table tbody tr td:nth-child(3) {
+    text-align: end;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .board {
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    padding: 0rem 1.25rem 0rem 1.25rem;
+  }
+  .board table {
+    width: 100%;
+  }
+  .board table thead {
+    width: 100%;
+    height: auto;
+  }
+  .board table thead tr th {
+    width: 100%;
+    height: 60px;
+    height: 3.75rem;
+  }
+  .board table thead tr th:nth-child(1) {
+    width: 100%;
+  }
+  .board table thead tr th:nth-child(2) {
+    display: none;
+  }
+  .board table thead tr th:nth-child(3) {
+    display: none;
+  }
+  .board table tbody tr td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+  }
+  .board table tbody tr td:nth-child(2) {
+    text-align: end;
+  }
+  .board table tbody tr td:nth-child(3) {
+    text-align: end;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .board {
+    width: 700px;
+    width: 43.75rem;
+    height: auto;
+    margin: auto;
+    margin-top: 80px;
+    margin-top: 5rem;
+  }
+  .board table {
+    border-right: hidden;
+    border-left: hidden;
+    margin-bottom: 80px;
+    margin-bottom: 5rem;
+  }
+  .board table thead {
+    width: auto;
+    height: auto;
+  }
+  .board table thead tr th {
+    width: auto;
+    height: 60px;
+    height: 3.75rem;
+  }
+  .board table thead tr th:nth-child(1) {
+    width: 450px;
+    width: 28.125rem;
+    color: #e75300;
+  }
+  .board table thead tr th:nth-child(2) {
+    width: 100px;
+    width: 6.25rem;
+  }
+  .board table thead tr th:nth-child(3) {
+    width: 150px;
+    width: 9.375rem;
+  }
+  .board table tbody tr td {
+    width: auto;
+    height: 40px;
+    height: 2.5rem;
+  }
+  .boardBullet {
+    font-weight: 700;
+    font-size: 16px;
+    font-size: 1rem;
+  }
+
+  .boardTxt {
+    margin-left: 5px;
+    margin-left: 0.3125rem;
+    font-size: 16px;
+    font-size: 1rem;
+  }
+
+  .board table tbody tr td:nth-child(2) {
+    text-align: center;
+  }
+  .board table tbody tr td:nth-child(3) {
+    text-align: center;
+  }
+}
 #footBox {
   width: 100%;
   height: auto;
