@@ -25,7 +25,9 @@
 }
 @include mobile-v{
   #viewBox {
-    @include unit(padding-top,100);
+    h2 {
+      @include unit(font-size,36);
+    }
   }
 }
 @include mobile-h{}
