@@ -10,6 +10,7 @@
     @include unit(height,40);
     margin: auto;
     text-align: center;
+    @include unit(margin-bottom,60);
     @include border-bottom($c:$color-black);
     ul {
       display: inline-block;
@@ -40,25 +41,27 @@
     }
   }
   @at-root .online_video {
-    @include unit(width,820);
+    @include unit(width,840);
     height: auto;
     margin: auto;
-    @include unit(margin-top,80);
+    @include unit(margin-top,20);
+    text-align: center;
     ul {
-      width: 100%;
+      display: inline-block;
+      width: auto;
       height: 100%;
       li {
         float: left;
-        width: 400px;
-        height: 300px;
-        margin-top: 20px;
-        margin-right: 20px;
-        border: 1px solid $color-black;
+        @include unit(width,400);
+        @include unit(max-width,600);
+        @include unit(height,300);
+        @include unit(margin-top,20);
+        @include unit(margin-right,10);
+        @include unit(margin-left,10);
+        box-sizing: border-box;
+        @include border($c:$color-black);
         &:nth-child(2n) {
           margin-right: 0;
-        }
-        &:nth-child(-n + 2) {
-          margin-top: 0;
         }
         @at-root .video_img {
           position: relative;
@@ -88,11 +91,11 @@
                 top: 50%;
                 left: 45%;
                 margin: auto;
-                margin-top: -16px;
-                margin-left: -5px;
-                border-radius: 5px;
+                @include unit(margin-top,-16);
+                @include unit(margin-left,-5);
+                @include unit(border-radius,5);
                 border: solid $color-orange;
-                border-width: 16px 0 16px 20px;
+                @include border-width(16,0,16,20);
                 border-top-color: transparent;
                 border-bottom-color: transparent;
               }
@@ -168,3 +171,52 @@
     }
   }
 }// .online_area
+
+@include mobile-v {
+  .online_area {
+    @at-root .online_video {
+      width: 100%; //
+      @include padding(0,20,0,20); //
+      ul {
+        li {
+          clear: both; //
+          width: 100%; //
+          margin-left: 0; //
+          margin-right: 0; //
+        }
+      }
+    }
+  }
+}
+@include mobile-h {
+  .online_area {
+    @at-root .online_video {
+      width: 100%; //
+      @include padding(0,20,0,20); //
+      ul {
+        li {
+          clear: both; //
+          width: 100%; //
+          margin-left: 0; //
+          margin-right: 0; //
+        }
+      }
+    }
+  }
+}
+@include tablet {
+  .online_area {
+    @at-root .online_video {
+      @include unit(width,600);
+      @include padding(0,20,0,20); //
+      ul {
+        li {
+          clear: both; //
+          @include unit(width,600); //
+          margin-left: 0; //
+          margin-right: 0; //
+        }
+      }
+    }
+  }
+}

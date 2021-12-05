@@ -1345,10 +1345,11 @@ h1 a {
 
   .academy_gps {
     background-image: none;
+    padding: 20px;
+    padding: 1.25rem;
   }
   .academy_gps .gps_mapBox {
-    width: 300px;
-    width: 18.75rem;
+    width: 100%;
     height: 100%;
     padding: 0;
     margin: auto;
@@ -1454,10 +1455,11 @@ h1 a {
 
   .academy_gps {
     background-image: none;
+    padding: 20px;
+    padding: 1.25rem;
   }
   .academy_gps .gps_mapBox {
-    width: 300px;
-    width: 18.75rem;
+    width: 100%;
     height: 100%;
     padding: 0;
     margin: auto;
@@ -1620,8 +1622,8 @@ h1 a {
   }
 
   .academy_area .academy_video {
-    width: 620px;
-    width: 38.75rem;
+    width: 820px;
+    width: 51.25rem;
     text-align: center;
   }
   .academy_area .academy_video ul {
@@ -1629,8 +1631,8 @@ h1 a {
     width: auto;
   }
   .academy_area .academy_video ul li {
-    width: 300px;
-    width: 18.75rem;
+    width: 400px;
+    width: 25rem;
   }
   .video_img {
     height: 70%;

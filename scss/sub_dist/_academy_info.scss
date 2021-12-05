@@ -313,8 +313,10 @@
   }// .academy_area
   .academy_gps {
     background-image: none;
+    @include unit(padding,20);
     .gps_mapBox {
-      @include unit(width,300); //
+      width: 100%;
+      // @include unit(width,300); //
       height: 100%;
       padding: 0;
       margin: auto;
@@ -408,8 +410,10 @@
   }// .academy_area
   .academy_gps {
     background-image: none;
+    @include unit(padding,20);
     .gps_mapBox {
-      @include unit(width,300); //
+      width: 100%;
+      // @include unit(width,300); //
       height: 100%;
       padding: 0;
       margin: auto;
@@ -548,13 +552,13 @@
       }
     }
     .academy_video {
-      @include unit(width,620);
+      @include unit(width,820);
       text-align: center;
       ul {
         display: inline-block;
         width: auto;
         li {
-          @include unit(width,300);
+          @include unit(width,400);
           @at-root .video_img {
             height: 70%;
           }
