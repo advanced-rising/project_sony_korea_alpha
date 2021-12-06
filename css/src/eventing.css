@@ -143,7 +143,7 @@ h1 a {
 .gnb > ul .last_gnbMenu {
   margin-right: 0px;
 }
-.gnb > ul .moblie_login {
+.gnb > ul .mobile_login {
   display: none;
 }
 .gnb > ul .mobile_signUp {
@@ -426,7 +426,7 @@ h1 a {
     text-align: center;
   }
 
-  #navigation .moblie_login {
+  #navigation .mobile_login {
     display: block;
   }
   #navigation .mobile_signUp {
@@ -491,8 +491,8 @@ h1 a {
     height: 2.25rem;
     margin: 10px 20px 0px 20px;
     margin: 0.625rem 1.25rem 0rem 1.25rem;
-    border-bottom: 1px 4 #ffffff;
-    border-bottom: 0.0625rem 4 #ffffff;
+    border-bottom: 4px solid #ffffff;
+    border-bottom: 0.25rem solid #ffffff;
   }
   #navigation .gnb_btn::before, #navigation .gnb_btn::after {
     content: "";
@@ -531,12 +531,12 @@ h1 a {
     background-size: cover;
   }
   #navigation .gnb {
-    display: none;
+    display: block;
     position: fixed;
     top: 80px;
     top: 5rem;
     width: 100%;
-    height: 100vw;
+    height: 100%;
     background-color: #03010f;
   }
   #navigation .gnb > ul {
@@ -546,24 +546,30 @@ h1 a {
   #navigation .gnb > ul > li {
     display: block;
     width: 100%;
-    height: 60px;
-    height: 3.75rem;
+    height: auto;
     font-size: 18px;
     font-size: 1.125rem;
   }
+  .sub_area {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
   .sub_menu {
-    display: none;
+    position: static;
+    display: block;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     margin: auto;
   }
   .sub_menu li {
     display: block;
+    height: 40px;
     text-align: center;
   }
 
-  #navigation .moblie_login {
+  #navigation .mobile_login {
     display: block;
   }
   #navigation .mobile_signUp {
@@ -590,8 +596,8 @@ h1 a {
     display: none;
   }
   #navigation .search_engin {
-    width: 400px;
-    width: 25rem;
+    width: 300px;
+    width: 18.75rem;
     height: 540px;
     height: 33.75rem;
   }
@@ -700,7 +706,7 @@ h1 a {
     text-align: center;
   }
 
-  #navigation .moblie_login {
+  #navigation .mobile_login {
     display: block;
   }
   #navigation .mobile_signUp {
@@ -837,7 +843,7 @@ h1 a {
     text-align: center;
   }
 
-  #navigation .moblie_login {
+  #navigation .mobile_login {
     display: block;
   }
   #navigation .mobile_signUp {

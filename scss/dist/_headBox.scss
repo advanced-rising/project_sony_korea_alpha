@@ -108,7 +108,7 @@
         &:hover .sub_menu { display: block;}
       }
       .last_gnbMenu {margin-right: 0px;}
-      .moblie_login { display: none;}
+      .mobile_login { display: none;}
       .mobile_signUp { display: none;}
     }
   }
@@ -329,7 +329,7 @@
         }
       }
     } 
-    .moblie_login { display: block;}
+    .mobile_login { display: block;}
     .mobile_signUp { display: block;}
     .unb {
       position: absolute;
@@ -372,7 +372,8 @@
       @include unit(width,40);
       @include unit(height,36);
       @include margin(10,20,0,20);
-      @include border-bottom($s:4,$c:$color-white);
+      // border-bottom: 4px solid $color-white;
+      @include border-bottom($w:4,$c:$color-white);
       &::before,
       &::after {
         content: "";
@@ -402,11 +403,11 @@
       @include img("cross_white.svg",$p:center)
     }
     .gnb {
-      display: none;
+      display: block;
       position: fixed;
       @include unit(top,80);
       width: 100%;
-      height: 100vw;
+      height: 100%;
       background-color: $color-black;
       > ul {
         width: 100%;
@@ -414,23 +415,30 @@
         > li {
           display: block;
           width: 100%;
-          @include unit(height,60);
+          height: auto;
           @include unit(font-size,18);
-          @at-root .sub_menu {
-            display: none;
-            left: 0;
+          @at-root .sub_area {
+            display: block;
             width: 100%;
-            height: 100%;
-            margin: auto;
-            li {
+            height: auto;
+            @at-root .sub_menu {
+              position: static;
               display: block;
-              text-align: center;
+              left: 0;
+              width: 100%;
+              height: auto;
+              margin: auto;
+              li {
+                display: block;
+                height: 40px;
+                text-align: center;
+              }
             }
           }
         }
       }
     } 
-    .moblie_login { display: block;}
+    .mobile_login { display: block;}
     .mobile_signUp { display: block;}
     .unb {
       position: absolute;
@@ -445,7 +453,7 @@
     .login_txt { display: none;}
     .signUp_txt { display: none;}
     .search_engin {
-      @include unit(width,400);
+      @include unit(width,300);
       @include unit(height,540);
       ul {
         width: 100%;
@@ -531,7 +539,7 @@
         }
       }
     }
-    .moblie_login { display: block;}
+    .mobile_login { display: block;}
     .mobile_signUp { display: block;}
     .unb {
       position: absolute;
@@ -632,7 +640,7 @@
         }
       }
     } 
-    .moblie_login { display: block;}
+    .mobile_login { display: block;}
     .mobile_signUp { display: block;}
     .unb {
       position: absolute;
