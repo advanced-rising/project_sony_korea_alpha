@@ -1,0 +1,50 @@
+#container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  @include unit(padding-top,80);
+  background-color: $color-black;
+  @at-root .store {
+    width: 100%;
+    @include unit(height,400);
+    margin: auto;
+    @include unit(padding-top,80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    p {
+      color: $color-white;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+    h2 {
+      color: $color-white;
+      font-size: 2rem;
+      text-align: center;
+    }
+    .button {
+      @include unit(width,300);
+      @include unit(height,60);
+      margin: auto;
+      @include unit(margin-top,80);
+      font-weight: 700;
+      text-align: center;
+      @include unit(line-height,60);
+      color: $color-white;
+      background-color: $color-orange;
+    }
+  }
+}
+
+
+article:nth-child(1) .store {
+  background-image: url("../../img/bought_store/bg_store_online.jpg");
+}
+article:nth-child(2) .store {
+  background-image: url("../../img/bought_store/bg_store_agj.jpg");
+}
+article:nth-child(3) .store {
+  background-image: url("../../img/bought_store/bg_store_center.jpg");
+}
+article:nth-child(4) .store {
+  background-image: url("../../img/bought_store/bg_store_consult.jpg");
+}

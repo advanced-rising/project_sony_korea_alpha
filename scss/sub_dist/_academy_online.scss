@@ -4,10 +4,11 @@
 .online_area {
   @include size();
   @include unit(padding-bottom,80);
+  @include unit(padding-top,10);
   background-color: $color-white;
   .tab_menu {
     width: 100%;
-    @include unit(height,40);
+    @include unit(height,60);
     margin: auto;
     text-align: center;
     @include unit(margin-bottom,60);
@@ -32,7 +33,7 @@
           display: block;
           width: auto;
           height: 100%;
-          box-sizing: border-box;
+          @include unit(line-height,30);
         }
         &.action span {
           @include border-bottom($w:3,$c:$color-orange);

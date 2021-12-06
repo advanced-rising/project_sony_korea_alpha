@@ -4,10 +4,11 @@
 .offline_area {
   @include size();
   @include unit(margin-bottom,80);
+  @include unit(padding-top,10);
   background-color: $color-white;
   .tab_menu {
     width: 100%;
-    @include unit(height,40);
+    @include unit(height,60);
     margin: auto;
     @include border-bottom($c:$color-black);
     text-align:center;
@@ -31,7 +32,7 @@
           display: block;
           width: auto;
           height: 100%;
-          box-sizing: border-box;
+          @include unit(line-height,30);
         }
         &.action span {
           @include border-bottom($w:3,$c:$color-orange);
@@ -43,7 +44,9 @@
     @include size();
     .offline_title {
       position: relative;
+      @include unit(min-width,300);
       @include unit(width,400);
+      @include unit(max-width,400);
       @include unit(height,80);
       margin: auto;
       @include unit(margin-top,80);
@@ -66,7 +69,7 @@
         &::after {
           position: absolute;
           bottom: 20%;
-          right: 0;
+          right: 50%;
           transform: translateY(50%);
           content: "";
           @include unit(width,3);
@@ -77,7 +80,7 @@
         &::before {
           position: absolute;
           bottom: 41%;
-          right: 0;
+          right: 50%;
           transform: translateY(50%);
           content: "";
           @include unit(width,3);
@@ -92,7 +95,7 @@
         &::after {
           position: absolute;
           bottom: 20%;
-          left: 0;
+          left: 50%;
           transform: translateY(50%);
           content: "";
           @include unit(width,3);
@@ -103,7 +106,7 @@
         &::before {
           position: absolute;
           bottom: 41%;
-          left: 0;
+          left: 50%;
           transform: translateY(50%);
           content: "";
           @include unit(width,3);
@@ -180,4 +183,119 @@
 }
 .offline_list li:nth-child(6) {
   background-image: url("../../img/academy/offLineAcademy/off-content_06.jpg");
+}
+
+@include mobile-v {
+  .offline_area {
+    @include unit(padding-top,10);
+    .tab_menu {
+      @include unit(height,140); //
+      ul {
+        @include unit(width,300); //
+        li {
+          float: left; //
+          @include unit(height,40); //
+          button {
+            height: auto; //
+          }
+          span {
+            @include unit(line-height,30); //
+          }
+        }
+      }
+    }
+    .offline_content {
+      .offline_title {
+        width: 100%; //
+      }
+    }// .offline_content
+  }// .offline_area
+  
+  .offline_list {
+    width: 100%; //
+    @include padding(0,20,0,20); //
+    li {
+      a {
+        span {
+          text-align: start; //
+        }
+      }
+    }
+  }
+}
+@include mobile-h {
+  .offline_area {
+    @include unit(padding-top,10);
+    .tab_menu {
+      @include unit(height,140); //
+      ul {
+        @include unit(width,300); //
+        li {
+          float: left; //
+          @include unit(height,40); //
+          button {
+            height: auto; //
+          }
+          span {
+            @include unit(line-height,30); //
+          }
+        }
+      }
+    }
+    .offline_content {
+      .offline_title {
+        width: 100%; //
+      }
+    }// .offline_content
+  }// .offline_area
+  
+  .offline_list {
+    width: 100%; //
+    @include padding(0,20,0,20); //
+    li {
+      a {
+        span {
+          text-align: start; //
+        }
+      }
+    }
+  }
+}
+@include tablet {
+  \.offline_area {
+    @include unit(padding-top,10);
+    .tab_menu {
+      @include unit(height,140); //
+      ul {
+        @include unit(width,300); //
+        li {
+          float: left; //
+          @include unit(height,40); //
+          button {
+            height: auto; //
+          }
+          span {
+            @include unit(line-height,30); //
+          }
+        }
+      }
+    }
+    .offline_content {
+      .offline_title {
+        width: 100%; //
+      }
+    }// .offline_content
+  }// .offline_area
+  
+  .offline_list {
+    width: 100%; //
+    @include padding(0,20,0,20); //
+    li {
+      a {
+        span {
+          text-align: start; //
+        }
+      }
+    }
+  }
 }

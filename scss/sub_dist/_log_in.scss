@@ -4,13 +4,16 @@
   @include unit(margin-bottom,80);
   @include unit(padding-top,160);
   .login_area {
-    @include unit(width,800);
+    @include unit(width,700);
     height: auto;
     margin: auto;
-    @include padding(40,180,40,180);
+    text-align: center;
     background-color: $color-light-blue;
     form {
-      @include size();
+      display: inline-block;
+      @include unit(width,400);
+      @include unit(max-width,400);
+      height: auto;
       @at-root .login_part {
         @include size();
         ul {
@@ -77,7 +80,10 @@
       }
     }
     @at-root .sns_login {
-      @include size();
+      display: inline-block;
+      @include unit(width,400);
+      @include unit(max-width,400);
+      height: auto;
       @include unit(margin-top,40);
       ul {
         @include size();
@@ -134,7 +140,7 @@
     }
   }
   @at-root .signUp_go {
-    @include unit(width,800);
+    @include unit(width,700);
     height: auto;
     margin: auto;
     @include unit(margin-top,40);
@@ -168,7 +174,7 @@
     }
   }
   .sign_notice {
-    @include unit(width,800);
+    @include unit(width,700);
     height: auto;
     margin: auto;
     @include unit(margin-top,20);
@@ -184,4 +190,145 @@
     }
   }
 }
-
+@include mobile-v {
+  .loginBox {
+    .login_area {
+      width: 100%; //
+      @include padding(0,20,0,20); //
+      form {
+        width: 100%; //
+        @at-root .login_part {
+          ul {
+            li {
+              @at-root .login_title {
+              }
+              @at-root #userId, #userPw {
+              }
+              @at-root button[type="submit"] {
+              }
+            }
+          }
+          @at-root .forget_area {
+            div {
+              a {
+                &::after {
+                }
+                &:last-child {}
+                &:last-child::after {}
+              }
+            }
+          }
+        }
+        hr {
+        }
+      }
+      @at-root .sns_login {
+        width: 100%; //;
+        ul {
+          li {
+            a {
+              @at-root .sns_icon {
+                &::after {
+                }
+              }
+              .sns_txt {
+              }
+              .naver_icon {}
+              .kakao_icon {}
+              .facebook_icon {}
+            }
+          }
+        }
+      }
+    }
+    @at-root .signUp_go {
+      width: 100%; //
+      p {
+      }
+      a {
+        @include unit(margin-top,20); //
+        &:hover,
+        &:focus {
+        }
+      }
+    }
+    .sign_notice {
+      width: 100%; //
+      li {
+        &::before {
+        }
+      }
+    }
+  }
+}
+@include mobile-h {
+  .loginBox {
+    .login_area {
+      width: 100%; //
+      @include padding(0,20,0,20); //
+      form {
+        width: 100%; //
+        @at-root .login_part {
+          ul {
+            li {
+              @at-root .login_title {
+              }
+              @at-root #userId, #userPw {
+              }
+              @at-root button[type="submit"] {
+              }
+            }
+          }
+          @at-root .forget_area {
+            div {
+              a {
+                &::after {
+                }
+                &:last-child {}
+                &:last-child::after {}
+              }
+            }
+          }
+        }
+        hr {
+        }
+      }
+      @at-root .sns_login {
+        width: 100%; //;
+        ul {
+          li {
+            a {
+              @at-root .sns_icon {
+                &::after {
+                }
+              }
+              .sns_txt {
+              }
+              .naver_icon {}
+              .kakao_icon {}
+              .facebook_icon {}
+            }
+          }
+        }
+      }
+    }
+    @at-root .signUp_go {
+      width: 100%; //
+      p {
+      }
+      a {
+        @include unit(margin-top,20); //
+        &:hover,
+        &:focus {
+        }
+      }
+    }
+    .sign_notice {
+      width: 100%; //
+      li {
+        &::before {
+        }
+      }
+    }
+  }
+}

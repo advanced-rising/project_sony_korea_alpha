@@ -898,16 +898,19 @@ h1 a {
   padding-top: 10rem;
 }
 .loginBox .login_area {
-  width: 800px;
-  width: 50rem;
+  width: 700px;
+  width: 43.75rem;
   height: auto;
   margin: auto;
-  padding: 40px 180px 40px 180px;
-  padding: 2.5rem 11.25rem 2.5rem 11.25rem;
+  text-align: center;
   background-color: #f1f5f9;
 }
 .loginBox .login_area form {
-  width: 100%;
+  display: inline-block;
+  width: 400px;
+  width: 25rem;
+  max-width: 400px;
+  max-width: 25rem;
   height: auto;
 }
 .login_part {
@@ -1004,7 +1007,11 @@ button[type=submit] {
   border: 0.0625rem solid #6f6f75;
 }
 .sns_login {
-  width: 100%;
+  display: inline-block;
+  width: 400px;
+  width: 25rem;
+  max-width: 400px;
+  max-width: 25rem;
   height: auto;
   margin-top: 40px;
   margin-top: 2.5rem;
@@ -1088,8 +1095,8 @@ button[type=submit] {
 }
 
 .signUp_go {
-  width: 800px;
-  width: 50rem;
+  width: 700px;
+  width: 43.75rem;
   height: auto;
   margin: auto;
   margin-top: 40px;
@@ -1143,8 +1150,8 @@ button[type=submit] {
 }
 
 .loginBox .sign_notice {
-  width: 800px;
-  width: 50rem;
+  width: 700px;
+  width: 43.75rem;
   height: auto;
   margin: auto;
   margin-top: 20px;
@@ -1164,6 +1171,52 @@ button[type=submit] {
   margin: 0rem 0.25rem 0rem -0.3125rem;
 }
 
+@media all and (max-width: 479px) {
+  .loginBox .login_area {
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    padding: 0rem 1.25rem 0rem 1.25rem;
+  }
+  .loginBox .login_area form {
+    width: 100%;
+  }
+  .sns_login {
+    width: 100%;
+  }
+  .signUp_go {
+    width: 100%;
+  }
+  .signUp_go a {
+    margin-top: 20px;
+    margin-top: 1.25rem;
+  }
+  .loginBox .sign_notice {
+    width: 100%;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .loginBox .login_area {
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    padding: 0rem 1.25rem 0rem 1.25rem;
+  }
+  .loginBox .login_area form {
+    width: 100%;
+  }
+  .sns_login {
+    width: 100%;
+  }
+  .signUp_go {
+    width: 100%;
+  }
+  .signUp_go a {
+    margin-top: 20px;
+    margin-top: 1.25rem;
+  }
+  .loginBox .sign_notice {
+    width: 100%;
+  }
+}
 #footBox {
   width: 100%;
   height: auto;

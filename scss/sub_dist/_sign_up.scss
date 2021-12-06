@@ -9,9 +9,11 @@
     height: auto;
     margin: auto;
     box-sizing: content-box;
-    @include padding(40,80,40,80);
+    @include padding(40,40,40,40);
+    text-align: center;
     background-color: $color-light-blue;
     @at-root .signUp_area {
+      display: inline-block;
       @include unit(width,940);
       height: auto;
       margin: auto;
@@ -29,39 +31,41 @@
       @at-root .signUp {
         @include size();
         @include unit(margin-top,40);
-        li {
-          float: left;
-          @include unit(width,300);
-          @include unit(height,200);
-          @include unit(margin-right,20);
-          background-color: $color-deep-gray;
-          &:last-of-type {
-            margin-right: 0;
-          }
-          @at-root .icon {
-            width: 100%;
-            height: 80%;
-            background-repeat: no-repeat;
-            @include unit(background-size,140);
-            background-position: center;
-          }
-          .person {
-            background-image: url("../../img/signup/ico_mem_person.png");
-          }
-          .company {
-            background-image: url("../../img/signup/ico_mem_company.png");
-          }
-          .foreigner {
-            background-image: url("../../img/signup/ico_mem_foreigners.png");
-          }
-          @at-root .txt {
-            width: 100%;
-            height: 20%;
-            text-align: center;
-            font-weight: 700;
-            @include unit(font-size,18);
-            text-transform: capitalize;
-            color: $color-white;
+        ul {
+          li {
+            float: left;
+            @include unit(width,300);
+            @include unit(height,200);
+            @include unit(margin-right,20);
+            background-color: $color-deep-gray;
+            &:last-of-type {
+              margin-right: 0;
+            }
+            @at-root .icon {
+              width: 100%;
+              height: 80%;
+              background-repeat: no-repeat;
+              @include unit(background-size,140);
+              background-position: center;
+            }
+            .person {
+              background-image: url("../../img/signup/ico_mem_person.png");
+            }
+            .company {
+              background-image: url("../../img/signup/ico_mem_company.png");
+            }
+            .foreigner {
+              background-image: url("../../img/signup/ico_mem_foreigners.png");
+            }
+            @at-root .txt {
+              width: 100%;
+              height: 20%;
+              text-align: center;
+              font-weight: 700;
+              @include unit(font-size,18);
+              text-transform: capitalize;
+              color: $color-white;
+            }
           }
         }
       }
@@ -86,27 +90,29 @@
   @at-root .sns_signUp {
     @include size();
     @include unit(margin-top,20);
-    li {
-      float: left;
-      @include unit(width,300);
-      @include unit(height,40);
-      @include unit(margin-right,20);
-      &:last-of-type {
-        margin-right: 0;
-      }
-      .icon {
+    ul {
+      li {
         float: left;
-        @include unit(width,40);
-        height: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-      }
-      .txt {
-        @include unit(line-height,40);
-        text-align: center;
-        @include unit(font-size,12);
-        font-weight: 700;
+        @include unit(width,300);
+        @include unit(height,40);
+        @include unit(margin-right,20);
+        &:last-of-type {
+          margin-right: 0;
+        }
+        .icon {
+          float: left;
+          @include unit(width,40);
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+        .txt {
+          @include unit(line-height,40);
+          text-align: center;
+          @include unit(font-size,12);
+          font-weight: 700;
+        }
       }
     }
     .sns_naver .icon {background-image: url("../../img/signup/ico_naver.png");}
@@ -121,5 +127,176 @@
   @at-root .sns_notice {
     @include unit(font-size,12);
     @include unit(margin-top,20);
+  }
+}
+@include mobile-v {
+  #container {
+    @at-root .signUpWrap {
+      width: 100%; //
+      @include padding(40,0,40,0); //
+      text-align: center; //
+      @at-root .signUp_area {
+        display: inline-block; //
+        width: 100%; //
+        @at-root .signUp_notice_title {
+        }
+        @at-root .signUp_notice_txt {
+          @include padding(0,20,0,20); //
+        }
+        @at-root .signUp {
+          text-align: center; //
+          ul {
+            display: inline-block; //
+            width: auto; //
+            li {
+              clear: both; //
+              @include unit(margin-top,20); //
+              margin-right: 0; //;
+              @at-root .icon {
+              }
+              @at-root .txt {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .sns_signUp_area {
+    width: 100%; //
+    .sns_title {
+      @include unit(margin-top,20); //
+    }
+    .sns_txt {
+    }
+    @at-root .sns_signUp {
+      text-align: center; //
+      ul {
+        display: inline-block; //
+        width: auto; //
+        li {
+          clear: both; //
+          @include unit(margin-top,20); //
+          margin-right: 0; //
+        }
+      }
+    }
+    @at-root .sns_notice {
+      @include padding(0,20,0,20); //
+    }
+  }
+}
+@include mobile-h {
+  #container {
+    @at-root .signUpWrap {
+      width: 100%; //
+      @include padding(40,0,40,0); //
+      text-align: center; //
+      @at-root .signUp_area {
+        display: inline-block; //
+        width: 100%; //
+        @at-root .signUp_notice_title {
+        }
+        @at-root .signUp_notice_txt {
+          @include padding(0,20,0,20); //
+        }
+        @at-root .signUp {
+          text-align: center; //
+          ul {
+            display: inline-block; //
+            width: auto; //
+            li {
+              clear: both; //
+              @include unit(margin-top,20); //
+              margin-right: 0; //;
+              @at-root .icon {
+              }
+              @at-root .txt {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .sns_signUp_area {
+    width: 100%; //
+    .sns_title {
+      @include unit(margin-top,20); //
+    }
+    .sns_txt {
+    }
+    @at-root .sns_signUp {
+      text-align: center; //
+      ul {
+        display: inline-block; //
+        width: auto; //
+        li {
+          clear: both; //
+          @include unit(margin-top,20); //
+          margin-right: 0; //
+        }
+      }
+    }
+    @at-root .sns_notice {
+      @include padding(0,20,0,20); //
+    }
+  }
+}
+@include tablet {
+  #container {
+    @at-root .signUpWrap {
+      width: 100%; //
+      @include padding(40,0,40,0); //
+      text-align: center; //
+      @at-root .signUp_area {
+        display: inline-block; //
+        width: 100%; //
+        @at-root .signUp_notice_title {
+        }
+        @at-root .signUp_notice_txt {
+          @include padding(0,20,0,20); //
+        }
+        @at-root .signUp {
+          text-align: center; //
+          ul {
+            display: inline-block; //
+            width: auto; //
+            li {
+              clear: both; //
+              @include unit(margin-top,20); //
+              margin-right: 0; //;
+              @at-root .icon {
+              }
+              @at-root .txt {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .sns_signUp_area {
+    width: 100%; //
+    .sns_title {
+      @include unit(margin-top,20); //
+    }
+    .sns_txt {
+    }
+    @at-root .sns_signUp {
+      text-align: center; //
+      ul {
+        display: inline-block; //
+        width: auto; //
+        li {
+          clear: both; //
+          @include unit(margin-top,20); //
+          margin-right: 0; //
+        }
+      }
+    }
+    @at-root .sns_notice {
+      @include padding(0,20,0,20); //
+    }
   }
 }

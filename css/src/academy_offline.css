@@ -940,12 +940,14 @@ h1 a {
   height: auto;
   margin-bottom: 80px;
   margin-bottom: 5rem;
+  padding-top: 10px;
+  padding-top: 0.625rem;
   background-color: #ffffff;
 }
 .offline_area .tab_menu {
   width: 100%;
-  height: 40px;
-  height: 2.5rem;
+  height: 60px;
+  height: 3.75rem;
   margin: auto;
   border-bottom: 1px solid #03010f;
   border-bottom: 0.0625rem solid #03010f;
@@ -975,7 +977,8 @@ h1 a {
   display: block;
   width: auto;
   height: 100%;
-  box-sizing: border-box;
+  line-height: 30px;
+  line-height: 1.875rem;
 }
 .offline_area .tab_menu ul li.action span {
   border-bottom: 3px solid #e75300;
@@ -987,8 +990,12 @@ h1 a {
 }
 .offline_area .offline_content .offline_title {
   position: relative;
+  min-width: 300px;
+  min-width: 18.75rem;
   width: 400px;
   width: 25rem;
+  max-width: 400px;
+  max-width: 25rem;
   height: 80px;
   height: 5rem;
   margin: auto;
@@ -1021,7 +1028,7 @@ h1 a {
 .offline_area .offline_content .offline_title .prev_btn::after {
   position: absolute;
   bottom: 20%;
-  right: 0;
+  right: 50%;
   transform: translateY(50%);
   content: "";
   width: 3px;
@@ -1034,7 +1041,7 @@ h1 a {
 .offline_area .offline_content .offline_title .prev_btn::before {
   position: absolute;
   bottom: 41%;
-  right: 0;
+  right: 50%;
   transform: translateY(50%);
   content: "";
   width: 3px;
@@ -1051,7 +1058,7 @@ h1 a {
 .offline_area .offline_content .offline_title .next_btn::after {
   position: absolute;
   bottom: 20%;
-  left: 0;
+  left: 50%;
   transform: translateY(50%);
   content: "";
   width: 3px;
@@ -1064,7 +1071,7 @@ h1 a {
 .offline_area .offline_content .offline_title .next_btn::before {
   position: absolute;
   bottom: 41%;
-  left: 0;
+  left: 50%;
   transform: translateY(50%);
   content: "";
   width: 3px;
@@ -1158,6 +1165,120 @@ h1 a {
   background-image: url("../../img/academy/offLineAcademy/off-content_06.jpg");
 }
 
+@media all and (max-width: 479px) {
+  .offline_area {
+    padding-top: 10px;
+    padding-top: 0.625rem;
+  }
+  .offline_area .tab_menu {
+    height: 140px;
+    height: 8.75rem;
+  }
+  .offline_area .tab_menu ul {
+    width: 300px;
+    width: 18.75rem;
+  }
+  .offline_area .tab_menu ul li {
+    float: left;
+    height: 40px;
+    height: 2.5rem;
+  }
+  .offline_area .tab_menu ul li button {
+    height: auto;
+  }
+  .offline_area .tab_menu ul li span {
+    line-height: 30px;
+    line-height: 1.875rem;
+  }
+  .offline_area .offline_content .offline_title {
+    width: 100%;
+  }
+
+  .offline_list {
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    padding: 0rem 1.25rem 0rem 1.25rem;
+  }
+  .offline_list li a span {
+    text-align: start;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .offline_area {
+    padding-top: 10px;
+    padding-top: 0.625rem;
+  }
+  .offline_area .tab_menu {
+    height: 140px;
+    height: 8.75rem;
+  }
+  .offline_area .tab_menu ul {
+    width: 300px;
+    width: 18.75rem;
+  }
+  .offline_area .tab_menu ul li {
+    float: left;
+    height: 40px;
+    height: 2.5rem;
+  }
+  .offline_area .tab_menu ul li button {
+    height: auto;
+  }
+  .offline_area .tab_menu ul li span {
+    line-height: 30px;
+    line-height: 1.875rem;
+  }
+  .offline_area .offline_content .offline_title {
+    width: 100%;
+  }
+
+  .offline_list {
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    padding: 0rem 1.25rem 0rem 1.25rem;
+  }
+  .offline_list li a span {
+    text-align: start;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  \.offline_area {
+    padding-top: 10px;
+    padding-top: 0.625rem;
+  }
+  \.offline_area .tab_menu {
+    height: 140px;
+    height: 8.75rem;
+  }
+  \.offline_area .tab_menu ul {
+    width: 300px;
+    width: 18.75rem;
+  }
+  \.offline_area .tab_menu ul li {
+    float: left;
+    height: 40px;
+    height: 2.5rem;
+  }
+  \.offline_area .tab_menu ul li button {
+    height: auto;
+  }
+  \.offline_area .tab_menu ul li span {
+    line-height: 30px;
+    line-height: 1.875rem;
+  }
+  \.offline_area .offline_content .offline_title {
+    width: 100%;
+  }
+
+  .offline_list {
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    padding: 0rem 1.25rem 0rem 1.25rem;
+  }
+  .offline_list li a span {
+    text-align: start;
+  }
+}
 #footBox {
   width: 100%;
   height: auto;

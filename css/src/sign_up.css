@@ -904,11 +904,13 @@ h1 a {
   height: auto;
   margin: auto;
   box-sizing: content-box;
-  padding: 40px 80px 40px 80px;
-  padding: 2.5rem 5rem 2.5rem 5rem;
+  padding: 40px 40px 40px 40px;
+  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+  text-align: center;
   background-color: #f1f5f9;
 }
 .signUp_area {
+  display: inline-block;
   width: 940px;
   width: 58.75rem;
   height: auto;
@@ -938,7 +940,7 @@ h1 a {
   margin-top: 40px;
   margin-top: 2.5rem;
 }
-.signUp li {
+.signUp ul li {
   float: left;
   width: 300px;
   width: 18.75rem;
@@ -948,7 +950,7 @@ h1 a {
   margin-right: 1.25rem;
   background-color: #333335;
 }
-.signUp li:last-of-type {
+.signUp ul li:last-of-type {
   margin-right: 0;
 }
 .icon {
@@ -960,13 +962,13 @@ h1 a {
   background-position: center;
 }
 
-.signUp li .person {
+.signUp ul li .person {
   background-image: url("../../img/signup/ico_mem_person.png");
 }
-.signUp li .company {
+.signUp ul li .company {
   background-image: url("../../img/signup/ico_mem_company.png");
 }
-.signUp li .foreigner {
+.signUp ul li .foreigner {
   background-image: url("../../img/signup/ico_mem_foreigners.png");
 }
 .txt {
@@ -1009,7 +1011,7 @@ h1 a {
   margin-top: 20px;
   margin-top: 1.25rem;
 }
-.sns_signUp li {
+.sns_signUp ul li {
   float: left;
   width: 300px;
   width: 18.75rem;
@@ -1018,10 +1020,10 @@ h1 a {
   margin-right: 20px;
   margin-right: 1.25rem;
 }
-.sns_signUp li:last-of-type {
+.sns_signUp ul li:last-of-type {
   margin-right: 0;
 }
-.sns_signUp li .icon {
+.sns_signUp ul li .icon {
   float: left;
   width: 40px;
   width: 2.5rem;
@@ -1030,7 +1032,7 @@ h1 a {
   background-size: cover;
   background-position: center;
 }
-.sns_signUp li .txt {
+.sns_signUp ul li .txt {
   line-height: 40px;
   line-height: 2.5rem;
   text-align: center;
@@ -1070,6 +1072,171 @@ h1 a {
   margin-top: 1.25rem;
 }
 
+@media all and (max-width: 479px) {
+  .signUpWrap {
+    width: 100%;
+    padding: 40px 0px 40px 0px;
+    padding: 2.5rem 0rem 2.5rem 0rem;
+    text-align: center;
+  }
+  .signUp_area {
+    display: inline-block;
+    width: 100%;
+  }
+  .signUp_notice_txt {
+    padding: 0px 20px 0px 20px;
+    padding: 0rem 1.25rem 0rem 1.25rem;
+  }
+
+  .signUp {
+    text-align: center;
+  }
+  .signUp ul {
+    display: inline-block;
+    width: auto;
+  }
+  .signUp ul li {
+    clear: both;
+    margin-top: 20px;
+    margin-top: 1.25rem;
+    margin-right: 0;
+  }
+  .sns_signUp_area {
+    width: 100%;
+  }
+  .sns_signUp_area .sns_title {
+    margin-top: 20px;
+    margin-top: 1.25rem;
+  }
+  .sns_signUp {
+    text-align: center;
+  }
+  .sns_signUp ul {
+    display: inline-block;
+    width: auto;
+  }
+  .sns_signUp ul li {
+    clear: both;
+    margin-top: 20px;
+    margin-top: 1.25rem;
+    margin-right: 0;
+  }
+
+  .sns_notice {
+    padding: 0px 20px 0px 20px;
+    padding: 0rem 1.25rem 0rem 1.25rem;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .signUpWrap {
+    width: 100%;
+    padding: 40px 0px 40px 0px;
+    padding: 2.5rem 0rem 2.5rem 0rem;
+    text-align: center;
+  }
+  .signUp_area {
+    display: inline-block;
+    width: 100%;
+  }
+  .signUp_notice_txt {
+    padding: 0px 20px 0px 20px;
+    padding: 0rem 1.25rem 0rem 1.25rem;
+  }
+
+  .signUp {
+    text-align: center;
+  }
+  .signUp ul {
+    display: inline-block;
+    width: auto;
+  }
+  .signUp ul li {
+    clear: both;
+    margin-top: 20px;
+    margin-top: 1.25rem;
+    margin-right: 0;
+  }
+  .sns_signUp_area {
+    width: 100%;
+  }
+  .sns_signUp_area .sns_title {
+    margin-top: 20px;
+    margin-top: 1.25rem;
+  }
+  .sns_signUp {
+    text-align: center;
+  }
+  .sns_signUp ul {
+    display: inline-block;
+    width: auto;
+  }
+  .sns_signUp ul li {
+    clear: both;
+    margin-top: 20px;
+    margin-top: 1.25rem;
+    margin-right: 0;
+  }
+
+  .sns_notice {
+    padding: 0px 20px 0px 20px;
+    padding: 0rem 1.25rem 0rem 1.25rem;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .signUpWrap {
+    width: 100%;
+    padding: 40px 0px 40px 0px;
+    padding: 2.5rem 0rem 2.5rem 0rem;
+    text-align: center;
+  }
+  .signUp_area {
+    display: inline-block;
+    width: 100%;
+  }
+  .signUp_notice_txt {
+    padding: 0px 20px 0px 20px;
+    padding: 0rem 1.25rem 0rem 1.25rem;
+  }
+
+  .signUp {
+    text-align: center;
+  }
+  .signUp ul {
+    display: inline-block;
+    width: auto;
+  }
+  .signUp ul li {
+    clear: both;
+    margin-top: 20px;
+    margin-top: 1.25rem;
+    margin-right: 0;
+  }
+  .sns_signUp_area {
+    width: 100%;
+  }
+  .sns_signUp_area .sns_title {
+    margin-top: 20px;
+    margin-top: 1.25rem;
+  }
+  .sns_signUp {
+    text-align: center;
+  }
+  .sns_signUp ul {
+    display: inline-block;
+    width: auto;
+  }
+  .sns_signUp ul li {
+    clear: both;
+    margin-top: 20px;
+    margin-top: 1.25rem;
+    margin-right: 0;
+  }
+
+  .sns_notice {
+    padding: 0px 20px 0px 20px;
+    padding: 0rem 1.25rem 0rem 1.25rem;
+  }
+}
 #footBox {
   width: 100%;
   height: auto;
