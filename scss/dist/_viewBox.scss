@@ -93,7 +93,7 @@
 }
 @include mobile-v{
   #viewBox {
-    @include unit(height,568);
+    @include unit(height,640);
     @at-root .view_area {
       .viewBox_img {
         dl {
@@ -122,7 +122,7 @@
 }
 @include mobile-h{
   #viewBox {
-    @include unit(height,568);
+    @include unit(height,640);
     @at-root .view_area {
       .viewBox_img {
         dl {

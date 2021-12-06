@@ -1018,8 +1018,8 @@ h1 a {
 
 @media all and (max-width: 479px) {
   #viewBox {
-    height: 568px;
-    height: 35.5rem;
+    height: 640px;
+    height: 40rem;
   }
   .view_area .viewBox_img dl {
     top: 20px;
@@ -1048,8 +1048,8 @@ h1 a {
 }
 @media all and (min-width: 480px) and (max-width: 767px) {
   #viewBox {
-    height: 568px;
-    height: 35.5rem;
+    height: 640px;
+    height: 40rem;
   }
   .view_area .viewBox_img dl {
     top: 100px;
