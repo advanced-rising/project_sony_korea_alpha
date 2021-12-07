@@ -55,18 +55,19 @@ console.log(subArea.length);
 console.log(subArea[0].previousSibling.previousSibling);
 console.log(subArea.length);
 
-for(; i<subArea.length ; i++){
+for(i = 0; i < subArea.length ; i++){
   (function(k){
     subArea[k].previousSibling.previousSibling.addEventListener('click', function(e){
       e.preventDefault();
-      for(; j<subArea.length; j++){
+      for(j = 0; j< subArea.length; j++){
         subArea[j].classList.remove(VIEW_ON);
+        console.log(subArea[j]);
       };
       subArea[k].classList.add(VIEW_ON);
     });
   })(i);
 };
-// 아 .. 왜 ??? 안됨 ?? remove 안됨 ;';;;
+// 아 .. 왜 ??? 안됨 ?? remove 안됨 ;';;; 아 됨 ㅎㅎ ㅋㅋ
 
 var viewBox = document.querySelector('#viewBox');
 var viewArea = viewBox.querySelector('.view_area');
