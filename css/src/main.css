@@ -44,22 +44,113 @@ h1 a {
   position: relative;
   width: auto;
   height: auto;
+  margin-top: 10px;
+  margin-top: 0.625rem;
   margin-left: 100px;
   margin-left: 6.25rem;
   color: #03010f;
 }
-#navigation .gnb_btn {
-  display: none;
-}
-#navigation .gnb_close {
-  display: none;
-}
-.gnb {
+.unb {
+  position: absolute;
+  top: 0;
+  right: 0;
   width: auto;
   height: 60px;
   height: 3.75rem;
-  padding-top: 10px;
-  padding-top: 0.625rem;
+  margin-right: 10px;
+  margin-right: 0.625rem;
+}
+.unb > ul {
+  width: auto;
+  height: 100%;
+  margin-top: 5px;
+  margin-top: 0.3125rem;
+}
+.unb > ul li {
+  float: left;
+  width: auto;
+  color: #ffffff;
+}
+.unb > ul li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: inherit;
+}
+.unb > ul li > a:focus, .unb > ul li > a:hover {
+  font-weight: 700;
+  color: #e75300;
+}
+.unb > ul li.login_txt, .unb > ul li.signUp_txt {
+  position: relative;
+  float: left;
+  width: auto;
+  height: 100%;
+  margin: 0px 10px 0px 10px;
+  margin: 0rem 0.625rem 0rem 0.625rem;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 40px;
+  line-height: 2.5rem;
+}
+.unb > ul li.login_txt {
+  word-spacing: -4px;
+  word-spacing: -0.25rem;
+}
+.unb > ul li.login_txt::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  top: 1rem;
+  right: -10px;
+  right: -0.625rem;
+  width: 1px;
+  width: 0.0625rem;
+  height: 10px;
+  height: 0.625rem;
+  background-color: #ffffff;
+}
+.unb > ul li a:hover, .unb > ul li a:focus {
+  color: #e75300;
+  text-decoration: none;
+}
+.unb > ul li .gnb_btn {
+  display: none;
+}
+.unb > ul li.search_part {
+  width: 40px;
+  width: 2.5rem;
+  height: 40px;
+  height: 2.5rem;
+}
+.unb > ul li.search_part .search {
+  width: 40px;
+  width: 2.5rem;
+  height: 40px;
+  height: 2.5rem;
+}
+.unb > ul li.search_part .search img {
+  width: 100%;
+  height: 100%;
+  filter: invert(99%) sepia(22%) saturate(2%) hue-rotate(105deg) brightness(106%) contrast(100%);
+}
+.unb > ul li.search_part .search:hover img {
+  filter: invert(48%) sepia(63%) saturate(6360%) hue-rotate(8deg) brightness(97%) contrast(101%);
+}
+
+.gnb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: auto;
+  height: 60px;
+  height: 3.75rem;
   margin-right: 200px;
   margin-right: 12.5rem;
   text-align: center;
@@ -67,7 +158,7 @@ h1 a {
 .gnb > ul {
   display: inline-block;
   width: auto;
-  height: 100%;
+  height: auto;
 }
 .gnb > ul > li {
   position: relative;
@@ -130,91 +221,7 @@ h1 a {
   display: block;
 }
 .gnb > ul .last_gnbMenu {
-  margin-right: 0px;
-}
-.gnb > ul .mobile_login {
-  display: none;
-}
-.gnb > ul .mobile_signUp {
-  display: none;
-}
-
-.unb {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: auto;
-  height: 40px;
-  height: 2.5rem;
-  margin-top: 10px;
-  margin-top: 0.625rem;
-  margin-right: 60px;
-  margin-right: 3.75rem;
-}
-.unb > ul {
-  width: auto;
-  height: 100%;
-  margin-top: 5px;
-  margin-top: 0.3125rem;
-}
-.unb > ul li {
-  color: #ffffff;
-}
-.unb > ul .login_txt,
-.unb > ul .signUp_txt {
-  position: relative;
-  float: left;
-  width: auto;
-  height: 100%;
-  margin: 0px 10px 0px 10px;
-  margin: 0rem 0.625rem 0rem 0.625rem;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 40px;
-  line-height: 2.5rem;
-}
-.unb > ul .login_txt {
-  word-spacing: -4px;
-  word-spacing: -0.25rem;
-}
-.unb > ul .login_txt::after {
-  content: "";
-  position: absolute;
-  top: 16px;
-  top: 1rem;
-  right: -10px;
-  right: -0.625rem;
-  width: 1px;
-  width: 0.0625rem;
-  height: 10px;
-  height: 0.625rem;
-  background-color: #ffffff;
-}
-.search_area {
-  float: right;
-  width: 40px;
-  width: 2.5rem;
-  height: 100%;
-  margin-right: 0px;
-}
-.search_area .search_open_btn {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.search_area .search_open_btn img {
-  width: 100%;
-  height: 100%;
-  filter: invert(99%) sepia(22%) saturate(2%) hue-rotate(105deg) brightness(106%) contrast(100%);
-}
-.search_area .search_open_btn:hover img {
-  filter: invert(48%) sepia(63%) saturate(6360%) hue-rotate(8deg) brightness(97%) contrast(101%);
-}
-
-.unb > ul li a:hover,
-.unb > ul li a:focus {
-  color: #e75300;
-  text-decoration: none;
+  margin-right: 0;
 }
 
 .search_modal {
@@ -258,14 +265,22 @@ h1 a {
   background-position: center;
   background-size: 80%;
 }
-.search_modal .search_engin input {
-  width: 600px;
-  width: 37.5rem;
+#search_icon {
+  position: absolute;
+  top: 70px;
+  top: 4.375rem;
+  left: 0;
+  right: 0;
+  width: 90%;
   height: 40px;
   height: 2.5rem;
+  margin: auto;
   padding: 5px;
   padding: 0.3125rem;
+  border: 1px solid #03010f;
+  border: 0.0625rem solid #03010f;
 }
+
 .search_modal .search_engin ul {
   overflow-y: auto;
   position: absolute;
@@ -285,7 +300,6 @@ h1 a {
 .search_modal .search_engin ul li {
   width: 90%;
   height: auto;
-  list-style: disc;
   line-height: 40px;
   line-height: 2.5rem;
   border-top: 1px solid #e75300;
@@ -303,20 +317,6 @@ h1 a {
   width: 100%;
   height: 100%;
 }
-#search_icon {
-  position: absolute;
-  top: 70px;
-  top: 4.375rem;
-  left: 0;
-  right: 0;
-  width: 90%;
-  height: 40px;
-  height: 2.5rem;
-  margin: auto;
-  border: 1px solid #03010f;
-  border: 0.0625rem solid #03010f;
-}
-
 .search_modal .search_modal_bg {
   position: fixed;
   top: 0;
@@ -335,7 +335,31 @@ h1 a {
   #navigation {
     margin-left: 0;
   }
-  #navigation .gnb_btn {
+  .unb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 60px;
+    height: 3.75rem;
+    margin-right: 0px;
+    margin-right: 0rem;
+  }
+  .unb > ul {
+    width: auto;
+    height: 100%;
+    margin-top: 5px;
+    margin-top: 0.3125rem;
+  }
+  .unb > ul li {
+    float: left;
+    color: #ffffff;
+  }
+  .unb > ul li > a:focus, .unb > ul li > a:hover {
+    font-weight: 700;
+    color: #e75300;
+  }
+  .unb > ul li .gnb_btn {
     display: block;
     position: relative;
     float: right;
@@ -343,12 +367,13 @@ h1 a {
     width: 2.5rem;
     height: 36px;
     height: 2.25rem;
-    margin: 10px 20px 0px 20px;
-    margin: 0.625rem 1.25rem 0rem 1.25rem;
+    margin: 0px 15px 0px 15px;
+    margin: 0rem 0.9375rem 0rem 0.9375rem;
     border-bottom: 4px solid #ffffff;
     border-bottom: 0.25rem solid #ffffff;
+    transition: 200ms;
   }
-  #navigation .gnb_btn::before, #navigation .gnb_btn::after {
+  .unb > ul li .gnb_btn::before, .unb > ul li .gnb_btn::after {
     content: "";
     position: absolute;
     display: block;
@@ -357,47 +382,75 @@ h1 a {
     height: 0.25rem;
     background-color: #ffffff;
   }
-  #navigation .gnb_btn::before {
+  .unb > ul li .gnb_btn::before {
     top: 4px;
     top: 0.25rem;
     left: 0;
   }
-  #navigation .gnb_btn::after {
+  .unb > ul li .gnb_btn::after {
     bottom: 10px;
     bottom: 0.625rem;
     bottom: 10px;
     left: 0;
   }
-  #navigation .gnb_close {
-    display: none;
-    position: absolute;
-    top: 10px;
-    top: 0.625rem;
-    right: 20px;
-    right: 1.25rem;
+  .unb > ul li .gnb_btn.active {
+    border: 0;
+  }
+  .unb > ul li .gnb_btn.active::before {
+    top: 50%;
+    transition: 200ms;
+    transform: rotate(135deg);
+  }
+  .unb > ul li .gnb_btn.active::after {
+    top: 50%;
+    transition: 200ms;
+    transform: rotate(45deg);
+  }
+  .unb > ul li.search_part {
     width: 40px;
     width: 2.5rem;
     height: 40px;
     height: 2.5rem;
-    background-image: url("../../img/cross_white.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
   }
-  #navigation .gnb {
-    display: block;
+  .unb > ul li.search_part .search {
+    width: 40px;
+    width: 2.5rem;
+    height: 40px;
+    height: 2.5rem;
+  }
+  .unb > ul li.search_part .search img {
+    width: 100%;
+    height: 100%;
+    filter: invert(99%) sepia(22%) saturate(2%) hue-rotate(105deg) brightness(106%) contrast(100%);
+  }
+  .unb > ul li.search_part .search:hover img {
+    filter: invert(48%) sepia(63%) saturate(6360%) hue-rotate(8deg) brightness(97%) contrast(101%);
+  }
+
+  .navi_area {
+    display: none;
     position: fixed;
-    top: 80px;
-    top: 5rem;
+    z-index: -1;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: #03010f;
   }
-  #navigation .gnb > ul {
+  .navi_area.on {
+    display: block;
+  }
+  .navi_area .gnb {
+    padding-top: 80px;
+    padding-top: 5rem;
     width: 100%;
     height: 100%;
   }
-  #navigation .gnb > ul > li {
+  .navi_area .gnb > ul {
+    width: 100%;
+    height: 100%;
+  }
+  .navi_area .gnb > ul > li {
     display: block;
     width: 100%;
     height: auto;
@@ -428,51 +481,62 @@ h1 a {
     text-align: center;
   }
 
-  #navigation .mobile_login {
-    display: block;
-  }
-  #navigation .mobile_signUp {
-    display: block;
-  }
-  #navigation .unb {
-    position: absolute;
-    top: 0;
-    right: 80px;
-    right: 5rem;
-    float: right;
-    width: 40px;
-    width: 2.5rem;
-    height: 40px;
-    height: 2.5rem;
-    margin-top: 10px;
-    margin-top: 0.625rem;
-    margin-right: 0;
-  }
-  #navigation .login_txt {
+  .search_modal {
     display: none;
   }
-  #navigation .signUp_txt {
-    display: none;
-  }
-  #navigation .search_engin {
+  .search_modal .search_engin {
+    overflow-x: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: auto;
     width: 300px;
     width: 18.75rem;
-    height: 540px;
-    height: 33.75rem;
+    height: 440px;
+    height: 27.5rem;
+    padding: 0px 20px 20px 20px;
+    padding: 0rem 1.25rem 1.25rem 1.25rem;
+    border: 1px solid #e75300;
+    border: 0.0625rem solid #e75300;
+    background-color: #ffffff;
+    transform: translate(-50%, -50%);
   }
-  #navigation .search_engin ul {
-    width: 100%;
-    height: 340px;
-    height: 21.25rem;
-    padding-right: 10px;
-    padding-right: 0.625rem;
-    padding-left: 10px;
-    padding-left: 0.625rem;
+  .search_modal .search_engin .search_topBox .search_close_btn {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    right: -1.25rem;
+  }
+  #search_icon {
+    position: absolute;
+    top: 50px;
+    top: 3.125rem;
     left: 0;
-  }
-  #navigation #search_icon {
+    right: 0;
     width: 90%;
-    height: auto;
+    height: 40px;
+    height: 2.5rem;
+    margin: auto;
+    padding: 5px;
+    padding: 0.3125rem;
+    border: 1px solid #03010f;
+    border: 0.0625rem solid #03010f;
+  }
+
+  .search_modal .search_engin ul {
+    overflow-y: auto;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    margin-top: 20px;
+    margin-top: 1.25rem;
+    width: 100%;
+    height: 380px;
+    height: 23.75rem;
+    box-sizing: content-box;
+    padding-right: 160px;
+    padding-right: 10rem;
+    text-align: start;
   }
 }
 @media all and (min-width: 480px) and (max-width: 767px) {
@@ -483,7 +547,31 @@ h1 a {
   #navigation {
     margin-left: 0;
   }
-  #navigation .gnb_btn {
+  .unb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 60px;
+    height: 3.75rem;
+    margin-right: 0px;
+    margin-right: 0rem;
+  }
+  .unb > ul {
+    width: auto;
+    height: 100%;
+    margin-top: 5px;
+    margin-top: 0.3125rem;
+  }
+  .unb > ul li {
+    float: left;
+    color: #ffffff;
+  }
+  .unb > ul li > a:focus, .unb > ul li > a:hover {
+    font-weight: 700;
+    color: #e75300;
+  }
+  .unb > ul li .gnb_btn {
     display: block;
     position: relative;
     float: right;
@@ -491,12 +579,13 @@ h1 a {
     width: 2.5rem;
     height: 36px;
     height: 2.25rem;
-    margin: 10px 20px 0px 20px;
-    margin: 0.625rem 1.25rem 0rem 1.25rem;
+    margin: 0px 15px 0px 15px;
+    margin: 0rem 0.9375rem 0rem 0.9375rem;
     border-bottom: 4px solid #ffffff;
     border-bottom: 0.25rem solid #ffffff;
+    transition: 200ms;
   }
-  #navigation .gnb_btn::before, #navigation .gnb_btn::after {
+  .unb > ul li .gnb_btn::before, .unb > ul li .gnb_btn::after {
     content: "";
     position: absolute;
     display: block;
@@ -505,47 +594,75 @@ h1 a {
     height: 0.25rem;
     background-color: #ffffff;
   }
-  #navigation .gnb_btn::before {
+  .unb > ul li .gnb_btn::before {
     top: 4px;
     top: 0.25rem;
     left: 0;
   }
-  #navigation .gnb_btn::after {
+  .unb > ul li .gnb_btn::after {
     bottom: 10px;
     bottom: 0.625rem;
     bottom: 10px;
     left: 0;
   }
-  #navigation .gnb_close {
-    display: none;
-    position: absolute;
-    top: 10px;
-    top: 0.625rem;
-    right: 20px;
-    right: 1.25rem;
+  .unb > ul li .gnb_btn.active {
+    border: 0;
+  }
+  .unb > ul li .gnb_btn.active::before {
+    top: 50%;
+    transition: 200ms;
+    transform: rotate(135deg);
+  }
+  .unb > ul li .gnb_btn.active::after {
+    top: 50%;
+    transition: 200ms;
+    transform: rotate(45deg);
+  }
+  .unb > ul li.search_part {
     width: 40px;
     width: 2.5rem;
     height: 40px;
     height: 2.5rem;
-    background-image: url("../../img/cross_white.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
   }
-  #navigation .gnb {
-    display: block;
+  .unb > ul li.search_part .search {
+    width: 40px;
+    width: 2.5rem;
+    height: 40px;
+    height: 2.5rem;
+  }
+  .unb > ul li.search_part .search img {
+    width: 100%;
+    height: 100%;
+    filter: invert(99%) sepia(22%) saturate(2%) hue-rotate(105deg) brightness(106%) contrast(100%);
+  }
+  .unb > ul li.search_part .search:hover img {
+    filter: invert(48%) sepia(63%) saturate(6360%) hue-rotate(8deg) brightness(97%) contrast(101%);
+  }
+
+  .navi_area {
+    display: none;
     position: fixed;
-    top: 80px;
-    top: 5rem;
+    z-index: -1;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: #03010f;
   }
-  #navigation .gnb > ul {
+  .navi_area.on {
+    display: block;
+  }
+  .navi_area .gnb {
+    padding-top: 80px;
+    padding-top: 5rem;
     width: 100%;
     height: 100%;
   }
-  #navigation .gnb > ul > li {
+  .navi_area .gnb > ul {
+    width: 100%;
+    height: 100%;
+  }
+  .navi_area .gnb > ul > li {
     display: block;
     width: 100%;
     height: auto;
@@ -576,51 +693,62 @@ h1 a {
     text-align: center;
   }
 
-  #navigation .mobile_login {
-    display: block;
+  .search_modal {
+    display: none;
   }
-  #navigation .mobile_signUp {
-    display: block;
+  .search_modal .search_engin {
+    overflow-x: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    width: 400px;
+    width: 25rem;
+    height: 440px;
+    height: 27.5rem;
+    padding: 0px 20px 20px 20px;
+    padding: 0rem 1.25rem 1.25rem 1.25rem;
+    border: 1px solid #e75300;
+    border: 0.0625rem solid #e75300;
+    background-color: #ffffff;
+    transform: translate(-50%, -50%);
   }
-  #navigation .unb {
+  .search_modal .search_engin .search_topBox .search_close_btn {
     position: absolute;
     top: 0;
-    right: 80px;
-    right: 5rem;
-    float: right;
-    width: 40px;
-    width: 2.5rem;
+    right: -20px;
+    right: -1.25rem;
+  }
+  #search_icon {
+    position: absolute;
+    top: 50px;
+    top: 3.125rem;
+    left: 0;
+    right: 0;
+    width: 90%;
     height: 40px;
     height: 2.5rem;
-    margin-top: 10px;
-    margin-top: 0.625rem;
-    margin-right: 0;
+    margin: auto;
+    padding: 5px;
+    padding: 0.3125rem;
+    border: 1px solid #03010f;
+    border: 0.0625rem solid #03010f;
   }
-  #navigation .login_txt {
-    display: none;
-  }
-  #navigation .signUp_txt {
-    display: none;
-  }
-  #navigation .search_engin {
-    width: 300px;
-    width: 18.75rem;
-    height: 540px;
-    height: 33.75rem;
-  }
-  #navigation .search_engin ul {
+
+  .search_modal .search_engin ul {
+    overflow-y: auto;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    margin-top: 20px;
+    margin-top: 1.25rem;
     width: 100%;
-    height: 340px;
-    height: 21.25rem;
-    padding-right: 10px;
-    padding-right: 0.625rem;
-    padding-left: 10px;
-    padding-left: 0.625rem;
-    left: 0;
-  }
-  #navigation #search_icon {
-    width: 90%;
-    height: auto;
+    height: 380px;
+    height: 23.75rem;
+    box-sizing: content-box;
+    padding-right: 160px;
+    padding-right: 10rem;
+    text-align: start;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
@@ -631,7 +759,31 @@ h1 a {
   #navigation {
     margin-left: 0;
   }
-  #navigation .gnb_btn {
+  .unb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 60px;
+    height: 3.75rem;
+    margin-right: 0px;
+    margin-right: 0rem;
+  }
+  .unb > ul {
+    width: auto;
+    height: 100%;
+    margin-top: 5px;
+    margin-top: 0.3125rem;
+  }
+  .unb > ul li {
+    float: left;
+    color: #ffffff;
+  }
+  .unb > ul li > a:focus, .unb > ul li > a:hover {
+    font-weight: 700;
+    color: #e75300;
+  }
+  .unb > ul li .gnb_btn {
     display: block;
     position: relative;
     float: right;
@@ -639,161 +791,13 @@ h1 a {
     width: 2.5rem;
     height: 36px;
     height: 2.25rem;
-    margin: 10px 20px 0px 20px;
-    margin: 0.625rem 1.25rem 0rem 1.25rem;
-    border-bottom: 4px solid #ffffff;
-    border-bottom: 0.25rem solid #ffffff;
-  }
-  #navigation .gnb_btn::before, #navigation .gnb_btn::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 4px;
-    height: 0.25rem;
-    background-color: #ffffff;
-  }
-  #navigation .gnb_btn::before {
-    top: 4px;
-    top: 0.25rem;
-    left: 0;
-  }
-  #navigation .gnb_btn::after {
-    bottom: 10px;
-    bottom: 0.625rem;
-    bottom: 10px;
-    left: 0;
-  }
-  #navigation .gnb_close {
-    display: none;
-    position: absolute;
-    top: 10px;
-    top: 0.625rem;
-    right: 20px;
-    right: 1.25rem;
-    width: 40px;
-    width: 2.5rem;
-    height: 40px;
-    height: 2.5rem;
-    background-image: url("../../img/cross_white.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  #navigation .gnb {
-    display: block;
-    position: fixed;
-    top: 80px;
-    top: 5rem;
-    width: 100%;
-    height: 100%;
-    background-color: #03010f;
-  }
-  #navigation .gnb > ul {
-    width: 100%;
-    height: 100%;
-  }
-  #navigation .gnb > ul > li {
-    display: block;
-    width: 100%;
-    height: auto;
-    font-size: 16px;
-    font-size: 1rem;
-  }
-  .sub_area {
-    display: none;
-    width: 100%;
-    height: auto;
-  }
-  .sub_area.on {
-    display: block;
-  }
-  .sub_menu {
-    position: static;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    margin: auto;
-  }
-  .sub_menu li {
-    display: block;
-    height: auto;
-    padding: 0;
-    text-align: center;
-  }
-
-  #navigation .mobile_login {
-    display: block;
-  }
-  #navigation .mobile_signUp {
-    display: block;
-  }
-  #navigation .unb {
-    position: absolute;
-    top: 0;
-    right: 80px;
-    right: 5rem;
-    float: right;
-    width: 40px;
-    width: 2.5rem;
-    height: 40px;
-    height: 2.5rem;
-    margin-top: 10px;
-    margin-top: 0.625rem;
-    margin-right: 0;
-  }
-  #navigation .login_txt {
-    display: none;
-  }
-  #navigation .signUp_txt {
-    display: none;
-  }
-  #navigation .search_engin {
-    width: 680px;
-    width: 42.5rem;
-    height: 620px;
-    height: 38.75rem;
-  }
-  #navigation .search_engin ul {
-    width: 100%;
-    height: 340px;
-    height: 21.25rem;
-    padding-right: 10px;
-    padding-right: 0.625rem;
-    padding-left: 10px;
-    padding-left: 0.625rem;
-    left: 0;
-  }
-  #navigation #search_icon {
-    width: 90%;
-    height: auto;
-  }
-}
-@media all and (min-width: 1024px) and (max-width: 1279px) {
-  .head_wrap {
-    height: 100%;
-  }
-
-  #navigation {
-    margin-left: 0;
-  }
-  #navigation .gnb_btn {
-    display: block;
-    position: relative;
-    float: right;
-    width: 40px;
-    width: 2.5rem;
-    height: 36px;
-    height: 2.25rem;
-    margin: 10px 20px 0px 20px;
-    margin: 0.625rem 1.25rem 0rem 1.25rem;
+    margin: 0px 15px 0px 15px;
+    margin: 0rem 0.9375rem 0rem 0.9375rem;
     border-bottom: 4px solid #ffffff;
     border-bottom: 0.25rem solid #ffffff;
     transition: 200ms;
   }
-  #navigation .gnb_btn::before, #navigation .gnb_btn::after {
+  .unb > ul li .gnb_btn::before, .unb > ul li .gnb_btn::after {
     content: "";
     position: absolute;
     display: block;
@@ -802,47 +806,52 @@ h1 a {
     height: 0.25rem;
     background-color: #ffffff;
   }
-  #navigation .gnb_btn::before {
+  .unb > ul li .gnb_btn::before {
     top: 4px;
     top: 0.25rem;
     left: 0;
   }
-  #navigation .gnb_btn::after {
+  .unb > ul li .gnb_btn::after {
     bottom: 10px;
     bottom: 0.625rem;
     bottom: 10px;
     left: 0;
   }
-  #navigation .gnb_btn.active {
+  .unb > ul li .gnb_btn.active {
     border: 0;
   }
-  #navigation .gnb_btn.active::before {
+  .unb > ul li .gnb_btn.active::before {
     top: 50%;
     transition: 200ms;
     transform: rotate(135deg);
   }
-  #navigation .gnb_btn.active::after {
+  .unb > ul li .gnb_btn.active::after {
     top: 50%;
     transition: 200ms;
     transform: rotate(45deg);
   }
-  #navigation .gnb_close {
-    display: none;
-    position: absolute;
-    top: 10px;
-    top: 0.625rem;
-    right: 20px;
-    right: 1.25rem;
+  .unb > ul li.search_part {
     width: 40px;
     width: 2.5rem;
     height: 40px;
     height: 2.5rem;
-    background-image: url("../../img/cross_white.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
   }
-  #navigation .gnb {
+  .unb > ul li.search_part .search {
+    width: 40px;
+    width: 2.5rem;
+    height: 40px;
+    height: 2.5rem;
+  }
+  .unb > ul li.search_part .search img {
+    width: 100%;
+    height: 100%;
+    filter: invert(99%) sepia(22%) saturate(2%) hue-rotate(105deg) brightness(106%) contrast(100%);
+  }
+  .unb > ul li.search_part .search:hover img {
+    filter: invert(48%) sepia(63%) saturate(6360%) hue-rotate(8deg) brightness(97%) contrast(101%);
+  }
+
+  .navi_area {
     display: none;
     position: fixed;
     z-index: -1;
@@ -850,18 +859,22 @@ h1 a {
     left: 0;
     width: 100%;
     height: 100%;
-    padding-top: 80px;
-    padding-top: 5rem;
     background-color: #03010f;
   }
-  #navigation .gnb.on {
+  .navi_area.on {
     display: block;
   }
-  #navigation .gnb > ul {
+  .navi_area .gnb {
+    padding-top: 80px;
+    padding-top: 5rem;
     width: 100%;
     height: 100%;
   }
-  #navigation .gnb > ul > li {
+  .navi_area .gnb > ul {
+    width: 100%;
+    height: 100%;
+  }
+  .navi_area .gnb > ul > li {
     display: block;
     width: 100%;
     height: auto;
@@ -892,51 +905,68 @@ h1 a {
     text-align: center;
   }
 
-  #navigation .mobile_login {
-    display: block;
+  .search_modal {
+    display: none;
   }
-  #navigation .mobile_signUp {
-    display: block;
+  .search_modal .search_engin {
+    overflow-x: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    width: 600px;
+    width: 37.5rem;
+    height: 540px;
+    height: 33.75rem;
+    padding: 0px 20px 20px 20px;
+    padding: 0rem 1.25rem 1.25rem 1.25rem;
+    border: 1px solid #e75300;
+    border: 0.0625rem solid #e75300;
+    background-color: #ffffff;
+    transform: translate(-50%, -50%);
   }
-  #navigation .unb {
+  .search_modal .search_engin .search_topBox .search_close_btn {
     position: absolute;
     top: 0;
-    right: 80px;
-    right: 5rem;
-    float: right;
-    width: 40px;
-    width: 2.5rem;
+    right: -20px;
+    right: -1.25rem;
+  }
+  #search_icon {
+    position: absolute;
+    top: 50px;
+    top: 3.125rem;
+    left: 0;
+    right: 0;
+    width: 90%;
     height: 40px;
     height: 2.5rem;
-    margin-top: 10px;
-    margin-top: 0.625rem;
-    margin-right: 0;
+    margin: auto;
+    padding: 5px;
+    padding: 0.3125rem;
+    border: 1px solid #03010f;
+    border: 0.0625rem solid #03010f;
   }
-  #navigation .login_txt {
-    display: none;
-  }
-  #navigation .signUp_txt {
-    display: none;
-  }
-  #navigation .search_engin {
-    width: 680px;
-    width: 42.5rem;
-    height: 620px;
-    height: 38.75rem;
-  }
-  #navigation .search_engin ul {
+
+  .search_modal .search_engin ul {
+    overflow-y: auto;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    margin-top: 20px;
+    margin-top: 1.25rem;
     width: 100%;
-    height: 340px;
-    height: 21.25rem;
-    padding-right: 10px;
-    padding-right: 0.625rem;
-    padding-left: 10px;
-    padding-left: 0.625rem;
-    left: 0;
+    height: 380px;
+    height: 23.75rem;
+    box-sizing: content-box;
+    padding-right: 160px;
+    padding-right: 10rem;
+    text-align: start;
   }
-  #navigation #search_icon {
-    width: 90%;
-    height: auto;
+}
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+  .navi_area .gnb > ul > li {
+    margin-right: 0.5px;
+    margin-right: 0.048828125vw;
   }
 }
 @media all and (min-width: 2560px) {
@@ -972,7 +1002,7 @@ h1 a {
   width: 100%;
   height: 100%;
 }
-.viewBox_img.action {
+.viewBox_img.active {
   display: block;
   z-index: 10;
 }
@@ -1058,7 +1088,7 @@ h1 a {
 #viewBox .view_indicator ul li:last-child {
   margin-right: 0px;
 }
-#viewBox .view_indicator ul li.action {
+#viewBox .view_indicator ul li.active {
   border-color: #e75300;
 }
 #viewBox .view_indicator ul li button {
