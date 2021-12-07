@@ -416,21 +416,24 @@
           display: block;
           width: 100%;
           height: auto;
-          @include unit(font-size,18);
+          @include unit(font-size,16);
           @at-root .sub_area {
-            display: block;
+            &.on { display: block;}
+            display: none;
             width: 100%;
             height: auto;
             @at-root .sub_menu {
               position: static;
               display: block;
+              top: 0;
               left: 0;
               width: 100%;
               height: auto;
               margin: auto;
               li {
                 display: block;
-                height: 40px;
+                height: auto;
+                padding: 0;
                 text-align: center;
               }
             }

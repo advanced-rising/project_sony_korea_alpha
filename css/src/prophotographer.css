@@ -547,17 +547,21 @@ h1 a {
     display: block;
     width: 100%;
     height: auto;
-    font-size: 18px;
-    font-size: 1.125rem;
+    font-size: 16px;
+    font-size: 1rem;
   }
   .sub_area {
-    display: block;
+    display: none;
     width: 100%;
     height: auto;
+  }
+  .sub_area.on {
+    display: block;
   }
   .sub_menu {
     position: static;
     display: block;
+    top: 0;
     left: 0;
     width: 100%;
     height: auto;
@@ -565,7 +569,8 @@ h1 a {
   }
   .sub_menu li {
     display: block;
-    height: 40px;
+    height: auto;
+    padding: 0;
     text-align: center;
   }
 
