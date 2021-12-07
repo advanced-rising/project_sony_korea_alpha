@@ -593,6 +593,7 @@
       @include unit(height,36);
       @include margin(10,20,0,20);
       @include border-bottom($w:4,$c:$color-white);
+      transition: 200ms;
       &::before,
       &::after {
         content: "";
@@ -611,6 +612,19 @@
         bottom: 10px;
         left: 0;
       }
+      &.active {
+        border: 0;
+        &::before {
+          top: 50%;
+          transition: 200ms;
+          transform: rotate(135deg);
+        }
+        &::after {
+          top: 50%;
+          transition: 200ms;
+          transform: rotate(45deg);
+        }
+      }
     }
     .gnb_close {
       display: none;
@@ -622,12 +636,17 @@
       @include img("cross_white.svg",$p:center)
     }
     .gnb {
-      &.on { display: block; }
+      &.on {
+        display: block;
+      }
       display: none;
       position: fixed;
-      @include unit(top,80);
+      z-index: -1;
+      top: 0;
+      left:  0;
       width: 100%;
       height: 100%;
+      @include unit(padding-top,80);
       background-color: $color-black;
       > ul {
         width: 100%;
