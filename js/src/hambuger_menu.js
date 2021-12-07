@@ -7,12 +7,8 @@ var naviArea = navigation.querySelector('.navi_area');
 var gnbUl = naviArea.querySelector('ul');
 var gnbLi = gnbUl.children;
 var gnbLiArr = Array.prototype.slice.call(gnbLi);
-
-
 var subArea = naviArea.querySelectorAll('.sub_area');
 
-
-console.log(subArea);
 
 var VIEW_ON = 'on';
 var ACTIVE_ON = 'active';
@@ -21,47 +17,28 @@ var ACTIVE_ON = 'active';
 // navigation gnbBtn 클릭시 메뉴 오픈
 gnbBtn.addEventListener('click', function(e){
   e.preventDefault();
-  naviArea.classList.toggle(VIEW_ON);
-  gnbBtn.classList.toggle(ACTIVE_ON);
+  var VIEW_ON = 'on';
+  var isActive = naviArea.classList.contains(VIEW_ON);
+  if(!isActive){
+    naviArea.classList.add(VIEW_ON);
+    gnbBtn.classList.add(ACTIVE_ON);
+  }else{
+    naviArea.classList.remove(VIEW_ON);
+    gnbBtn.classList.remove(ACTIVE_ON);
+    // gnbBtn = transition
+  }
 });
-
 
 // 서브메뉴 목록이 없다면 a를 클릭 , 있다면 서브메뉴를 나타나게 하라 .
 var i = 0;
 var j = 0;
 var len = gnbLiArr.length;
-// gnbLiArr.forEach(function(element,index){
-//   var menuBtn = element.querySelector('a');
-//   menuBtn.addEventListener('click',function(e){
-//     indexCheck = index;
-//     gnbLiArr.forEach(function(data,index){
-//       if(index !== indexCheck){
-//         data.classList.remove(VIEW_ON);
-//       }else{
-//         data.classList.add(VIEW_ON);
-//       }
-//     });
-//     subArea.forEach(function(data,index){
-//       if(index !== indexCheck){
-//         data.classList.remove(VIEW_ON);
-//       }else{
-//         data.classList.add(VIEW_ON);
-//       }
-//     });
-//   });
-// });
-console.log(gnbLiArr.length);
-console.log(subArea.length);
-console.log(subArea[0].previousSibling.previousSibling);
-console.log(subArea.length);
-
 for(i = 0; i < subArea.length ; i++){
   (function(k){
     subArea[k].previousSibling.previousSibling.addEventListener('click', function(e){
       e.preventDefault();
       for(j = 0; j< subArea.length; j++){
         subArea[j].classList.remove(VIEW_ON);
-        console.log(subArea[j]);
       };
       subArea[k].classList.add(VIEW_ON);
     });
