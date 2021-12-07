@@ -26,7 +26,7 @@
           content: "";
           @include unit(width,23);
           @include unit(height,2);
-          background-color: $color-black;
+          background-color: $color-white;
           vertical-align: top;
         }
         span {
@@ -48,7 +48,7 @@
       &.active .click_jump:after {
         @include unit(width,31);
         width: 31px;
-        background: var(--main-color);
+        background: $color-orange;
       }
     }
   }

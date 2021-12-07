@@ -53,21 +53,7 @@
         height: 100%;
         @include unit(margin-right,17);
         @include unit(line-height,50);
-        
         color: $color-white;
-        > button {
-          @include display-block();
-          @include unit(font-size,16);
-          text-decoration: none;
-          text-align: center;
-          text-transform: uppercase;
-          color: inherit;
-          &:focus,
-          &:hover {
-            // font-weight: 700;
-            color: $color-orange;
-          }
-        }
         > a {
           @include display-block();
           @include unit(font-size,16);
@@ -123,6 +109,7 @@
     > ul {
       width: auto;
       height: 100%;
+      @include unit(margin-top,5);
       li {
         color: $color-white;
       }
@@ -301,11 +288,11 @@
       @include img("cross_white.svg",$p:center)
     }
     .gnb {
-      display: none;
+      display: block;
       position: fixed;
       @include unit(top,80);
       width: 100%;
-      height: 100vw;
+      height: 100%;
       background-color: $color-black;
       > ul {
         width: 100%;
@@ -313,17 +300,27 @@
         > li {
           display: block;
           width: 100%;
-          @include unit(height,60);
-          @include unit(font-size,18);
-          @at-root .sub_menu {
+          height: auto;
+          @include unit(font-size,16);
+          @at-root .sub_area {
+            &.on { display: block;}
             display: none;
-            left: 0;
             width: 100%;
-            height: 100%;
-            margin: auto;
-            li {
+            height: auto;
+            @at-root .sub_menu {
+              position: static;
               display: block;
-              text-align: center;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: auto;
+              margin: auto;
+              li {
+                display: block;
+                height: auto;
+                padding: 0;
+                text-align: center;
+              }
             }
           }
         }
@@ -514,11 +511,11 @@
       @include img("cross_white.svg",$p:center)
     }
     .gnb {
-      display: none;
+      display: block;
       position: fixed;
       @include unit(top,80);
       width: 100%;
-      height: 100vw;
+      height: 100%;
       background-color: $color-black;
       > ul {
         width: 100%;
@@ -526,22 +523,32 @@
         > li {
           display: block;
           width: 100%;
-          @include unit(height,60);
-          @include unit(font-size,18);
-          @at-root .sub_menu {
+          height: auto;
+          @include unit(font-size,16);
+          @at-root .sub_area {
+            &.on { display: block;}
             display: none;
-            left: 0;
             width: 100%;
-            height: 100%;
-            margin: auto;
-            li {
+            height: auto;
+            @at-root .sub_menu {
+              position: static;
               display: block;
-              text-align: center;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: auto;
+              margin: auto;
+              li {
+                display: block;
+                height: auto;
+                padding: 0;
+                text-align: center;
+              }
             }
           }
         }
       }
-    }
+    } 
     .mobile_login { display: block;}
     .mobile_signUp { display: block;}
     .unb {
@@ -615,11 +622,12 @@
       @include img("cross_white.svg",$p:center)
     }
     .gnb {
+      &.on { display: block; }
       display: none;
       position: fixed;
       @include unit(top,80);
       width: 100%;
-      height: 100vw;
+      height: 100%;
       background-color: $color-black;
       > ul {
         width: 100%;
@@ -627,17 +635,27 @@
         > li {
           display: block;
           width: 100%;
-          @include unit(height,60);
-          @include unit(font-size,18);
-          @at-root .sub_menu {
+          height: auto;
+          @include unit(font-size,16);
+          @at-root .sub_area {
+            &.on { display: block;}
             display: none;
-            left: 0;
             width: 100%;
-            height: 100%;
-            margin: auto;
-            li {
+            height: auto;
+            @at-root .sub_menu {
+              position: static;
               display: block;
-              text-align: center;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: auto;
+              margin: auto;
+              li {
+                display: block;
+                height: auto;
+                padding: 0;
+                text-align: center;
+              }
             }
           }
         }

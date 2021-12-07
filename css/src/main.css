@@ -81,20 +81,6 @@ h1 a {
   line-height: 3.125rem;
   color: #ffffff;
 }
-.gnb > ul > li > button {
-  display: block;
-  width: 100%;
-  height: 100%;
-  font-size: 16px;
-  font-size: 1rem;
-  text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
-  color: inherit;
-}
-.gnb > ul > li > button:focus, .gnb > ul > li > button:hover {
-  color: #e75300;
-}
 .gnb > ul > li > a {
   display: block;
   width: 100%;
@@ -168,6 +154,8 @@ h1 a {
 .unb > ul {
   width: auto;
   height: 100%;
+  margin-top: 5px;
+  margin-top: 0.3125rem;
 }
 .unb > ul li {
   color: #ffffff;
@@ -397,12 +385,12 @@ h1 a {
     background-size: cover;
   }
   #navigation .gnb {
-    display: none;
+    display: block;
     position: fixed;
     top: 80px;
     top: 5rem;
     width: 100%;
-    height: 100vw;
+    height: 100%;
     background-color: #03010f;
   }
   #navigation .gnb > ul {
@@ -412,20 +400,31 @@ h1 a {
   #navigation .gnb > ul > li {
     display: block;
     width: 100%;
-    height: 60px;
-    height: 3.75rem;
-    font-size: 18px;
-    font-size: 1.125rem;
+    height: auto;
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  .sub_area {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+  .sub_area.on {
+    display: block;
   }
   .sub_menu {
-    display: none;
+    position: static;
+    display: block;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     margin: auto;
   }
   .sub_menu li {
     display: block;
+    height: auto;
+    padding: 0;
     text-align: center;
   }
 
@@ -682,12 +681,12 @@ h1 a {
     background-size: cover;
   }
   #navigation .gnb {
-    display: none;
+    display: block;
     position: fixed;
     top: 80px;
     top: 5rem;
     width: 100%;
-    height: 100vw;
+    height: 100%;
     background-color: #03010f;
   }
   #navigation .gnb > ul {
@@ -697,20 +696,31 @@ h1 a {
   #navigation .gnb > ul > li {
     display: block;
     width: 100%;
-    height: 60px;
-    height: 3.75rem;
-    font-size: 18px;
-    font-size: 1.125rem;
+    height: auto;
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  .sub_area {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+  .sub_area.on {
+    display: block;
   }
   .sub_menu {
-    display: none;
+    position: static;
+    display: block;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     margin: auto;
   }
   .sub_menu li {
     display: block;
+    height: auto;
+    padding: 0;
     text-align: center;
   }
 
@@ -824,8 +834,11 @@ h1 a {
     top: 80px;
     top: 5rem;
     width: 100%;
-    height: 100vw;
+    height: 100%;
     background-color: #03010f;
+  }
+  #navigation .gnb.on {
+    display: block;
   }
   #navigation .gnb > ul {
     width: 100%;
@@ -834,20 +847,31 @@ h1 a {
   #navigation .gnb > ul > li {
     display: block;
     width: 100%;
-    height: 60px;
-    height: 3.75rem;
-    font-size: 18px;
-    font-size: 1.125rem;
+    height: auto;
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  .sub_area {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+  .sub_area.on {
+    display: block;
   }
   .sub_menu {
-    display: none;
+    position: static;
+    display: block;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     margin: auto;
   }
   .sub_menu li {
     display: block;
+    height: auto;
+    padding: 0;
     text-align: center;
   }
 
@@ -2866,7 +2890,7 @@ h1 a {
   width: 1.4375rem;
   height: 2px;
   height: 0.125rem;
-  background-color: #03010f;
+  background-color: #ffffff;
   vertical-align: top;
 }
 #scroll_nav .jump_menu > li .click_jump span {
@@ -2892,7 +2916,7 @@ h1 a {
   width: 31px;
   width: 1.9375rem;
   width: 31px;
-  background: var(--main-color);
+  background: #e75300;
 }
 
 @media all and (max-width: 479px) {
