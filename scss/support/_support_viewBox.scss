@@ -1,0 +1,98 @@
+@at-root .viewBox {
+  width: 100%;
+  @include unit(height,480);
+  @include padding(160,40,0,40);
+  background-color: $color-light-blue;
+  @at-root .view_wrap {
+    position: relative;
+    @include unit(width,1280);
+    height: 100%;
+    margin: auto;
+    color: $color-black;
+    h3 {
+      @include unit(margin-bottom,20);
+      @include unit(font-size,36);
+    }
+    span {
+      @include unit(font-size,18);
+    }
+    button {
+      position: absolute;
+      @include unit(bottom,40);
+      left: 0;
+      width: auto;
+      @include unit(height,50);
+      @include padding(0,20,0,20);
+      color: $color-white;
+      background: $color-blue;
+    }
+  }
+}
+@include mobile-v {
+  @at-root .viewBox {
+    @include padding(160,10,0,10); //
+    @at-root .view_wrap {
+      @include unit(width,300); //
+      h3 {
+        @include unit(margin-bottom,20);
+        @include unit(font-size,36);
+      }
+      span {
+        @include unit(font-size,18);
+      }
+      button {
+      }
+    }
+  }
+}
+@include mobile-h {
+  @at-root .viewBox {
+    @include padding(160,10,0,10); //
+    @at-root .view_wrap {
+      @include unit(width,400); //
+      h3 {
+        @include unit(margin-bottom,20);
+        @include unit(font-size,36);
+      }
+      span {
+        @include unit(font-size,18);
+      }
+      button {
+      }
+    }
+  }
+}
+@include tablet {
+  @at-root .viewBox {
+    @include padding(160,10,0,10); //
+    @at-root .view_wrap {
+      @include unit(width,700); //
+      h3 {
+        @include unit(margin-bottom,20);
+        @include unit(font-size,36);
+      }
+      span {
+        @include unit(font-size,18);
+      }
+      button {
+      }
+    }
+  }
+}
+@include laptop {
+  @at-root .viewBox {
+    @include padding(160,10,0,10); //
+    @at-root .view_wrap {
+      @include unit(width,1000); //
+      h3 {
+        @include unit(margin-bottom,20);
+        @include unit(font-size,36);
+      }
+      span {
+        @include unit(font-size,18);
+      }
+      button {
+      }
+    }
+  }
+}

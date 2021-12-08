@@ -10,20 +10,17 @@
   <script>
     $(document).ready(function(){
       $("#support_headBox").load("support_headBox.html .support_headerWrap")
-      $("#footBox").load("footer.html .foot_wrap")
+      $("#footBox").load("z_common_footer.html .foot_wrap")
     });
   </script>
   <link rel="stylesheet" href="../css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
-  <link rel="stylesheet" href="../css/common/variable.css">
-  <link rel="stylesheet" href="../css/src/z_common_footer.css">
-  <link rel="stylesheet" href="../css/src/support_headBox.css">
-  <link rel="stylesheet" href="../css/src/h_support_origin.css">
+  <link rel="stylesheet" href="../css/src/support_origin.css">
   <link rel="shortcut icon" href="../favicon.ico" type="image/ico">
   <link rel="apple-touch-icon" href="../favicon.ico">
   <script src="../js/common/modernizr-custom.js"></script>
 
-  <title>정품등록</title>
+  <title>Sony KOREA - Alpha | 정품등록</title>
 </head>
 <body>
   <!-- layout -->
@@ -32,7 +29,7 @@
     <header id="support_headBox"></header>
     <!-- // #support_headBox =============================== -->
     <section id="container">
-      <h2>소니 정품등록 서비스</h2>
+      <h2 class="blind">소니 정품등록 서비스</h2>
       <article class="viewBox">
         <div class="view_wrap">
           <h3>정품 안내</h3>
@@ -45,52 +42,54 @@
           </button>
         </div>
       </article>
-      <article class="content">
-        <div class="content_title">
+      <article class="contents">
+        <div class="contents_title">
           <h3>소니코리아 정품등록</h3>
           <p>정품등록을 하시면 세심한 A/S, 다양한 할인혜택과 이벤트참여 기회 등 소니만의 특별한 혜택을 경험하실 수 있습니다.</p>
         </div>
         <div class="content_list">
-          <ul class="clearfix">
-            <li>
-              <div class="content_img con1_img">
-                <button type="button" class="action">
-                </button>
-              </div>
-              <p>
-                무상보증 수리 및<br />
-                무상점검 서비스
-              </p>
-            </li>
-            <li>
-              <div class="content_img con2_img">
-                <button type="button">
-                </button>
-              </div>
-              <p>
-                각종행사 초대 및<br />
-                이벤트 혜택
-              </p>
-            </li>
-            <li>
-              <div class="content_img con3_img">
-                <button type="button">
-                </button>
-              </div>
-              <p>
-                10% 할인쿠폰 제공
-              </p>
-            </li>
-            <li>
-              <div class="content_img con4_img">
-                <button type="button">
-                </button>
-              </div>
-              <p>
-                픽업 서비스
-              </p>
-            </li>
-          </ul>
+          <div class="fixed_part">
+            <ul class="clearfix">
+              <li>
+                <div class="content_img con1_img">
+                  <button type="button" class="action">
+                  </button>
+                </div>
+                <p>
+                  무상보증 수리 및<br />
+                  무상점검 서비스
+                </p>
+              </li>
+              <li>
+                <div class="content_img con2_img">
+                  <button type="button">
+                  </button>
+                </div>
+                <p>
+                  각종행사 초대 및<br />
+                  이벤트 혜택
+                </p>
+              </li>
+              <li>
+                <div class="content_img con3_img">
+                  <button type="button">
+                  </button>
+                </div>
+                <p>
+                  10% 할인쿠폰 제공
+                </p>
+              </li>
+              <li>
+                <div class="content_img con4_img">
+                  <button type="button">
+                  </button>
+                </div>
+                <p>
+                  픽업 서비스
+                </p>
+              </li>
+            </ul>
+          </div>
           <div class="sub_content">
             <ul>
               <li class="free">
@@ -131,13 +130,13 @@
                 <li>일부 악세서리의 경우 정품 스티커가 부착 되어 있습니다.</li>
                 <li>정품 보증서가 없는 경우에는 구매처 및 소니코리아 고객센터를 통해 확인 가능합니다.</li>
               </ul>
+              <div class="original_img"></div>
             </div>
-            <div class="original_img"></div>
           </div>
         </div>
       </article>
       <article class="notice">
-        <h3>정품등록 혜택</h3>
+        <h3 class="blind">정품등록 혜택</h3>
       </article>
     </section>
     <!-- #footBox_headBox =============================== -->

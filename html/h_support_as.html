@@ -10,20 +10,17 @@
   <script>
     $(document).ready(function(){
       $("#support_headBox").load("support_headBox.html .support_headerWrap")
-      $("#footBox").load("footer.html .foot_wrap")
+      $("#footBox").load("z_common_footer.html .foot_wrap")
     });
   </script>
   <link rel="stylesheet" href="../css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
-  <link rel="stylesheet" href="../css/common/variable.css">
-  <link rel="stylesheet" href="../css/src/z_common_footer.css">
-  <link rel="stylesheet" href="../css/src/support_headBox.css">
-  <link rel="stylesheet" href="../css/src/h_support_as.css">
+  <link rel="stylesheet" href="../css/src/support_as.css">
   <link rel="shortcut icon" href="../favicon.ico" type="image/ico">
   <link rel="apple-touch-icon" href="../favicon.ico">
   <script src="../js/common/modernizr-custom.js"></script>
 
-  <title>a/s</title>
+  <title>Sony KOREA - Alpha | A/S지원</title>
 </head>
 <body>
   <!-- layout -->
@@ -32,7 +29,7 @@
     <header id="support_headBox"></header>
     <!-- // #support_headBox =============================== -->
     <section id="container">
-      <h2>소니 A/S 서비스</h2>
+      <h2 class="blind">소니 A/S 서비스</h2>
       <article class="viewBox">
         <div class="view_wrap">
           <h3>A/S 신청안내</h3>
@@ -45,7 +42,64 @@
           </button>
         </div>
       </article>
-      <article class="content"></article>
+      <article class="content">
+        <h2 class="blind">A/S 신청 FAQ</h2>
+        <div class="content_list">
+          <div class="fixed_part">
+            <ul class="clearfix">
+              <li>
+                <div class="content_img con1_img"></div>
+                <p>
+                  제품사용이 어렵거나<br />
+                  불편함이 있으신가요?
+                </p>
+                <button type="button" class="action">
+                  <span>제품지원 바로가기</span>
+                </button>
+              </li>
+              <li>
+                <div class="content_img con2_img"></div>
+                <p>
+                  소니 제품이라면<br />
+                  더육 편리하게
+                </p>
+                <button type="button">
+                    <span>픽업 서비스 신청</span>
+                  </button>
+              </li>
+              <li>
+                <div class="content_img con3_img"></div>
+                <p>
+                  운송장 번호로<br />
+                  한번에 확인하세요!
+                </p>
+                <button type="button">
+                    <span>픽업 서비스 신청확인</span>
+                  </button>
+              </li>
+              <li>
+                <div class="content_img con4_img"></div>
+                <p>
+                  가까운 A/S 센터로<br />
+                  직접 방문을 원하신다면!
+                </p>
+                <button type="button">
+                    <span>A/S 센터 찾기</span>
+                  </button>
+              </li>
+              <li>
+                <div class="content_img con5_img"></div>
+                <p>
+                  더욱 빠른 A/S 신청을<br />
+                  원하신다면?
+                </p>
+                <button type="button">
+                    <span>A/S 센터 방문 예약 신청</span>
+                  </button>
+              </li>
+            </ul>
+          </div>
+      </article>
       <article class="notice"> </article>
     </section>
     <!-- #footBox_headBox =============================== -->

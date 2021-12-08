@@ -1,0 +1,249 @@
+/* #support_headBox =========================== */
+#support_headBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  @include unit(height,80);
+  @include unit(padding,10);
+  background-color: $color-light-black;
+  @at-root .support_headerWrap {
+    @include unit(width,1280);
+    height: 100%;
+    margin: auto;
+    h1 {
+      float: left;
+      width: auto;
+      height: auto;
+      @include unit(margin-top,20);
+      @include unit(margin-right,40);
+    }
+  }
+}
+/* .gnb ======================================= */
+.gnb {
+  float: left;
+  width: auto;
+  height: auto;
+  ul {
+    width: auto;
+    height: auto;
+    li {
+      float: left;
+      width: auto;
+      height: 100%;
+      @include unit(margin-right,30);
+      @include unit(margin-top,20);
+      &:last-of-type { margin-right: 0;}
+      a {
+        width: auto;
+        height: auto;
+        span {
+          display: block;
+          @include unit(padding,5);
+          box-sizing: content-box;
+          text-align: center;
+          @include unit(font-size,16);
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+/* // .gnb======================================= */
+/* .unb ======================================= */
+.unb {
+  float: right;
+  width: auto;
+  height: auto;
+  > ul {
+    width: auto;
+    height: auto;
+    > li {
+      float: left;
+      width: auto;
+      height: 100%;
+      @include unit(margin-left,30);
+      @include unit(margin-top,20);
+      &:first-of-type { margin-left: 0;}
+      a {
+        width: auto;
+        height: auto;
+        span {
+          display: block;
+          @include unit(padding,5);
+          text-transform: uppercase;
+          box-sizing: content-box;
+          text-align: center;
+          @include unit(font-size,16);
+          color: $color-white;
+        }
+      }
+      &.login_txt {
+        word-spacing: -4px;
+      }
+      &.sony_site {
+        position: relative;
+        .sub_sony_site {
+          display: none;
+          position: absolute;
+          @include unit(top,50);
+          right: 0;
+          width: auto;
+          height: 100%;
+          > li {
+            @include unit(width,240);
+            @include unit(height,60);
+            @include unit(padding-right,10);
+            text-align: right;
+            background-color: $color-light-black;
+          }
+          span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            @include unit(line-height,60);
+            text-align: end;
+            color: $color-white;
+          }
+          .sony_site.action .sub_sony_site {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+@include mobile-v {
+#support_headBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  @include unit(height,80);
+  margin: auto;
+  @include unit(padding,10);
+  background-color: $color-light-black;
+  @at-root .support_headerWrap {
+    @include unit(width,300); //
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    h1 {
+      clear: both;
+      display: inline-block;
+      width: 100%;
+      height: auto;
+      margin: auto;
+      @include unit(margin-top,20);
+      margin-right: 0;
+    }
+  }
+}
+.gnb {
+  display: none; //
+  float: left;
+  width: auto;
+  height: auto;
+  ul {
+    width: auto;
+    height: auto;
+    li {
+      float: left;
+      width: auto;
+      height: 100%;
+      @include unit(margin-right,30);
+      @include unit(margin-top,20);
+      &:last-of-type { margin-right: 0;}
+      a {
+        width: auto;
+        height: auto;
+        span {
+          display: block;
+          @include unit(padding,5);
+          box-sizing: content-box;
+          text-align: center;
+          @include unit(font-size,16);
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+/* // .gnb======================================= */
+/* .unb ======================================= */
+.unb {
+  display: none; // 
+  float: right;
+  width: auto;
+  height: auto;
+  > ul {
+    width: auto;
+    height: auto;
+    > li {
+      float: left;
+      width: auto;
+      height: 100%;
+      @include unit(margin-left,30);
+      @include unit(margin-top,20);
+      &:first-of-type { margin-left: 0;}
+      a {
+        width: auto;
+        height: auto;
+        span {
+          display: block;
+          @include unit(padding,5);
+          text-transform: uppercase;
+          box-sizing: content-box;
+          text-align: center;
+          @include unit(font-size,16);
+          color: $color-white;
+        }
+      }
+      &.login_txt {
+        word-spacing: -4px;
+      }
+      &.sony_site {
+        position: relative;
+        .sub_sony_site {
+          display: none;
+          position: absolute;
+          @include unit(top,50);
+          right: 0;
+          width: auto;
+          height: 100%;
+          > li {
+            @include unit(width,240);
+            @include unit(height,60);
+            @include unit(padding-right,10);
+            text-align: right;
+            background-color: $color-light-black;
+          }
+          span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            @include unit(line-height,60);
+            text-align: end;
+            color: $color-white;
+          }
+          .sony_site.action .sub_sony_site {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+}
+@include mobile-h {}
+@include tablet {}
+@include laptop {}
+
+

@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* h_support_as.css */
+
+#container {
+  // width: 100%;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: $color-white;
+}
+@at-root .content {
+  width: 100%;
+  height: 400px;
+  .content_list {
+    width: 100%;
+    height: auto;
+    @include unit(margin-top,40);
+    @at-root .fixed_part {
+      @include unit(margin-top,40);
+      text-align: center;
+      ul {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        li {
+          float: left;
+          @include unit(width,220);
+          height: auto;
+          @include margin(0,10,0,10);
+          &:last-child {
+            margin-right: 0;
+          }
+          p {
+            display: block;
+            width: 100%;
+            @include unit(height,40);
+            @include unit(margin-top,10);
+            text-align: center;
+          }
+          .content_img {
+            width: 100%;
+            @include unit(height,200);
+            @include unit(padding,10);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: $color-mint;
+            filter: invert(19%) sepia(0%) saturate(51%) hue-rotate(12deg) brightness(108%) contrast(102%);
+            &.con1_img {
+              background-image: url("../../img/support/origin/ico_product_support.png");
+            }
+            &.con2_img {
+              background-image: url("../../img/support/origin/ico_pickup_service.png");
+            }
+            &.con3_img {
+              background-image: url("../../img/support/origin/ico_as_number.png");
+            }
+            &.con4_img {
+              background-image: url("../../img/support/origin/ico_as_center.png");
+            }
+            &.con5_img {
+              background-image: url("../../img/support/origin/ico_asvisit_service.png");
+            }
+          }
+          button {
+            display: block;
+            width: 100%;
+            @include unit(height,60);
+            @include unit(margin-top,10);
+            font-weight: 700;
+            color: $color-white;
+            background-color:$color-blue;
+          }
+          &:hover .content_img {
+            filter: invert(39%) sepia(91%) saturate(2688%) hue-rotate(3deg) brightness(92%) contrast(102%);
+          }
+        }
+      }
+    }
+  }
+}
+
+
