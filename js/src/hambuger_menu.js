@@ -13,7 +13,7 @@ let subArea = naviArea.querySelectorAll('.sub_area');
 const VIEW_ON = 'on';
 const ACTIVE_ON = 'active';
 
-
+console.log(getComputedStyle(naviArea).left);
 // * ===================================
 // navigation gnbBtn 클릭시 메뉴 오픈
 gnbBtn.addEventListener('click', function(e){
@@ -23,12 +23,28 @@ gnbBtn.addEventListener('click', function(e){
   if(!isActive){
     naviArea.classList.add(VIEW_ON);
     gnbBtn.classList.add(ACTIVE_ON);
+    // ! showLeftFn(naviArea);
   }else{
     naviArea.classList.remove(VIEW_ON);
     gnbBtn.classList.remove(ACTIVE_ON);
     // gnbBtn = transition
   }
 });
+
+// ! 수정할것 . 슬라이드 효과 
+let showLeftFn = function(data){
+  let styleLeft = getComputedStyle(data).left;
+  let indexCheck = 0;
+  let intervalFn = setInterval(function(){
+    indexCheck += 1;
+    if(styleLeft >= 100 + '%' ){
+      data.style.left = indexCheck +"%";
+      console.log(styleLeft);
+    }else{
+      clearInterval(intervalFn);
+    }
+  },10);
+};
 // * ===================================
 // 서브메뉴 목록이 없다면 a를 클릭 , 있다면 서브메뉴를 나타나게 하라 .
 let i = 0;
