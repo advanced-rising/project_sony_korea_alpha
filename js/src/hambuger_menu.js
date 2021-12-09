@@ -13,19 +13,22 @@ let subArea = naviArea.querySelectorAll('.sub_area');
 const VIEW_ON = 'on';
 const ACTIVE_ON = 'active';
 
-console.log(getComputedStyle(naviArea).left);
 // * ===================================
 // navigation gnbBtn 클릭시 메뉴 오픈
 gnbBtn.addEventListener('click', function(e){
   e.preventDefault();
   let VIEW_ON = 'on';
+
   let isActive = naviArea.classList.contains(VIEW_ON);
+  // let isActive = naviArea.style.display = 'block';
   if(!isActive){
+    // naviArea.style.display = 'block';
     naviArea.classList.add(VIEW_ON);
     gnbBtn.classList.add(ACTIVE_ON);
-    naviArea.style.transform = 'translate(0%)';
+    naviArea.style.transform = 'translate(" ")';
     console.log(naviArea.style.transform);
   }else{
+    // naviArea.style.display = 'none';
     naviArea.classList.remove(VIEW_ON);
     gnbBtn.classList.remove(ACTIVE_ON);
     // gnbBtn = transition
