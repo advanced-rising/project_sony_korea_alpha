@@ -18,22 +18,29 @@ const ACTIVE_ON = 'active';
 gnbBtn.addEventListener('click', function(e){
   e.preventDefault();
   let VIEW_ON = 'on';
-
-  let isActive = naviArea.classList.contains(VIEW_ON);
+  naviArea.style.display = "block";
+  let isActive = gnbBtn.classList.contains(ACTIVE_ON);
+  // naviArea.style.width = 'translate(-100%)';
   // let isActive = naviArea.style.display = 'block';
   if(!isActive){
     // naviArea.style.display = 'block';
-    naviArea.classList.add(VIEW_ON);
     gnbBtn.classList.add(ACTIVE_ON);
-    naviArea.style.transform = 'translate(" ")';
+    // naviArea.classList.add(VIEW_ON);
+    naviArea.style.transform = "translate(0)";
+    
     console.log(naviArea.style.transform);
   }else{
     // naviArea.style.display = 'none';
-    naviArea.classList.remove(VIEW_ON);
+    // naviArea.classList.remove(VIEW_ON);
     gnbBtn.classList.remove(ACTIVE_ON);
+
+    
     // gnbBtn = transition
   }
 });
+//  ! 네비게이션 버튼을 누르고 난 뒤 수행하는 함수를 만들어야 한다 .!!
+// 
+
 
 // ! 수정할것 . 슬라이드 효과 
 // setInterval(function(data){
