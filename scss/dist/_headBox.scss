@@ -715,14 +715,17 @@
     @at-root .navi_area {
       &.on {
         display: block;
+        transition: 500ms linear;
       }
       display: none;
       position: fixed;
       z-index: -1;
       top: 0;
-      left:  -100%;
+      left:  0;
       width: 100%;
       height: 100%;
+      transform: translate(-100%);
+      transition: 500ms linear;
       background-color: $color-black;
       .gnb {
         @include unit(padding-top,80);

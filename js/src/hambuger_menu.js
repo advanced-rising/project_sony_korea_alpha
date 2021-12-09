@@ -23,7 +23,8 @@ gnbBtn.addEventListener('click', function(e){
   if(!isActive){
     naviArea.classList.add(VIEW_ON);
     gnbBtn.classList.add(ACTIVE_ON);
-    // ! showLeftFn(naviArea);
+    naviArea.style.transform = 'translate(0%)';
+    console.log(naviArea.style.transform);
   }else{
     naviArea.classList.remove(VIEW_ON);
     gnbBtn.classList.remove(ACTIVE_ON);
@@ -32,19 +33,15 @@ gnbBtn.addEventListener('click', function(e){
 });
 
 // ! 수정할것 . 슬라이드 효과 
-let showLeftFn = function(data){
-  let styleLeft = getComputedStyle(data).left;
-  let indexCheck = 0;
-  let intervalFn = setInterval(function(){
-    indexCheck += 1;
-    if(styleLeft >= 100 + '%' ){
-      data.style.left = indexCheck +"%";
-      console.log(styleLeft);
-    }else{
-      clearInterval(intervalFn);
-    }
-  },10);
-};
+// setInterval(function(data){
+//   let style = getComputedStyle(data).transform;
+// });
+
+// on이 되면 메뉴 영역이 움직이면서 돌아오게 하라 !
+// 결국엔 add 하는것을 함수로 써서 VIEW_ON이 되면서, 움직이는 효과까지 주게 하라 .
+
+
+
 // * ===================================
 // 서브메뉴 목록이 없다면 a를 클릭 , 있다면 서브메뉴를 나타나게 하라 .
 let i = 0;
@@ -103,22 +100,16 @@ function autoSlides(n) {
   if ( ( n + 1 ) > slideLength) {
     slideIndex = 0;
     n = 0;
-  }// else if (n < 0) {
-    // slideIndex = ( viewLen - 1 );
-    // n = ( viewLen - 1 );
-  // }
-  // 이건 왜 사용하는건가 ??? 
-  else {
-    // n이 viewLen 과 같지 않다면, for문을 실행하게 하라.
-    for(i = 0; i < viewSlide.length; i++) {
-      viewSlide[i].classList.remove(ACTIVE_ON);
-    }
-    for(i = 0; i < indicatorBtn.length; i++) {
-        indicatorBtn[i].classList.remove(ACTIVE_ON);
-      }
-    viewSlide[n].classList.add(ACTIVE_ON);
-    indicatorBtn[n].classList.add(ACTIVE_ON);
   }
+  // n이 viewLen 과 같지 않다면, for문을 실행하게 하라.
+  for(i = 0; i < viewSlide.length; i++) {
+    viewSlide[i].classList.remove(ACTIVE_ON);
+  }
+  for(i = 0; i < indicatorBtn.length; i++) {
+      indicatorBtn[i].classList.remove(ACTIVE_ON);
+    }
+  viewSlide[n].classList.add(ACTIVE_ON);
+  indicatorBtn[n].classList.add(ACTIVE_ON);
 }
 // * ===================================
 
@@ -157,14 +148,15 @@ window.onload = function(){
 //   });
 // });
 
-for(i = 0 ; i < slideLength ; i++){
-  let viewIndicatorBtn = viewIndicatorLi[i].querySelector('button');
-  viewIndicatorBtn.addEventListener('click', function(e){
-    e.preventDefault();
-    function selectSlide(n){
-      slideIndex = n;
-      console.log(slideIndex);
-      autoSlides(slideIndex);
-    }
-  });
-}
+// for(i = 0 ; i < slideLength ; i++){
+//   let viewIndicatorBtn = viewIndicatorLi[i].querySelector('button');
+//   viewIndicatorBtn.addEventListener('click', function(e){
+//     e.preventDefault();
+//     function selectSlide(n){
+//       slideIndex = n;
+//       console.log(slideIndex);
+//       autoSlides(slideIndex);
+//     }
+//   });
+// }
+
