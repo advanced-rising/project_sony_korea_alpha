@@ -17,25 +17,15 @@ const ACTIVE_ON = 'active';
 // navigation gnbBtn 클릭시 메뉴 오픈
 gnbBtn.addEventListener('click', function(e){
   e.preventDefault();
-  let VIEW_ON = 'on';
-  naviArea.style.display = "block";
   let isActive = gnbBtn.classList.contains(ACTIVE_ON);
-  // naviArea.style.width = 'translate(-100%)';
-  // let isActive = naviArea.style.display = 'block';
   if(!isActive){
-    // naviArea.style.display = 'block';
     gnbBtn.classList.add(ACTIVE_ON);
-    // naviArea.classList.add(VIEW_ON);
-    naviArea.style.transform = "translate(0)";
-    
-    console.log(naviArea.style.transform);
+    // naviArea.style.display = "block";
+    naviArea.classList.add(VIEW_ON);
   }else{
-    // naviArea.style.display = 'none';
-    // naviArea.classList.remove(VIEW_ON);
     gnbBtn.classList.remove(ACTIVE_ON);
-
-    
-    // gnbBtn = transition
+    // naviArea.style.display = "none";
+    naviArea.classList.remove(VIEW_ON);
   }
 });
 //  ! 네비게이션 버튼을 누르고 난 뒤 수행하는 함수를 만들어야 한다 .!!
