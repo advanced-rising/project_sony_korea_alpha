@@ -208,6 +208,7 @@ h1 a {
   display: block;
   width: 100%;
   height: 100%;
+  text-transform: uppercase;
 }
 .sub_menu li a:hover {
   font-weight: 700;
@@ -849,29 +850,21 @@ h1 a {
   }
 
   .navi_area {
-    display: none;
     position: fixed;
     z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    transform: translate(-100%);
     transition: all 100ms ease-in-out;
     opacity: 0;
     background-color: #03010f;
   }
-  .navi_area.on {
-    display: block;
-    transform: translate(0%);
-    opacity: 1;
-    transition: all 100ms ease-in-out;
-  }
   .navi_area .gnb {
-    padding-top: 80px;
-    padding-top: 5rem;
     width: 100%;
     height: 100%;
+    padding: 80px 40px 0px 40px;
+    padding: 5rem 2.5rem 0rem 2.5rem;
   }
   .navi_area .gnb > ul {
     width: 100%;
@@ -892,6 +885,9 @@ h1 a {
   .sub_area.on {
     display: block;
   }
+  .sub_area.on .sub_menu {
+    border: 4px solid #e75300;
+  }
   .sub_menu {
     position: static;
     display: block;
@@ -906,6 +902,9 @@ h1 a {
     height: auto;
     padding: 0;
     text-align: center;
+  }
+  .sub_menu li:hover {
+    color: #e75300;
   }
 
   .search_modal {
@@ -977,6 +976,46 @@ h1 a {
     width: 2560px;
   }
 }
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in 200ms ease-in-out forwards;
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  1% {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.fade-out {
+  animation: fade-out 200ms ease-in-out forwards;
+}
+
+.has-fade {
+  visibility: hidden;
+}
+
 #viewBox {
   width: 100%;
   height: 680px;

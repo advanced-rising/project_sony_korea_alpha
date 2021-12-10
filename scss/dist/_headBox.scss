@@ -161,6 +161,7 @@
               background-color: $color-light-black;
               a {
                 @include display-block();
+                text-transform: uppercase;
               }
               a:hover {
                 font-weight: 700;
@@ -713,27 +714,26 @@
       }
     } 
     @at-root .navi_area {
-      &.on {
-        display: block;
-        transform: translate(0%);
-        opacity: 1;
-        transition: all 100ms ease-in-out;
-      }
-      display: none;
+      // &.on {
+      //   display: block;
+      //   top: 0;
+      //   opacity: 1;
+      //   transition: all 100ms ease-in-out;
+      // }
+      // display: none;
       position: fixed;
       z-index: -1;
       top: 0;
       left:  0;
       width: 100%;
       height: 100%;
-      transform: translate(-100%);
       transition: all 100ms ease-in-out;
       opacity: 0;
       background-color: $color-black;
       .gnb {
-        @include unit(padding-top,80);
         width: 100%;
         height: 100%;
+        @include padding(80,40,0,40);
         > ul {
           width: 100%;
           height: 100%;
@@ -744,6 +744,9 @@
             @include unit(font-size,16);
             @at-root .sub_area {
               &.on { display: block;}
+              &.on .sub_menu {
+                border: 4px solid $color-orange;
+              }
               display: none;
               width: 100%;
               height: auto;
@@ -760,6 +763,9 @@
                   height: auto;
                   padding: 0;
                   text-align: center;
+                  &:hover {
+                    color: $color-orange;
+                  }
                 }
               }
             }
@@ -833,4 +839,43 @@
   .head_wrap {
     width: 2560px;
   }
+}
+
+// animation keyframe
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in 200ms ease-in-out forwards;
+}
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  1% {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.fade-out {
+  animation: fade-out 200ms ease-in-out forwards;
+}
+.has-fade {
+  visibility: hidden;
 }
