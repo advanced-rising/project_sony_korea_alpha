@@ -125,10 +125,15 @@ function currentSlide(n) {
   slideIndex = n;
   autoSlides(slideIndex);
 }
-
 // * ===================================
-
-
+viewIndicatorLi.forEach((element,index)=>{
+  let indicatorLink = element.querySelector('button');
+  indicatorLink.addEventListener('click', (e)=>{
+    e.preventDefault();
+    slideIndex = index;
+    currentSlide(slideIndex);
+  })
+})
 
 
 // * ===================================
