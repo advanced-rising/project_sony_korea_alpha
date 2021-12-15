@@ -11,7 +11,6 @@ let gnbLiArr = Array.prototype.slice.call(gnbLi);
 const subArea = naviArea.querySelectorAll('.sub_area');
 
 
-
 const viewBox = document.querySelector('#viewBox');
 const viewArea = viewBox.querySelector('.view_area');
 const viewUl = viewArea.querySelector('ul');
@@ -177,17 +176,19 @@ window.onload = function(){
 function hasFadeFn(){
   if(matchMedia("screen and (max-width: 1023px)").matches){
     naviArea.classList.add('has-fade');
+    for(i=0;i<subArea.length;i++){
+      subArea[i].classList.add('has-fade');
+    }
   }else if(matchMedia("screen and (min-width: 1024px)").matches){
     naviArea.classList.remove('has-fade');
+    for(i=0;i<subArea.length;i++){
+      subArea[i].classList.remove('has-fade');
+    }
   }
 }
 hasFadeFn();
 
 
-// 비디오 ....
-// 1번이 1첫번째로 오게되면, 5번째는 1번의 왼쪽으로 오고, 
-// 다음버튼을 누르게되면, 1번은 2번자리에 오며, 5번째가 1번자리에 오게 해야함.
-// 일단 다음 video 가 오게 만들어보자.
 
 // video indicator 탭버튼
 for(i=0;i<videoLen;i++){
@@ -203,3 +204,10 @@ for(i=0;i<videoLen;i++){
     })
   })(i)
 }
+
+// 비디오 ....
+// 1번이 1첫번째로 오게되면, 5번째는 1번의 왼쪽으로 오고, 
+// 다음버튼을 누르게되면, 1번은 2번자리에 오며, 5번째가 1번자리에 오게 해야함.
+// 일단 다음 video 가 오게 만들어보자.
+// 아마도 스타일을 줘서 만드는것이 편할거라 생각된다.
+
