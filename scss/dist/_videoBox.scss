@@ -208,6 +208,9 @@
           @include unit(border-radius,50);
           background-color: $color-deep-gray;
         }
+        a {
+          @include display-block();
+        }
       }
     }
   }
@@ -260,6 +263,9 @@
           @include unit(border-radius,50);
           background-color: $color-deep-gray;
         }
+        a {
+          @include display-block();
+        }
       }
     }
   }
@@ -311,6 +317,9 @@
           @include unit(border-radius,50);
           background-color: $color-deep-gray;
         }
+        a {
+          @include display-block();
+        }
       }
     }
   }
@@ -359,6 +368,9 @@
           @include unit(width,100);
           @include unit(border-radius,50);
           background-color: $color-deep-gray;
+        }
+        a {
+          @include display-block();
         }
       }
     }

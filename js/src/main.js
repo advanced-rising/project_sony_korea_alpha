@@ -22,6 +22,9 @@ const viewIndicatorUl = viewIndicator.querySelector('ul');
 const viewIndicatorLi = viewIndicatorUl.querySelectorAll('li');
 
 
+let viewSlide = viewUl.querySelectorAll(".viewBox_img");
+let indicatorBtn = viewIndicatorUl.querySelectorAll("li");
+
 
 const videoBox = document.querySelector('#videoBox');
 const videoArea = videoBox.querySelector('.video_list');
@@ -33,23 +36,17 @@ const videoPrev = videoBtn.querySelector('.prev_btn');
 const videoUl = videoArea.querySelector('ul');
 const videoLi = videoUl.querySelectorAll('li');
 
-console.log(videoLi);
-// 비디오 ....
-// 1번이 1첫번째로 오게되면, 5번째는 1번의 왼쪽으로 오고, 
-// 다음버튼을 누르게되면, 1번은 2번자리에 오며, 5번째가 1번자리에 오게 해야함.
+const videoIndicator = videoBox.querySelector('.video_indicator');
+const videoIndicatorUl = videoIndicator.querySelector('ul');
+const videoIndicatorLi = videoIndicatorUl.querySelectorAll('li');
 
-videoNext.addEventListener('click',(e)=>{
-  e.preventDefault();
-
-})
-
-
-
-
+let slideLength = viewLi.length;
+let videoLen = videoLi.length;
+let countCheck = 0;
+let afterCheck = countCheck;
 const VIEW_ON = 'on';
 const ACTIVE_ON = 'active';
 
-let slideLength = viewLi.length;
 
 let i;
 let j;
@@ -125,16 +122,14 @@ for(i = 0; i < subArea.length ; i++){
 // 1. 일단 조건문으로 . n 번째라면에서 len이 같다면 0으로 만들어라
 // 2. 같지 않다면, for문을 통해서 값을 늘려가라 .
 // 3. 이 함수를 setTimeInterval을 통해 일정시간동안 함수를 수행하라.
-let slideIndex = 0;
-let viewSlide = viewUl.querySelectorAll(".viewBox_img");
-let indicatorBtn = viewIndicatorUl.querySelectorAll("li");
+
 
 // * ===================================
 function autoSlides(n) {
   // let viewLen = viewLi.length;
   
   if ( ( n + 1 ) > slideLength) {
-    slideIndex = 0;
+    countCheck = 0;
     n = 0;
   }
   // n이 viewLen 과 같지 않다면, for문을 실행하게 하라.
@@ -149,16 +144,16 @@ function autoSlides(n) {
 }
 // onclick 로 하고 있지만... javascript로 바꿀수 있는 방안을 찾고 있음.
 function currentSlide(n) {
-  slideIndex = n;
-  autoSlides(slideIndex);
+  countCheck = n;
+  autoSlides(countCheck);
 }
 // * ===================================
 viewIndicatorLi.forEach((element,index)=>{
   let indicatorLink = element.querySelector('button');
   indicatorLink.addEventListener('click', (e)=>{
     e.preventDefault();
-    slideIndex = index;
-    currentSlide(slideIndex);
+    countCheck = index;
+    currentSlide(countCheck);
   })
 })
 
@@ -166,13 +161,13 @@ viewIndicatorLi.forEach((element,index)=>{
 // * ===================================
 // window 창이 실행되는 순간 바로 실행하게 만들어라
 window.onload = function(){
-  autoSlides(slideIndex);
-  // slideIndex는 초기값이 0으로 설정하게 해야한다.
+  autoSlides(countCheck);
+  // countCheck는 초기값이 0으로 설정하게 해야한다.
   // 그 후 반복수행으로 계속 수행하게 한다.
   let setTimed = 3000;
   setInterval(function(){
-    slideIndex++;
-    autoSlides(slideIndex);
+    countCheck++;
+    autoSlides(countCheck);
   }, setTimed);
 }
 // * ===================================
@@ -187,3 +182,39 @@ function hasFadeFn(){
   }
 }
 hasFadeFn();
+
+
+// 비디오 ....
+// 1번이 1첫번째로 오게되면, 5번째는 1번의 왼쪽으로 오고, 
+// 다음버튼을 누르게되면, 1번은 2번자리에 오며, 5번째가 1번자리에 오게 해야함.
+// 일단 다음 video 가 오게 만들어보자.
+
+console.log(videoLen);
+const siblingsFn = (select, idx = countCheck)=>{
+  const otherArr = [];
+  select.forEach((data,index)=>{
+    if(idx !== index){
+      otherArr.push(data);
+    }
+  })
+};
+const countIndicatorFn = ()=>{
+  videoLi[countCheck].classList.add(ACTIVE_ON);
+  siblingsFn(videoLi,countCheck).forEach((element)=>{
+    element.classList.remove(ACTIVE_ON);
+  });
+}
+const indicatorActiveFn = ()=>{
+  videoIndicatorLi[afterCheck].classList.remove(ACTIVE_ON);
+  console.log(countCheck);
+  videoIndicatorLi[countCheck].classList.add(ACTIVE_ON);
+}
+videoIndicatorLi.forEach((element,index)=>{
+  element.querySelector('a').addEventListener('click',(e)=>{
+    e.preventDefault();
+    countCheck = index;
+    console.log(countCheck);
+    indicatorActiveFn();
+    countIndicatorFn();
+  })
+})
