@@ -10,6 +10,8 @@ let gnbLi = gnbUl.children;
 let gnbLiArr = Array.prototype.slice.call(gnbLi);
 const subArea = naviArea.querySelectorAll('.sub_area');
 
+
+
 const viewBox = document.querySelector('#viewBox');
 const viewArea = viewBox.querySelector('.view_area');
 const viewUl = viewArea.querySelector('ul');
@@ -18,6 +20,31 @@ const viewLi = viewUl.querySelectorAll('.viewBox_img');
 const viewIndicator = viewBox.querySelector('.view_indicator');
 const viewIndicatorUl = viewIndicator.querySelector('ul');
 const viewIndicatorLi = viewIndicatorUl.querySelectorAll('li');
+
+
+
+const videoBox = document.querySelector('#videoBox');
+const videoArea = videoBox.querySelector('.video_list');
+
+const videoBtn = videoArea.querySelector('.video_btn');
+const videoNext = videoBtn.querySelector('.next_btn');
+const videoPrev = videoBtn.querySelector('.prev_btn');
+
+const videoUl = videoArea.querySelector('ul');
+const videoLi = videoUl.querySelectorAll('li');
+
+console.log(videoLi);
+// 비디오 ....
+// 1번이 1첫번째로 오게되면, 5번째는 1번의 왼쪽으로 오고, 
+// 다음버튼을 누르게되면, 1번은 2번자리에 오며, 5번째가 1번자리에 오게 해야함.
+
+videoNext.addEventListener('click',(e)=>{
+  e.preventDefault();
+
+})
+
+
+
 
 const VIEW_ON = 'on';
 const ACTIVE_ON = 'active';
@@ -149,3 +176,14 @@ window.onload = function(){
   }, setTimed);
 }
 // * ===================================
+
+// has-fade를 주기 위해 . 사용하는 조건문. 
+// 1023 이하 적용 . 1024 이후 적용 안함
+function hasFadeFn(){
+  if(matchMedia("screen and (max-width: 1023px)").matches){
+    naviArea.classList.add('has-fade');
+  }else if(matchMedia("screen and (min-width: 1024px)").matches){
+    naviArea.classList.remove('has-fade');
+  }
+}
+hasFadeFn();

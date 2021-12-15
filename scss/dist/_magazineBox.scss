@@ -277,6 +277,66 @@
     }
   }
 }
+@include laptop{
+  .magazine_list {
+    @include unit(width,620);
+    ul {
+      li {
+        float: left;
+        @include unit(width,300);
+        @include unit(height,340);
+        &:nth-child(3) {
+          @include unit(margin-right,20);
+        }
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+        &:nth-child(-n + 2) {
+          margin-top: 0px;
+        }
+        &:nth-last-child(-n + 3) {
+          @include unit(margin-top,20);
+        }
+        &:first-child {
+          @include unit(width,300);
+          @include unit(height,340);
+        }
+        .magazine_img {
+          width: 100%;
+          @include unit(height,250);
+        }
+        &:first-child .magazine_img {
+          width: 100%;
+          @include unit(height,250);
+        }
+        .magazine_txt {
+          @include unit(height,90);
+          p {
+            @include unit(font-size,14);
+          }  
+          span {
+            @include unit(font-size,16);
+          }
+        }
+        &:first-child .magazine_txt p {
+          margin-bottom: 0;
+          @include unit(font-size,14);
+        }
+        &:first-child .magazine_txt span {
+          @include unit(font-size,16);
+        }
+        &:first-child .magazine_txt {
+          width: 100%;
+          @include unit(height,90);
+          @include padding(5,10,5,10);
+        }
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+}
 @include pcfull{
   #magazineBox {
     width: 2560px;

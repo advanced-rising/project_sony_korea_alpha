@@ -175,7 +175,7 @@
       left: 0;
       right: 0;
       z-index: 1;
-      &.action {
+      &.active {
         display: block;
         z-index: 10;
         @include unit(width,320);
@@ -203,7 +203,7 @@
         &:last-child {
           margin-right: 0;
         }
-        &.action {
+        &.active {
           @include unit(width,80);
           @include unit(border-radius,50);
           background-color: $color-deep-gray;
@@ -227,7 +227,7 @@
       left: 0;
       right: 0;
       z-index: 1;
-      &.action {
+      &.active {
         display: block;
         z-index: 10;
         @include unit(width,320);
@@ -255,7 +255,7 @@
         &:last-child {
           margin-right: 0;
         }
-        &.action {
+        &.active {
           @include unit(width,80);
           @include unit(border-radius,50);
           background-color: $color-deep-gray;
@@ -278,7 +278,7 @@
       left: 0;
       right: 0;
       z-index: 1;
-      &.action {
+      &.active {
         display: block;
         z-index: 10;
         @include unit(width,760);
@@ -306,7 +306,7 @@
         &:last-child {
           margin-right: 0;
         }
-        &.action {
+        &.active {
           @include unit(width,100);
           @include unit(border-radius,50);
           background-color: $color-deep-gray;
@@ -329,7 +329,7 @@
       left: 0;
       right: 0;
       z-index: 1;
-      &.action {
+      &.active {
         display: block;
         z-index: 10;
       }
@@ -355,7 +355,7 @@
         &:last-child {
           margin-right: 0;
         }
-        &.action {
+        &.active {
           @include unit(width,100);
           @include unit(border-radius,50);
           background-color: $color-deep-gray;

@@ -344,10 +344,6 @@
       }
     } 
     @at-root .navi_area {
-      &.on {
-        display: block;
-      }
-      display: none;
       position: fixed;
       z-index: -1;
       top: 0;
@@ -529,10 +525,6 @@
       }
     } 
     @at-root .navi_area {
-      &.on {
-        display: block;
-      }
-      display: none;
       position: fixed;
       z-index: -1;
       top: 0;
@@ -714,13 +706,6 @@
       }
     } 
     @at-root .navi_area {
-      // &.on {
-      //   display: block;
-      //   top: 0;
-      //   opacity: 1;
-      //   transition: all 100ms ease-in-out;
-      // }
-      // display: none;
       position: fixed;
       z-index: -1;
       top: 0;
