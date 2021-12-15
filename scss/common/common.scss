@@ -49,7 +49,6 @@
 }
 .content_title > h3 {
   position: relative;
-  display: inline-block;
   width: 100%;
   height: auto;
   @include unit(padding-left,60);
@@ -105,3 +104,20 @@
   border-radius: 50%;
   background-color: $color-orange;
 }
+@include mobile-v {
+  .content_title > h3 {
+    @include unit(padding-left,30);
+    padding-right: 0;
+    @include unit(font-size,36);
+  }
+  .content_title p {
+    padding-left: 0;
+  }
+  .content_icon::before {
+    left: 0;
+  }
+  .header_dot {
+    @include unit(font-size,36);
+  }
+}
+@include mobile-h {}

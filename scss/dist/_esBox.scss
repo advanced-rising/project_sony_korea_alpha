@@ -107,7 +107,6 @@
       float: left;
       @include unit(width,320);
       margin: auto;
-      @include unit(margin-left,20);
       h3 {
         width: 100%;
         margin: auto;
@@ -118,7 +117,8 @@
         height: auto;
         margin: auto;
         ul {
-          width: 400%;
+          @include unit(width,1020);
+          @include unit(margin-bottom,20);
           li {
             @include unit(width,240);
             margin-top: 0;
@@ -146,12 +146,11 @@
 }
 @include mobile-h{
   .es_area {
-    @include unit(width,320);
+    width: 90%;
     .es_content {
       float: left;
-      @include unit(width,320);
+      width: 100%;
       margin: auto;
-      @include unit(margin-left,20);
       h3 {
         width: 100%;
         margin: auto;
@@ -162,7 +161,8 @@
         height: auto;
         margin: auto;
         ul {
-          width: 400%;
+          @include unit(width,1020);
+          @include unit(margin-bottom,20);
           li {
             @include unit(width,240);
             margin-top: 0;
@@ -190,12 +190,11 @@
 }
 @include tablet{
   .es_area {
-    @include unit(width,768);
+    width: 90%;
   }
   .es_content {
-    @include unit(width,768);
+    width: 100%;
     margin: auto;
-    @include unit(margin-left,20);
     h3 {
       margin: auto;
     }
@@ -205,7 +204,8 @@
       height: auto;
       margin: auto;
       ul {
-        width: 200%;
+        @include unit(width,1020);
+        @include unit(margin-bottom,20);
         li {
           float: left;
           @include unit(width,240);
@@ -235,7 +235,8 @@
       height: auto;
       margin: auto;
       ul {
-        width: 200%;
+        @include unit(width,1020);
+        @include unit(margin-bottom,20);
         li {
           float: left;
           @include unit(width,240);

@@ -1,7 +1,7 @@
 #videoBox {
   @include size();
   margin: auto;
-  @include padding(40,0,40,0);
+  @include padding(40,0,80,0);
   background-color: $color-light-blue;
   @at-root .video_list {
     position: relative;
@@ -9,6 +9,7 @@
     @include unit(height,520);
     margin: auto;
     @include unit(margin-top,40);
+    text-align: center;
     .video_btn {
       z-index: 110;
       position: absolute;
@@ -77,8 +78,9 @@
       }
     }
     ul {
+      display: inline-block;
       position: relative;
-      width: auto;
+      width: 100%;
       height: auto;
       .video {
         position: absolute;
@@ -159,39 +161,91 @@
 }
 .video iframe {display: none;}
 .video_play_btn:hover + iframe { display: block;}
-.video_indicator { display: none;}
+.video_indicator {
+  display: none;
+  text-align: center;
+  ul {
+    display: inline-block;
+  }
+}
+
 @include mobile-v{
   .video_list {
     @include unit(width,320);
-    @include unit(height,320);
+    @include unit(height,200);
     .video_btn {
       display: none;
     }
-    .video {
-      display: none;
-      @include unit(width,320);
-      @include unit(height,200);
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1;
-      &.active {
-        display: block;
-        z-index: 10;
+    ul {
+      .video {
+        display: none;
         @include unit(width,320);
-      @include unit(height,200);
+        @include unit(height,200);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        &.active {
+          display: block;
+          z-index: 10;
+        }
+      }
+      .video01 {
+        display: none;
+        @include unit(width,320);
+        @include unit(height,200);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .video02 {
+        display: none;
+        @include unit(width,320);
+        @include unit(height,200);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .video03 {
+        display: none;
+        @include unit(width,320);
+        @include unit(height,200);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .video04 {
+        display: none;
+        @include unit(width,320);
+        @include unit(height,200);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .video05 {
+        display: none;
+        @include unit(width,320);
+        @include unit(height,200);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
       }
     }
   }
   .video_indicator {
     display: block;
-    @include unit(width,360);
+    width: 100%;
     @include unit(height,40);
     margin: auto;
     @include unit(margin-top,40);
     @include padding(0,20,0,20);
     ul {
-      width: 100%;
+      width: auto;
       height: 100%;
       li {
         float: left;
@@ -217,36 +271,82 @@
 }
 @include mobile-h{
   .video_list {
-    @include unit(width,320);
-    @include unit(height,320);
+    @include unit(width,420);
+    @include unit(height,300);
     .video_btn {
       display: none;
     }
-    .video {
-      display: none;
-      @include unit(width,320);
-      @include unit(height,200);
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1;
-      &.active {
-        display: block;
-        z-index: 10;
-        @include unit(width,320);
-        @include unit(height,200);
+    ul {
+      .video {
+        display: none;
+        @include unit(width,420);
+        @include unit(height,300);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        &.active {
+          display: block;
+          z-index: 10;
+        }
+      }
+      .video01 {
+        display: none;
+        @include unit(width,420);
+        @include unit(height,300);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .video02 {
+        display: none;
+        @include unit(width,420);
+        @include unit(height,300);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .video03 {
+        display: none;
+        @include unit(width,420);
+        @include unit(height,300);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .video04 {
+        display: none;
+        @include unit(width,420);
+        @include unit(height,300);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .video05 {
+        display: none;
+        @include unit(width,420);
+        @include unit(height,300);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
       }
     }
+    
   }
   .video_indicator {
     display: block;
-    @include unit(width,360);
+    width: 100%;
     @include unit(height,40);
     margin: auto;
     @include unit(margin-top,40);
     @include padding(0,20,0,20);
     ul {
-      width: 100%;
+      width: auto;
       height: 100%;
       li {
         float: left;
@@ -272,35 +372,82 @@
 }
 @include tablet{
   .video_list {
-    @include unit(width,700);
+    @include unit(width,760);
+    @include unit(height,520);
     .video_btn {
       display: none;
     }
-    .video {
-      display: none;
-      @include unit(width,760);
-      @include unit(height,520);
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1;
-      &.active {
-        display: block;
-        z-index: 10;
+    ul {
+      .video {
+        display: none;
         @include unit(width,760);
-        @include unit(width,520);
+        @include unit(height,520);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        &.active {
+          display: block;
+          z-index: 10;
+        }
+      }
+      .video01 {
+        display: none;
+        @include unit(width,760);
+        @include unit(height,520);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .video02 {
+        display: none;
+        @include unit(width,760);
+        @include unit(height,520);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .video03 {
+        display: none;
+        @include unit(width,760);
+        @include unit(height,520);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .video04 {
+        display: none;
+        @include unit(width,760);
+        @include unit(height,520);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .video05 {
+        display: none;
+        @include unit(width,760);
+        @include unit(height,520);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
       }
     }
+    
   }
   .video_indicator {
     display: block;
-    @include unit(width,420);
+    width: 100%;
     @include unit(height,50);
     margin: auto;
     @include unit(margin-top,40);
     @include padding(0,20,0,20);
     ul {
-      width: 100%;
+      width: auto;
       height: 100%;
       li {
         float: left;
@@ -330,29 +477,77 @@
     .video_btn {
       display: none;
     }
-    .video {
-      display: none;
-      @include unit(width,760);
-      @include unit(height,520);
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1;
-      &.active {
-        display: block;
-        z-index: 10;
+    ul {
+      .video {
+        display: none;
+        @include unit(width,760);
+        @include unit(height,520);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        &.active {
+          display: block;
+          z-index: 10;
+        }
+      }
+      .video01 {
+        display: none;
+        @include unit(width,760);
+        @include unit(height,520);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .video02 {
+        display: none;
+        @include unit(width,760);
+        @include unit(height,520);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .video03 {
+        display: none;
+        @include unit(width,760);
+        @include unit(height,520);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .video04 {
+        display: none;
+        @include unit(width,760);
+        @include unit(height,520);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .video05 {
+        display: none;
+        @include unit(width,760);
+        @include unit(height,520);
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
       }
     }
+    
   }
   .video_indicator {
     display: block;
-    @include unit(width,420);
+    width: 100%;
     @include unit(height,50);
     margin: auto;
     @include unit(margin-top,40);
     @include padding(0,20,0,20);
     ul {
-      width: 100%;
+      width: auto;
       height: 100%;
       li {
         float: left;

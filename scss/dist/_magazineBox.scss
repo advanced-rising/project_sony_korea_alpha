@@ -100,6 +100,7 @@
         float: left;
         @include unit(width,260);
         @include unit(height,380);
+        @include unit(margin-top,20);
         &:nth-child(3) {
           @include unit(margin-right,20);
         }
@@ -107,10 +108,10 @@
           @include unit(margin-right,20);
         }
         &:nth-child(-n + 2) {
-          margin-top: auto;
+          @include unit(margin-top,20);
         }
         &:last-child(-n + 3) {
-          margin-top: auto;
+          @include unit(margin-top,20);
         }
         &:first-child {
           @include unit(width,260);
@@ -144,9 +145,6 @@
           width: 100%;
           @include unit(height,100);
           @include padding(5,10,5,10);
-        }
-        &:last-child {
-          display: none;
         }
       }
     }
@@ -165,6 +163,7 @@
         float: left;
         @include unit(width,260);
         @include unit(height,380);
+        @include unit(margin-top,20);
         &:nth-child(3) {
           @include unit(margin-right,20);
         }
@@ -172,10 +171,10 @@
           @include unit(margin-right,20);
         }
         &:nth-child(-n + 2) {
-          margin-top: auto;
+          @include unit(margin-top,20);
         }
         &:last-child(-n + 3) {
-          margin-top: auto;
+          @include unit(margin-top,20);
         }
         &:first-child {
           @include unit(width,260);
@@ -209,9 +208,6 @@
           width: 100%;
           @include unit(height,100);
           @include padding(5,10,5,10);
-        }
-        &:last-child {
-          display: none;
         }
       }
     }
