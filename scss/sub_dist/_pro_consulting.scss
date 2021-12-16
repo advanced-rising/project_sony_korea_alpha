@@ -1,7 +1,7 @@
 .consulting {
   @include img("proconsulting/bg_pro_sips.jpg");
 }
-.consultingtServiceBox {
+.consultingServiceBox {
   @include size();
   @at-root .consultingService_info {
     @include size();
