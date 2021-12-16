@@ -20,7 +20,7 @@ function makeScriptFn(urlDataJs){
 fetch(headBoxCode)
 .then((response)=> response.text())
 .then((data)=> headBox.innerHTML = data)
-.then(()=>makeScriptFn("../js/src/common.js"))
+.then(()=>makeScriptFn("../dist/src/common.js"))
 
 // footer
 fetch(footBoxCode)

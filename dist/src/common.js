@@ -3,12 +3,22 @@ const navigation = headBox.querySelector('#navigation');
 const gnbBtn = navigation.querySelector('.gnb_btn');
 const gnbClose = navigation.querySelector('.gnb_close');
 
+const openBtn = document.querySelector('.search_open_btn');
+const closeBtn = document.querySelector('.search_close_btn')
+const searchModal = document.querySelector('.search_modal');
+
 const naviArea = navigation.querySelector('.navi_area');
 const fadeElement = document.querySelectorAll('.has-fade');
 const gnbUl = naviArea.querySelector('ul');
 const gnbLi = gnbUl.children;
 const gnbLiArr = Array.prototype.slice.call(gnbLi);
 const subArea = naviArea.querySelectorAll('.sub_area');
+const subMenu = naviArea.querySelectorAll('.sub_menu');
+
+const familySelector = document.querySelector('.family_site');
+const familyBtn = familySelector.querySelector('button');
+const subFamily = document.querySelector('.sub_family');
+
 
 
 let countCheck = 0;
@@ -47,11 +57,9 @@ gnbBtn.addEventListener('click', (e) => {
 
   if(!isActive){
     gnbBtn.classList.add(ACTIVE_ON);
-    // naviArea.classList.add(VIEW_ON);
     fadeInFn(fadeElement);
   }else{
     gnbBtn.classList.remove(ACTIVE_ON);
-    // naviArea.classList.remove(VIEW_ON);
     resetOnFn(subArea);
     fadeOutFn(fadeElement);
   }
@@ -72,8 +80,10 @@ for(i = 0; i < subArea.length ; i++){
       e.preventDefault();
       for(j = 0; j< subArea.length; j++){
         subArea[j].classList.remove(VIEW_ON);
+        subMenu[j].removeAttribute('style');
       };
       subArea[k].classList.add(VIEW_ON);
+      downSlide(subMenu,k);
     });
   })(i);
 };
@@ -102,7 +112,39 @@ function hasFadeFn(){
 }
 hasFadeFn();
 
+// unb - search button
+openBtn.addEventListener('click', function(event){
+  event.preventDefault();
+  searchModal.style.display = 'block';
 
+  window.onscroll = ()=>{
+    window.scrollTo(0, 0);
+  };
+});
+closeBtn.addEventListener('click', function(event){
+  event.preventDefault();
+  searchModal.style.display = 'none';
+  window.onscroll = ()=>{
+    window.scrollTo()
+  };
+});
 
+// footBox - family button
+familyBtn.addEventListener('click',function(event){
+  event.preventDefault();
 
+  const isActive = subFamily.classList.contains(ACTIVE_ON);
 
+  if(!isActive){
+    subFamily.classList.add(ACTIVE_ON);
+  }else{
+    subFamily.classList.remove(ACTIVE_ON);
+  }
+});
+
+function downSlide(element,i){
+  element[i].style.transform = 'translateY(0%)';
+}
+function upSlide(element,i){
+  element[i].style.transform = 'translateY(-100%)';
+}

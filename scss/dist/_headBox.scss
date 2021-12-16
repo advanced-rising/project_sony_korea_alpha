@@ -122,7 +122,7 @@
       > ul {
         display: inline-block;
         width: auto;
-        height: auto;
+        height: 100%;
         > li {
           position: relative;
           float: left;
@@ -144,32 +144,41 @@
               color: $color-orange;
             }
           }
-          
-          @at-root .sub_menu {
+          @at-root .sub_area {
+            &.on {
+              display: block;
+            }
             display: none;
-            position: absolute;
-            @include unit(top,50);
-            @include unit(left,-20);
-            li {
-              width: auto;
-              @include unit(min-width,140);
-              height: auto;
-              text-align: start;
-              white-space: nowrap;
-              @include padding(5,20,5,20);
-              color: $color-white;
-              background-color: $color-light-black;
-              a {
-                @include display-block();
-                text-transform: uppercase;
-              }
-              a:hover {
-                font-weight: 700;
-                color: $color-orange;
+            width: 100%;
+            height: auto;
+            @at-root .sub_menu {
+              position: absolute;
+              top: 60px;
+              @include unit(left,-20);
+              transform: translateY(-100%);
+              transition: transform 100ms linear;
+              li {
+                width: auto;
+                @include unit(min-width,140);
+                height: auto;
+                text-align: start;
+                white-space: nowrap;
+                @include padding(5,20,5,20);
+                color: $color-white;
+                background-color: $color-light-black;
+                a {
+                  @include display-block();
+                  text-transform: uppercase;
+                }
+                a:hover {
+                  font-weight: 700;
+                  color: $color-orange;
+                }
               }
             }
           }
-          &:hover .sub_menu { display: block;}
+          
+          // &:hover .sub_menu { display: block;}
         }
         .last_gnbMenu {margin-right: 0;}
       }
@@ -200,7 +209,33 @@
             right: 0;
             @include unit(width,40);
             @include unit(height,40);
-            @include img("cross_black.svg",$p:center,$s:80%);
+            // @include img("cross_black.svg",$p:center,$s:80%);
+            &::before {
+              content: "";
+              position: absolute;
+              @include unit(top,25);
+              @include unit(right,5);
+              display: block;
+              @include border($w:3,$c:$color-black);
+              @include unit(width,40);
+              height: auto;
+              @include unit(border-radius,5);
+              background-color: $color-black;
+              transform: rotate(135deg);
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              @include unit(top,25);
+              @include unit(right,5);
+              display: block;
+              @include border($w:3,$c:$color-black);
+              @include unit(width,40);
+              height: auto;
+              @include unit(border-radius,5);
+              background-color: $color-black;
+              transform: rotate(45deg);
+            }
           }
         }
         @at-root #search_icon {
@@ -250,6 +285,8 @@
         z-index: -1;
         width: 100%;
         height: 100%;
+        overflow: hidden;
+        touch-action: none;
         background-color: $color-light-black;
       }
     }

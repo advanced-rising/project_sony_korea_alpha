@@ -72,8 +72,19 @@ window.onload = function(){
   // countCheck는 초기값이 0으로 설정하게 해야한다.
   // 그 후 반복수행으로 계속 수행하게 한다.
   let setTimed = 3000;
-  setInterval(function(){
-    countCheck++;
-    autoSlides(countCheck);
+  const slideInterval = setInterval(function(){
+      countCheck++;
+      autoSlides(countCheck);
+      opacityFn();
   }, setTimed);
+}
+
+function opacityFn(){
+  viewLi[afterCheck].style.opacity = 0;
+  setTimeout(()=>{
+    viewLi[afterCheck].removeAttribute('style');
+    viewLi[afterCheck].classList.remove(ACTIVE_ON);
+    viewLi[countCheck].classList.add(ACTIVE_ON);
+    afterCheck = countCheck
+  },100);
 }

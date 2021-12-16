@@ -155,7 +155,7 @@ h1 a {
 .gnb > ul {
   display: inline-block;
   width: auto;
-  height: auto;
+  height: 100%;
 }
 .gnb > ul > li {
   position: relative;
@@ -184,13 +184,21 @@ h1 a {
   font-weight: 700;
   color: #e75300;
 }
-.sub_menu {
+.sub_area {
   display: none;
+  width: 100%;
+  height: auto;
+}
+.sub_area.on {
+  display: block;
+}
+.sub_menu {
   position: absolute;
-  top: 50px;
-  top: 3.125rem;
+  top: 60px;
   left: -20px;
   left: -1.25rem;
+  transform: translateY(-100%);
+  transition: transform 100ms linear;
 }
 .sub_menu li {
   width: auto;
@@ -215,9 +223,6 @@ h1 a {
   color: #e75300;
 }
 
-.gnb > ul > li:hover .sub_menu {
-  display: block;
-}
 .gnb > ul .last_gnbMenu {
   margin-right: 0;
 }
@@ -258,10 +263,42 @@ h1 a {
   width: 2.5rem;
   height: 40px;
   height: 2.5rem;
-  background-image: url("../../img/cross_black.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 80%;
+}
+.search_modal .search_engin .search_topBox .search_close_btn::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  top: 1.5625rem;
+  right: 5px;
+  right: 0.3125rem;
+  display: block;
+  border: 3px solid #03010f;
+  border: 0.1875rem solid #03010f;
+  width: 40px;
+  width: 2.5rem;
+  height: auto;
+  border-radius: 5px;
+  border-radius: 0.3125rem;
+  background-color: #03010f;
+  transform: rotate(135deg);
+}
+.search_modal .search_engin .search_topBox .search_close_btn::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  top: 1.5625rem;
+  right: 5px;
+  right: 0.3125rem;
+  display: block;
+  border: 3px solid #03010f;
+  border: 0.1875rem solid #03010f;
+  width: 40px;
+  width: 2.5rem;
+  height: auto;
+  border-radius: 5px;
+  border-radius: 0.3125rem;
+  background-color: #03010f;
+  transform: rotate(45deg);
 }
 #search_icon {
   position: absolute;
@@ -322,6 +359,8 @@ h1 a {
   z-index: -1;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  touch-action: none;
   background-color: #03010fdd;
 }
 
@@ -965,7 +1004,7 @@ h1 a {
 }
 @media all and (min-width: 2560px) {
   .head_wrap {
-    width: 2560px;
+    width: 100%;
   }
 }
 @keyframes fade-in {
