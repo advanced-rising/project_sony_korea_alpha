@@ -235,7 +235,7 @@ let len = domesticData.length;
 let permissionCode = `<div class="pro_img"></div><div class="pro_txt"><span></span></div><div class="pro_profile"><div class="profile_img"><a href="#"><span></span></a></div><div class="img_txt"><a href="#"><p></p></a></div></div>`
 
 proBox.append(makeUl);
-for(; i>len;i++){
+for(; i<len;i++){
   let makeLi = document.createElement('li');
   makeLi.innerHTML = permissionCode;
   makeUl.append(makeLi);
