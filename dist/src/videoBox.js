@@ -1,4 +1,21 @@
 // videoBox.js
+const videoData = [
+  {
+    "imgUrl" : "../../img/main/video/97_xomc.jpg",
+  },
+  {
+    "imgUrl" : "../../img/main/video/97_e08u.jpg",
+  },
+  {
+    "imgUrl" : "../../img/main/video/96_g2ry.jpg",
+  },
+  {
+    "imgUrl" : "../../img/main/video/95_g2ry.jpg",
+  },
+  {
+    "imgUrl" : "../../img/main/video/93_e77u.jpg",
+  },
+]
 const videoBox = document.querySelector('#videoBox');
 const videoArea = videoBox.querySelector('.video_list');
 const videoBtn = videoArea.querySelector('.video_btn');
@@ -10,6 +27,7 @@ const videoIndicator = videoBox.querySelector('.video_indicator');
 const videoIndicatorUl = videoIndicator.querySelector('ul');
 const videoIndicatorLi = videoIndicatorUl.querySelectorAll('li');
 
+const videoLiCvt = [...videoLi];
 
 let videoLen = videoLi.length;
 
@@ -41,3 +59,16 @@ for(i=0;i<videoLen;i++){
 // 다음버튼을 누르게되면, 1번은 2번자리에 오며, 5번째가 1번자리에 오게 해야함.
 // 일단 다음 video 가 오게 만들어보자.
 // 아마도 스타일을 줘서 만드는것이 편할거라 생각된다.
+
+
+
+
+videoNext.addEventListener('click',(e)=>{
+  e.preventDefault();
+  console.log('확인');
+  
+  videoLiCvt[0].style.left = 300+'px';
+  videoLiCvt[0].style.zIndex = 90;
+  videoLiCvt[0].style.transform = 'scale(0.9)';
+
+})

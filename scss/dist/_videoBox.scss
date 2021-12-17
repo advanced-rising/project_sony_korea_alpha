@@ -84,50 +84,44 @@
       height: auto;
       .video {
         position: absolute;
+        top: 0;
+        @include unit(width,760);
+        @include unit(height,520);
         margin: auto;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center; 
       }
-      .video01 {
-        top: 0;
-        left: 0;
-        right: 0;
+      .video00 {
+        @include unit(left,220);
         z-index: 100;
-        @include unit(width,760);
-        @include unit(height,520);
+        transform: scale(1);
         background-image: url("../../img/main/video/97_xomc.jpg")
       }
-      .video02 {
-        @include unit(top,20);
-        @include unit(right,180);
+      .video01 {
+        // display: none;
+        @include unit(left,300);
         z-index: 90;
-        @include unit(width,720);
-        @include unit(height,480);
+        transform: scale(0.9);
         background-image: url("../../img/main/video/97_e08u.jpg")
       }
-      .video03 {
-        @include unit(top,40);
-        @include unit(right,140);
+      .video02 {
+        // display: none;
+        @include unit(left,380);
         z-index: 80;
-        @include unit(width,680);
-        @include unit(height,440);
+        transform: scale(0.8);
         background-image: url("../../img/main/video/96_g2ry.jpg")
       }
-      .video04 {
-        @include unit(top,40);
-        @include unit(left,140);
+      .video03 {
+        @include unit(left,60);
         z-index: 80;
-        @include unit(width,680);
-        @include unit(height,440);
+        transform: scale(0.8);
         background-image: url("../../img/main/video/95_g2ry.jpg")
       }
-      .video05 {
-        @include unit(top,20);
-        @include unit(left,180);
+      .video04 {
+        @include unit(left,140);
         z-index: 90;
-        @include unit(width,720);
-        @include unit(height,480);
+        transform: scale(0.9);
         background-image: url("../../img/main/video/93_e77u.jpg")
       }
       .video_play_btn {

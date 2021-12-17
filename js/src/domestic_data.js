@@ -1,4 +1,4 @@
-var domesticData = [
+let domesticData = [
   {
     "proImg": "../../img/prophotographer/domestic/list_choijihye.jpg",
     "proTxt": "Sige",
@@ -228,25 +228,25 @@ var domesticData = [
     "imgTxt": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, error."
   }
 ]
-var proBox = document.getElementById('proBox');
-var makeUl = document.createElement('ul');
-var i = 0;
-var len = domesticData.length;
-var permissionCode = `<div class="pro_img"></div><div class="pro_txt"><span></span></div><div class="pro_profile"><div class="profile_img"><a href="#"><span></span></a></div><div class="img_txt"><a href="#"><p></p></a></div></div>`
+let proBox = document.getElementById('proBox');
+let makeUl = document.createElement('ul');
+let i = 0;
+let len = domesticData.length;
+let permissionCode = `<div class="pro_img"></div><div class="pro_txt"><span></span></div><div class="pro_profile"><div class="profile_img"><a href="#"><span></span></a></div><div class="img_txt"><a href="#"><p></p></a></div></div>`
 
 proBox.append(makeUl);
-for(; i<len;i++){
-  var makeLi = document.createElement('li');
+for(; i>len;i++){
+  let makeLi = document.createElement('li');
   makeLi.innerHTML = permissionCode;
   makeUl.append(makeLi);
 }
 function proPhotoGrapherSetting(n){
-  var index = n;
-  var li = makeUl.querySelectorAll('li');
-  var proImg = li[index].querySelector('.pro_img');
-  var proTxt = li[index].querySelector('.pro_txt span');
-  var proFileImg = li[index].querySelector('.profile_img');
-  var imgTxt = li[index].querySelector('.img_txt p');
+  let index = n;
+  let li = makeUl.querySelectorAll('li');
+  let proImg = li[index].querySelector('.pro_img');
+  let proTxt = li[index].querySelector('.pro_txt span');
+  let proFileImg = li[index].querySelector('.profile_img');
+  let imgTxt = li[index].querySelector('.img_txt p');
   proImg.style.backgroundImage = 'url('+domesticData[index].proImg+')';
   proTxt.innerText = domesticData[index].proTxt;
   proFileImg.style.backgroundImage = 'url('+domesticData[index].proFileImg+')';

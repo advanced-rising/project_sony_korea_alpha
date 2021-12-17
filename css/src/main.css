@@ -2331,68 +2331,49 @@ h1 a {
 }
 .video_list ul .video {
   position: absolute;
+  top: 0;
+  width: 760px;
+  width: 47.5rem;
+  height: 520px;
+  height: 32.5rem;
   margin: auto;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-.video_list ul .video01 {
-  top: 0;
-  left: 0;
-  right: 0;
+.video_list ul .video00 {
+  left: 220px;
+  left: 13.75rem;
   z-index: 100;
-  width: 760px;
-  width: 47.5rem;
-  height: 520px;
-  height: 32.5rem;
+  transform: scale(1);
   background-image: url("../../img/main/video/97_xomc.jpg");
 }
-.video_list ul .video02 {
-  top: 20px;
-  top: 1.25rem;
-  right: 180px;
-  right: 11.25rem;
+.video_list ul .video01 {
+  left: 300px;
+  left: 18.75rem;
   z-index: 90;
-  width: 720px;
-  width: 45rem;
-  height: 480px;
-  height: 30rem;
+  transform: scale(0.9);
   background-image: url("../../img/main/video/97_e08u.jpg");
 }
-.video_list ul .video03 {
-  top: 40px;
-  top: 2.5rem;
-  right: 140px;
-  right: 8.75rem;
+.video_list ul .video02 {
+  left: 380px;
+  left: 23.75rem;
   z-index: 80;
-  width: 680px;
-  width: 42.5rem;
-  height: 440px;
-  height: 27.5rem;
+  transform: scale(0.8);
   background-image: url("../../img/main/video/96_g2ry.jpg");
 }
-.video_list ul .video04 {
-  top: 40px;
-  top: 2.5rem;
-  left: 140px;
-  left: 8.75rem;
+.video_list ul .video03 {
+  left: 60px;
+  left: 3.75rem;
   z-index: 80;
-  width: 680px;
-  width: 42.5rem;
-  height: 440px;
-  height: 27.5rem;
+  transform: scale(0.8);
   background-image: url("../../img/main/video/95_g2ry.jpg");
 }
-.video_list ul .video05 {
-  top: 20px;
-  top: 1.25rem;
-  left: 180px;
-  left: 11.25rem;
+.video_list ul .video04 {
+  left: 140px;
+  left: 8.75rem;
   z-index: 90;
-  width: 720px;
-  width: 45rem;
-  height: 480px;
-  height: 30rem;
+  transform: scale(0.9);
   background-image: url("../../img/main/video/93_e77u.jpg");
 }
 .video_list ul .video_play_btn {
