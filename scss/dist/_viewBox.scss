@@ -18,12 +18,6 @@
         left: 0;
         width: 100%;
         height: 100%;
-        transition: all 100ms ease-in-out;
-        &.active {
-          display: block;
-          z-index: 10;
-          transition: all 100ms ease-in-out;
-        }
         &:nth-child(1) {
           @include img("main/viewBox/img_main72_sjcn.jpg");
         }
@@ -315,7 +309,7 @@
   from {
     opacity: .8;
   }
-  5% {
+  80% {
     opacity: .9;
   }
   to {
@@ -323,5 +317,5 @@
   }
 }
 .view-fade {
-  animation: view-fade 500ms ease-in-out;
+  animation: view-fade 500ms linear;
 }

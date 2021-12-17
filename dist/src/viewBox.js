@@ -42,12 +42,18 @@ function autoSlides(n) {
   }
   // n이 viewLen 과 같지 않다면, for문을 실행하게 하라.
   for(i = 0; i < viewSlide.length; i++) {
-    viewSlide[i].classList.remove(ACTIVE_ON);
+    viewSlide[i].style.display = 'none';
+    viewSlide[i].classList.remove("view-fade");
+    viewSlide[i].style.zIndex = -1;
   }
   for(i = 0; i < indicatorBtn.length; i++) {
     indicatorBtn[i].classList.remove(ACTIVE_ON);
   }
-  viewSlide[n].classList.add(ACTIVE_ON);
+  viewSlide[n].style.display = 'block';
+  viewSlide[n].classList.add('view-fade');
+  viewSlide[n].style.zIndex = 10;
+
+  
   indicatorBtn[n].classList.add(ACTIVE_ON);
 }
 
@@ -71,11 +77,10 @@ window.onload = function(){
   autoSlides(countCheck);
   // countCheck는 초기값이 0으로 설정하게 해야한다.
   // 그 후 반복수행으로 계속 수행하게 한다.
-  let setTimed = 3000;
+  let setTimed = 5000;
   const slideInterval = setInterval(function(){
       countCheck++;
       autoSlides(countCheck);
-      opacityFn();
   }, setTimed);
 }
 
