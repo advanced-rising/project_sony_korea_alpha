@@ -33,31 +33,37 @@
         @include unit(max-width,1280);
         height: auto;
         margin: auto;
-        div {
+        button {
           position: absolute;
           top: 0;
           @include unit(width,80);
           @include unit(height,80);
           background-color: $color-light-gray;
+          &.prevBtn { left: 0; }
+          &.nextBtn { right: 0; }
         }
-        .prevBtn { left: 0; }
-        .nextBtn { right: 0; }
+        
       }
       @at-root .accessoryList {
-        overflow-x: auto;
+        position: relative;
+        overflow-x: hidden;
         overflow-y: hidden;
-        @include unit(width,980);
+        @include unit(width,1020);
         @include unit(height,300);
         margin: auto;
         @include unit(margin-top,20);
         ul {
-          @include unit(width,1680);
+          position: absolute;
+          top: 0;
+          left: 0;
           height: auto;
+          transition: left 100ms linear;
           li {
             float: left;
             @include unit(width,300);
             @include unit(height,300);
-            @include unit(margin-right,40);
+            @include unit(margin-left,20);
+            @include unit(margin-right,20);
             background-color: $color-light-gray;
             a {
               width: 100%;
@@ -84,6 +90,9 @@
             border-radius: 50%;
             background-color: $color-light-gray;
             &:last-child { margin-right: 0;}
+            &.active {
+              background-color: $color-black;
+            }
           }
         }
       }

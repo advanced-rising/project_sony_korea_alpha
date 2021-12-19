@@ -189,16 +189,14 @@ h1 a {
   width: 100%;
   height: auto;
 }
-.sub_area.on {
-  display: block;
-}
 .sub_menu {
+  z-index: -1;
   position: absolute;
   top: 60px;
+  top: 3.75rem;
   left: -20px;
   left: -1.25rem;
   transform: translateY(-100%);
-  transition: transform 100ms linear;
 }
 .sub_menu li {
   width: auto;
@@ -1138,7 +1136,7 @@ h1 a {
   height: auto;
   margin: auto;
 }
-.accessoryBtn div {
+.accessoryBtn button {
   position: absolute;
   top: 0;
   width: 80px;
@@ -1147,18 +1145,19 @@ h1 a {
   height: 5rem;
   background-color: #6f6f75;
 }
-.accessoryBtn .prevBtn {
+.accessoryBtn button.prevBtn {
   left: 0;
 }
-.accessoryBtn .nextBtn {
+.accessoryBtn button.nextBtn {
   right: 0;
 }
 
 .accessoryList {
-  overflow-x: auto;
+  position: relative;
+  overflow-x: hidden;
   overflow-y: hidden;
-  width: 980px;
-  width: 61.25rem;
+  width: 1020px;
+  width: 63.75rem;
   height: 300px;
   height: 18.75rem;
   margin: auto;
@@ -1166,9 +1165,11 @@ h1 a {
   margin-top: 1.25rem;
 }
 .accessoryList ul {
-  width: 1680px;
-  width: 105rem;
+  position: absolute;
+  top: 0;
+  left: 0;
   height: auto;
+  transition: left 100ms linear;
 }
 .accessoryList ul li {
   float: left;
@@ -1176,8 +1177,10 @@ h1 a {
   width: 18.75rem;
   height: 300px;
   height: 18.75rem;
-  margin-right: 40px;
-  margin-right: 2.5rem;
+  margin-left: 20px;
+  margin-left: 1.25rem;
+  margin-right: 20px;
+  margin-right: 1.25rem;
   background-color: #6f6f75;
 }
 .accessoryList ul li a {
@@ -1211,6 +1214,9 @@ h1 a {
 }
 .accessoryIndicator > ul li:last-child {
   margin-right: 0;
+}
+.accessoryIndicator > ul li.active {
+  background-color: #03010f;
 }
 
 .accessoryStore {

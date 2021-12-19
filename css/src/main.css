@@ -192,16 +192,14 @@ h1 a {
   width: 100%;
   height: auto;
 }
-.sub_area.on {
-  display: block;
-}
 .sub_menu {
+  z-index: -1;
   position: absolute;
   top: 60px;
+  top: 3.75rem;
   left: -20px;
   left: -1.25rem;
   transform: translateY(-100%);
-  transition: transform 100ms linear;
 }
 .sub_menu li {
   width: auto;

@@ -145,18 +145,15 @@
             }
           }
           @at-root .sub_area {
-            &.on {
-              display: block;
-            }
             display: none;
             width: 100%;
             height: auto;
             @at-root .sub_menu {
+              z-index: -1;
               position: absolute;
-              top: 60px;
+              @include unit(top,60);
               @include unit(left,-20);
               transform: translateY(-100%);
-              transition: transform 100ms linear;
               li {
                 width: auto;
                 @include unit(min-width,140);

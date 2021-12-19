@@ -79,11 +79,15 @@ for(i = 0; i < subArea.length ; i++){
     subArea[k].parentNode.querySelector('a').addEventListener('click', function(e){
       e.preventDefault();
       for(j = 0; j< subArea.length; j++){
-        subArea[j].classList.remove(VIEW_ON);
+        subArea[j].style.display = 'none';
+        
         subMenu[j].removeAttribute('style');
       };
-      subArea[k].classList.add(VIEW_ON);
-      downSlide(subMenu,k);
+      subArea[k].style.display = 'block';
+      setTimeout(()=>{
+        downSlide(subMenu,k);
+      },50);
+      return true;
     });
   })(i);
 };
@@ -91,6 +95,25 @@ for(i = 0; i < subArea.length ; i++){
 // 변수 선언 안해줌 ㅋㅋ
 // subArea의 parentNode 를 잡고, 그 부모요소의 바로 자식인 a tag를 childNode로 잡아서
 // childeNode === node_element ... 
+
+
+// 특정영역 클릭시 해당 기능 사라지게하기.
+// document.addEventListener('click',()=>{
+//   for(i = 0; i < subArea.length ; i++){
+//     if(subArea[i].style.display === 'block'){
+//       subMenu[i].removeAttribute('style');
+//     }
+//   }
+// })
+
+// document.addEventListener('click',(e)=>{
+//   e.preventDefault();
+//   if(subFamily.classList.contains(ACTIVE_ON) === true){
+//     subFamily.classList.remove(ACTIVE_ON);
+//   }else {}
+//   console.log(subFamily.classList.contains(ACTIVE_ON));
+// })
+
 // * ===================================
 
 // * ===================================
@@ -113,6 +136,7 @@ function hasFadeFn(){
 hasFadeFn();
 
 // unb - search button
+// search 모달창이 작동되었을때 바깥 스크롤을 막는 방법
 openBtn.addEventListener('click', function(event){
   event.preventDefault();
   searchModal.style.display = 'block';
@@ -144,7 +168,5 @@ familyBtn.addEventListener('click',function(event){
 
 function downSlide(element,i){
   element[i].style.transform = 'translateY(0%)';
-}
-function upSlide(element,i){
-  element[i].style.transform = 'translateY(-100%)';
+  element[i].style.transition = 'transform 100ms linear';
 }
