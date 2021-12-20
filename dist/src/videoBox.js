@@ -18,16 +18,24 @@ const videoData = [
 ]
 const videoBox = document.querySelector('#videoBox');
 const videoArea = videoBox.querySelector('.video_list');
+
+const videoPanel = ['next_btn','prev_btn'];
 const videoBtn = videoArea.querySelector('.video_btn');
 const videoNext = videoBtn.querySelector('.next_btn');
 const videoPrev = videoBtn.querySelector('.prev_btn');
-const videoUl = videoArea.querySelector('ul');
-const videoLi = videoUl.querySelectorAll('li');
+let videoUl = videoArea.querySelector('ul');
+let videoLi = videoUl.querySelectorAll('li');
 const videoIndicator = videoBox.querySelector('.video_indicator');
 const videoIndicatorUl = videoIndicator.querySelector('ul');
 const videoIndicatorLi = videoIndicatorUl.querySelectorAll('li');
 
-const videoLiCvt = [...videoLi];
+const video00 = videoUl.querySelector('.video00');
+const video01 = videoUl.querySelector('.video01');
+const video02 = videoUl.querySelector('.video02');
+const video03 = videoUl.querySelector('.video03');
+const video04 = videoUl.querySelector('.video04');
+
+let videoLiCvt = [...videoLi];
 
 let videoLen = videoLi.length;
 
@@ -40,19 +48,19 @@ let videoLen = videoLi.length;
 
 
 // video indicator 탭버튼
-for(i=0;i<videoLen;i++){
-  ((k)=>{
-    videoIndicatorLi[k].addEventListener('click',(e)=>{
-      e.preventDefault();
-      for(j=0;j<videoLen;j++){
-        videoIndicatorLi[j].classList.remove(ACTIVE_ON);
-        videoLi[j].classList.remove(ACTIVE_ON);
-      }
-      videoIndicatorLi[k].classList.add(ACTIVE_ON);
-      videoLi[k].classList.add(ACTIVE_ON);
-    })
-  })(i)
-}
+// for(i=0;i<videoLen;i++){
+//   ((k)=>{
+//     videoIndicatorLi[k].addEventListener('click',(e)=>{
+//       e.preventDefault();
+//       for(j=0;j<videoLen;j++){
+//         videoIndicatorLi[j].classList.remove(ACTIVE_ON);
+//         videoLi[j].classList.remove(ACTIVE_ON);
+//       }
+//       videoIndicatorLi[k].classList.add(ACTIVE_ON);
+//       videoLi[k].classList.add(ACTIVE_ON);
+//     })
+//   })(i)
+// }
 
 // 비디오 ....
 // 1번이 1첫번째로 오게되면, 5번째는 1번의 왼쪽으로 오고, 
@@ -60,15 +68,97 @@ for(i=0;i<videoLen;i++){
 // 일단 다음 video 가 오게 만들어보자.
 // 아마도 스타일을 줘서 만드는것이 편할거라 생각된다.
 
+console.log(videoLiCvt);
+let videoCount = 0;
+// 처음에 하였던 생각은 . 비동기식으로 하면 될거라 생각함 . 그게 아님.
+// 클릭하였을때 동시에 실행되도록 하여야함.
+// videoNext 버튼을 클릭하였을때 1->5 , 5->4, 4->3, 3->2, 2->1 이런식으로. 
+// videoPrev 버튼을 클릭하였을때 1->2, 2->3, 3->4, 4->5 5->1 이런식으로.
+// 버튼을 클릭했을때 for문을 통해서 i값을 전달받아 해당 클래스에 넣어줌.
+// video0${i} 이런식으로 ...
 
 
+// videoNext.addEventListener('click',(e)=>{
+//   e.preventDefault();
+//   for(let i = 0; i<videoLen; i++){
+//     if(i === 0){
+//       videoLiCvt[i].style.left = 140+'px';
+//       videoLiCvt[i].style.zIndex = 90;
+//       videoLiCvt[i].style.transform = 'scale(0.9)';
+//       console.log(i);
+//     }else if(i === 1){
+//       videoLiCvt[i].style.left = 220+'px';
+//       videoLiCvt[i].style.zIndex = 100;
+//       videoLiCvt[i].style.transform = 'scale(1)';
+//       console.log(i);
+//     }else if(i === 2){
+//       videoLiCvt[i].style.left = 300+'px';
+//       videoLiCvt[i].style.zIndex = 90;
+//       videoLiCvt[i].style.transform = 'scale(0.9)';
+//       console.log(i);
+//     }else if(i === 3){
+//       videoLiCvt[i].style.left = 380+'px';
+//       videoLiCvt[i].style.zIndex = 80;
+//       videoLiCvt[i].style.transform = 'scale(0.8)';
+//       console.log(i);
+//     }else if(i === 4){
+//       videoLiCvt[i].style.left = 60+'px';
+//       videoLiCvt[i].style.zIndex = 80;
+//       videoLiCvt[i].style.transform = 'scale(0.8)';
+//       console.log(i);
+//     }
+//   }
+// })
 
-videoNext.addEventListener('click',(e)=>{
-  e.preventDefault();
-  console.log('확인');
-  
-  videoLiCvt[0].style.left = 300+'px';
-  videoLiCvt[0].style.zIndex = 90;
-  videoLiCvt[0].style.transform = 'scale(0.9)';
+class VideoSlide {
+  constructor(container , videoLi, control) {
+    this.videoContainer = container;
+    this.videoControl = control;
+    this.videoArray = [...videoLi];
+  }
+  removeVideo(){
+    this.videoArray.forEach((element)=>{
+      element.classList.remove('video01');
+      element.classList.remove('video02');
+      element.classList.remove('video03');
+      element.classList.remove('video04');
+      element.classList.remove('video05');
+    })
+    this.videoArray.slice(0,5).forEach((element,i)=>{
+      element.classList.add(`video0${i+1}`)
+    })
+  }
+  setCurrentState(direction){
+    if(direction.className === 'prev_btn'){
+      this.videoArray.unshift(this.videoArray.pop());
+    }else {
+      this.videoArray.pop(this.videoArray.unshift());
+    }
+    this.removeVideo();
+  }
 
-})
+  // setControls(){
+  //   this.videoControl.forEach((control)=>{
+  //     videoBtn.appendChild(document.createElement('button')).className = control;
+  //     videoBtn.appendChild(document.createElement('button')).Attribute('type','button');
+  //     console.log(control);
+  //     // document.querySelector(control).innerText = control;
+  //   });
+  // }
+
+  useControls(){
+    const trigger = [...videoBtn.childNodes];
+    trigger.forEach((control)=>{
+      control.addEventListener('click',(e)=>{
+        e.preventDefault();
+        if(control == 'next_btn'){
+          this.buttonState(control);
+        }
+      })
+    })
+  }
+}
+
+const videoSlideCarousel = new VideoSlide(videoUl,videoLi,videoPanel);
+// videoSlideCarousel.setControls();
+videoSlideCarousel.useControls();
