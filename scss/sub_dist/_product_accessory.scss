@@ -57,7 +57,7 @@
           top: 0;
           left: 0;
           height: auto;
-          transition: left 100ms linear;
+          transition: left 500ms linear;
           li {
             float: left;
             @include unit(width,300);
