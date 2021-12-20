@@ -7,6 +7,7 @@
     @include unit(width,700);
     height: auto;
     margin: auto;
+    @include unit(padding,40);
     text-align: center;
     background-color: $color-light-blue;
     form {
@@ -127,6 +128,7 @@
               display: block;
               width: auto;
               height: auto;
+              @include unit(margin-left,60);
               @include unit(font-size,16);
               @include unit(line-height,28);
               color: $color-black;
@@ -194,7 +196,7 @@
   .loginBox {
     .login_area {
       width: 100%; //
-      @include padding(0,20,0,20); //
+      @include padding(40,20,40,20); //
       form {
         width: 100%; //
         @at-root .login_part {
@@ -265,7 +267,7 @@
   .loginBox {
     .login_area {
       width: 100%; //
-      @include padding(0,20,0,20); //
+      @include padding(40,20,40,20); //
       form {
         width: 100%; //
         @at-root .login_part {
