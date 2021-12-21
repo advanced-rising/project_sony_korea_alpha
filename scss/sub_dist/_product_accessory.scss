@@ -93,6 +93,9 @@
             &.active {
               background-color: $color-black;
             }
+            a {
+              @include display-block();
+            }
           }
         }
       }

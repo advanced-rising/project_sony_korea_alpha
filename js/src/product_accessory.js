@@ -78,6 +78,7 @@ let countRxzv = 0;
 let countCommon = 0;
 let permission = true;
 
+
 const bodyNextFn = (element,index,e)=>{
   if(countBody >= index){
     e.stopPropagation();
@@ -150,6 +151,30 @@ const commonPrevFn = (element,index,e)=>{
   }
 }
 
+const indiRotateFn = (indiList,count)=>{
+  indiList.forEach((element,index)=>{
+    if(index !== count){
+      if(count !== -1 && count !== 3){
+        element.classList.remove('active')
+      }
+    }else{
+      element.classList.add('active')
+    }
+  })
+}
+
+accBodyIndiLi.forEach((element,index)=>{
+  element.children[0].addEventListener('click',(e)=>{
+    console.log(element);
+    e.preventDefault();
+      indiRotateFn(accBodyIndiLi,index);
+      countBody = index;
+      accBodyListUl.style.left = (-100*countBody) +'%';
+  })
+})
+
+
+
 
 accBodyNextBtn.addEventListener('click',(e)=>{
   e.preventDefault();
@@ -157,6 +182,7 @@ accBodyNextBtn.addEventListener('click',(e)=>{
     permission = false
     setTimeout(()=>{
       countBody++;
+      indiRotateFn(accBodyIndiLi,countBody);
       bodyNextFn(accBodyListUl,accBodyLen,e)
       permission = true;
     },100)
@@ -169,13 +195,12 @@ accBodyPrevBtn.addEventListener('click',(e)=>{
     permission = false;
     setTimeout(()=>{
       countBody--;
+      indiRotateFn(accBodyIndiLi,countBody);
       bodyPrevFn(accBodyListUl,accBodyLen,e)
       permission =true;
     },100)
   }
 })
-
-
 
 
 accLensNextBtn.addEventListener('click',(e)=>{
@@ -184,6 +209,7 @@ accLensNextBtn.addEventListener('click',(e)=>{
     permission = false
     setTimeout(()=>{
       countLens++;
+      indiRotateFn(accLensIndiLi,countLens);
       lensNextFn(accLensListUl,accLensLen,e)
       permission = true;
     },100)
@@ -196,6 +222,7 @@ accLensPrevBtn.addEventListener('click',(e)=>{
     permission = false;
     setTimeout(()=>{
       countLens--;
+      indiRotateFn(accLensIndiLi,countLens);
       lensPrevFn(accLensListUl,accLensLen,e)
       permission =true;
     },100)
@@ -209,6 +236,7 @@ accRxzvNextBtn.addEventListener('click',(e)=>{
     permission = false
     setTimeout(()=>{
       countRxzv++;
+      indiRotateFn(accRxzvIndiLi,countRxzv);
       rxzvNextFn(accRxzvListUl,accRxzvLen,e)
       permission = true;
     },100)
@@ -221,6 +249,7 @@ accRxzvPrevBtn.addEventListener('click',(e)=>{
     permission = false;
     setTimeout(()=>{
       countRxzv--;
+      indiRotateFn(accRxzvIndiLi,countRxzv);
       rxzvPrevFn(accRxzvListUl,accRxzvLen,e)
       permission =true;
     },100)
@@ -234,6 +263,7 @@ accCommonNextBtn.addEventListener('click',(e)=>{
     permission = false
     setTimeout(()=>{
       countCommon++;
+      indiRotateFn(accCommonIndiLi,countCommon);
       commonNextFn(accCommonListUl,accCommonLen,e)
       permission = true;
     },100)
@@ -246,8 +276,9 @@ accCommonPrevBtn.addEventListener('click',(e)=>{
     permission = false;
     setTimeout(()=>{
       countCommon--;
+      indiRotateFn(accCommonIndiLi,countCommon);
       commonPrevFn(accCommonListUl,accCommonLen,e)
-      permission =true;
+      permission = true;
     },100)
   }
 })

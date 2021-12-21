@@ -1218,6 +1218,11 @@ h1 a {
 .accessoryIndicator > ul li.active {
   background-color: #03010f;
 }
+.accessoryIndicator > ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
 .accessoryStore {
   width: 400px;

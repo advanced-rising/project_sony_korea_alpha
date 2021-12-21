@@ -46,7 +46,7 @@ let videoLen = videoLi.length;
 // let i = 0;
 // let j = 0;
 
-
+// ! 지우지 마시오
 // video indicator 탭버튼
 // for(i=0;i<videoLen;i++){
 //   ((k)=>{
@@ -61,6 +61,9 @@ let videoLen = videoLi.length;
 //     })
 //   })(i)
 // }
+// ! ==============
+
+
 
 // 비디오 ....
 // 1번이 1첫번째로 오게되면, 5번째는 1번의 왼쪽으로 오고, 
@@ -70,12 +73,7 @@ let videoLen = videoLi.length;
 
 console.log(videoLiCvt);
 let videoCount = 0;
-// 처음에 하였던 생각은 . 비동기식으로 하면 될거라 생각함 . 그게 아님.
-// 클릭하였을때 동시에 실행되도록 하여야함.
-// videoNext 버튼을 클릭하였을때 1->5 , 5->4, 4->3, 3->2, 2->1 이런식으로. 
-// videoPrev 버튼을 클릭하였을때 1->2, 2->3, 3->4, 4->5 5->1 이런식으로.
-// 버튼을 클릭했을때 for문을 통해서 i값을 전달받아 해당 클래스에 넣어줌.
-// video0${i} 이런식으로 ...
+
 
 
 // videoNext.addEventListener('click',(e)=>{
@@ -162,3 +160,44 @@ class VideoSlide {
 const videoSlideCarousel = new VideoSlide(videoUl,videoLi,videoPanel);
 // videoSlideCarousel.setControls();
 videoSlideCarousel.useControls();
+
+// pop unshift
+
+
+videoPrev.addEventListener('click',(e)=>{
+  e.preventDefault();
+})
+
+// 으으으으으으으으으으으으으으으으으으응으으으으으ㅡ응으ㅡ으ㅡㅇㅁㄴㅇ
+// ㅇㅁㄴㅇㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ
+// ul 안에다가 li 배열들을 하니씩 pop unshift 해주고 .
+// ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁ
+
+// 
+// 
+/**
+ * ! 첫번째 목표.
+ * videoNext 버튼을 클릭하였을때 1->2 , 2->3, 3->4, 4->5, 5->1 이런식으로. 
+ * videoPrev 버튼을 클릭하였을때 1->5, 5->4, 4->3, 3->2 2->1 이런식으로.
+ * videoLi는 배열로 되어있음. - > 배열이므로, pop shift unshift 등 사용할 수 잇음.
+ * pop은 제일 끝 배열을 제거하고 그 값을 반환처리함. 
+ * unshift는 값을 배열의 제일 앞으로 오게 해줌.
+ * ? 그러면 
+ * 
+ * ! 두번째 목표 
+ * videoLi의 배열의 순서가 바뀌므로, 해당순번에 .class 를 집어넣어 animation keyframe으로 .class를 넣어줌.
+ * 이때, video 태그는 살려둬야함 . 그러므로 .className(video animation keyframe을 넣어줘야함 )
+ * 
+ * ? ex)
+ * videoLi[0].className('video animationClass'); ....
+ * insertBefore
+ */
+console.log(videoLiCvt);
+ videoNext.addEventListener('click',(e)=>{
+  e.preventDefault();
+  videoLiCvt.slice(0,5);
+  videoLiCvt.pop(videoLiCvt.unshift());
+  console.log(videoLiCvt);
+  // videoUl.insertBefore(videoLiCvt[4],videoUl.firstChild);
+  // console.log(videoLiCvt[4]);
+})

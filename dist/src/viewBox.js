@@ -57,7 +57,6 @@ function autoSlides(n) {
   indicatorBtn[n].classList.add(ACTIVE_ON);
 }
 
-// onclick 로 하고 있지만... javascript로 바꿀수 있는 방안을 찾고 있음.
 function currentSlide(n) {
   countCheck = n;
   autoSlides(countCheck);
