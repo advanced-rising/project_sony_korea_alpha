@@ -79,9 +79,11 @@ for(i = 0; i < subArea.length ; i++){
     subArea[k].parentNode.querySelector('a').addEventListener('click', function(e){
       e.preventDefault();
       for(j = 0; j< subArea.length; j++){
-        subArea[j].style.display = 'none';
-        
-        subMenu[j].removeAttribute('style');
+        upSlide(subMenu,j);
+        setTimeout(()=>{
+          subArea[j].removeAttribute('style');
+          subArea[j].style.display = 'none';
+        },10)
       };
       subArea[k].style.display = 'block';
       setTimeout(()=>{
@@ -98,20 +100,24 @@ for(i = 0; i < subArea.length ; i++){
 
 
 // 특정영역 클릭시 해당 기능 사라지게하기.
-// document.addEventListener('click',()=>{
-//   for(i = 0; i < subArea.length ; i++){
-//     if(subArea[i].style.display === 'block'){
-//       subMenu[i].removeAttribute('style');
-//     }
-//   }
-// })
+document.addEventListener('click',()=>{
+  for(i = 0; i < subArea.length ; i++){
+    if(subArea[i].style.display === 'block'){
+      upSlide(subMenu,i);
+      setTimeout(()=>{
+        subMenu[i].removeAttribute('style');
+      },10)
+    }
+  }
+})
 
 // document.addEventListener('click',(e)=>{
 //   e.preventDefault();
 //   if(subFamily.classList.contains(ACTIVE_ON) === true){
-//     subFamily.classList.remove(ACTIVE_ON);
-//   }else {}
-//   console.log(subFamily.classList.contains(ACTIVE_ON));
+//     if(subMenu){
+//       subFamily.classList.remove(ACTIVE_ON);
+//     }
+//   }
 // })
 
 // * ===================================
@@ -168,5 +174,10 @@ familyBtn.addEventListener('click',function(event){
 
 function downSlide(element,i){
   element[i].style.transform = 'translateY(0%)';
+  element[i].style.transition = 'transform 100ms linear';
+}
+
+function upSlide(element,i){
+  element[i].style.transform = 'translateY(-100%)';
   element[i].style.transition = 'transform 100ms linear';
 }

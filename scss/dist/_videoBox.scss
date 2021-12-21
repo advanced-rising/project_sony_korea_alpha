@@ -574,7 +574,9 @@
     @include unit(width,2560);
   }
 }
-
+.hidden {
+  display: none;
+}
 .move-out-from-left {
   animation: move-out-left 0.5s ease-in-out;
 }

@@ -191,13 +191,17 @@ videoPrev.addEventListener('click',(e)=>{
  * ? ex)
  * videoLi[0].className('video animationClass'); ....
  * insertBefore
+ * append
  */
-console.log(videoLiCvt);
- videoNext.addEventListener('click',(e)=>{
+
+videoNext.addEventListener('click',(e)=>{
   e.preventDefault();
-  videoLiCvt.slice(0,5);
-  videoLiCvt.pop(videoLiCvt.unshift());
+  videoUl.prepend(videoLiCvt.at(-1));
+  videoUl = videoArea.querySelector('ul');
+  videoLi = videoArea.querySelectorAll('li');
+  videoLiCvt = [...videoLi];
   console.log(videoLiCvt);
-  // videoUl.insertBefore(videoLiCvt[4],videoUl.firstChild);
-  // console.log(videoLiCvt[4]);
 })
+
+
+

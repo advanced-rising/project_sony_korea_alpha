@@ -2919,6 +2919,10 @@ h1 a {
     width: 160rem;
   }
 }
+.hidden {
+  display: none;
+}
+
 .move-out-from-left {
   animation: move-out-left 0.5s ease-in-out;
 }
