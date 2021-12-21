@@ -38,6 +38,7 @@ const video04 = videoUl.querySelector('.video04');
 let videoLiCvt = [...videoLi];
 
 let videoLen = videoLi.length;
+let permission = true;
 
 // let countCheck = 0;
 // let afterCheck = countCheck;
@@ -48,19 +49,19 @@ let videoLen = videoLi.length;
 
 // ! 지우지 마시오
 // video indicator 탭버튼
-// for(i=0;i<videoLen;i++){
-//   ((k)=>{
-//     videoIndicatorLi[k].addEventListener('click',(e)=>{
-//       e.preventDefault();
-//       for(j=0;j<videoLen;j++){
-//         videoIndicatorLi[j].classList.remove(ACTIVE_ON);
-//         videoLi[j].classList.remove(ACTIVE_ON);
-//       }
-//       videoIndicatorLi[k].classList.add(ACTIVE_ON);
-//       videoLi[k].classList.add(ACTIVE_ON);
-//     })
-//   })(i)
-// }
+for(i=0;i<videoLen;i++){
+  ((k)=>{
+    videoIndicatorLi[k].addEventListener('click',(e)=>{
+      e.preventDefault();
+      for(j=0;j<videoLen;j++){
+        videoIndicatorLi[j].classList.remove(ACTIVE_ON);
+        videoLi[j].classList.remove(ACTIVE_ON);
+      }
+      videoIndicatorLi[k].classList.add(ACTIVE_ON);
+      videoLi[k].classList.add(ACTIVE_ON);
+    })
+  })(i)
+}
 // ! ==============
 
 
@@ -74,107 +75,6 @@ let videoLen = videoLi.length;
 console.log(videoLiCvt);
 let videoCount = 0;
 
-
-
-// videoNext.addEventListener('click',(e)=>{
-//   e.preventDefault();
-//   for(let i = 0; i<videoLen; i++){
-//     if(i === 0){
-//       videoLiCvt[i].style.left = 140+'px';
-//       videoLiCvt[i].style.zIndex = 90;
-//       videoLiCvt[i].style.transform = 'scale(0.9)';
-//       console.log(i);
-//     }else if(i === 1){
-//       videoLiCvt[i].style.left = 220+'px';
-//       videoLiCvt[i].style.zIndex = 100;
-//       videoLiCvt[i].style.transform = 'scale(1)';
-//       console.log(i);
-//     }else if(i === 2){
-//       videoLiCvt[i].style.left = 300+'px';
-//       videoLiCvt[i].style.zIndex = 90;
-//       videoLiCvt[i].style.transform = 'scale(0.9)';
-//       console.log(i);
-//     }else if(i === 3){
-//       videoLiCvt[i].style.left = 380+'px';
-//       videoLiCvt[i].style.zIndex = 80;
-//       videoLiCvt[i].style.transform = 'scale(0.8)';
-//       console.log(i);
-//     }else if(i === 4){
-//       videoLiCvt[i].style.left = 60+'px';
-//       videoLiCvt[i].style.zIndex = 80;
-//       videoLiCvt[i].style.transform = 'scale(0.8)';
-//       console.log(i);
-//     }
-//   }
-// })
-
-class VideoSlide {
-  constructor(container , videoLi, control) {
-    this.videoContainer = container;
-    this.videoControl = control;
-    this.videoArray = [...videoLi];
-  }
-  removeVideo(){
-    this.videoArray.forEach((element)=>{
-      element.classList.remove('video01');
-      element.classList.remove('video02');
-      element.classList.remove('video03');
-      element.classList.remove('video04');
-      element.classList.remove('video05');
-    })
-    this.videoArray.slice(0,5).forEach((element,i)=>{
-      element.classList.add(`video0${i+1}`)
-    })
-  }
-  setCurrentState(direction){
-    if(direction.className === 'prev_btn'){
-      this.videoArray.unshift(this.videoArray.pop());
-    }else {
-      this.videoArray.pop(this.videoArray.unshift());
-    }
-    this.removeVideo();
-  }
-
-  // setControls(){
-  //   this.videoControl.forEach((control)=>{
-  //     videoBtn.appendChild(document.createElement('button')).className = control;
-  //     videoBtn.appendChild(document.createElement('button')).Attribute('type','button');
-  //     console.log(control);
-  //     // document.querySelector(control).innerText = control;
-  //   });
-  // }
-
-  useControls(){
-    const trigger = [...videoBtn.childNodes];
-    trigger.forEach((control)=>{
-      control.addEventListener('click',(e)=>{
-        e.preventDefault();
-        if(control == 'next_btn'){
-          this.buttonState(control);
-        }
-      })
-    })
-  }
-}
-
-const videoSlideCarousel = new VideoSlide(videoUl,videoLi,videoPanel);
-// videoSlideCarousel.setControls();
-videoSlideCarousel.useControls();
-
-// pop unshift
-
-
-videoPrev.addEventListener('click',(e)=>{
-  e.preventDefault();
-})
-
-// 으으으으으으으으으으으으으으으으으으응으으으으으ㅡ응으ㅡ으ㅡㅇㅁㄴㅇ
-// ㅇㅁㄴㅇㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ
-// ul 안에다가 li 배열들을 하니씩 pop unshift 해주고 .
-// ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁ
-
-// 
-// 
 /**
  * ! 첫번째 목표.
  * videoNext 버튼을 클릭하였을때 1->2 , 2->3, 3->4, 4->5, 5->1 이런식으로. 
@@ -193,14 +93,33 @@ videoPrev.addEventListener('click',(e)=>{
  * insertBefore
  * append
  */
-
-videoNext.addEventListener('click',(e)=>{
-  e.preventDefault();
-  videoUl.prepend(videoLiCvt.at(-1));
+function videoUlCopy(){
   videoUl = videoArea.querySelector('ul');
   videoLi = videoArea.querySelectorAll('li');
   videoLiCvt = [...videoLi];
-  console.log(videoLiCvt);
+}
+videoNext.addEventListener('click',(e)=>{
+  e.preventDefault();
+  if(permission){
+    permission = false;
+    videoUl.prepend(videoLiCvt.at(-1));
+    videoUlCopy();
+    setTimeout(()=>{
+      permission = true;
+    },10)
+  }
+})
+
+videoPrev.addEventListener('click',(e)=>{
+  e.preventDefault();
+  if(permission){
+    permission = false;
+    videoUl.append(videoLiCvt.at(0));
+    videoUlCopy();
+    setTimeout(()=>{
+      permission = true;
+    },10)
+  }
 })
 
 

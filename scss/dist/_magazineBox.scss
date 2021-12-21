@@ -98,14 +98,17 @@
       width: 100%;
       li {
         float: left;
-        @include unit(width,260);
+        // @include unit(width,260);
+        width: 100%;
         @include unit(height,380);
         @include unit(margin-top,20);
         &:nth-child(3) {
-          @include unit(margin-right,20);
+          // @include unit(margin-right,20);
+          margin-right: 0;
         }
         &:nth-child(2n) {
-          @include unit(margin-right,20);
+          // @include unit(margin-right,20);
+          margin-right: 0;
         }
         &:nth-child(-n + 2) {
           @include unit(margin-top,20);
@@ -114,7 +117,8 @@
           @include unit(margin-top,20);
         }
         &:first-child {
-          @include unit(width,260);
+          // @include unit(width,260);
+          width: 100%;
           @include unit(height,380);
         }
         @at-root .magazine_img {
@@ -153,7 +157,7 @@
 @include mobile-h{
   .magazine_list {
     overflow-x: auto;
-    @include unit(width,280);
+    @include unit(width,420);
     @include unit(padding-right,20);
     @include unit(padding-left,20);
     box-sizing: content-box;
@@ -161,14 +165,15 @@
       width: 100%;
       li {
         float: left;
-        @include unit(width,260);
+        // @include unit(width,260);
+        width: 100%;
         @include unit(height,380);
         @include unit(margin-top,20);
         &:nth-child(3) {
-          @include unit(margin-right,20);
+          @include unit(margin-right,0);
         }
         &:nth-child(2n) {
-          @include unit(margin-right,20);
+          @include unit(margin-right,0);
         }
         &:nth-child(-n + 2) {
           @include unit(margin-top,20);
@@ -177,7 +182,8 @@
           @include unit(margin-top,20);
         }
         &:first-child {
-          @include unit(width,260);
+          // @include unit(width,420);
+          width: 100%;
           @include unit(height,380);
         }
         @at-root .magazine_img {
