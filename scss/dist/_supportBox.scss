@@ -21,15 +21,31 @@
       @include unit(padding,20);
       &:nth-child(1) {
         background-color: $color-orange;
+        &:hover .support_txt::before,
+        &:hover .support_txt::after {
+          animation: arrow_move 1000ms linear infinite;
+        }
       }
       &:nth-child(2) {
         background-color: $color-deep-gray;
+        &:hover .support_txt::before,
+        &:hover .support_txt::after {
+          animation: arrow_move 1000ms linear infinite;
+        }
       }
       &:nth-child(3) {
         background-color: $color-light-gray;
+        &:hover .support_txt::before,
+        &:hover .support_txt::after {
+          animation: arrow_move 1000ms linear infinite;
+        }
       }
       &:nth-child(4) {
         background-color: $color-black;
+        &:hover .support_txt::before,
+        &:hover .support_txt::after {
+          animation: arrow_move 1000ms linear infinite;
+        }
       }
       &:nth-child(odd) {
         margin-right: 20px;
@@ -65,6 +81,7 @@
               @include unit(width,3);
               @include unit(height,15);
               transform: rotate(135deg);
+              transition: all 100ms linear;
               background-color: $color-white;
             }
             &::after {
@@ -76,6 +93,7 @@
               @include unit(width,3);
               @include unit(height,15);
               transform: rotate(45deg);
+              transition: all 100ms linear;
               background-color: $color-white;
             }
           }
@@ -137,5 +155,16 @@
 @include pcfull{
   #supportBox {
     @include unit(width,2560);
+  }
+}
+@keyframes arrow_move {
+  from {
+    @include unit(right,20);
+  }
+  50% {
+    @include unit(right,10);
+  }
+  to {
+    @include unit(right,20);
   }
 }

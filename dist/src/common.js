@@ -132,6 +132,7 @@ function hasFadeFn(){
     for(i=0;i<subArea.length;i++){
       subArea[i].classList.add('has-fade');
     }
+    // location.reload();
   }else if(matchMedia("screen and (min-width: 1024px)").matches){
     naviArea.classList.remove('has-fade');
     for(i=0;i<subArea.length;i++){
