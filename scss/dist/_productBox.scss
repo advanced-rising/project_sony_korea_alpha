@@ -83,15 +83,16 @@
           transform: translateX(100%);
           @include unit(width,300);
           @include unit(height,60);
-          @include unit(line-height,50);
           text-transform: uppercase;
           font-weight: 700;
           box-sizing: border-box;
           @include border($w:5,$c:$color-orange);
           color: $color-black;
           background-color: $color-white;
+          transition: all 100ms ease-out;
           &:hover {
-            font-size: 18px;
+            @include unit(font-size,16.5);
+            transition: all 100ms ease-out;
           }
           span {
             width: 100%;

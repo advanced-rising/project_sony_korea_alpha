@@ -1509,8 +1509,6 @@ h1 a {
   width: 18.75rem;
   height: 60px;
   height: 3.75rem;
-  line-height: 50px;
-  line-height: 3.125rem;
   text-transform: uppercase;
   font-weight: 700;
   box-sizing: border-box;
@@ -1518,9 +1516,12 @@ h1 a {
   border: 0.3125rem solid #e75300;
   color: #03010f;
   background-color: #ffffff;
+  transition: all 100ms ease-out;
 }
 .more_product:hover {
-  font-size: 18px;
+  font-size: 16.5px;
+  font-size: 1.03125rem;
+  transition: all 100ms ease-out;
 }
 .more_product span {
   width: 100%;
