@@ -25,7 +25,7 @@ let countCheck = 0;
 let afterCheck = countCheck;
 const VIEW_ON = 'on';
 const ACTIVE_ON = 'active';
-
+let PERMISSION = true;
 
 let i = 0;
 let j = 0;
@@ -54,15 +54,29 @@ fadeOutFn = (element) => {
 gnbBtn.addEventListener('click', (e) => {
   e.preventDefault();
   let isActive = gnbBtn.classList.contains(ACTIVE_ON);
-
-  if(!isActive){
-    gnbBtn.classList.add(ACTIVE_ON);
-    fadeInFn(fadeElement);
-  }else{
-    gnbBtn.classList.remove(ACTIVE_ON);
-    resetOnFn(subArea);
-    fadeOutFn(fadeElement);
+  if(PERMISSION){
+    PERMISSION = false;
+    if(!isActive){
+      gnbBtn.classList.add(ACTIVE_ON);
+      naviArea.style.display = 'block';
+      setTimeout(()=>{
+        naviArea.style.transform = 'translateY(0)'
+      },10)
+      // fadeInFn(fadeElement);
+    }else{
+      gnbBtn.classList.remove(ACTIVE_ON);
+      naviArea.style.transform = 'translateY(-100%)'
+      // resetOnFn(subArea);
+      // fadeOutFn(fadeElement);
+      setTimeout(()=>{
+        naviArea.style.display = 'none';
+      },300)
+    }
+    setTimeout(()=>{
+      PERMISSION = true;
+    },100)
   }
+  
 });
 //  ! 네비게이션 버튼을 누르고 난 뒤 수행하는 함수를 만들어야 한다 .!!
 
@@ -74,25 +88,28 @@ gnbBtn.addEventListener('click', (e) => {
 // 결국엔 add 하는것을 함수로 써서 VIEW_ON이 되면서, 움직이는 효과까지 주게 하라 .
 
 // menu 선택시 subArea 보이게 해주는 역할
-for(i = 0; i < subArea.length ; i++){
-  (function(k){
-    subArea[k].parentNode.querySelector('a').addEventListener('click', function(e){
-      e.preventDefault();
-      for(j = 0; j< subArea.length; j++){
-        upSlide(subMenu,j);
+const menuSelectFn = function(){
+  for(i = 0; i < subArea.length ; i++){
+    (function(k){
+      subArea[k].parentNode.querySelector('a').addEventListener('click', function(e){
+        e.preventDefault();
+        for(j = 0; j< subArea.length; j++){
+          upSlide(subMenu,j);
+          setTimeout(()=>{
+            subArea[j].removeAttribute('style');
+            subArea[j].style.display = 'none';
+          },10)
+        };
+        subArea[k].style.display = 'block';
         setTimeout(()=>{
-          subArea[j].removeAttribute('style');
-          subArea[j].style.display = 'none';
-        },10)
-      };
-      subArea[k].style.display = 'block';
-      setTimeout(()=>{
-        downSlide(subMenu,k);
-      },50);
-      return true;
-    });
-  })(i);
-};
+          downSlide(subMenu,k);
+        },50);
+        return true;
+      });
+    })(i);
+  };
+}
+menuSelectFn();
 // 아 .. 왜 ??? 안됨 ?? remove 안됨 ;';;; 아 됨 ㅎㅎ ㅋㅋ
 // 변수 선언 안해줌 ㅋㅋ
 // subArea의 parentNode 를 잡고, 그 부모요소의 바로 자식인 a tag를 childNode로 잡아서
@@ -126,21 +143,16 @@ document.addEventListener('click',()=>{
 
 // has-fade를 주기 위해 . 사용하는 조건문. 
 // 1023 이하 적용 . 1024 이후 적용 안함
-function hasFadeFn(){
+
+function matchFn(){
   if(matchMedia("screen and (max-width: 1023px)").matches){
-    naviArea.classList.add('has-fade');
-    for(i=0;i<subArea.length;i++){
-      subArea[i].classList.add('has-fade');
-    }
+    
     // location.reload();
   }else if(matchMedia("screen and (min-width: 1024px)").matches){
-    naviArea.classList.remove('has-fade');
-    for(i=0;i<subArea.length;i++){
-      subArea[i].classList.remove('has-fade');
-    }
+    menuSelectFn();
   }
 }
-hasFadeFn();
+matchFn();
 
 // unb - search button
 // search 모달창이 작동되었을때 바깥 스크롤을 막는 방법

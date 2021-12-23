@@ -466,12 +466,15 @@ h1 a {
   }
 
   .navi_area {
+    display: none;
     position: fixed;
     z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    transition: all 100ms ease-in-out;
+    transform: translateY(-100%);
     background-color: #03010f;
   }
   .navi_area .gnb {
@@ -674,12 +677,15 @@ h1 a {
   }
 
   .navi_area {
+    display: none;
     position: fixed;
     z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    transition: all 100ms ease-in-out;
+    transform: translateY(-100%);
     background-color: #03010f;
   }
   .navi_area .gnb {
@@ -882,6 +888,7 @@ h1 a {
   }
 
   .navi_area {
+    display: none;
     position: fixed;
     z-index: -1;
     top: 0;
@@ -889,7 +896,7 @@ h1 a {
     width: 100%;
     height: 100%;
     transition: all 100ms ease-in-out;
-    opacity: 0;
+    transform: translateY(-100%);
     background-color: #03010f;
   }
   .navi_area .gnb {

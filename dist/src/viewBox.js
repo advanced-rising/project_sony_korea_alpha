@@ -31,7 +31,6 @@ fetch(viewBoxDataCode)
     makeViewIndicator.append(makeViewIndiUl);
     const viewBoxIndicatoCode = `<button type="button"><span></span></button>`
 
-
     for(let i=0; i<dataArrLen;i++){
       const makeViewLi = document.createElement('li');
       makeViewLi.setAttribute('class','viewBox_img');
@@ -42,18 +41,13 @@ fetch(viewBoxDataCode)
       const makeIndiLi = document.createElement('li');
       makeIndiLi.innerHTML = viewBoxIndicatoCode;
       makeViewIndiUl.append(makeIndiLi);
-      
       const viewIndiLi = makeViewIndiUl.querySelectorAll('li');
       const viewIndiSpan = viewIndiLi[i].querySelector('span');
-
       viewIndiSpan.innerText = dataArr[i].buttonTxt;
     }
-
     const makeViewLi = makeViewUl.querySelectorAll('li');
     const makeViewLiArr = [...makeViewLi];
     
-    
-
     for(let i=0;i<dataArrLen;i++){
       let viewDtSpan = makeViewLiArr[i].querySelectorAll('dt>span');
       viewDtSpan[0].innerText = dataArr[i].title1; 
@@ -63,9 +57,6 @@ fetch(viewBoxDataCode)
       let viewDdSpan = makeViewLiArr[i].querySelector('dd>span');
       viewDdSpan.innerText = dataArr[i].comment;
     }
-
-
-
   })
   .then(()=>{
 
