@@ -72,7 +72,6 @@ for(i=0;i<videoLen;i++){
 // 일단 다음 video 가 오게 만들어보자.
 // 아마도 스타일을 줘서 만드는것이 편할거라 생각된다.
 
-console.log(videoLiCvt);
 let videoCount = 0;
 
 /**
@@ -93,34 +92,20 @@ let videoCount = 0;
  * insertBefore
  * append
  */
-function videoUlCopy(){
-  videoUl = videoArea.querySelector('ul');
-  videoLi = videoArea.querySelectorAll('li');
-  videoLiCvt = [...videoLi];
+// video carousel slide 기능
+const carouselSlide = function(e){
+  e.preventDefault();
+  if(permission){
+    permission = false;
+    let target = e.target.classList.contains('prev_btn');
+    videoLiCvt = [...videoLi];
+    target ? videoUl.prepend(videoLiCvt.at(-1)) : videoUl.append(videoLiCvt.at(0))
+    videoLi = videoArea.querySelectorAll('li');
+    setTimeout(()=>{
+      permission = true;
+    },500)
+  }
 }
-videoNext.addEventListener('click',(e)=>{
-  e.preventDefault();
-  if(permission){
-    permission = false;
-    videoUl.prepend(videoLiCvt.at(-1));
-    videoUlCopy();
-    setTimeout(()=>{
-      permission = true;
-    },10)
-  }
-})
-
-videoPrev.addEventListener('click',(e)=>{
-  e.preventDefault();
-  if(permission){
-    permission = false;
-    videoUl.append(videoLiCvt.at(0));
-    videoUlCopy();
-    setTimeout(()=>{
-      permission = true;
-    },10)
-  }
-})
-
+videoBtn.addEventListener('click',carouselSlide)
 
 
