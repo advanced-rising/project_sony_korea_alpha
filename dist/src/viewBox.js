@@ -1,4 +1,74 @@
 // viewBox.js
+
+const viewBoxDataCode = "../data/mainViewBoxData.json";
+
+fetch(viewBoxDataCode)
+  .then((response)=>{
+    return response.json();
+  })
+  .then((response)=>{
+    const dataArr = [...response];
+    const dataArrLen = dataArr.length;
+    const viewBoxH3 = viewBox.querySelector('#viewBox h3');
+    const makeViewArea = document.createElement('div');
+    makeViewArea.setAttribute('class','view_area');
+    const makeViewUl = document.createElement('ul');
+    viewBoxH3.after(makeViewArea);
+    makeViewArea.append(makeViewUl);
+    const viewBoxCode = 
+    `<dl>
+      <dt>
+        <span></span>
+        <span></span>
+        <span></span>
+      </dt>
+      <dd><span></span></dd>
+    </dl>`
+    const makeViewIndicator = document.createElement('div');
+    makeViewIndicator.setAttribute('class','view_indicator');
+    makeViewArea.after(makeViewIndicator);
+    const makeViewIndiUl = document.createElement('ul');
+    makeViewIndicator.append(makeViewIndiUl);
+    const viewBoxIndicatoCode = `<button type="button"><span></span></button>`
+
+
+    for(let i=0; i<dataArrLen;i++){
+      const makeViewLi = document.createElement('li');
+      makeViewLi.setAttribute('class','viewBox_img');
+      makeViewLi.innerHTML = viewBoxCode;
+      makeViewUl.append(makeViewLi);
+      makeViewLi.style.backgroundImage = 'url('+dataArr[i].img+')'
+
+      const makeIndiLi = document.createElement('li');
+      makeIndiLi.innerHTML = viewBoxIndicatoCode;
+      makeViewIndiUl.append(makeIndiLi);
+      
+      const viewIndiLi = makeViewIndiUl.querySelectorAll('li');
+      const viewIndiSpan = viewIndiLi[i].querySelector('span');
+
+      viewIndiSpan.innerText = dataArr[i].buttonTxt;
+    }
+
+    const makeViewLi = makeViewUl.querySelectorAll('li');
+    const makeViewLiArr = [...makeViewLi];
+    
+    
+
+    for(let i=0;i<dataArrLen;i++){
+      let viewDtSpan = makeViewLiArr[i].querySelectorAll('dt>span');
+      viewDtSpan[0].innerText = dataArr[i].title1; 
+      viewDtSpan[1].innerText = dataArr[i].title2; 
+      viewDtSpan[2].innerText = dataArr[i].title3;
+
+      let viewDdSpan = makeViewLiArr[i].querySelector('dd>span');
+      viewDdSpan.innerText = dataArr[i].comment;
+    }
+
+
+
+  })
+  .then(()=>{
+
 const viewBox = document.querySelector('#viewBox');
 const viewArea = viewBox.querySelector('.view_area');
 const viewUl = viewArea.querySelector('ul');
@@ -10,6 +80,7 @@ const viewSlide = viewUl.querySelectorAll(".viewBox_img");
 const indicatorBtn = viewIndicatorUl.querySelectorAll("li");
 
 let slideLength = viewLi.length;
+
 // let countCheck = 0;
 // let afterCheck = countCheck;
 // const VIEW_ON = 'on';
@@ -92,3 +163,5 @@ function opacityFn(){
     afterCheck = countCheck
   },100);
 }
+
+})// fetch

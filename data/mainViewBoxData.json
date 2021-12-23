@@ -1,0 +1,34 @@
+[
+  {
+    "title1" : "첫번째 광고줄 광고가 1번째",
+    "title2" : "두번째 광고줄 광고가 1번째",
+    "title3" : "세번째 광고줄 광고가 1번째",
+    "comment" : "광고 1 번째 가나다라마바사",
+    "img" : "../img/main/viewBox/img_main72_sjcn.jpg",
+    "buttonTxt" : "광고1"
+  },
+  {
+    "title1" : "첫번째 광고줄 광고가 2번째",
+    "title2" : "두번째 광고줄 광고가 2번째",
+    "title3" : "세번째 광고줄 광고가 2번째",
+    "comment" : "광고 2 번째 가나다라마바사",
+    "img" : "../img/main/viewBox/img_main72_g2ry.jpg",
+    "buttonTxt" : "광고2"
+  },
+  {
+    "title1" : "첫번째 광고줄 광고가 3번째",
+    "title2" : "두번째 광고줄 광고가 3번째",
+    "title3" : "세번째 광고줄 광고가 3번째",
+    "comment" : "광고 3 번째 가나다라마바사",
+    "img" : "../img/main/viewBox/img_main70_ucuy.jpg",
+    "buttonTxt" : "광고3"
+  },
+  {
+    "title1" : "첫번째 광고줄 광고가 4번째",
+    "title2" : "두번째 광고줄 광고가 4번째",
+    "title3" : "세번째 광고줄 광고가 4번째",
+    "comment" : "광고 4 번째 가나다라마바사",
+    "img" : "../img/main/viewBox/img_main75_90jm.jpg",
+    "buttonTxt" : "광고4"
+  }
+]

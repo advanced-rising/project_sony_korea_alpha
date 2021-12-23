@@ -12,24 +12,27 @@
       width: 100%;
       height: 100%;
       @at-root  .viewBox_img {
-        display: none;
+        display: block;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        &:nth-child(1) {
-          @include img("main/viewBox/img_main72_sjcn.jpg");
-        }
-        &:nth-child(2) {
-          @include img("main/viewBox/img_main72_g2ry.jpg");
-        }
-        &:nth-child(3) {
-          @include img("main/viewBox/img_main70_ucuy.jpg");
-        }
-        &:nth-child(4) {
-          @include img("main/viewBox/img_main75_90jm.jpg");
-        }
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        // &:nth-child(1) {
+        //   @include img("main/viewBox/img_main72_sjcn.jpg");
+        // }
+        // &:nth-child(2) {
+        //   @include img("main/viewBox/img_main72_g2ry.jpg");
+        // }
+        // &:nth-child(3) {
+        //   @include img("main/viewBox/img_main70_ucuy.jpg");
+        // }
+        // &:nth-child(4) {
+        //   @include img("main/viewBox/img_main75_90jm.jpg");
+        // }
         dl {
           position: absolute;
           @include unit(bottom,200);
@@ -47,8 +50,10 @@
             @include unit(font-size,24);
             font-weight: 700;
             span {
+              display: block;
               width: auto;
               height: auto;
+              @include unit(margin-bottom,20);
             }
           }
           dd {
