@@ -88,7 +88,7 @@ gnbBtn.addEventListener('click', (e) => {
 // 결국엔 add 하는것을 함수로 써서 VIEW_ON이 되면서, 움직이는 효과까지 주게 하라 .
 
 // menu 선택시 subArea 보이게 해주는 역할
-const menuSelectFn = function(){
+function menuSelectFn(){
   for(i = 0; i < subArea.length ; i++){
     (function(k){
       subArea[k].parentNode.querySelector('a').addEventListener('click', function(e){
@@ -109,7 +109,7 @@ const menuSelectFn = function(){
     })(i);
   };
 }
-menuSelectFn();
+
 // 아 .. 왜 ??? 안됨 ?? remove 안됨 ;';;; 아 됨 ㅎㅎ ㅋㅋ
 // 변수 선언 안해줌 ㅋㅋ
 // subArea의 parentNode 를 잡고, 그 부모요소의 바로 자식인 a tag를 childNode로 잡아서
@@ -143,16 +143,36 @@ document.addEventListener('click',()=>{
 
 // has-fade를 주기 위해 . 사용하는 조건문. 
 // 1023 이하 적용 . 1024 이후 적용 안함
-
-function matchFn(){
-  if(matchMedia("screen and (max-width: 1023px)").matches){
-    
-    // location.reload();
-  }else if(matchMedia("screen and (min-width: 1024px)").matches){
-    menuSelectFn();
+const deviceSizeData = [
+  { type : 'mobile-v', size : 479 },
+  { type : 'mobile-h', size : 767 },
+  { type : 'tablet', size : 1023 },
+  { type : 'laptop', size : 1279 },
+  { type : 'pc1280', size : 1439 },
+  { type : 'pc1440', size : 1919 },
+  { type : 'pc1920', size : 2559 },
+  { type : 'pc2560' }
+]
+const mediaArray = [];
+for(let i=0; i<deviceSizeData.length; i+=1){
+  let matchCode;
+  if(i === 0){
+    matchCode = window.matchMedia(`screen and (max-width:${deviceSizeData[i].size}px)`);
+  }else if( i === deviceSizeData.length - 1){
+    matchCode = window.matchMedia(`screen and (min-width:${deviceSizeData[i-1].size + 1}px)`);
+  }else{
+    matchCode = window.matchMedia(`screen and (min-width:${deviceSizeData[i-1].size + 1}px) and (max-width:${deviceSizeData[i].size}px)`);
   }
+  mediaArray.push(matchCode);
 }
-matchFn();
+mediaArray.forEach((data,index)=>{
+  data.addEventListener('change',(e)=>{
+    if(data.matches === true){
+      location.reload();
+    }
+  })
+})
+
 
 // unb - search button
 // search 모달창이 작동되었을때 바깥 스크롤을 막는 방법

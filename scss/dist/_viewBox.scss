@@ -21,6 +21,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        transition: all 100ms linear;
         // &:nth-child(1) {
         //   @include img("main/viewBox/img_main72_sjcn.jpg");
         // }
