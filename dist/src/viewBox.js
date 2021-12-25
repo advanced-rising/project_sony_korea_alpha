@@ -132,7 +132,7 @@ fetch(viewBoxDataCode)
     })
   })
   // window 창이 실행되는 순간 바로 실행하게 만들어라
-  window.onload = function(){
+  const autoSlidesFn = function(){
     autoSlides(countCheck);
     // countCheck는 초기값이 0으로 설정하게 해야한다.
     // 그 후 반복수행으로 계속 수행하게 한다.
@@ -142,6 +142,7 @@ fetch(viewBoxDataCode)
         autoSlides(countCheck);
     }, setTimed);
   }
+  autoSlidesFn();
 
   // ! 미사용
   // function opacityFn(){

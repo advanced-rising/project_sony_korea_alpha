@@ -23,8 +23,8 @@ const videoPanel = ['next_btn','prev_btn'];
 const videoBtn = videoArea.querySelector('.video_btn');
 const videoNext = videoBtn.querySelector('.next_btn');
 const videoPrev = videoBtn.querySelector('.prev_btn');
-let videoUl = videoArea.querySelector('ul');
-let videoLi = videoUl.querySelectorAll('li');
+const videoUl = videoArea.querySelector('ul');
+const videoLi = videoUl.querySelectorAll('li');
 const videoIndicator = videoBox.querySelector('.video_indicator');
 const videoIndicatorUl = videoIndicator.querySelector('ul');
 const videoIndicatorLi = videoIndicatorUl.querySelectorAll('li');
@@ -107,5 +107,14 @@ const carouselSlide = function(e){
   }
 }
 videoBtn.addEventListener('click',carouselSlide)
+const videoPlayBtn = videoUl.querySelectorAll('li > button');
+const videoPlayBtnArr = [...videoPlayBtn];
+console.log(videoPlayBtnArr);
+videoPlayBtnArr.forEach((el,i)=>{
+  el.addEventListener('click',(e)=>{
+    const vodTag = document.createElement('video');
+    // 내일하자 .. 잠오네
+  })
+})
 
 

@@ -1076,7 +1076,7 @@ h1 a {
   height: 100%;
 }
 .viewBox_img {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -2585,7 +2585,7 @@ h1 a {
     display: none;
   }
   .video_list ul li:nth-child(1) {
-    display: none;
+    display: block;
     width: 420px;
     width: 26.25rem;
     height: 300px;
@@ -2597,7 +2597,7 @@ h1 a {
     transform: scale(1);
   }
   .video_list ul li:nth-child(2) {
-    display: none;
+    display: block;
     width: 420px;
     width: 26.25rem;
     height: 300px;
@@ -2609,7 +2609,7 @@ h1 a {
     transform: scale(1);
   }
   .video_list ul li:nth-child(3) {
-    display: none;
+    display: block;
     width: 420px;
     width: 26.25rem;
     height: 300px;
@@ -2621,7 +2621,7 @@ h1 a {
     transform: scale(1);
   }
   .video_list ul li:nth-child(4) {
-    display: none;
+    display: block;
     width: 420px;
     width: 26.25rem;
     height: 300px;
@@ -2633,7 +2633,7 @@ h1 a {
     transform: scale(1);
   }
   .video_list ul li:nth-child(5) {
-    display: none;
+    display: block;
     width: 420px;
     width: 26.25rem;
     height: 300px;
@@ -3417,30 +3417,31 @@ h1 a {
   height: 7.5rem;
   padding: 20px;
   padding: 1.25rem;
+  transition: all 100ms linear;
 }
 #supportBox ul li:nth-child(1) {
   background-color: #e75300;
 }
 #supportBox ul li:nth-child(1):hover .support_txt::before, #supportBox ul li:nth-child(1):hover .support_txt::after {
-  animation: arrow_move 1000ms linear infinite;
+  animation: arrow_move 800ms ease-in-out infinite;
 }
 #supportBox ul li:nth-child(2) {
   background-color: #333335;
 }
 #supportBox ul li:nth-child(2):hover .support_txt::before, #supportBox ul li:nth-child(2):hover .support_txt::after {
-  animation: arrow_move 1000ms linear infinite;
+  animation: arrow_move 800ms ease-in-out infinite;
 }
 #supportBox ul li:nth-child(3) {
   background-color: #6f6f75;
 }
 #supportBox ul li:nth-child(3):hover .support_txt::before, #supportBox ul li:nth-child(3):hover .support_txt::after {
-  animation: arrow_move 1000ms linear infinite;
+  animation: arrow_move 800ms ease-in-out infinite;
 }
 #supportBox ul li:nth-child(4) {
   background-color: #03010f;
 }
 #supportBox ul li:nth-child(4):hover .support_txt::before, #supportBox ul li:nth-child(4):hover .support_txt::after {
-  animation: arrow_move 1000ms linear infinite;
+  animation: arrow_move 800ms ease-in-out infinite;
 }
 #supportBox ul li:nth-child(odd) {
   margin-right: 20px;
@@ -3588,16 +3589,16 @@ h1 a {
 }
 @keyframes arrow_move {
   from {
-    right: 20px;
-    right: 1.25rem;
+    right: 15px;
+    right: 0.9375rem;
   }
   50% {
-    right: 10px;
-    right: 0.625rem;
-  }
-  to {
     right: 20px;
     right: 1.25rem;
+  }
+  to {
+    right: 15px;
+    right: 0.9375rem;
   }
 }
 /* ============= // #supportBox =========== */

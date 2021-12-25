@@ -19,32 +19,33 @@
       @include unit(width,500);
       @include unit(height,120);
       @include unit(padding,20);
+      transition: all 100ms linear;
       &:nth-child(1) {
         background-color: $color-orange;
         &:hover .support_txt::before,
         &:hover .support_txt::after {
-          animation: arrow_move 1000ms linear infinite;
+          animation: arrow_move 800ms ease-in-out infinite;
         }
       }
       &:nth-child(2) {
         background-color: $color-deep-gray;
         &:hover .support_txt::before,
         &:hover .support_txt::after {
-          animation: arrow_move 1000ms linear infinite;
+          animation: arrow_move 800ms ease-in-out infinite;
         }
       }
       &:nth-child(3) {
         background-color: $color-light-gray;
         &:hover .support_txt::before,
         &:hover .support_txt::after {
-          animation: arrow_move 1000ms linear infinite;
+          animation: arrow_move 800ms ease-in-out infinite;
         }
       }
       &:nth-child(4) {
         background-color: $color-black;
         &:hover .support_txt::before,
         &:hover .support_txt::after {
-          animation: arrow_move 1000ms linear infinite;
+          animation: arrow_move 800ms ease-in-out infinite;
         }
       }
       &:nth-child(odd) {
@@ -159,12 +160,12 @@
 }
 @keyframes arrow_move {
   from {
-    @include unit(right,20);
+    @include unit(right,15);
   }
   50% {
-    @include unit(right,10);
+    @include unit(right,20);
   }
   to {
-    @include unit(right,20);
+    @include unit(right,15);
   }
 }

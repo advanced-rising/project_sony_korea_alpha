@@ -11,15 +11,13 @@ const naviArea = navigation.querySelector('.navi_area');
 const fadeElement = document.querySelectorAll('.has-fade');
 const gnbUl = naviArea.querySelector('ul');
 const gnbLi = gnbUl.children;
-const gnbLiArr = Array.prototype.slice.call(gnbLi);
+const gnbLiArr = [...gnbLi];
 const subArea = naviArea.querySelectorAll('.sub_area');
 const subMenu = naviArea.querySelectorAll('.sub_menu');
 
 const familySelector = document.querySelector('.family_site');
 const familyBtn = familySelector.querySelector('button');
 const subFamily = document.querySelector('.sub_family');
-
-
 
 let countCheck = 0;
 let afterCheck = countCheck;
@@ -31,6 +29,59 @@ let i = 0;
 let j = 0;
 let len = gnbLiArr.length;
 // * ===================================
+subArea.forEach((element,i)=>{
+  const selectParent = element.parentNode;
+  selectParent.querySelector('a').addEventListener('click',(e)=>{
+    e.preventDefault();
+    (subArea[i].style.display === 'block')
+      ? upSlide(subArea,subMenu,i,50)
+      : downSlide(subArea,subMenu,i,50)
+    
+  })  
+})
+function downSlide(parent,element,i,timed){
+  parent[i].style.display = 'block';
+  setTimeout((timed)=>{
+    element[i].style.transform = 'translateY(0%)';
+    element[i].style.transition = 'transform 100ms linear';
+  },timed)
+  return downSlide;
+}
+
+function upSlide(parent,element,i,timed){
+  element[i].style.transform = 'translateY(-100%)';
+  element[i].style.transition = 'transform 100ms linear';
+  setTimeout((timed)=>{
+    parent[i].style.display = 'none';
+  },timed)
+  return upSlide;
+}
+// 서브메뉴 display block 다른영역 클릭시 해당 기능 사라지게하기.
+// document.addEventListener('click',()=>{
+//   for(let i = 0; i < subArea.length ; i++){
+//     if(gnbLiArr[i] === true){
+//       if(subArea[i].style.display === 'block'){
+//         console.log('확인');
+//         upSlide(subArea,subMenu,i,500);
+//       }
+//     }
+//   }
+// })
+
+document.addEventListener('click',()=>{
+  for(i = 0; i < subArea.length ; i++){
+      
+    if(subArea[i].style.display === 'block'){
+      subMenu[i].style.transform = 'translateY(-100%)';
+      subMenu[i].style.transition = 'transform 100ms linear';
+    }
+    if(subMenu[i].style.transform === 'translateY(0)'){
+      subArea[i].style.display = 'none'; 
+    }
+  }
+})
+// ! 다른영역 클릭시 , display block 에서 none으로 처리가 안되는점 해결하기 .....
+
 resetOnFn = (element) => {
   for(j = 0; j< element.length; j++){
     element[j].classList.remove(VIEW_ON);
@@ -38,19 +89,6 @@ resetOnFn = (element) => {
 }
 
 // navigation gnbBtn 클릭시 메뉴 오픈
-fadeInFn = (element) => {
-  element.forEach( (element) => {
-    element.classList.remove('fade-out');
-    element.classList.add('fade-in');
-  });
-}
-fadeOutFn = (element) => {
-  element.forEach( (element) => {
-    element.classList.remove('fade-in');
-    element.classList.add('fade-out');
-  });
-}
-
 gnbBtn.addEventListener('click', (e) => {
   e.preventDefault();
   let isActive = gnbBtn.classList.contains(ACTIVE_ON);
@@ -62,12 +100,9 @@ gnbBtn.addEventListener('click', (e) => {
       setTimeout(()=>{
         naviArea.style.transform = 'translateY(0)'
       },10)
-      // fadeInFn(fadeElement);
     }else{
       gnbBtn.classList.remove(ACTIVE_ON);
       naviArea.style.transform = 'translateY(-100%)'
-      // resetOnFn(subArea);
-      // fadeOutFn(fadeElement);
       setTimeout(()=>{
         naviArea.style.display = 'none';
       },300)
@@ -79,63 +114,6 @@ gnbBtn.addEventListener('click', (e) => {
   
 });
 //  ! 네비게이션 버튼을 누르고 난 뒤 수행하는 함수를 만들어야 한다 .!!
-
-// * ===================================
-
-
-// * ===================================
-// on이 되면 메뉴 영역이 움직이면서 돌아오게 하라 !
-// 결국엔 add 하는것을 함수로 써서 VIEW_ON이 되면서, 움직이는 효과까지 주게 하라 .
-
-// menu 선택시 subArea 보이게 해주는 역할
-function menuSelectFn(){
-  for(i = 0; i < subArea.length ; i++){
-    (function(k){
-      subArea[k].parentNode.querySelector('a').addEventListener('click', function(e){
-        e.preventDefault();
-        for(j = 0; j< subArea.length; j++){
-          upSlide(subMenu,j);
-          setTimeout(()=>{
-            subArea[j].removeAttribute('style');
-            subArea[j].style.display = 'none';
-          },10)
-        };
-        subArea[k].style.display = 'block';
-        setTimeout(()=>{
-          downSlide(subMenu,k);
-        },50);
-        return true;
-      });
-    })(i);
-  };
-}
-
-// 아 .. 왜 ??? 안됨 ?? remove 안됨 ;';;; 아 됨 ㅎㅎ ㅋㅋ
-// 변수 선언 안해줌 ㅋㅋ
-// subArea의 parentNode 를 잡고, 그 부모요소의 바로 자식인 a tag를 childNode로 잡아서
-// childeNode === node_element ... 
-
-
-// 특정영역 클릭시 해당 기능 사라지게하기.
-document.addEventListener('click',()=>{
-  for(i = 0; i < subArea.length ; i++){
-    if(subArea[i].style.display === 'block'){
-      upSlide(subMenu,i);
-      setTimeout(()=>{
-        subMenu[i].removeAttribute('style');
-      },10)
-    }
-  }
-})
-
-// document.addEventListener('click',(e)=>{
-//   e.preventDefault();
-//   if(subFamily.classList.contains(ACTIVE_ON) === true){
-//     if(subMenu){
-//       subFamily.classList.remove(ACTIVE_ON);
-//     }
-//   }
-// })
 
 // * ===================================
 
@@ -168,7 +146,7 @@ for(let i=0; i<deviceSizeData.length; i+=1){
 mediaArray.forEach((data,index)=>{
   data.addEventListener('change',(e)=>{
     if(data.matches === true){
-      location.reload();
+      location.reload(true);
     }
   })
 })
@@ -179,7 +157,7 @@ mediaArray.forEach((data,index)=>{
 openBtn.addEventListener('click', function(event){
   event.preventDefault();
   searchModal.style.display = 'block';
-
+  closeBtn.focus();
   window.onscroll = ()=>{
     window.scrollTo(0, 0);
   };
@@ -205,12 +183,3 @@ familyBtn.addEventListener('click',function(event){
   }
 });
 
-function downSlide(element,i){
-  element[i].style.transform = 'translateY(0%)';
-  element[i].style.transition = 'transform 100ms linear';
-}
-
-function upSlide(element,i){
-  element[i].style.transform = 'translateY(-100%)';
-  element[i].style.transition = 'transform 100ms linear';
-}

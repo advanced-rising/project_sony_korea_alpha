@@ -290,7 +290,7 @@
     ul {
       li {
         &:nth-child(1) {
-          display: none;
+          display: block;
           @include unit(width,420);
           @include unit(height,300);
           top: 0;
@@ -301,7 +301,7 @@
           
         }
         &:nth-child(2) {
-          display: none;
+          display: block;
           @include unit(width,420);
           @include unit(height,300);
           top: 0;
@@ -311,7 +311,7 @@
           transform: scale(1);
         }
         &:nth-child(3) {
-          display: none;
+          display: block;
           @include unit(width,420);
           @include unit(height,300);
           top: 0;
@@ -321,7 +321,7 @@
           transform: scale(1);
         }
         &:nth-child(4) {
-          display: none;
+          display: block;
           @include unit(width,420);
           @include unit(height,300);
           top: 0;
@@ -331,7 +331,7 @@
           transform: scale(1);
         }
         &:nth-child(5) {
-          display: none;
+          display: block;
           @include unit(width,420);
           @include unit(height,300);
           top: 0;
