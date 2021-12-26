@@ -1,3 +1,5 @@
+
+
 const viewBoxCode = "../temp/viewBox.html";
 const productBoxCode = "../temp/productBox.html";
 const magazineBoxCode = "../temp/magazineBox.html";
@@ -38,6 +40,9 @@ fetch(videoBoxCode)
 .then((response)=>response.text())
 .then((data)=>videoBoxHTML.innerHTML = data)
 .then(()=>makeScriptFn("../dist/src/videoBox.js"))
+.then(()=>makeScriptFn("../dist/main/VideoSlide.js"))
+.then(()=>makeScriptFn("../dist/main/VideoPlay.js"))
+// .then(()=>makeScriptFn("../dist/main/VideoTap.js"))
 
 fetch(esBoxCode)
 .then((response)=>response.text())

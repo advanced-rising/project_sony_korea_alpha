@@ -9,6 +9,7 @@ fetch(viewBoxDataCode)
   .then((response)=>{
     const dataArr = [...response];
     const dataArrLen = dataArr.length;
+    
     const viewBoxH3 = viewBox.querySelector('#viewBox h3');
     const makeViewArea = document.createElement('div');
     makeViewArea.setAttribute('class','view_area');
@@ -41,7 +42,8 @@ fetch(viewBoxDataCode)
       makeViewLi.innerHTML = viewBoxCode;
       makeViewUl.append(makeViewLi);
       makeViewLi.style.backgroundImage = 'url('+dataArr[i].img+')'
-
+    }
+    for(let i=0; i<dataArrLen;i++){
       const makeIndiLi = document.createElement('li');
       makeIndiLi.innerHTML = viewBoxIndicatoCode;
       makeViewIndiUl.append(makeIndiLi);
@@ -89,16 +91,7 @@ fetch(viewBoxDataCode)
       element[j].classList.remove(VIEW_ON);
     };
   }
-  // 광고슬라이드 영역할 준비
-  // 1. 다음 이미지가 오도록 하기
-  // 2. 다음 이미지가 올때 fade 효과주기
-  // 3. indicator 효과 주기
-
-  // 1. 일단 조건문으로 . n 번째라면에서 len이 같다면 0으로 만들어라
-  // 2. 같지 않다면, for문을 통해서 값을 늘려가라 .
-  // 3. 이 함수를 setTimeInterval을 통해 일정시간동안 함수를 수행하라.
-
-  // * ===================================
+  // 슬라이드 구현 하기 위한 함수
   function autoSlides(n) {
     if ( ( n + 1 ) > slideLength) {
       countCheck = 0;
@@ -119,10 +112,12 @@ fetch(viewBoxDataCode)
     },100)
     indicatorBtn[n].classList.add(ACTIVE_ON);
   }
+  // 인디케이터 슬라이드를 확인하기 위한 함수
   function currentSlide(n) {
     countCheck = n;
     autoSlides(countCheck);
   }
+  // 인디케이터 클릭할 경우에 해당 슬라이드로 이동
   viewIndicatorLi.forEach((element,index)=>{
     let indicatorLink = element.querySelector('button');
     indicatorLink.addEventListener('click', (e)=>{
@@ -131,7 +126,7 @@ fetch(viewBoxDataCode)
       currentSlide(countCheck);
     })
   })
-  // window 창이 실행되는 순간 바로 실행하게 만들어라
+  // 오토 슬라이드 이벤트
   const autoSlidesFn = function(){
     autoSlides(countCheck);
     // countCheck는 초기값이 0으로 설정하게 해야한다.
