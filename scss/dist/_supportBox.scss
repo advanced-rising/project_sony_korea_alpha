@@ -160,12 +160,12 @@
 }
 @keyframes arrow_move {
   from {
-    @include unit(right,15);
-  }
-  50% {
     @include unit(right,20);
   }
-  to {
+  50% {
     @include unit(right,15);
+  }
+  to {
+    @include unit(right,20);
   }
 }
