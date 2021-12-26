@@ -1,3 +1,5 @@
+
+
 const videoBox = document.querySelector('#videoBox');
 const videoArea = videoBox.querySelector('.video_list');
 const videoBtn = videoArea.querySelector('.video_btn');
