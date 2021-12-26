@@ -25,6 +25,13 @@
             @include unit(width,240);
             height: auto;
             @include unit(margin-top,20);
+            overflow: hidden;
+            
+            &:hover .event_img,
+            &:hover .seminar_img {
+              transform: scale(1.1);
+              transition: transform 500ms ease;
+            }
             &:nth-child(2n - 1) {
               @include unit(margin-right,20);
             }
@@ -36,6 +43,7 @@
               background-size: cover;
               background-position: center;
               box-sizing: border-box;
+              transition: transform 500ms ease;
             }
             .event_txt,
             .seminar_txt {

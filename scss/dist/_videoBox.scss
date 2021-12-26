@@ -11,12 +11,13 @@
     @include unit(margin-top,40);
     text-align: center;
     .video_btn {
-      z-index: 110;
+      z-index: 1;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
-      @include unit(width,1100);
+      width: 100%;
+      // @include unit(width,1100);
       @include unit(height,80);
       .next_btn {
         position: absolute;
@@ -114,6 +115,14 @@
           transform: scale(0.8);
           transition: all 500ms linear;
         }
+        .vod_area {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 200;
+        }
       }
       .video {
         position: absolute;
@@ -141,6 +150,7 @@
         background-image: url("../../img/main/video/96_g2ry.jpg");
       }
       .video_play_btn {
+        z-index: 10;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -169,8 +179,6 @@
     }
   }
 }
-.video iframe {display: none;}
-.video_play_btn:hover + iframe { display: block;}
 .video_indicator {
   display: none;
   text-align: center;
@@ -290,7 +298,7 @@
     ul {
       li {
         &:nth-child(1) {
-          display: block;
+          display: none;
           @include unit(width,420);
           @include unit(height,300);
           top: 0;
@@ -301,7 +309,7 @@
           
         }
         &:nth-child(2) {
-          display: block;
+          display: none;
           @include unit(width,420);
           @include unit(height,300);
           top: 0;
@@ -311,7 +319,7 @@
           transform: scale(1);
         }
         &:nth-child(3) {
-          display: block;
+          display: none;
           @include unit(width,420);
           @include unit(height,300);
           top: 0;
@@ -321,7 +329,7 @@
           transform: scale(1);
         }
         &:nth-child(4) {
-          display: block;
+          display: none;
           @include unit(width,420);
           @include unit(height,300);
           top: 0;
@@ -331,7 +339,7 @@
           transform: scale(1);
         }
         &:nth-child(5) {
-          display: block;
+          display: none;
           @include unit(width,420);
           @include unit(height,300);
           top: 0;

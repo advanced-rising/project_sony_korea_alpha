@@ -1,18 +1,33 @@
 // videoBox.js
 const videoData = [
   {
+    "videoName" : "디지털 언패킹 a7 소개",
+    "playName" : "디지털 언패킹 a7 소개 재생",
+    "videoUrl" : "https://youtu.be/mh1WahTk3QA",
     "imgUrl" : "../../img/main/video/97_xomc.jpg",
   },
   {
+    "videoName" : "인생에 남을 바디 프로필 촬영 프로젝트",
+    "playName" : "인생에 남을 바디 프로필 촬영 프로젝트 재생",
+    "videoUrl" : "https://youtu.be/GyoTAlB_nUo",
     "imgUrl" : "../../img/main/video/97_e08u.jpg",
   },
   {
+    "videoName" : "디지털 언패킹 영상 슈팅 리포트",
+    "playName" : "디지털 언패킹 영상 슈팅 리포트 재생",
+    "videoUrl" : "https://youtu.be/pqTlqIhA7W4",
     "imgUrl" : "../../img/main/video/96_g2ry.jpg",
   },
   {
+    "videoName" : "디지털 언패킹 사진 슈팅 리포트",
+    "playName" : "디지털 언패킹 사진 슈팅 리포트 재생",
+    "videoUrl" : "https://youtu.be/qUUwlsn7NU0",
     "imgUrl" : "../../img/main/video/95_g2ry.jpg",
   },
   {
+    "videoName" : "시행 미생의 다리 출사 풍경 촬영법",
+    "playName" : "시행 미생의 다리 출사 풍경 촬영법 재생",
+    "videoUrl" : "https://youtu.be/WbXFk-2qZLc",
     "imgUrl" : "../../img/main/video/93_e77u.jpg",
   },
 ]
@@ -24,7 +39,7 @@ const videoBtn = videoArea.querySelector('.video_btn');
 const videoNext = videoBtn.querySelector('.next_btn');
 const videoPrev = videoBtn.querySelector('.prev_btn');
 const videoUl = videoArea.querySelector('ul');
-const videoLi = videoUl.querySelectorAll('li');
+let videoLi = videoUl.querySelectorAll('li');
 const videoIndicator = videoBox.querySelector('.video_indicator');
 const videoIndicatorUl = videoIndicator.querySelector('ul');
 const videoIndicatorLi = videoIndicatorUl.querySelectorAll('li');
@@ -100,21 +115,27 @@ const carouselSlide = function(e){
     let target = e.target.classList.contains('prev_btn');
     videoLiCvt = [...videoLi];
     target ? videoUl.prepend(videoLiCvt.at(-1)) : videoUl.append(videoLiCvt.at(0))
-    videoLi = videoArea.querySelectorAll('li');
+    videoLi = videoUl.querySelectorAll('li');
     setTimeout(()=>{
       permission = true;
     },500)
   }
 }
 videoBtn.addEventListener('click',carouselSlide)
-const videoPlayBtn = videoUl.querySelectorAll('li > button');
-const videoPlayBtnArr = [...videoPlayBtn];
-console.log(videoPlayBtnArr);
-videoPlayBtnArr.forEach((el,i)=>{
+
+
+// 비디오 버튼 클릭시 비디오 iframe 재생하기, 그러나 iframe 이 안뜨네 ??
+videoLiCvt.forEach((el,i)=>{
+  let vodIframe = `<iframe width="100%" height="100%" src="${videoData[i].videoUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
   el.addEventListener('click',(e)=>{
-    const vodTag = document.createElement('video');
-    // 내일하자 .. 잠오네
+    let target = e.target.classList.contains('video_play_btn')
+    console.log(target)
+    if(target){
+      const vodArea = document.createElement('div');
+      vodArea.className = 'vod_area';
+      el.append(vodArea)  
+      vodArea.innerHTML = vodIframe
+    }
   })
+  videoLiCvt = [...videoLi];
 })
-
-
