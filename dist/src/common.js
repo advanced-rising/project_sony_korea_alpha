@@ -35,7 +35,7 @@ let len = gnbLiArr.length;
 // 메뉴 클릭 버튼 함수
 subArea.forEach((element,i)=>{
   const selectParent = element.parentNode;
-  selectParent.querySelector('a').addEventListener('click',(e)=>{
+  selectParent.querySelector('a').addEventListener('mouseover',(e)=>{
     e.preventDefault();
     (subArea[i].style.display === 'block')
     ? upSlide(subArea,subMenu,i,50)
@@ -47,7 +47,6 @@ function downSlide(parent,element,i,timed){
   parent[i].style.display = 'block';
   setTimeout((timed)=>{
     element[i].style.transform = 'translateY(0%)';
-    element[i].style.transition = 'transform 100ms linear';
   },timed)
   return downSlide;
 }
@@ -55,22 +54,21 @@ function downSlide(parent,element,i,timed){
 // 메뉴 업 슬라이드 위에로 
 function upSlide(parent,element,i,timed){
   element[i].style.transform = 'translateY(-100%)';
-  element[i].style.transition = 'transform 100ms linear';
   setTimeout((timed)=>{
     parent[i].style.display = 'none';
   },timed)
   return upSlide;
 }
 // 메뉴 이외의 클릭시 메뉴 닫기
-document.addEventListener('click',(e)=>{
-  let selectDocument = e.target;
-  for(i = 0; i < subArea.length ; i++){
-  if(selectDocument !== subArea[i].parentNode.querySelector('a'))
-    if(subArea[i].style.display === 'block'){
-      upSlide(subArea,subMenu,i,50)
-    }
-  }
-})
+// document.addEventListener('mouseover',(e)=>{
+//   let selectDocument = e.target;
+//   for(i = 0; i < subArea.length ; i++){
+//   if(selectDocument !== subArea[i].parentNode.querySelector('a'))
+//     if(subArea[i].style.display === 'block'){
+//       upSlide(subArea,subMenu,i,50)
+//     }
+//   }
+// })
 
 // navigation gnbBtn 클릭시 메뉴 오픈
 gnbBtn.addEventListener('click', (e) => {

@@ -131,6 +131,13 @@
           @include unit(margin-right,17);
           @include unit(line-height,50);
           color: $color-white;
+          // &:hover .sub_area {
+          //   display: block;
+          // }
+          // &:hover .sub_menu {
+          //   transform: translateY(0%);
+          //   transition: all 100ms ease;
+          // }
           > a {
             z-index: 100;
             @include display-block();
@@ -155,6 +162,7 @@
               @include unit(top,60);
               @include unit(left,-20);
               transform: translateY(-100%);
+              transition: all 100ms ease;
               li {
                 width: auto;
                 @include unit(min-width,140);

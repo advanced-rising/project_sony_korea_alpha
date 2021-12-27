@@ -201,6 +201,7 @@ h1 a {
   left: -20px;
   left: -1.25rem;
   transform: translateY(-100%);
+  transition: all 100ms ease;
 }
 .sub_menu li {
   width: auto;
