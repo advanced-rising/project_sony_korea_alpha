@@ -37,11 +37,46 @@ subArea.forEach((element,i)=>{
   const selectParent = element.parentNode;
   selectParent.querySelector('a').addEventListener('mouseover',(e)=>{
     e.preventDefault();
-    (subArea[i].style.display === 'block')
-    ? upSlide(subArea,subMenu,i,50)
-    : downSlide(subArea,subMenu,i,50)
+    if(subArea[i].style.display !== 'block'){
+      downSlide(subArea,subMenu,i,50) 
+    }else {
+      upSlide(subArea,subMenu,i,50)    
+    }
   })  
 })
+// subArea.forEach((element,i)=>{
+  // element.
+// })
+gnbUl.addEventListener('mouseleave',(e)=>{
+  console.log(gnbUl)
+  e.preventDefault();
+  for(let i=0; i<subArea.length;i++){
+    upSlide(subArea,subMenu,i,50)
+  }
+})
+// gnbLiArr.forEach((data,i)=>{
+//   console.log(data.querySelector('a'));
+//   data.querySelector('a').addEventListener('mouseover',(e)=>{
+//     e.preventDefault();
+//     (subArea[i].style.display === 'block')
+//     ? upSlide(subArea,subMenu,i,50)
+//     : downSlide(subArea,subMenu,i,50)
+//   })
+// })
+
+// 마우스 클릭버전
+// subArea.forEach((element,i)=>{
+//   const selectParent = element.parentNode;
+//   selectParent.querySelector('a').addEventListener('click',(e)=>{
+//     e.preventDefault();
+//     (subArea[i].style.display === 'block')
+//     ? upSlide(subArea,subMenu,i,50)
+//     : downSlide(subArea,subMenu,i,50)
+//   })  
+// })
+
+
+
 // 메뉴 다운 슬라이드 아래로 
 function downSlide(parent,element,i,timed){
   parent[i].style.display = 'block';
@@ -60,7 +95,18 @@ function upSlide(parent,element,i,timed){
   return upSlide;
 }
 // 메뉴 이외의 클릭시 메뉴 닫기
-// document.addEventListener('mouseover',(e)=>{
+// document.addEventListener('mouseleave',(e)=>{
+//   let selectDocument = e.target;
+//   for(i = 0; i < subArea.length ; i++){
+//     if(selectDocument !== subArea[i].parentNode.querySelector('a')){
+//       if(subArea[i].style.display === 'block'){
+//         upSlide(subArea,subMenu,i,50)
+//     }
+//   }
+// })
+
+// 메뉴 이외의 클릭시 메뉴 닫기
+// document.addEventListener('click',(e)=>{
 //   let selectDocument = e.target;
 //   for(i = 0; i < subArea.length ; i++){
 //   if(selectDocument !== subArea[i].parentNode.querySelector('a'))
