@@ -44,11 +44,10 @@
             .sub_family {
               display: none;
               position: absolute;
-              @include unit-calc-plus(top,-100%,-100);
+              @include unit-calc-plus(top,-100%,-90);
               left: 0;
               width: 100%;
               height: auto;
-              @include unit(padding-bottom,40);
               li {
                 width: 100%;
                 @include unit(height,50);
