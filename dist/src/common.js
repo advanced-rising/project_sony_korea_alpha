@@ -34,14 +34,11 @@ let len = gnbLiArr.length;
 // 메뉴 클릭 버튼 함수
 subArea.forEach((element,i)=>{
   const selectParent = element.parentNode;
-  selectParent.addEventListener('click',(e)=>{
-    let selectAlink = selectParent.querySelector('a');
+  selectParent.querySelector('a').addEventListener('click',(e)=>{
     e.preventDefault();
-    if(e.target === selectAlink){
-      (subArea[i].style.display === 'block')
-      ? upSlide(subArea,subMenu,i,50)
-      : downSlide(subArea,subMenu,i,50)
-    }
+    (subArea[i].style.display === 'block')
+    ? upSlide(subArea,subMenu,i,50)
+    : downSlide(subArea,subMenu,i,50)
   })  
 })
 // 메뉴 다운 슬라이드 아래로 
