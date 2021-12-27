@@ -132,6 +132,7 @@
           @include unit(line-height,50);
           color: $color-white;
           > a {
+            z-index: 100;
             @include display-block();
             @include unit(font-size,16);
             text-decoration: none;

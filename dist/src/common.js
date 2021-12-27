@@ -15,6 +15,8 @@ const gnbLiArr = [...gnbLi];
 const subArea = naviArea.querySelectorAll('.sub_area');
 const subMenu = naviArea.querySelectorAll('.sub_menu');
 
+const gnbAbbr = gnbUl.querySelector('abbr');
+
 const familySelector = document.querySelector('.family_site');
 const familyBtn = familySelector.querySelector('button');
 const subFamily = document.querySelector('.sub_family');
@@ -29,16 +31,20 @@ let i = 0;
 let j = 0;
 let len = gnbLiArr.length;
 // * ===================================
+// 메뉴 클릭 버튼 함수
 subArea.forEach((element,i)=>{
   const selectParent = element.parentNode;
-  selectParent.querySelector('a').addEventListener('click',(e)=>{
+  selectParent.addEventListener('click',(e)=>{
+    let selectAlink = selectParent.querySelector('a');
     e.preventDefault();
-    (subArea[i].style.display === 'block')
+    if(e.target === selectAlink){
+      (subArea[i].style.display === 'block')
       ? upSlide(subArea,subMenu,i,50)
       : downSlide(subArea,subMenu,i,50)
-    
+    }
   })  
 })
+// 메뉴 다운 슬라이드 아래로 
 function downSlide(parent,element,i,timed){
   parent[i].style.display = 'block';
   setTimeout((timed)=>{
@@ -48,6 +54,7 @@ function downSlide(parent,element,i,timed){
   return downSlide;
 }
 
+// 메뉴 업 슬라이드 위에로 
 function upSlide(parent,element,i,timed){
   element[i].style.transform = 'translateY(-100%)';
   element[i].style.transition = 'transform 100ms linear';
@@ -56,37 +63,16 @@ function upSlide(parent,element,i,timed){
   },timed)
   return upSlide;
 }
-// 서브메뉴 display block 다른영역 클릭시 해당 기능 사라지게하기.
-// document.addEventListener('click',()=>{
-//   for(let i = 0; i < subArea.length ; i++){
-//     if(gnbLiArr[i] === true){
-//       if(subArea[i].style.display === 'block'){
-//         console.log('확인');
-//         upSlide(subArea,subMenu,i,500);
-//       }
-//     }
-//   }
-// })
-
-document.addEventListener('click',()=>{
+// 메뉴 이외의 클릭시 메뉴 닫기
+document.addEventListener('click',(e)=>{
+  let selectDocument = e.target;
   for(i = 0; i < subArea.length ; i++){
-      
+  if(selectDocument !== subArea[i].parentNode.querySelector('a'))
     if(subArea[i].style.display === 'block'){
-      subMenu[i].style.transform = 'translateY(-100%)';
-      subMenu[i].style.transition = 'transform 100ms linear';
-    }
-    if(subMenu[i].style.transform === 'translateY(0)'){
-      subArea[i].style.display = 'none'; 
+      upSlide(subArea,subMenu,i,50)
     }
   }
 })
-// ! 다른영역 클릭시 , display block 에서 none으로 처리가 안되는점 해결하기 .....
-
-resetOnFn = (element) => {
-  for(j = 0; j< element.length; j++){
-    element[j].classList.remove(VIEW_ON);
-  };
-}
 
 // navigation gnbBtn 클릭시 메뉴 오픈
 gnbBtn.addEventListener('click', (e) => {
@@ -113,7 +99,6 @@ gnbBtn.addEventListener('click', (e) => {
   }
   
 });
-//  ! 네비게이션 버튼을 누르고 난 뒤 수행하는 함수를 만들어야 한다 .!!
 
 // * ===================================
 
