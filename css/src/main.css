@@ -2404,21 +2404,6 @@ h1 a {
   background-size: cover;
   background-position: center;
 }
-.video_list ul .video0 {
-  background-image: url("../../img/main/video/95_g2ry.jpg");
-}
-.video_list ul .video1 {
-  background-image: url("../../img/main/video/93_e77u.jpg");
-}
-.video_list ul .video2 {
-  background-image: url("../../img/main/video/97_xomc.jpg");
-}
-.video_list ul .video3 {
-  background-image: url("../../img/main/video/97_e08u.jpg");
-}
-.video_list ul .video4 {
-  background-image: url("../../img/main/video/96_g2ry.jpg");
-}
 .video_list ul .video_play_btn {
   z-index: 10;
   position: absolute;

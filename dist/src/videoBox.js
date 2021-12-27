@@ -18,19 +18,30 @@ fetch(videoPath)
     selectVideoUl = document.querySelector('.video_part');
     selectVideoUl.append(makeVideoLi)
     let videoCode =
-    `<span class="blind">${dataArr[0].videoName}</span>
+    `<span class="blind">${dataArr[i].videoName}</span>
       <button class="video_play_btn">
-        <span class="blind">${dataArr[1].playName}</span>
+        <span class="blind">${dataArr[i].playName}</span>
       </button>`  
     makeVideoLi.innerHTML = videoCode
     
   }
+  let video0 = document.querySelector('.video0');
+  let video1 = document.querySelector('.video1');
+  let video2 = document.querySelector('.video2');
+  let video3 = document.querySelector('.video3');
+  let video4 = document.querySelector('.video4');
+  video0.style.backgroundImage = `url(${dataArr[0].imgUrl})`
+  video1.style.backgroundImage = `url(${dataArr[1].imgUrl})`
+  video2.style.backgroundImage = `url(${dataArr[2].imgUrl})`
+  video3.style.backgroundImage = `url(${dataArr[3].imgUrl})`
+  video4.style.backgroundImage = `url(${dataArr[4].imgUrl})`
+
   for(let i=0; i<dataArr.length; i++){
     const makeVideoIndi = document.createElement('li')
     selectIndiUl = document.querySelector('.indi_part');
     selectIndiUl.append(makeVideoIndi)
     const videoIndiCode = `<a href="#">
-    <span class="blind">${dataArr[2].indiButton}</span></a>`
+    <span class="blind">${dataArr[i].indiButton}</span></a>`
     makeVideoIndi.innerHTML = videoIndiCode
   }
   return response
@@ -96,8 +107,9 @@ fetch(videoPath)
           el.append(vodArea)  
           vodArea.innerHTML = vodIframe
         }
+        console.log(i);
+        videoLiCvt = [...videoLi];
       })
-      videoLiCvt = [...videoLi];
     })
   }
   videoPlay()
