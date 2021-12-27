@@ -219,6 +219,7 @@ h1 a {
   width: 100%;
   height: 100%;
   text-transform: uppercase;
+  text-decoration: none;
 }
 .sub_menu li a:hover {
   font-weight: 700;
@@ -511,6 +512,7 @@ h1 a {
     width: 100%;
     height: auto;
     margin: auto;
+    border: 3px solid #e75300;
   }
   .sub_menu li {
     display: block;
@@ -722,6 +724,7 @@ h1 a {
     width: 100%;
     height: auto;
     margin: auto;
+    border: 3px solid #e75300;
   }
   .sub_menu li {
     display: block;
@@ -925,9 +928,6 @@ h1 a {
   .sub_area.on {
     display: block;
   }
-  .sub_area.on .sub_menu {
-    border: 4px solid #e75300;
-  }
   .sub_menu {
     position: static;
     display: block;
@@ -936,6 +936,7 @@ h1 a {
     width: 100%;
     height: auto;
     margin: auto;
+    border: 3px solid #e75300;
   }
   .sub_menu li {
     display: block;

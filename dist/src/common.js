@@ -104,7 +104,7 @@ gnbBtn.addEventListener('click', (e) => {
 
 // * ===================================
 
-// has-fade를 주기 위해 . 사용하는 조건문. 
+// 반응형시 새로고침을 해야하는 경우를 위한 함수 이벤트
 // 1023 이하 적용 . 1024 이후 적용 안함
 const deviceSizeData = [
   { type : 'mobile-v', size : 479 },

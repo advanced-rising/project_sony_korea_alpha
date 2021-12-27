@@ -167,6 +167,7 @@
                 a {
                   @include display-block();
                   text-transform: uppercase;
+                  text-decoration: none;
                 }
                 a:hover {
                   font-weight: 700;
@@ -414,6 +415,7 @@
                 width: 100%;
                 height: auto;
                 margin: auto;
+                border: 3px solid $color-orange;
                 li {
                   display: block;
                   height: auto;
@@ -598,6 +600,7 @@
                 width: 100%;
                 height: auto;
                 margin: auto;
+                border: 3px solid $color-orange;
                 li {
                   display: block;
                   height: auto;
@@ -771,9 +774,6 @@
             @include unit(font-size,16);
             @at-root .sub_area {
               &.on { display: block;}
-              &.on .sub_menu {
-                border: 4px solid $color-orange;
-              }
               display: none;
               width: 100%;
               height: auto;
@@ -785,6 +785,7 @@
                 width: 100%;
                 height: auto;
                 margin: auto;
+                border: 3px solid $color-orange;
                 li {
                   display: block;
                   height: auto;
