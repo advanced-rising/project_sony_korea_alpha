@@ -1152,13 +1152,60 @@ h1 a {
   width: 5rem;
   height: 80px;
   height: 5rem;
-  background-color: #6f6f75;
 }
 .accessoryBtn button.prevBtn {
   left: 0;
 }
+.accessoryBtn button.prevBtn::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 30%;
+  left: 30%;
+  width: 40px;
+  height: 4px;
+  transform: translate(-50%, -50%);
+  transform: rotate(135deg);
+  background-color: #03010f;
+}
+.accessoryBtn button.prevBtn::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 64%;
+  left: 30%;
+  width: 40px;
+  height: 4px;
+  transform: translate(-50%, -50%);
+  transform: rotate(45deg);
+  background-color: #03010f;
+}
 .accessoryBtn button.nextBtn {
   right: 0;
+}
+.accessoryBtn button.nextBtn::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 30%;
+  left: 30%;
+  width: 40px;
+  height: 4px;
+  transform: translate(-50%, -50%);
+  transform: rotate(45deg);
+  background-color: #03010f;
+}
+.accessoryBtn button.nextBtn::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 64%;
+  left: 30%;
+  width: 40px;
+  height: 4px;
+  transform: translate(-50%, -50%);
+  transform: rotate(135deg);
+  background-color: #03010f;
 }
 
 .accessoryList {
@@ -1350,17 +1397,25 @@ h1 a {
   height: 3.75rem;
   margin-bottom: 40px;
   margin-bottom: 2.5rem;
+  padding-left: 20px;
+  padding-left: 1.25rem;
   background-color: #333335;
   color: #ffffff;
 }
 .siteNav > ul > li:last-child {
   margin-bottom: 0;
 }
-.siteNav > ul > li button .other_txt {
+.siteNav > ul > li a {
+  display: block;
+  width: 100%;
+  height: 100%;
   letter-spacing: 2px;
   letter-spacing: 0.125rem;
   color: #ffffff;
   text-transform: uppercase;
+  text-decoration: none;
+  line-height: 60px;
+  line-height: 3.75rem;
 }
 .family_site button {
   width: 100%;
@@ -1376,7 +1431,7 @@ h1 a {
   line-height: 40px;
   line-height: 2.5rem;
 }
-.family_site .sub_family {
+.sub_family {
   display: none;
   position: absolute;
   top: calc(-100% + -90px);
@@ -1385,52 +1440,34 @@ h1 a {
   width: 100%;
   height: auto;
 }
-.family_site .sub_family li {
+.sub_family.active {
+  display: block;
+}
+.sub_family li {
   width: 100%;
   height: 50px;
   height: 3.125rem;
-  height: 50px;
-  padding: 10px 20px 10px 20px;
-  padding: 0.625rem 1.25rem 0.625rem 1.25rem;
+  padding-left: 20px;
+  padding-left: 1.25rem;
   background-color: #03010f;
 }
-.family_site .sub_family li a {
+.sub_family li a {
   display: block;
   width: 100%;
   height: 100%;
+  line-height: 50px;
+  line-height: 3.125rem;
   text-decoration: none;
 }
-.family_site .sub_family li span {
+.sub_family li a:hover {
+  color: #e75300;
+}
+.sub_family li span {
   display: block;
   width: 100%;
   height: 100%;
   line-height: 25px;
   line-height: 1.5625rem;
-}
-.family_site .sub_family.active {
-  display: block;
-}
-
-.siteNav > ul .global_site button {
-  width: 100%;
-  height: 100%;
-  padding: 10px 20px 10px 20px;
-  padding: 0.625rem 1.25rem 0.625rem 1.25rem;
-}
-.siteNav > ul .global_site button span {
-  display: block;
-  text-align: start;
-}
-.siteNav > ul .global_site:hover button span,
-.siteNav > ul .global_site:focus button span {
-  font-weight: 700;
-  color: #e75300;
-}
-.siteNav > ul .sub_family li:hover,
-.siteNav > ul .sub_family li:focus,
-.siteNav > ul .family_site:hover button span {
-  font-weight: 700;
-  color: #e75300;
 }
 
 .foot_area .other_site .sns_site {

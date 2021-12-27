@@ -1,5 +1,5 @@
 // viewBox.js
-
+{
 const viewBoxDataCode = "../data/mainViewBoxData.json";
 
 fetch(viewBoxDataCode)
@@ -77,12 +77,12 @@ fetch(viewBoxDataCode)
   const indicatorBtn = viewIndicatorUl.querySelectorAll("li");
 
 
-  // let countCheck = 0;
-  // let afterCheck = countCheck;
-  // const VIEW_ON = 'on';
-  // const ACTIVE_ON = 'active';
-  // let i = 0;
-  // let j = 0;
+  let countCheck = 0;
+  let afterCheck = countCheck;
+  const VIEW_ON = 'on';
+  const ACTIVE_ON = 'active';
+  let i = 0;
+  let j = 0;
 
   let slideLength = viewLi.length;
   // VIEW_ON 을 초기화 . because 메뉴를 클릭하고 난 뒤 선택을 없애야 하니까.
@@ -151,3 +151,4 @@ fetch(viewBoxDataCode)
   // }
 
 })// fetch
+}

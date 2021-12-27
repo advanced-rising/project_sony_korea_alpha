@@ -19,15 +19,17 @@
             width: 100%;
             @include unit(height,60);
             @include unit(margin-bottom,40);
+            @include unit(padding-left,20);
             background-color: $color-deep-gray;
             color: $color-white;
             &:last-child { margin-bottom: 0;}
-            button {
-              .other_txt {
-                @include unit(letter-spacing,2);
-                color: $color-white;
-                text-transform: uppercase;
-              }
+            a {
+              @include display-block();
+              @include unit(letter-spacing,2);
+              color: $color-white;
+              text-transform: uppercase;
+              text-decoration: none;
+              @include unit(line-height,60);
             }
           }
           @at-root .family_site {
@@ -41,7 +43,10 @@
                 @include unit(line-height,40);
               }
             }
-            .sub_family {
+            @at-root .sub_family {
+              &.active {
+                display: block;
+              }
               display: none;
               position: absolute;
               @include unit-calc-plus(top,-100%,-90);
@@ -51,42 +56,23 @@
               li {
                 width: 100%;
                 @include unit(height,50);
-                height: 50px;
-                @include padding(10,20,10,20);
+                @include unit(padding-left,20);
                 background-color: $color-black;
                 a {
                   @include display-block();
+                  @include unit(line-height,50);
                   text-decoration: none;
+                  &:hover {
+                    color: $color-orange;
+                  }
                 }
                 span {
                   @include display-block();
                   @include unit(line-height,25);
                 }
               }
-              &.active {
-                display: block;
-              }
+              
             }
-          }
-          .global_site button {
-            width: 100%;
-            height: 100%;
-            @include padding(10,20,10,20);
-            span {
-              display: block;
-              text-align: start;
-            }
-          }
-          .global_site:hover button span,
-          .global_site:focus button span {
-            font-weight: 700;
-            color: $color-orange;
-          }
-          .sub_family li:hover,
-          .sub_family li:focus,
-          .family_site:hover button span {
-            font-weight: 700;
-            color: $color-orange;
           }
         }
       }

@@ -1,3 +1,4 @@
+{
 const headBox = document.querySelector('#headBox');
 const navigation = headBox.querySelector('#navigation');
 const gnbBtn = navigation.querySelector('.gnb_btn');
@@ -18,9 +19,9 @@ const subMenu = naviArea.querySelectorAll('.sub_menu');
 const gnbAbbr = gnbUl.querySelector('abbr');
 
 const familySelector = document.querySelector('.family_site');
-const familyBtn = familySelector.querySelector('button');
+const familyBtn = familySelector.querySelector('a');
 const subFamily = document.querySelector('.sub_family');
-
+const subFamilyLink = subFamily.querySelectorAll('li>a');
 let countCheck = 0;
 let afterCheck = countCheck;
 const VIEW_ON = 'on';
@@ -155,13 +156,17 @@ closeBtn.addEventListener('click', function(event){
 // footBox - family button
 familyBtn.addEventListener('click',function(event){
   event.preventDefault();
-
   const isActive = subFamily.classList.contains(ACTIVE_ON);
-
   if(!isActive){
     subFamily.classList.add(ACTIVE_ON);
   }else{
     subFamily.classList.remove(ACTIVE_ON);
   }
 });
-
+// footBox 외 클릭시 subFamily 사라지게 하기
+document.addEventListener('click',(e)=>{
+  if(e.target !== familyBtn){
+    subFamily.classList.remove(ACTIVE_ON);
+  }
+})
+}

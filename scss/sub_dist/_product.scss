@@ -247,23 +247,71 @@
   }
   @at-root .productBtn {
     position: relative;
-    width: auto;
+    width: 80%;
     height: auto;
+    margin: auto;
     @include unit(margin-top,20);
-    div {
+    button {
       position: absolute;
       @include unit(width,80);
-      @include unit(height,80);
-      background-color: $color-orange;
+      @include unit(height,80);;
       transform: translateY(50%);
     }
     .prevBtn {
       top: 50%;
       left: 0;
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 30%;
+        left: 30%;
+        width: 40px;
+        height: 4px;
+        transform: translate(-50%,-50%);
+        transform: rotate(135deg);
+        background-color: $color-black;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 64%;
+        left: 30%;
+        width: 40px;
+        height: 4px;
+        transform: translate(-50%,-50%);
+        transform: rotate(45deg);
+        background-color: $color-black;
+      }
     }
     .nextBtn {
       top: 50%;
       right: 0;
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 30%;
+        left: 30%;
+        width: 40px;
+        height: 4px;
+        transform: translate(-50%,-50%);
+        transform: rotate(45deg);
+        background-color: $color-black;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 64%;
+        left: 30%;
+        width: 40px;
+        height: 4px;
+        transform: translate(-50%,-50%);
+        transform: rotate(135deg);
+        background-color: $color-black;
+      }
     }
   }
   @at-root .productList {
