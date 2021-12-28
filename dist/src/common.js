@@ -2,26 +2,22 @@
 const headBox = document.querySelector('#headBox');
 const navigation = headBox.querySelector('#navigation');
 const gnbBtn = navigation.querySelector('.gnb_btn');
-const gnbClose = navigation.querySelector('.gnb_close');
 
 const openBtn = document.querySelector('.search_open_btn');
 const closeBtn = document.querySelector('.search_close_btn')
 const searchModal = document.querySelector('.search_modal');
 
 const naviArea = navigation.querySelector('.navi_area');
-const fadeElement = document.querySelectorAll('.has-fade');
 const gnbUl = naviArea.querySelector('ul');
 const gnbLi = gnbUl.children;
 const gnbLiArr = [...gnbLi];
-const subArea = naviArea.querySelectorAll('.sub_area');
-const subMenu = naviArea.querySelectorAll('.sub_menu');
 
-const gnbAbbr = gnbUl.querySelector('abbr');
 
 const familySelector = document.querySelector('.family_site');
 const familyBtn = familySelector.querySelector('a');
 const subFamily = document.querySelector('.sub_family');
-const subFamilyLink = subFamily.querySelectorAll('li>a');
+
+
 let countCheck = 0;
 let afterCheck = countCheck;
 const VIEW_ON = 'on';
@@ -33,36 +29,26 @@ let j = 0;
 let len = gnbLiArr.length;
 // * ===================================
 // 메뉴 클릭 버튼 함수
-subArea.forEach((element,i)=>{
-  const selectParent = element.parentNode;
-  selectParent.querySelector('a').addEventListener('mouseover',(e)=>{
-    e.preventDefault();
-    if(subArea[i].style.display !== 'block'){
-      downSlide(subArea,subMenu,i,50) 
-    }else {
-      upSlide(subArea,subMenu,i,50)    
+gnbLiArr.forEach((el,index)=>{
+  el.addEventListener('mouseenter',(e)=>{
+    const target = e.target;
+    target.classList.add(VIEW_ON);
+  })
+  el.addEventListener('mouseleave',(e)=>{
+    const target = e.target;
+      target.classList.remove(VIEW_ON);
+  })
+  const targetALink = el.querySelector('a');
+  targetALink.addEventListener('focus',(e)=>{
+    for(let i =0; i<gnbLiArr.length;i++){
+      if(i !== index){
+        gnbLiArr[i].classList.remove(VIEW_ON)
+      }else {
+        gnbLiArr[i].classList.add(VIEW_ON)
+      }
     }
-  })  
+  })
 })
-// subArea.forEach((element,i)=>{
-  // element.
-// })
-gnbUl.addEventListener('mouseleave',(e)=>{
-  console.log(gnbUl)
-  e.preventDefault();
-  for(let i=0; i<subArea.length;i++){
-    upSlide(subArea,subMenu,i,50)
-  }
-})
-// gnbLiArr.forEach((data,i)=>{
-//   console.log(data.querySelector('a'));
-//   data.querySelector('a').addEventListener('mouseover',(e)=>{
-//     e.preventDefault();
-//     (subArea[i].style.display === 'block')
-//     ? upSlide(subArea,subMenu,i,50)
-//     : downSlide(subArea,subMenu,i,50)
-//   })
-// })
 
 // 마우스 클릭버전
 // subArea.forEach((element,i)=>{
@@ -83,7 +69,6 @@ function downSlide(parent,element,i,timed){
   setTimeout((timed)=>{
     element[i].style.transform = 'translateY(0%)';
   },timed)
-  return downSlide;
 }
 
 // 메뉴 업 슬라이드 위에로 
@@ -92,18 +77,7 @@ function upSlide(parent,element,i,timed){
   setTimeout((timed)=>{
     parent[i].style.display = 'none';
   },timed)
-  return upSlide;
 }
-// 메뉴 이외의 클릭시 메뉴 닫기
-// document.addEventListener('mouseleave',(e)=>{
-//   let selectDocument = e.target;
-//   for(i = 0; i < subArea.length ; i++){
-//     if(selectDocument !== subArea[i].parentNode.querySelector('a')){
-//       if(subArea[i].style.display === 'block'){
-//         upSlide(subArea,subMenu,i,50)
-//     }
-//   }
-// })
 
 // 메뉴 이외의 클릭시 메뉴 닫기
 // document.addEventListener('click',(e)=>{

@@ -131,60 +131,54 @@
           @include unit(margin-right,17);
           @include unit(line-height,50);
           color: $color-white;
-          // &:hover .sub_area {
-          //   display: block;
-          // }
-          // &:hover .sub_menu {
-          //   transform: translateY(0%);
-          //   transition: all 100ms ease;
-          // }
-          > a {
-            z-index: 100;
-            @include display-block();
-            @include unit(font-size,16);
-            text-decoration: none;
-            text-align: center;
-            text-transform: uppercase;
-            color: inherit;
-            &:focus,
-            &:hover {
-              font-weight: 700;
-              color: $color-orange;
-            }
-          }
-          @at-root .sub_area {
-            display: none;
+          > div {
             width: 100%;
-            height: auto;
-            @at-root .sub_menu {
-              z-index: -1;
-              position: absolute;
-              @include unit(top,60);
-              @include unit(left,-20);
-              transform: translateY(-100%);
-              transition: all 100ms ease;
-              li {
-                width: auto;
-                @include unit(min-width,140);
-                height: auto;
-                text-align: start;
-                white-space: nowrap;
-                @include padding(5,20,5,20);
-                color: $color-white;
-                background-color: $color-light-black;
-                a {
-                  @include display-block();
-                  text-transform: uppercase;
-                  text-decoration: none;
-                }
-                a:hover {
-                  font-weight: 700;
-                  color: $color-orange;
-                }
+            height: 100%;
+            > a {
+              z-index: 100;
+              // @include display-block();
+              
+              @include unit(font-size,16);
+              text-decoration: none;
+              text-align: center;
+              text-transform: uppercase;
+              color: inherit;
+              &:focus,
+              &:hover {
+                font-weight: 700;
+                color: $color-orange;
               }
             }
           }
-          
+          @at-root .sub_menu {
+            display: none;
+            position: absolute;
+            @include unit(top,58);
+            @include unit(left,-20);
+            > li {
+              width: 100%;
+              @include unit(min-width,140);
+              height: auto;
+              text-align: start;
+              white-space: nowrap;
+              @include padding(5,20,5,20);
+              color: $color-white;
+              background-color: $color-light-black;
+              > a {
+                // @include display-block();
+                text-transform: uppercase;
+                text-decoration: none;
+                text-align: start;
+              }
+              a:hover {
+                font-weight: 700;
+                color: $color-orange;
+              }
+            }
+          }
+          &.on .sub_menu {
+            display: block;
+          }
           // &:hover .sub_menu { display: block;}
         }
         .last_gnbMenu {margin-right: 0;}
@@ -410,25 +404,21 @@
             width: 100%;
             height: auto;
             @include unit(font-size,16);
-            @at-root .sub_area {
-              &.on { display: block;}
-              display: none;
+            @at-root .sub_menu {
+              position: static;
+              top: 0;
+              left: 0;
               width: 100%;
               height: auto;
-              @at-root .sub_menu {
-                position: static;
+              margin: auto;
+              border: 3px solid $color-orange;
+              li {
                 display: block;
-                top: 0;
-                left: 0;
-                width: 100%;
                 height: auto;
-                margin: auto;
-                border: 3px solid $color-orange;
-                li {
-                  display: block;
-                  height: auto;
-                  padding: 0;
-                  text-align: center;
+                padding: 0;
+                text-align: center;
+                &:hover {
+                  color: $color-orange;
                 }
               }
             }
@@ -595,25 +585,21 @@
             width: 100%;
             height: auto;
             @include unit(font-size,16);
-            @at-root .sub_area {
-              &.on { display: block;}
-              display: none;
+            @at-root .sub_menu {
+              position: static;
+              top: 0;
+              left: 0;
               width: 100%;
               height: auto;
-              @at-root .sub_menu {
-                position: static;
+              margin: auto;
+              border: 3px solid $color-orange;
+              li {
                 display: block;
-                top: 0;
-                left: 0;
-                width: 100%;
                 height: auto;
-                margin: auto;
-                border: 3px solid $color-orange;
-                li {
-                  display: block;
-                  height: auto;
-                  padding: 0;
-                  text-align: center;
+                padding: 0;
+                text-align: center;
+                &:hover {
+                  color: $color-orange;
                 }
               }
             }
@@ -780,28 +766,21 @@
             width: 100%;
             height: auto;
             @include unit(font-size,16);
-            @at-root .sub_area {
-              &.on { display: block;}
-              display: none;
+            @at-root .sub_menu {
+              position: static;
+              top: 0;
+              left: 0;
               width: 100%;
               height: auto;
-              @at-root .sub_menu {
-                position: static;
+              margin: auto;
+              border: 3px solid $color-orange;
+              li {
                 display: block;
-                top: 0;
-                left: 0;
-                width: 100%;
                 height: auto;
-                margin: auto;
-                border: 3px solid $color-orange;
-                li {
-                  display: block;
-                  height: auto;
-                  padding: 0;
-                  text-align: center;
-                  &:hover {
-                    color: $color-orange;
-                  }
+                padding: 0;
+                text-align: center;
+                &:hover {
+                  color: $color-orange;
                 }
               }
             }
