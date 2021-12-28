@@ -4,7 +4,7 @@
 
 let selectIndiUl;
 let selectVideoUl;
-const videoPath = "../data/_videoMovie.json"
+const videoPath = "../data/videoMovieData.json"
 fetch(videoPath)
 .then((response)=>{
   return response.json()
@@ -80,7 +80,7 @@ fetch(videoPath)
   let i = 0;
   let j = 0;
   const videoData = [...response];
-
+// 비디오 슬라이드 기능
   const carouselSlide = function(e){
     e.preventDefault();
     if(permission){
@@ -95,7 +95,7 @@ fetch(videoPath)
     }
   }
   videoBtn.addEventListener('click',carouselSlide)
-
+// 비디오 플레이 버튼 클릭시 유튜브 화면 제공
   const videoPlay = function(){
     videoLiCvt.forEach((el,i)=>{
       let vodIframe = `<iframe width="100%" height="100%" src="${videoData[i].videoUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
@@ -113,7 +113,7 @@ fetch(videoPath)
     })
   }
   videoPlay()
-  
+// 비디오 인디케이터 클릭시 해당 비디오로 이동
   const videoIndiFn = function(){
     for(i=0;i<videoLen;i++){
       ((k)=>{
@@ -130,7 +130,6 @@ fetch(videoPath)
     }
   }
   videoIndiFn();
-  
   
 })
 }

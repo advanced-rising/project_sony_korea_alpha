@@ -44,6 +44,7 @@ fetch(videoBoxCode)
 fetch(esBoxCode)
 .then((response)=>response.text())
 .then((data)=>esBoxHTML.innerHTML = data)
+.then(()=>makeScriptFn("../dist/src/esBox.js"))
 
 fetch(scrollBoxCode)
 .then((response)=>response.text())

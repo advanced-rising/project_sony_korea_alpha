@@ -175,6 +175,8 @@ h1 a {
 }
 .gnb > ul > li > div > a {
   z-index: 100;
+  width: 100%;
+  height: 100%;
   font-size: 16px;
   font-size: 1rem;
   text-decoration: none;
@@ -207,6 +209,8 @@ h1 a {
   background-color: #03010fdd;
 }
 .sub_menu > li > a {
+  width: 100%;
+  height: 100%;
   text-transform: uppercase;
   text-decoration: none;
   text-align: start;
