@@ -11,18 +11,3 @@
 // //   const makeLi = document.createElement('li');
 // // })
 
-
-const eventUl = document.querySelector('.event_part');
-const eventLi = eventUl.querySelectorAll('li');
-const eventArr = [...eventLi]
-let eventUlWidth = eventUl.clientWidth;
-console.log(eventUlWidth)
-let eventLeftData = parseInt(eventUl.style.left)
-console.log(eventLeftData)
-
-
-const seminarUl = document.querySelector('.seminar_part');
-const seminarLi = seminarUl.querySelectorAll('li');
-const seminarArr = [...seminarLi]
-
-

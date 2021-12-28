@@ -19,7 +19,7 @@ fetch(videoPath)
     selectVideoUl.append(makeVideoLi)
     let videoCode =
     `<span class="blind">${dataArr[i].videoName}</span>
-      <button class="video_play_btn">
+      <button class="video_play_btn" tabindex="-1">
         <span class="blind">${dataArr[i].playName}</span>
       </button>`  
     makeVideoLi.innerHTML = videoCode
@@ -89,6 +89,10 @@ fetch(videoPath)
       videoLiCvt = [...videoLi];
       target ? videoUl.prepend(videoLiCvt.at(-1)) : videoUl.append(videoLiCvt.at(0))
       videoLi = videoUl.querySelectorAll('li');
+      videoLiCvt.forEach((el,index)=>{
+        el.querySelector('button').setAttribute('tabindex',-1);
+      })
+      videoLiCvt[3].querySelector('button').setAttribute('tabindex',0);
       setTimeout(()=>{
         permission = true;
       },500)
