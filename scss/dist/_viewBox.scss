@@ -88,7 +88,8 @@
 }
 @include mobile-v{
   #viewBox {
-    @include unit(height,640);
+    // @include unit(height,640);
+    height: 100vh;
     @at-root .view_area {
       .viewBox_img {
         dl {
@@ -118,7 +119,8 @@
 }
 @include mobile-h{
   #viewBox {
-    @include unit(height,640);
+    // @include unit(height,640);
+    height: 100vh;
     @at-root .view_area {
       .viewBox_img {
         dl {
@@ -148,7 +150,8 @@
 }
 @include tablet{
   #viewBox {
-    @include unit(height,1000);
+    // @include unit(height,1000);
+    height: 100vh;
     @at-root .view_area {
       dl {
         @include unit(bottom,200);
@@ -176,7 +179,8 @@
 }
 @include laptop{
   #viewBox {
-    @include unit(height,1000);
+    // @include unit(height,1000);
+    height: 100vh;
     @at-root .view_area {
       dl {
         @include unit(bottom,200);
@@ -204,7 +208,8 @@
 }
 @include pc1280{
   #viewBox {
-    @include unit(height,1000);
+    // @include unit(height,1000);
+    height: 100vh;
     @at-root .view_area {
       dl{
         dt {
@@ -228,7 +233,8 @@
 }
 @include pc1440{
   #viewBox {
-    @include unit(height,1000);
+    // @include unit(height,1000);
+    height: 100vh;
     @at-root .view_area {
       dl {
         dt {
@@ -252,7 +258,8 @@
 }
 @include pc1920{
   #viewBox {
-    @include unit(height,1000);
+    // @include unit(height,1000);
+    height: 100vh;
     @at-root .view_area {
       dl {
         dt {
@@ -276,7 +283,8 @@
 }
 @include pcfull{
   #viewBox {
-    @include unit(height,1000);
+    // @include unit(height,1000);
+    height: 100vw;
     @at-root .view_area {
       @include unit(width,2560);
       dl {

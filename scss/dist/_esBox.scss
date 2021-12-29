@@ -37,16 +37,25 @@
             }
             .event_img,
             .seminar_img {
+              position: relative;
+              z-index: -1;
               width: 100%;
-              @include unit(height,220);
-              background-repeat: no-repeat;
-              background-size: cover;
-              background-position: center;
-              box-sizing: border-box;
+              @include unit(height,240);
               transition: transform 500ms ease;
+              img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: auto;
+                height: 100%;
+                margin: 0 auto;
+                transform: translate(-50%,-50%);
+              }
+              
             }
             .event_txt,
             .seminar_txt {
+              z-index: 100;
               width: 100%;
               @include unit(height,100);
               @include unit(padding,10);
@@ -82,30 +91,30 @@
       @include unit(height,660);
       background-color: $color-light-blue;
     }
-    .event_area li:nth-child(1) .event_img {
-      background-image: url("../../img/main/event/20211022_02_ex7m_list.jpg");
-    }
-    .event_area li:nth-child(2) .event_img {
-      background-image: url("../../img/main/event/20211019_01_dpjh_list.jpg");
-    }
-    .event_area li:nth-child(3) .event_img {
-      background-image: url("../../img/main/event/20211001_01_wo13_list.jpg");
-    }
-    .event_area li:nth-child(4) .event_img {
-      background-image: url("../../img/main/event/20210707_01_apxu_list.jpg");
-    }
-    .seminar_area li:nth-child(1) .seminar_img {
-      background-image: url("../../img/main/seminar/20211027_01_u1rt_list.jpg");
-    }
-    .seminar_area li:nth-child(2) .seminar_img {
-      background-image: url("../../img/main/seminar/20211022_01_x31b_list.jpg");
-    }
-    .seminar_area li:nth-child(3) .seminar_img {
-      background-image: url("../../img/main/seminar/20211014_01_g2ry_list.jpg");
-    }
-    .seminar_area li:nth-child(4) .seminar_img {
-      background-image: url("../../img/main/seminar/210901_alpha_p4yz_01.png");
-    }
+    // .event_area li:nth-child(1) .event_img {
+    //   background-image: url("../../img/main/event/20211022_02_ex7m_list.jpg");
+    // }
+    // .event_area li:nth-child(2) .event_img {
+    //   background-image: url("../../img/main/event/20211019_01_dpjh_list.jpg");
+    // }
+    // .event_area li:nth-child(3) .event_img {
+    //   background-image: url("../../img/main/event/20211001_01_wo13_list.jpg");
+    // }
+    // .event_area li:nth-child(4) .event_img {
+    //   background-image: url("../../img/main/event/20210707_01_apxu_list.jpg");
+    // }
+    // .seminar_area li:nth-child(1) .seminar_img {
+    //   background-image: url("../../img/main/seminar/20211027_01_u1rt_list.jpg");
+    // }
+    // .seminar_area li:nth-child(2) .seminar_img {
+    //   background-image: url("../../img/main/seminar/20211022_01_x31b_list.jpg");
+    // }
+    // .seminar_area li:nth-child(3) .seminar_img {
+    //   background-image: url("../../img/main/seminar/20211014_01_g2ry_list.jpg");
+    // }
+    // .seminar_area li:nth-child(4) .seminar_img {
+    //   background-image: url("../../img/main/seminar/210901_alpha_p4yz_01.png");
+    // }
   }
 }
 @include mobile-v{

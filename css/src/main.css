@@ -180,6 +180,7 @@ h1 a {
   z-index: 100;
   width: 100%;
   height: 100%;
+  display: inline-block;
   font-size: 16px;
   font-size: 1rem;
   text-decoration: none;
@@ -214,6 +215,7 @@ h1 a {
 .sub_menu > li > a {
   width: 100%;
   height: 100%;
+  display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
   text-align: start;
@@ -1149,8 +1151,7 @@ h1 a {
 
 @media all and (max-width: 479px) {
   #viewBox {
-    height: 640px;
-    height: 40rem;
+    height: 100vh;
   }
   .view_area .viewBox_img dl {
     top: 20px;
@@ -1178,8 +1179,7 @@ h1 a {
 }
 @media all and (min-width: 480px) and (max-width: 767px) {
   #viewBox {
-    height: 640px;
-    height: 40rem;
+    height: 100vh;
   }
   .view_area .viewBox_img dl {
     top: 100px;
@@ -1207,8 +1207,7 @@ h1 a {
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
   #viewBox {
-    height: 1000px;
-    height: 62.5rem;
+    height: 100vh;
   }
   .view_area dl {
     bottom: 200px;
@@ -1236,8 +1235,7 @@ h1 a {
 }
 @media all and (min-width: 1024px) and (max-width: 1279px) {
   #viewBox {
-    height: 1000px;
-    height: 62.5rem;
+    height: 100vh;
   }
   .view_area dl {
     bottom: 200px;
@@ -1264,8 +1262,7 @@ h1 a {
 }
 @media all and (min-width: 1280px) and (max-width: 1439px) {
   #viewBox {
-    height: 1000px;
-    height: 62.5rem;
+    height: 100vh;
   }
   .view_area dl dt {
     font-size: 48px;
@@ -1288,8 +1285,7 @@ h1 a {
 }
 @media all and (min-width: 1440px) and (max-width: 1919px) {
   #viewBox {
-    height: 1000px;
-    height: 62.5rem;
+    height: 100vh;
   }
   .view_area dl dt {
     font-size: 48px;
@@ -1312,8 +1308,7 @@ h1 a {
 }
 @media all and (min-width: 1920px) and (max-width: 2559px) {
   #viewBox {
-    height: 1000px;
-    height: 62.5rem;
+    height: 100vh;
   }
   .view_area dl dt {
     font-size: 48px;
@@ -1336,8 +1331,7 @@ h1 a {
 }
 @media all and (min-width: 2560px) {
   #viewBox {
-    height: 1000px;
-    height: 62.5rem;
+    height: 100vw;
   }
   .view_area {
     width: 2560px;
@@ -2955,17 +2949,26 @@ h1 a {
 }
 .es_inner ul li .event_img,
 .es_inner ul li .seminar_img {
+  position: relative;
+  z-index: -1;
   width: 100%;
-  height: 220px;
-  height: 13.75rem;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  box-sizing: border-box;
+  height: 240px;
+  height: 15rem;
   transition: transform 500ms ease;
+}
+.es_inner ul li .event_img img,
+.es_inner ul li .seminar_img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
 }
 .es_inner ul li .event_txt,
 .es_inner ul li .seminar_txt {
+  z-index: 100;
   width: 100%;
   height: 100px;
   height: 6.25rem;
@@ -3010,30 +3013,6 @@ h1 a {
   height: 660px;
   height: 41.25rem;
   background-color: #f1f5f9;
-}
-.es_area .event_area li:nth-child(1) .event_img {
-  background-image: url("../../img/main/event/20211022_02_ex7m_list.jpg");
-}
-.es_area .event_area li:nth-child(2) .event_img {
-  background-image: url("../../img/main/event/20211019_01_dpjh_list.jpg");
-}
-.es_area .event_area li:nth-child(3) .event_img {
-  background-image: url("../../img/main/event/20211001_01_wo13_list.jpg");
-}
-.es_area .event_area li:nth-child(4) .event_img {
-  background-image: url("../../img/main/event/20210707_01_apxu_list.jpg");
-}
-.es_area .seminar_area li:nth-child(1) .seminar_img {
-  background-image: url("../../img/main/seminar/20211027_01_u1rt_list.jpg");
-}
-.es_area .seminar_area li:nth-child(2) .seminar_img {
-  background-image: url("../../img/main/seminar/20211022_01_x31b_list.jpg");
-}
-.es_area .seminar_area li:nth-child(3) .seminar_img {
-  background-image: url("../../img/main/seminar/20211014_01_g2ry_list.jpg");
-}
-.es_area .seminar_area li:nth-child(4) .seminar_img {
-  background-image: url("../../img/main/seminar/210901_alpha_p4yz_01.png");
 }
 
 @media all and (max-width: 479px) {
@@ -3207,7 +3186,7 @@ h1 a {
     margin: auto;
   }
   .es_content .es_inner {
-    overflow-x: hidden;
+    overflow-x: auto;
     width: 100%;
     height: auto;
     margin: auto;
@@ -3608,39 +3587,34 @@ h1 a {
   height: 3.75rem;
   margin-bottom: 40px;
   margin-bottom: 2.5rem;
-  padding-left: 20px;
-  padding-left: 1.25rem;
+  line-height: 60px;
+  line-height: 3.75rem;
   background-color: #333335;
   color: #ffffff;
 }
 .siteNav > ul > li:last-child {
   margin-bottom: 0;
 }
-.siteNav > ul > li a {
-  display: block;
+.siteNav > ul > li > div {
   width: 100%;
   height: 100%;
+}
+.siteNav > ul > li > div > a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  margin-left: 20px;
+  margin-left: 1.25rem;
   letter-spacing: 2px;
   letter-spacing: 0.125rem;
   color: #ffffff;
   text-transform: uppercase;
-  text-decoration: none;
-  line-height: 60px;
-  line-height: 3.75rem;
-}
-.family_site button {
-  width: 100%;
-  height: 100%;
-  padding: 10px 20px 10px 20px;
-  padding: 0.625rem 1.25rem 0.625rem 1.25rem;
-}
-.family_site button span {
-  display: block;
-  width: 100%;
-  height: 100%;
   text-align: start;
-  line-height: 40px;
-  line-height: 2.5rem;
+  text-indent: 0.5rem;
+  text-decoration: none;
+}
+.siteNav > ul > li > div > a:hover {
+  color: #e75300;
 }
 .sub_family {
   display: none;
@@ -3651,34 +3625,33 @@ h1 a {
   width: 100%;
   height: auto;
 }
-.sub_family.active {
-  display: block;
-}
-.sub_family li {
+.sub_family > li {
   width: 100%;
   height: 50px;
   height: 3.125rem;
-  padding-left: 20px;
-  padding-left: 1.25rem;
   background-color: #03010f;
 }
-.sub_family li a {
-  display: block;
+.sub_family > li > a {
   width: 100%;
   height: 100%;
-  line-height: 50px;
-  line-height: 3.125rem;
+  display: inline-block;
+  margin-left: 20px;
+  margin-left: 1.25rem;
   text-decoration: none;
 }
-.sub_family li a:hover {
+.sub_family > li > a:hover {
   color: #e75300;
 }
-.sub_family li span {
+.sub_family > li span {
   display: block;
   width: 100%;
   height: 100%;
   line-height: 25px;
   line-height: 1.5625rem;
+}
+
+.siteNav > ul li.on .sub_family {
+  display: block;
 }
 
 .foot_area .other_site .sns_site {

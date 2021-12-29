@@ -136,9 +136,9 @@
             height: 100%;
             > a {
               z-index: 100;
-              // @include display-block();
               width: 100%;
               height: 100%;
+              display: inline-block;
               @include unit(font-size,16);
               text-decoration: none;
               text-align: center;
@@ -168,7 +168,7 @@
               > a {
                 width: 100%;
                 height: 100%;
-                // @include display-block();
+                display: inline-block;
                 text-transform: uppercase;
                 text-decoration: none;
                 text-align: start;

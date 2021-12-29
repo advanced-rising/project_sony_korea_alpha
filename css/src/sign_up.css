@@ -177,6 +177,7 @@ h1 a {
   z-index: 100;
   width: 100%;
   height: 100%;
+  display: inline-block;
   font-size: 16px;
   font-size: 1rem;
   text-decoration: none;
@@ -211,6 +212,7 @@ h1 a {
 .sub_menu > li > a {
   width: 100%;
   height: 100%;
+  display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
   text-align: start;
@@ -1414,39 +1416,34 @@ h1 a {
   height: 3.75rem;
   margin-bottom: 40px;
   margin-bottom: 2.5rem;
-  padding-left: 20px;
-  padding-left: 1.25rem;
+  line-height: 60px;
+  line-height: 3.75rem;
   background-color: #333335;
   color: #ffffff;
 }
 .siteNav > ul > li:last-child {
   margin-bottom: 0;
 }
-.siteNav > ul > li a {
-  display: block;
+.siteNav > ul > li > div {
   width: 100%;
   height: 100%;
+}
+.siteNav > ul > li > div > a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  margin-left: 20px;
+  margin-left: 1.25rem;
   letter-spacing: 2px;
   letter-spacing: 0.125rem;
   color: #ffffff;
   text-transform: uppercase;
-  text-decoration: none;
-  line-height: 60px;
-  line-height: 3.75rem;
-}
-.family_site button {
-  width: 100%;
-  height: 100%;
-  padding: 10px 20px 10px 20px;
-  padding: 0.625rem 1.25rem 0.625rem 1.25rem;
-}
-.family_site button span {
-  display: block;
-  width: 100%;
-  height: 100%;
   text-align: start;
-  line-height: 40px;
-  line-height: 2.5rem;
+  text-indent: 0.5rem;
+  text-decoration: none;
+}
+.siteNav > ul > li > div > a:hover {
+  color: #e75300;
 }
 .sub_family {
   display: none;
@@ -1457,34 +1454,33 @@ h1 a {
   width: 100%;
   height: auto;
 }
-.sub_family.active {
-  display: block;
-}
-.sub_family li {
+.sub_family > li {
   width: 100%;
   height: 50px;
   height: 3.125rem;
-  padding-left: 20px;
-  padding-left: 1.25rem;
   background-color: #03010f;
 }
-.sub_family li a {
-  display: block;
+.sub_family > li > a {
   width: 100%;
   height: 100%;
-  line-height: 50px;
-  line-height: 3.125rem;
+  display: inline-block;
+  margin-left: 20px;
+  margin-left: 1.25rem;
   text-decoration: none;
 }
-.sub_family li a:hover {
+.sub_family > li > a:hover {
   color: #e75300;
 }
-.sub_family li span {
+.sub_family > li span {
   display: block;
   width: 100%;
   height: 100%;
   line-height: 25px;
   line-height: 1.5625rem;
+}
+
+.siteNav > ul li.on .sub_family {
+  display: block;
 }
 
 .foot_area .other_site .sns_site {
