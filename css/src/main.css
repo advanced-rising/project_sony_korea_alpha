@@ -1331,7 +1331,7 @@ h1 a {
 }
 @media all and (min-width: 2560px) {
   #viewBox {
-    height: 100vw;
+    height: 100vh;
   }
   .view_area {
     width: 2560px;
@@ -3592,6 +3592,8 @@ h1 a {
   height: 3.75rem;
   margin-bottom: 40px;
   margin-bottom: 2.5rem;
+  padding-left: 20px;
+  padding-left: 1.25rem;
   line-height: 60px;
   line-height: 3.75rem;
   background-color: #333335;
@@ -3604,8 +3606,6 @@ h1 a {
   width: 100%;
   height: 100%;
   display: inline-block;
-  margin-left: 20px;
-  margin-left: 1.25rem;
   letter-spacing: 2px;
   letter-spacing: 0.125rem;
   color: #ffffff;
@@ -3626,7 +3626,7 @@ h1 a {
   content: "";
   display: block;
   position: absolute;
-  top: 40%;
+  top: 30%;
   right: -100%;
   border: solid #e75300;
   border-width: 6px 8px 6px 0px;
@@ -3680,7 +3680,7 @@ h1 a {
   content: "";
   display: block;
   position: absolute;
-  top: 40%;
+  top: 30%;
   right: -75%;
   border: solid #e75300;
   border-width: 6px 0px 6px 8px;
