@@ -87,7 +87,9 @@ fetch(videoPath)
       permission = false;
       let target = e.target.classList.contains('prev_btn');
       videoLiCvt = [...videoLi];
-      target ? videoUl.prepend(videoLiCvt[-1]) : videoUl.append(videoLiCvt[0])
+      let lastVideoLi = videoLiCvt[videoLiCvt.length-1];
+      let firstVideoLi = videoLiCvt[0];
+      target ? videoUl.prepend(lastVideoLi) : videoUl.append(firstVideoLi)
       videoLi = videoUl.querySelectorAll('li');
       videoLiCvt.forEach((el,index)=>{
         el.querySelector('button').setAttribute('tabindex',-1);
