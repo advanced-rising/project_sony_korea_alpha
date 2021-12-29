@@ -28,6 +28,7 @@
           @include unit(height,2);
           background-color: $color-white;
           vertical-align: top;
+          transition: all 100ms ease;
         }
         span {
           display: none;
@@ -39,16 +40,19 @@
           @include unit(line-height,1);
           color: $color-orange;
           white-space: nowrap;
+          transition: all 100ms ease;
         } 
       }
       &:hover .click_jump > span {
         display: block;
+        transition: all 100ms ease;
       }
       &:hover .click_jump:after,
       &.active .click_jump:after {
         @include unit(width,31);
         width: 31px;
         background: $color-orange;
+        transition: all 100ms ease;
       }
     }
   }

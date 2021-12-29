@@ -30,9 +30,11 @@ let len = gnbLiArr.length;
 // * ===================================
 // 메뉴 클릭 버튼 함수
 gnbLiArr.forEach((el,index)=>{
+  console.log(el)
   el.addEventListener('mouseenter',(e)=>{
     const target = e.target;
     target.classList.add(VIEW_ON);
+    console.log(target)
   })
   el.addEventListener('mouseleave',(e)=>{
     const target = e.target;
@@ -172,33 +174,24 @@ closeBtn.addEventListener('click', function(event){
 });
 
 // footBox - family button
-// familyBtn.addEventListener('click',function(event){
-//   event.preventDefault();
-//   const isActive = subFamily.classList.contains(ACTIVE_ON);
-//   if(!isActive){
-//     subFamily.classList.add(ACTIVE_ON);
-//   }else{
-//     subFamily.classList.remove(ACTIVE_ON);
-//   }
-// });
+familyBtn.addEventListener('click',function(event){
+  event.preventDefault();
+  const isActive = subFamily.classList.contains(VIEW_ON);
+  if(!isActive){
+    subFamily.classList.add(VIEW_ON);
+    familyBtn.classList.add(ACTIVE_ON);
+  }else{
+    subFamily.classList.remove(VIEW_ON);
+    familyBtn.classList.remove(ACTIVE_ON);
+  }
+});
 // footBox 외 클릭시 subFamily 사라지게 하기
-// document.addEventListener('click',(e)=>{
-//   if(e.target !== familyBtn){
-//     subFamily.classList.remove(ACTIVE_ON);
-//   }
-// })
-const familyBtnFn = function(){
-  const siteNav = document.querySelector('.siteNav>ul>li');
-  familyBtn.addEventListener('mouseover',(e)=>{
-    console.log(e.target)
-    siteNav.classList.add(VIEW_ON);
-  })
-  familyBtn.addEventListener('mouseleave',(e)=>{
-    siteNav.classList.remove(VIEW_ON);
-  })
-  console.log(siteNav)
-}
-familyBtnFn();
+document.addEventListener('click',(e)=>{
+  if(e.target !== familyBtn){
+    subFamily.classList.remove(VIEW_ON);
+    familyBtn.classList.remove(ACTIVE_ON);
+  }
+})
 
 
 

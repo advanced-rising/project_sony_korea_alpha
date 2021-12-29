@@ -16,6 +16,7 @@
           width: 100%;
           height: 100%;
           > li {
+            display: block;
             width: 100%;
             @include unit(height,60);
             @include unit(margin-bottom,40);
@@ -23,28 +24,52 @@
             background-color: $color-deep-gray;
             color: $color-white;
             &:last-child { margin-bottom: 0;}
-            > div {
+            > a {
               width: 100%;
               height: 100%;
-              > a {
-                width: 100%;
-                height: 100%;
-                display: inline-block;
-                @include unit(margin-left,20);
-                @include unit(letter-spacing,2);
-                color: $color-white;
-                text-transform: uppercase;
-                text-align: start;
-                text-indent: 0.5rem;
-                text-decoration: none;
-                &:hover {
-                  color: $color-orange;
-                }
-                
+              display: inline-block;
+              @include unit(margin-left,20);
+              @include unit(letter-spacing,2);
+              color: $color-white;
+              text-transform: uppercase;
+              text-align: start;
+              text-indent: 0.5rem;
+              text-decoration: none;
+              &:hover {
+                color: $color-orange;
               }
             }
           }
+          @at-root .family_site {
+            > a {
+              span {
+                position: relative;
+                width: 100%;
+                height: 100%;
+              }
+              span::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 40%;
+                right: -100%;
+                border: solid $color-orange;
+                @include border-width(6,8,6,0);
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+                transform: rotate(90deg);
+                transition: all 300ms ease;
+              }
+            }
+            > a.active span::after {
+              transform: rotate(270deg);
+                transition: all 300ms ease;
+            }
+          }
           @at-root .sub_family {
+            &.on {
+              display: block;
+            }
             display: none;
             position: absolute;
             @include unit-calc-plus(top,-100%,-90);
@@ -65,17 +90,30 @@
                   color: $color-orange;
                 }
               }
-              span {
-                @include display-block();
-                @include unit(line-height,25);
-              }
             }
             
           }
-          
-          li.on .sub_family {
-            display: block;
+          @at-root .global_site {
+            > a {
+              span {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                &::after {
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  top: 40%;
+                  right: -75%;
+                  border: solid $color-orange;
+                  @include border-width(6,0,6,8);
+                  border-top-color: transparent;
+                  border-bottom-color: transparent;
+                }
+              }
+            }
           }
+          
         }
       }
       .sns_site {
@@ -374,5 +412,14 @@
   }
   .other_site {
     float: right;
+  }
+}
+@keyframes familyBtn {
+  from {
+    transform: rotate(-90);
+  }
+  to {
+    transform: rotate(-90);
+
   }
 }
