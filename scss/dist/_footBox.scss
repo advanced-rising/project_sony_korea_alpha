@@ -1,13 +1,13 @@
 #footBox {
   @include size();
-  @include padding(40,0,40,0);
+  @include padding(40, 0, 40, 0);
   background-color: $color-black;
   @at-root .foot_area {
-    @include unit(width,1140);
+    @include unit(width, 1140);
     height: auto;
     margin: auto;
     .other_site {
-      @include unit(width,376);
+      @include unit(width, 376);
       height: auto;
       @at-root .siteNav {
         position: relative;
@@ -18,18 +18,20 @@
           > li {
             display: block;
             width: 100%;
-            @include unit(height,60);
-            @include unit(margin-bottom,40);
-            @include unit(padding-left,20);
-            @include unit(line-height,60);
+            @include unit(height, 60);
+            @include unit(margin-bottom, 40);
+            @include unit(padding-left, 20);
+            @include unit(line-height, 60);
             background-color: $color-deep-gray;
             color: $color-white;
-            &:last-child { margin-bottom: 0;}
+            &:last-child {
+              margin-bottom: 0;
+            }
             > a {
               width: 100%;
               height: 100%;
               display: inline-block;
-              @include unit(letter-spacing,2);
+              @include unit(letter-spacing, 2);
               color: $color-white;
               text-transform: uppercase;
               text-align: start;
@@ -54,7 +56,7 @@
                 top: 30%;
                 right: -100%;
                 border: solid $color-orange;
-                @include border-width(6,8,6,0);
+                @include border-width(6, 8, 6, 0);
                 border-top-color: transparent;
                 border-bottom-color: transparent;
                 transform: rotate(90deg);
@@ -63,7 +65,7 @@
             }
             > a.active span::after {
               transform: rotate(270deg);
-                transition: all 300ms ease;
+              transition: all 300ms ease;
             }
           }
           @at-root .sub_family {
@@ -72,26 +74,25 @@
             }
             display: none;
             position: absolute;
-            @include unit-calc-plus(top,-100%,-90);
+            @include unit-calc-plus(top, -100%, -90);
             left: 0;
             width: 100%;
             height: auto;
             > li {
               width: 100%;
-              @include unit(height,50);
+              @include unit(height, 50);
               background-color: $color-black;
               > a {
                 width: 100%;
                 height: 100%;
                 display: inline-block;
-                @include unit(margin-left,20);
+                @include unit(margin-left, 20);
                 text-decoration: none;
                 &:hover {
                   color: $color-orange;
                 }
               }
             }
-            
           }
           @at-root .global_site {
             > a {
@@ -106,29 +107,30 @@
                   top: 30%;
                   right: -75%;
                   border: solid $color-orange;
-                  @include border-width(6,0,6,8);
+                  @include border-width(6, 0, 6, 8);
                   border-top-color: transparent;
                   border-bottom-color: transparent;
                 }
               }
             }
           }
-          
         }
       }
       .sns_site {
         width: 100%;
-        @include unit(height,46);
-        @include unit(margin-top,40);
+        @include unit(height, 46);
+        @include unit(margin-top, 40);
         ul {
           @include size();
           li {
             float: left;
-            @include unit(width,46);
-            @include unit(height,46);
-            @include unit(margin-right,20);
+            @include unit(width, 46);
+            @include unit(height, 46);
+            @include unit(margin-right, 20);
             border-radius: 100%;
-            &:last-child {margin-right: 0;}
+            &:last-child {
+              margin-right: 0;
+            }
             a {
               @include display-block();
               .company_sns_icon {
@@ -169,7 +171,7 @@
         float: left;
         width: auto;
         height: 100%;
-        @include padding(0,10,0,10);
+        @include padding(0, 10, 0, 10);
         color: $color-white;
         a {
           display: block;
@@ -179,11 +181,11 @@
         }
         &::after {
           position: absolute;
-          @include unit(top,8);
+          @include unit(top, 8);
           left: 0;
           content: "";
-          @include unit(width,1);
-          @include unit(height,10);
+          @include unit(width, 1);
+          @include unit(height, 10);
           background-color: $color-white;
         }
         &:first-child::after {
@@ -194,15 +196,15 @@
         }
         &:nth-child(2):hover {
           color: $color-orange;
-        } 
+        }
       }
       address {
         @include size();
-        @include unit(margin-top,60);
+        @include unit(margin-top, 60);
         color: $color-white;
       }
       .copyright {
-        @include unit(margin-top,40);
+        @include unit(margin-top, 40);
         font-weight: 700;
         color: $color-white;
       }
@@ -210,14 +212,14 @@
   }
 }
 
-@include mobile-v{
+@include mobile-v {
   .foot_area {
-    @include unit(width,280);
+    @include unit(width, 280);
     .other_site {
       float: left;
       @include size();
       margin: auto;
-      @include unit(margin-bottom,20);
+      @include unit(margin-bottom, 20);
       .siteNav {
         & > ul {
           @include size();
@@ -225,19 +227,47 @@
       }
       .sns_site {
         position: relative;
-        @include unit(width,178);
-        @include unit(height,112);
+        @include unit(width, 178);
+        @include unit(height, 112);
         margin: auto;
-        @include unit(margin-top,20);
-        @include unit(margin-bottom,20);
+        @include unit(margin-top, 20);
+        @include unit(margin-bottom, 20);
         ul {
           li {
-            @include unit(margin-top,20);
+            @include unit(margin-top, 20);
             &:nth-child(-n + 3) {
               margin-top: 0;
             }
             &:nth-child(3n) {
               margin-right: 0;
+            }
+          }
+          @at-root .family_site {
+            > a {
+              span {
+                position: relative;
+                width: 100%;
+                height: 100%;
+              }
+              span::after {
+                right: -40%;
+              }
+            }
+            > a.active span::after {
+              transform: rotate(270deg);
+              transition: all 300ms ease;
+            }
+          }
+          @at-root .global_site {
+            > a {
+              span {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                &::after {
+                  right: -23%;
+                }
+              }
             }
           }
         }
@@ -248,28 +278,99 @@
     }
   }
 }
-@include mobile-h{
+@include mobile-h {
   .foot_area {
-    @include unit(width,320);
+    @include unit(width, 320);
     .other_site {
       float: left;
       @include size();
       margin: auto;
-      @include unit(margin-bottom,20);
+      @include unit(margin-bottom, 20);
       .siteNav {
         & > ul {
           @include size();
         }
       }
       .sns_site {
-        @include unit(width,178);
-        @include unit(height,112);
+        @include unit(width, 178);
+        @include unit(height, 112);
         margin: auto;
-        @include unit(margin-top,20);
-        @include unit(margin-bottom,20);
+        @include unit(margin-top, 20);
+        @include unit(margin-bottom, 20);
         ul {
           li {
-            @include unit(margin-top,20);
+            @include unit(margin-top, 20);
+            &:nth-child(-n + 3) {
+              margin-top: 0;
+            }
+            &:nth-child(3n) {
+              margin-right: 0;
+            }
+          }
+          @at-root .family_site {
+            > a {
+              span {
+                position: relative;
+                width: 100%;
+                height: 100%;
+              }
+              span::after {
+                right: -65%;
+              }
+            }
+            > a.active span::after {
+              transform: rotate(270deg);
+              transition: all 300ms ease;
+            }
+          }
+          @at-root .global_site {
+            > a {
+              span {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                &::after {
+                  right: -44%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .company_info {
+      float: left;
+    }
+  }
+}
+@include tablet {
+  .foot_area {
+    @include unit(width, 700);
+    margin: auto;
+    .other_site {
+      float: left;
+      @include size();
+      margin: auto;
+      @include unit(margin-bottom, 20);
+      @at-root .siteNav {
+        & > ul {
+          float: left;
+          @include unit(width, 376);
+        }
+        .sub_family {
+          @include unit-calc-plus(top, -100%, -276);
+        }
+      }
+      .sns_site {
+        float: right;
+        @include unit(width, 178);
+        @include unit(height, 112);
+        margin: auto;
+        @include unit(margin-top, 20);
+        @include unit(margin-bottom, 20);
+        ul {
+          li {
+            @include unit(margin-top, 20);
             &:nth-child(-n + 3) {
               margin-top: 0;
             }
@@ -285,75 +386,32 @@
     }
   }
 }
-@include tablet{
+@include laptop {
   .foot_area {
-    @include unit(width,700);
+    @include unit(width, 700);
     margin: auto;
     .other_site {
       float: left;
       @include size();
       margin: auto;
-      @include unit(margin-bottom,20);
+      @include unit(margin-bottom, 20);
       @at-root .siteNav {
         & > ul {
           float: left;
-          @include unit(width,376);
+          @include unit(width, 376);
         }
         .sub_family {
-          @include unit-calc-plus(top,-100%,-276);
+          @include unit-calc-plus(top, -100%, -276);
         }
       }
       .sns_site {
         float: right;
-        @include unit(width,178);
-        @include unit(height,112);
+        @include unit(width, 178);
+        @include unit(height, 112);
         margin: auto;
-        @include unit(margin-top,20);
-        @include unit(margin-bottom,20);
-        ul {
-          li {
-            @include unit(margin-top,20);
-            &:nth-child(-n + 3) {
-              margin-top: 0;
-            }
-            &:nth-child(3n) {
-              margin-right: 0;
-            }
-          }
-        }
-      }
-    }
-    .company_info {
-      float: left;
-    }
-  }
-}
-@include laptop{
-  .foot_area {
-    @include unit(width,700);
-    margin: auto;
-    .other_site {
-      float: left;
-      @include size();
-      margin: auto;
-      @include unit(margin-bottom,20);
-      @at-root .siteNav {
-        & > ul {
-          float: left;
-          @include unit(width,376);
-        }
-        .sub_family {
-          @include unit-calc-plus(top,-100%,-276);
-        }
-      }
-      .sns_site {
-        float: right;
-        @include unit(width,178);
-        @include unit(height,112);
-        margin: auto;
-        @include margin(20,0,20,0);
+        @include margin(20, 0, 20, 0);
         li {
-          @include unit(margin-top,20);
+          @include unit(margin-top, 20);
           &:nth-child(-n + 3) {
             margin-top: 0;
           }
@@ -368,7 +426,7 @@
     }
   }
 }
-@include pc1280{
+@include pc1280 {
   .company_info {
     float: left;
   }
@@ -376,7 +434,7 @@
     float: right;
   }
 }
-@include pc1440{
+@include pc1440 {
   .foot_area {
     width: 1140px;
   }
@@ -387,7 +445,7 @@
     float: right;
   }
 }
-@include pc1920{
+@include pc1920 {
   .foot_area {
     width: 1140px;
   }
@@ -398,7 +456,7 @@
     float: right;
   }
 }
-@include pcfull{
+@include pcfull {
   .foot_wrap {
     width: 2560px;
     margin: auto;
@@ -420,6 +478,5 @@
   }
   to {
     transform: rotate(-90);
-
   }
 }

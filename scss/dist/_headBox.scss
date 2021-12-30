@@ -2,21 +2,21 @@
   position: fixed;
   z-index: 1000;
   width: 100%;
-  @include unit(height,80);
+  @include unit(height, 80);
   margin: auto;
   background-color: $color-black;
   @at-root .head_wrap {
     width: auto;
     height: 100%;
     margin: auto;
-    @include unit(padding-top,10);
+    @include unit(padding-top, 10);
     background-color: inherit;
     @at-root h1 {
       float: left;
-      @include unit(width,60);
-      @include unit(height,60);
+      @include unit(width, 60);
+      @include unit(height, 60);
       margin: auto;
-      @include unit(margin-left,10);
+      @include unit(margin-left, 10);
       a {
         @include display-block();
       }
@@ -28,27 +28,27 @@
   position: relative;
   width: auto;
   height: auto;
-  @include unit(margin-top,10);
-  @include unit(margin-left,100);
+  @include unit(margin-top, 10);
+  @include unit(margin-left, 100);
   color: $color-black;
   @at-root .unb {
     position: absolute;
     top: 0;
     right: 0;
     width: auto;
-    @include unit(height,60);
-    @include unit(margin-right,10);
+    @include unit(height, 60);
+    @include unit(margin-right, 10);
     > ul {
       width: auto;
       height: 100%;
-      @include unit(margin-top,5);
+      @include unit(margin-top, 5);
       li {
         float: left;
         width: auto;
         color: $color-white;
         > a {
           @include display-block();
-          @include unit(font-size,16);
+          @include unit(font-size, 16);
           text-decoration: none;
           text-align: center;
           text-transform: uppercase;
@@ -59,27 +59,27 @@
             color: $color-orange;
           }
         }
-        &.login_txt, 
+        &.login_txt,
         &.signUp_txt {
           position: relative;
           float: left;
           width: auto;
           height: 100%;
-          @include margin(0,10,0,10);
+          @include margin(0, 10, 0, 10);
           text-align: center;
           text-transform: uppercase;
-          @include unit(line-height,40);
+          @include unit(line-height, 40);
         }
         &.login_txt {
-          @include unit(word-spacing,-4);
-        } 
-        &.login_txt::after { 
+          @include unit(word-spacing, -4);
+        }
+        &.login_txt::after {
           content: "";
-          position: absolute; 
-          @include unit(top,16);
-          @include unit(right,-10);
-          @include unit(width,1);
-          @include unit(height,10);
+          position: absolute;
+          @include unit(top, 16);
+          @include unit(right, -10);
+          @include unit(width, 1);
+          @include unit(height, 10);
           background-color: $color-white;
         }
         & a:hover,
@@ -91,24 +91,26 @@
           display: none;
         }
         &.search_part {
-          @include unit(width,40);
-          @include unit(height,40);
+          @include unit(width, 40);
+          @include unit(height, 40);
           .search {
-            @include unit(width,40);
-            @include unit(height,40);
+            @include unit(width, 40);
+            @include unit(height, 40);
             img {
               width: 100%;
               height: 100%;
-              filter: invert(99%) sepia(22%) saturate(2%) hue-rotate(105deg) brightness(106%) contrast(100%);
+              filter: invert(99%) sepia(22%) saturate(2%) hue-rotate(105deg)
+                brightness(106%) contrast(100%);
             }
             &:hover img {
-              filter: invert(48%) sepia(63%) saturate(6360%) hue-rotate(8deg) brightness(97%) contrast(101%);
+              filter: invert(48%) sepia(63%) saturate(6360%) hue-rotate(8deg)
+                brightness(97%) contrast(101%);
             }
           }
         }
       }
     }
-  } 
+  }
   @at-root .navi_area {
     @at-root .gnb {
       position: absolute;
@@ -116,8 +118,8 @@
       right: 0;
       left: 0;
       width: auto;
-      @include unit(height,60);
-      @include unit(margin-right,200);
+      @include unit(height, 60);
+      @include unit(margin-right, 200);
       text-align: center;
       > ul {
         display: inline-block;
@@ -126,10 +128,10 @@
         > li {
           position: relative;
           float: left;
-          @include unit(width,90);
+          @include unit(width, 90);
           height: 100%;
-          @include unit(margin-right,17);
-          @include unit(line-height,50);
+          @include unit(margin-right, 17);
+          @include unit(line-height, 50);
           color: $color-white;
           > div {
             width: 100%;
@@ -139,7 +141,7 @@
               width: 100%;
               height: 100%;
               display: inline-block;
-              @include unit(font-size,16);
+              @include unit(font-size, 16);
               text-decoration: none;
               text-align: center;
               text-transform: uppercase;
@@ -154,15 +156,15 @@
           @at-root .sub_menu {
             display: none;
             position: absolute;
-            @include unit(top,58);
-            @include unit(left,-20);
+            @include unit(top, 58);
+            @include unit(left, -20);
             > li {
               width: 100%;
-              @include unit(min-width,140);
+              @include unit(min-width, 140);
               height: auto;
               text-align: start;
               white-space: nowrap;
-              @include padding(5,20,5,20);
+              @include padding(5, 20, 5, 20);
               color: $color-white;
               background-color: $color-light-black;
               > a {
@@ -184,10 +186,12 @@
           }
           // &:hover .sub_menu { display: block;}
         }
-        .last_gnbMenu {margin-right: 0;}
+        .last_gnbMenu {
+          margin-right: 0;
+        }
       }
     }
-    @at-root .search_modal { 
+    @at-root .search_modal {
       display: none;
       .search_engin {
         overflow-x: hidden;
@@ -196,47 +200,47 @@
         left: 0;
         right: 0;
         margin: auto;
-        @include unit(width,1000);
-        @include unit(height,600);
-        @include border($c:$color-orange);
+        @include unit(width, 1000);
+        @include unit(height, 600);
+        @include border($c: $color-orange);
         background-color: $color-white;
         .search_topBox {
           position: relative;
           top: 0;
           left: 0;
           width: 100%;
-          @include unit(height,40);
-          @include unit(margin-bottom,40);
+          @include unit(height, 40);
+          @include unit(margin-bottom, 40);
           .search_close_btn {
             position: absolute;
             top: 0;
             right: 0;
-            @include unit(width,40);
-            @include unit(height,40);
+            @include unit(width, 40);
+            @include unit(height, 40);
             // @include img("cross_black.svg",$p:center,$s:80%);
             &::before {
               content: "";
               position: absolute;
-              @include unit(top,25);
-              @include unit(right,5);
+              @include unit(top, 25);
+              @include unit(right, 5);
               display: block;
-              @include border($w:3,$c:$color-black);
-              @include unit(width,40);
+              @include border($w: 3, $c: $color-black);
+              @include unit(width, 40);
               height: auto;
-              @include unit(border-radius,5);
+              @include unit(border-radius, 5);
               background-color: $color-black;
               transform: rotate(135deg);
             }
             &::after {
               content: "";
               position: absolute;
-              @include unit(top,25);
-              @include unit(right,5);
+              @include unit(top, 25);
+              @include unit(right, 5);
               display: block;
-              @include border($w:3,$c:$color-black);
-              @include unit(width,40);
+              @include border($w: 3, $c: $color-black);
+              @include unit(width, 40);
               height: auto;
-              @include unit(border-radius,5);
+              @include unit(border-radius, 5);
               background-color: $color-black;
               transform: rotate(45deg);
             }
@@ -244,32 +248,32 @@
         }
         @at-root #search_icon {
           position: absolute;
-          @include unit(top,70);
+          @include unit(top, 70);
           left: 0;
           right: 0;
           width: 90%;
-          @include unit(height,40);
+          @include unit(height, 40);
           margin: auto;
-          @include unit(padding,5);
-          @include border($c:$color-black);
+          @include unit(padding, 5);
+          @include border($c: $color-black);
         }
         ul {
           overflow-y: auto;
           position: absolute;
           top: 20%;
           left: 10%;
-          @include unit(margin-top,20);
-          @include unit(width,900);
-          @include unit(height,400);
+          @include unit(margin-top, 20);
+          @include unit(width, 900);
+          @include unit(height, 400);
           box-sizing: content-box;
-          @include unit(padding-right,160);
+          @include unit(padding-right, 160);
           text-align: start;
           li {
             width: 90%;
             height: auto;
-            @include unit(line-height,40);
-            @include border-top($c:$color-orange);
-            @include border-bottom($c:$color-orange);
+            @include unit(line-height, 40);
+            @include border-top($c: $color-orange);
+            @include border-bottom($c: $color-orange);
             color: $color-black;
             &:nth-child(even) {
               border-top: 0;
@@ -281,7 +285,7 @@
           }
         }
       }
-      
+
       .search_modal_bg {
         position: fixed;
         top: 0;
@@ -297,7 +301,7 @@
   }
 }
 
-@include mobile-v{
+@include mobile-v {
   .head_wrap {
     height: 100%;
   }
@@ -308,12 +312,12 @@
       top: 0;
       right: 0;
       width: auto;
-      @include unit(height,60);
-      @include unit(margin-right,0);
+      @include unit(height, 60);
+      @include unit(margin-right, 0);
       > ul {
         width: auto;
         height: 100%;
-        @include unit(margin-top,5);
+        @include unit(margin-top, 5);
         li {
           float: left;
           color: $color-white;
@@ -328,10 +332,10 @@
             display: block;
             position: relative;
             float: right;
-            @include unit(width,40);
-            @include unit(height,36);
-            @include margin(0,15,0,15);
-            @include border-bottom($w:4,$c:$color-white);
+            @include unit(width, 40);
+            @include unit(height, 36);
+            @include margin(0, 15, 0, 15);
+            @include border-bottom($w: 4, $c: $color-white);
             transition: 200ms;
             &::before,
             &::after {
@@ -339,15 +343,15 @@
               position: absolute;
               display: block;
               width: 100%;
-              @include unit(height,4);
+              @include unit(height, 4);
               background-color: $color-white;
             }
             &::before {
-              @include unit(top,4);
+              @include unit(top, 4);
               left: 0;
             }
             &::after {
-              @include unit(bottom,10);
+              @include unit(bottom, 10);
               bottom: 10px;
               left: 0;
             }
@@ -366,37 +370,39 @@
             }
           }
           &.search_part {
-            @include unit(width,40);
-            @include unit(height,40);
+            @include unit(width, 40);
+            @include unit(height, 40);
             .search {
-              @include unit(width,40);
-              @include unit(height,40);
+              @include unit(width, 40);
+              @include unit(height, 40);
               img {
                 width: 100%;
                 height: 100%;
-                filter: invert(99%) sepia(22%) saturate(2%) hue-rotate(105deg) brightness(106%) contrast(100%);
+                filter: invert(99%) sepia(22%) saturate(2%) hue-rotate(105deg)
+                  brightness(106%) contrast(100%);
               }
               &:hover img {
-                filter: invert(48%) sepia(63%) saturate(6360%) hue-rotate(8deg) brightness(97%) contrast(101%);
+                filter: invert(48%) sepia(63%) saturate(6360%) hue-rotate(8deg)
+                  brightness(97%) contrast(101%);
               }
             }
           }
         }
       }
-    } 
+    }
     @at-root .navi_area {
       display: none;
       position: fixed;
       z-index: -1;
       top: 0;
-      left:  0;
+      left: 0;
       width: 100%;
       height: 100%;
       transition: all 100ms ease-in-out;
       transform: translateY(-100%);
       background-color: $color-black;
       .gnb {
-        @include unit(padding-top,80);
+        @include unit(padding-top, 80);
         width: 100%;
         height: 100%;
         > ul {
@@ -406,7 +412,7 @@
             display: block;
             width: 100%;
             height: auto;
-            @include unit(font-size,16);
+            @include unit(font-size, 16);
             @at-root .sub_menu {
               position: static;
               top: 0;
@@ -428,7 +434,7 @@
           }
         }
       }
-      @at-root .search_modal { 
+      @at-root .search_modal {
         display: none;
         .search_engin {
           overflow-x: hidden;
@@ -436,41 +442,41 @@
           top: 50%; //
           left: 50%; //
           margin: auto;
-          @include unit(width,300); //
-          @include unit(height,440); //
-          @include padding(0,20,20,20); //
-          @include border($c:$color-orange);
+          @include unit(width, 300); //
+          @include unit(height, 440); //
+          @include padding(0, 20, 20, 20); //
+          @include border($c: $color-orange);
           background-color: $color-white;
-          transform: translate(-50%,-50%); //
+          transform: translate(-50%, -50%); //
           .search_topBox {
             .search_close_btn {
               position: absolute;
               top: 0;
-              @include unit(right,-20); //
+              @include unit(right, -20); //
             }
           }
           @at-root #search_icon {
             position: absolute;
-            @include unit(top,50);
+            @include unit(top, 50);
             left: 0;
             right: 0;
             width: 90%;
-            @include unit(height,40);
+            @include unit(height, 40);
             margin: auto;
-            @include unit(padding,5);
-            @include border($c:$color-black);
+            @include unit(padding, 5);
+            @include border($c: $color-black);
           }
           ul {
             overflow-y: auto;
             position: absolute; //
             top: 20%; //
             left: 5%; //
-            @include unit(margin-top,20);
+            @include unit(margin-top, 20);
             width: 100%; //
             // @include unit(width,580);
-            @include unit(height,380); //
+            @include unit(height, 380); //
             box-sizing: content-box;
-            @include unit(padding-right,160);
+            @include unit(padding-right, 160);
             text-align: start;
           }
         }
@@ -478,7 +484,7 @@
     }
   }
 }
-@include mobile-h{
+@include mobile-h {
   .head_wrap {
     height: 100%;
   }
@@ -489,12 +495,12 @@
       top: 0;
       right: 0;
       width: auto;
-      @include unit(height,60);
-      @include unit(margin-right,0);
+      @include unit(height, 60);
+      @include unit(margin-right, 0);
       > ul {
         width: auto;
         height: 100%;
-        @include unit(margin-top,5);
+        @include unit(margin-top, 5);
         li {
           float: left;
           color: $color-white;
@@ -509,10 +515,10 @@
             display: block;
             position: relative;
             float: right;
-            @include unit(width,40);
-            @include unit(height,36);
-            @include margin(0,15,0,15);
-            @include border-bottom($w:4,$c:$color-white);
+            @include unit(width, 40);
+            @include unit(height, 36);
+            @include margin(0, 15, 0, 15);
+            @include border-bottom($w: 4, $c: $color-white);
             transition: 200ms;
             &::before,
             &::after {
@@ -520,15 +526,15 @@
               position: absolute;
               display: block;
               width: 100%;
-              @include unit(height,4);
+              @include unit(height, 4);
               background-color: $color-white;
             }
             &::before {
-              @include unit(top,4);
+              @include unit(top, 4);
               left: 0;
             }
             &::after {
-              @include unit(bottom,10);
+              @include unit(bottom, 10);
               bottom: 10px;
               left: 0;
             }
@@ -547,37 +553,39 @@
             }
           }
           &.search_part {
-            @include unit(width,40);
-            @include unit(height,40);
+            @include unit(width, 40);
+            @include unit(height, 40);
             .search {
-              @include unit(width,40);
-              @include unit(height,40);
+              @include unit(width, 40);
+              @include unit(height, 40);
               img {
                 width: 100%;
                 height: 100%;
-                filter: invert(99%) sepia(22%) saturate(2%) hue-rotate(105deg) brightness(106%) contrast(100%);
+                filter: invert(99%) sepia(22%) saturate(2%) hue-rotate(105deg)
+                  brightness(106%) contrast(100%);
               }
               &:hover img {
-                filter: invert(48%) sepia(63%) saturate(6360%) hue-rotate(8deg) brightness(97%) contrast(101%);
+                filter: invert(48%) sepia(63%) saturate(6360%) hue-rotate(8deg)
+                  brightness(97%) contrast(101%);
               }
             }
           }
         }
       }
-    } 
+    }
     @at-root .navi_area {
       display: none;
       position: fixed;
       z-index: -1;
       top: 0;
-      left:  0;
+      left: 0;
       width: 100%;
       height: 100%;
       transition: all 100ms ease-in-out;
       transform: translateY(-100%);
       background-color: $color-black;
       .gnb {
-        @include unit(padding-top,80);
+        @include unit(padding-top, 80);
         width: 100%;
         height: 100%;
         > ul {
@@ -587,7 +595,7 @@
             display: block;
             width: 100%;
             height: auto;
-            @include unit(font-size,16);
+            @include unit(font-size, 16);
             @at-root .sub_menu {
               position: static;
               top: 0;
@@ -609,7 +617,7 @@
           }
         }
       }
-      @at-root .search_modal { 
+      @at-root .search_modal {
         display: none;
         .search_engin {
           overflow-x: hidden;
@@ -617,41 +625,41 @@
           top: 50%; //
           left: 50%; //
           margin: auto;
-          @include unit(width,400); //
-          @include unit(height,440); //
-          @include padding(0,20,20,20); //
-          @include border($c:$color-orange);
+          @include unit(width, 400); //
+          @include unit(height, 440); //
+          @include padding(0, 20, 20, 20); //
+          @include border($c: $color-orange);
           background-color: $color-white;
-          transform: translate(-50%,-50%); //
+          transform: translate(-50%, -50%); //
           .search_topBox {
             .search_close_btn {
               position: absolute;
               top: 0;
-              @include unit(right,-20); //
+              @include unit(right, -20); //
             }
           }
           @at-root #search_icon {
             position: absolute;
-            @include unit(top,50);
+            @include unit(top, 50);
             left: 0;
             right: 0;
             width: 90%;
-            @include unit(height,40);
+            @include unit(height, 40);
             margin: auto;
-            @include unit(padding,5);
-            @include border($c:$color-black);
+            @include unit(padding, 5);
+            @include border($c: $color-black);
           }
           ul {
             overflow-y: auto;
             position: absolute; //
             top: 20%; //
             left: 5%; //
-            @include unit(margin-top,20);
+            @include unit(margin-top, 20);
             width: 100%; //
             // @include unit(width,580);
-            @include unit(height,380); //
+            @include unit(height, 380); //
             box-sizing: content-box;
-            @include unit(padding-right,160);
+            @include unit(padding-right, 160);
             text-align: start;
           }
         }
@@ -659,7 +667,7 @@
     }
   }
 }
-@include tablet{
+@include tablet {
   .head_wrap {
     height: 100%;
   }
@@ -670,12 +678,12 @@
       top: 0;
       right: 0;
       width: auto;
-      @include unit(height,60);
-      @include unit(margin-right,0);
+      @include unit(height, 60);
+      @include unit(margin-right, 0);
       > ul {
         width: auto;
         height: 100%;
-        @include unit(margin-top,5);
+        @include unit(margin-top, 5);
         li {
           float: left;
           color: $color-white;
@@ -690,10 +698,10 @@
             display: block;
             position: relative;
             float: right;
-            @include unit(width,40);
-            @include unit(height,36);
-            @include margin(0,15,0,15);
-            @include border-bottom($w:4,$c:$color-white);
+            @include unit(width, 40);
+            @include unit(height, 36);
+            @include margin(0, 15, 0, 15);
+            @include border-bottom($w: 4, $c: $color-white);
             transition: 200ms;
             &::before,
             &::after {
@@ -701,15 +709,15 @@
               position: absolute;
               display: block;
               width: 100%;
-              @include unit(height,4);
+              @include unit(height, 4);
               background-color: $color-white;
             }
             &::before {
-              @include unit(top,4);
+              @include unit(top, 4);
               left: 0;
             }
             &::after {
-              @include unit(bottom,10);
+              @include unit(bottom, 10);
               bottom: 10px;
               left: 0;
             }
@@ -728,30 +736,32 @@
             }
           }
           &.search_part {
-            @include unit(width,40);
-            @include unit(height,40);
+            @include unit(width, 40);
+            @include unit(height, 40);
             .search {
-              @include unit(width,40);
-              @include unit(height,40);
+              @include unit(width, 40);
+              @include unit(height, 40);
               img {
                 width: 100%;
                 height: 100%;
-                filter: invert(99%) sepia(22%) saturate(2%) hue-rotate(105deg) brightness(106%) contrast(100%);
+                filter: invert(99%) sepia(22%) saturate(2%) hue-rotate(105deg)
+                  brightness(106%) contrast(100%);
               }
               &:hover img {
-                filter: invert(48%) sepia(63%) saturate(6360%) hue-rotate(8deg) brightness(97%) contrast(101%);
+                filter: invert(48%) sepia(63%) saturate(6360%) hue-rotate(8deg)
+                  brightness(97%) contrast(101%);
               }
             }
           }
         }
       }
-    } 
+    }
     @at-root .navi_area {
       display: none;
       position: fixed;
       z-index: -1;
       top: 0;
-      left:  0;
+      left: 0;
       width: 100%;
       height: 100%;
       transition: all 100ms ease-in-out;
@@ -760,7 +770,7 @@
       .gnb {
         width: 100%;
         height: 100%;
-        @include padding(80,40,0,40);
+        @include padding(80, 40, 0, 40);
         > ul {
           width: 100%;
           height: 100%;
@@ -768,7 +778,7 @@
             display: block;
             width: 100%;
             height: auto;
-            @include unit(font-size,16);
+            @include unit(font-size, 16);
             @at-root .sub_menu {
               position: static;
               top: 0;
@@ -790,7 +800,7 @@
           }
         }
       }
-      @at-root .search_modal { 
+      @at-root .search_modal {
         display: none;
         .search_engin {
           overflow-x: hidden;
@@ -798,41 +808,41 @@
           top: 50%; //
           left: 50%; //
           margin: auto;
-          @include unit(width,600); //
-          @include unit(height,540); //
-          @include padding(0,20,20,20); //
-          @include border($c:$color-orange);
+          @include unit(width, 600); //
+          @include unit(height, 540); //
+          @include padding(0, 20, 20, 20); //
+          @include border($c: $color-orange);
           background-color: $color-white;
-          transform: translate(-50%,-50%); //
+          transform: translate(-50%, -50%); //
           .search_topBox {
             .search_close_btn {
               position: absolute;
               top: 0;
-              @include unit(right,-20); //
+              @include unit(right, -20); //
             }
           }
           @at-root #search_icon {
             position: absolute;
-            @include unit(top,50);
+            @include unit(top, 50);
             left: 0;
             right: 0;
             width: 90%;
-            @include unit(height,40);
+            @include unit(height, 40);
             margin: auto;
-            @include unit(padding,5);
-            @include border($c:$color-black);
+            @include unit(padding, 5);
+            @include border($c: $color-black);
           }
           ul {
             overflow-y: auto;
             position: absolute; //
             top: 20%; //
             left: 5%; //
-            @include unit(margin-top,20);
+            @include unit(margin-top, 20);
             width: 100%; //
             // @include unit(width,580);
-            @include unit(height,380); //
+            @include unit(height, 380); //
             box-sizing: content-box;
-            @include unit(padding-right,160);
+            @include unit(padding-right, 160);
             text-align: start;
           }
         }
@@ -840,20 +850,20 @@
     }
   }
 }
-@include laptop{
+@include laptop {
   #navigation {
     @at-root .navi_area {
       .gnb {
         > ul {
           > li {
-            @include vw(margin-right,0.5,1024);
+            @include vw(margin-right, 0.5, 1024);
           }
         }
       }
     }
   }
 }
-@include pcfull{
+@include pcfull {
   .head_wrap {
     width: 100%;
   }

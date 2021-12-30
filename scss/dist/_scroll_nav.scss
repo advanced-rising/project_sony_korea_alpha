@@ -1,10 +1,10 @@
 /* =============== #scroll_nav =================== */
 #scroll_nav {
   position: fixed;
-  @include unit(top,80);
+  @include unit(top, 80);
   right: 0;
   z-index: 900;
-  @include unit(width,60);
+  @include unit(width, 60);
   height: 100%;
   background-color: $color-white-black;
   .jump_menu {
@@ -13,19 +13,19 @@
     right: 0;
     width: 100%;
     & > li {
-      @include unit(padding-right,18);
-      @include unit(margin-bottom,2);
+      @include unit(padding-right, 18);
+      @include unit(margin-bottom, 2);
       text-align: right;
       .click_jump {
         position: relative;
         display: inline-block;
-        @include unit(height,22);
-        @include padding(4,0,4,0);
+        @include unit(height, 22);
+        @include padding(4, 0, 4, 0);
         &::after {
           display: inline-block;
           content: "";
-          @include unit(width,23);
-          @include unit(height,2);
+          @include unit(width, 23);
+          @include unit(height, 2);
           background-color: $color-white;
           vertical-align: top;
           transition: all 100ms ease;
@@ -33,15 +33,15 @@
         span {
           display: none;
           position: absolute;
-          @include unit(top,-4);
-          @include unit(right,36);
-          @include unit(padding-right,13);
-          @include unit(font-size,14);  
-          @include unit(line-height,1);
+          @include unit(top, -4);
+          @include unit(right, 36);
+          @include unit(padding-right, 13);
+          @include unit(font-size, 14);
+          @include unit(line-height, 1);
           color: $color-orange;
           white-space: nowrap;
           transition: all 100ms ease;
-        } 
+        }
       }
       &:hover .click_jump > span {
         display: block;
@@ -49,7 +49,7 @@
       }
       &:hover .click_jump:after,
       &.active .click_jump:after {
-        @include unit(width,31);
+        @include unit(width, 31);
         width: 31px;
         background: $color-orange;
         transition: all 100ms ease;
@@ -57,12 +57,18 @@
     }
   }
 }
-@include mobile-v{
-    #scroll_nav {display: none;}
+@include mobile-v {
+  #scroll_nav {
+    display: none;
+  }
 }
-@include mobile-h{
-    #scroll_nav {display: none;}
+@include mobile-h {
+  #scroll_nav {
+    display: none;
+  }
 }
-@include tablet{
-    #scroll_nav {display: none;}
+@include tablet {
+  #scroll_nav {
+    display: none;
+  }
 }

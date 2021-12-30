@@ -1,46 +1,48 @@
 #esBox {
   @include size();
   margin: auto;
-  @include padding(40,0,40,0);
+  @include padding(40, 0, 40, 0);
   @at-root .es_area {
     position: relative;
     top: 0;
     left: 0;
-    @include unit(width,1100);
+    @include unit(width, 1100);
     height: auto;
     margin: auto;
     @at-root .es_content {
-      @include unit(width,500);
+      @include unit(width, 500);
       height: auto;
       h3 {
         width: 100%;
-        @include unit(height,80);
+        @include unit(height, 80);
         text-align: center;
       }
       @at-root .es_inner {
         ul {
-          @include size();
+          position: relative;
+          left: 0;
+          transition: all 500ms linear;
           li {
             float: left;
-            @include unit(width,240);
+            @include unit(width, 240);
             height: auto;
-            @include unit(margin-top,20);
+            @include unit(margin-top, 20);
             overflow: hidden;
-            
+
             &:hover .event_img,
             &:hover .seminar_img {
               transform: scale(1.1);
               transition: transform 500ms ease;
             }
             &:nth-child(2n - 1) {
-              @include unit(margin-right,20);
+              @include unit(margin-right, 20);
             }
             .event_img,
             .seminar_img {
               position: relative;
               z-index: -1;
               width: 100%;
-              @include unit(height,240);
+              @include unit(height, 240);
               transition: transform 500ms ease;
               img {
                 position: absolute;
@@ -49,27 +51,26 @@
                 width: auto;
                 height: 100%;
                 margin: 0 auto;
-                transform: translate(-50%,-50%);
+                transform: translate(-50%, -50%);
               }
-              
             }
             .event_txt,
             .seminar_txt {
               z-index: 100;
               width: 100%;
-              @include unit(height,100);
-              @include unit(padding,10);
-              @include unit(font-size,16);
+              @include unit(height, 100);
+              @include unit(padding, 10);
+              @include unit(font-size, 16);
               word-break: break-all;
               color: $color-white;
               background-color: $color-deep-gray;
               .put_in_btn {
                 width: auto;
-                @include unit(line-height,25);
-                @include unit(margin-bottom,10);
+                @include unit(line-height, 25);
+                @include unit(margin-bottom, 10);
                 text-align: center;
-                @include unit(font-size,12);
-                @include padding(2,10,2,10);
+                @include unit(font-size, 12);
+                @include padding(2, 10, 2, 10);
                 color: $color-white;
               }
               .apply {
@@ -86,9 +87,9 @@
     .es_bar {
       position: absolute;
       bottom: 0;
-      @include unit-calc-minus(left,50%,10);
-      @include unit(width,20);
-      @include unit(height,660);
+      @include unit-calc-minus(left, 50%, 10);
+      @include unit(width, 20);
+      @include unit(height, 660);
       background-color: $color-light-blue;
     }
     // .event_area li:nth-child(1) .event_img {
@@ -117,30 +118,37 @@
     // }
   }
 }
-@include mobile-v{
+@include mobile-v {
   .es_area {
-    @include unit(width,320);
+    @include unit(width, 320);
     .es_content {
       float: left;
-      @include unit(width,320);
+      @include unit(width, 320);
       margin: auto;
       h3 {
         width: 100%;
         margin: auto;
       }
       .es_inner {
+        &::-webkit-scrollbar {
+          display: none;
+        }
         overflow-x: auto;
+        scroll-snap-type: x mandatory;
         width: 100%;
         height: auto;
         margin: auto;
         ul {
-          @include unit(width,1020);
-          @include unit(margin-bottom,20);
+          @include unit(width, 1020);
+          @include unit(margin-bottom, 20);
           li {
-            @include unit(width,240);
+            scroll-snap-type: start;
+            @include unit(width, 240);
             margin-top: 0;
-            @include unit(margin-right,20);
-            &:last-child {margin-right: 0;}
+            @include unit(margin-right, 20);
+            &:last-child {
+              margin-right: 0;
+            }
           }
         }
       }
@@ -152,16 +160,17 @@
   .event_img,
   .seminar_img {
     width: 100%;
-    @include unit(height,220);
+    @include unit(height, 220);
   }
-  .event_txt, .seminar_txt {
+  .event_txt,
+  .seminar_txt {
     width: 100%;
-    @include unit(height,100);
-    @include unit(padding,10);
-    @include unit(font-size,16);
+    @include unit(height, 100);
+    @include unit(padding, 10);
+    @include unit(font-size, 16);
   }
 }
-@include mobile-h{
+@include mobile-h {
   .es_area {
     width: 90%;
     .es_content {
@@ -173,18 +182,25 @@
         margin: auto;
       }
       .es_inner {
+        &::-webkit-scrollbar {
+          display: none;
+        }
         overflow-x: auto;
+        scroll-snap-type: x mandatory;
         width: 100%;
         height: auto;
         margin: auto;
         ul {
-          @include unit(width,1020);
-          @include unit(margin-bottom,20);
+          scroll-snap-align: start;
+          @include unit(width, 1020);
+          @include unit(margin-bottom, 20);
           li {
-            @include unit(width,240);
+            @include unit(width, 240);
             margin-top: 0;
-            @include unit(margin-right,20);
-            &:last-child {margin-right: 0;}
+            @include unit(margin-right, 20);
+            &:last-child {
+              margin-right: 0;
+            }
           }
         }
       }
@@ -196,16 +212,17 @@
   .event_img,
   .seminar_img {
     width: 100%;
-    @include unit(height,220);
+    @include unit(height, 220);
   }
-  .event_txt, .seminar_txt {
+  .event_txt,
+  .seminar_txt {
     width: 100%;
-    @include unit(height,100);
-    @include unit(padding,10);
-    @include unit(font-size,16);
+    @include unit(height, 100);
+    @include unit(padding, 10);
+    @include unit(font-size, 16);
   }
 }
-@include tablet{
+@include tablet {
   .es_area {
     width: 90%;
   }
@@ -216,57 +233,72 @@
       margin: auto;
     }
     .es_inner {
+      &::-webkit-scrollbar {
+        display: none;
+      }
       overflow-x: auto;
+      scroll-snap-type: x mandatory;
       width: 100%;
       height: auto;
       margin: auto;
       ul {
-        @include unit(width,1020);
-        @include unit(margin-bottom,20);
+        @include unit(width, 1020);
+        @include unit(margin-bottom, 20);
         li {
           float: left;
-          @include unit(width,240);
+          @include unit(width, 240);
           margin-top: 0;
-          @include unit(margin-right,20);
-          &:last-child {margin-right: 0;}
+          @include unit(margin-right, 20);
+          &:last-child {
+            margin-right: 0;
+          }
         }
       }
     }
-  } 
-  .es_bar { display: none;}
+  }
+  .es_bar {
+    display: none;
+  }
 }
 @include laptop {
   .es_area {
-    @include unit(width,768);
+    @include unit(width, 768);
   }
   .es_content {
-    @include unit(width,768);
+    @include unit(width, 768);
     margin: auto;
-    @include unit(margin-left,20);
+    @include unit(margin-left, 20);
     h3 {
       margin: auto;
     }
     .es_inner {
+      &::-webkit-scrollbar {
+        display: none;
+      }
       overflow-x: auto;
-      width: 100%;
+      scroll-snap-type: x mandatory;
       height: auto;
       margin: auto;
       ul {
-        @include unit(width,1020);
-        @include unit(margin-bottom,20);
+        @include unit(width, 1020);
+        @include unit(margin-bottom, 20);
         li {
           float: left;
-          @include unit(width,240);
+          @include unit(width, 240);
           margin-top: 0;
-          @include unit(margin-right,20);
-          &:last-child {margin-right: 0;}
+          @include unit(margin-right, 20);
+          &:last-child {
+            margin-right: 0;
+          }
         }
       }
     }
-  } 
-  .es_bar { display: none;}
+  }
+  .es_bar {
+    display: none;
+  }
 }
-@include pc1280{
+@include pc1280 {
   .event_area {
     float: left;
   }
@@ -274,7 +306,7 @@
     float: right;
   }
 }
-@include pc1440{
+@include pc1440 {
   .event_area {
     float: left;
   }
@@ -282,7 +314,7 @@
     float: right;
   }
 }
-@include pc1920{
+@include pc1920 {
   .event_area {
     float: left;
   }
@@ -290,7 +322,7 @@
     float: right;
   }
 }
-@include pcfull{
+@include pcfull {
   .event_area {
     float: left;
   }
