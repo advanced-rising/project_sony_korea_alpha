@@ -14,8 +14,8 @@
   width: 100%;
   height: auto;
   margin: auto;
-  @include unit(margin-top,80);
-  @include unit(margin-bottom,80);
+  @include unit(margin-top, 80);
+  @include unit(margin-bottom, 80);
   text-align: center;
   ul {
     display: inline-block;
@@ -24,29 +24,29 @@
     li {
       float: left;
       @at-root .product_img {
-        @include unit(width,540);
-        @include unit(height,540);
-        @include unit(margin-right,20);
+        @include unit(width, 540);
+        @include unit(height, 540);
+        @include unit(margin-right, 20);
       }
       @at-root .product_txt {
         position: relative;
-        @include unit(width,460);
-        @include unit(height,640);
-        @include unit(padding-top,80);
+        @include unit(width, 460);
+        @include unit(height, 640);
+        @include unit(padding-top, 80);
         .product_title {
           position: absolute;
-          @include unit(top,20);
+          @include unit(top, 20);
           left: 0;
           right: 0;
-          @include unit(width,420);
+          @include unit(width, 420);
           height: auto;
           margin: auto;
-          @include unit(font-size,24);
+          @include unit(font-size, 24);
           font-weight: 700;
           text-align: center;
           background-color: $color-white;
           span {
-            @include unit(margin-right,10);
+            @include unit(margin-right, 10);
             &:last-child {
               margin-right: 0;
             }
@@ -54,30 +54,30 @@
         }
         ul {
           @include size();
-          @include unit(padding,20);
+          @include unit(padding, 20);
           li {
             @include size();
-            @include unit(margin-bottom,10);
-            @include unit(font-size,18);
+            @include unit(margin-bottom, 10);
+            @include unit(font-size, 18);
             &:last-child {
               margin-bottom: 0;
             }
             span {
-              @include unit(font-size,16);
+              @include unit(font-size, 16);
               font-weight: 700;
               color: $color-black;
             }
             @at-root .info_name {
               position: relative;
-              @include unit(margin-left,10);
+              @include unit(margin-left, 10);
               float: left;
               &::after {
                 position: absolute;
-                @include unit(top,15);
-                @include unit(left,-10);
+                @include unit(top, 15);
+                @include unit(left, -10);
                 content: "";
-                @include unit(width,5);
-                @include unit(height,5);
+                @include unit(width, 5);
+                @include unit(height, 5);
                 border-radius: 100%;
                 background-color: $color-white;
               }
@@ -87,32 +87,32 @@
               float: right;
               &::after {
                 position: absolute;
-                @include unit(top,14);
-                @include unit(right,140);
+                @include unit(top, 14);
+                @include unit(right, 140);
                 content: "";
-                @include vw(width,40,480);
+                @include vw(width, 40, 480);
                 height: auto;
-                @include border($s:dashed,$c:$color-light-gray)
+                @include border($s: dashed, $c: $color-light-gray);
               }
             }
           }
         }
         .product_store {
           position: absolute;
-          @include unit(bottom,20);
+          @include unit(bottom, 20);
           left: 0;
           right: 0;
           margin: auto;
-          @include unit(width,300);
-          @include unit(height,40);
+          @include unit(width, 300);
+          @include unit(height, 40);
           text-align: center;
           background-color: $color-orange;
           a {
             @include display-block();
             span {
-              @include unit(font-size,16);
+              @include unit(font-size, 16);
               font-weight: 700;
-              @include unit(line-height,40);
+              @include unit(line-height, 40);
             }
           }
         }
@@ -120,38 +120,40 @@
     }
   }
 }
-.product_fullframe, .preview_fullframe {
+.product_fullframe,
+.preview_fullframe {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-.product_fullframe {
-  background-image:url("../../img/product/fullframe/32853360_1.png");
-} 
-.productList .preview_fullframe:nth-child(1) {
-  background-image: url("../../img/product/fullframe/32853060_1.png");
-} 
-.productList .preview_fullframe:nth-child(2) {
-  background-image: url("../../img/product/fullframe/32853360_1.png");
-} 
-.productList .preview_fullframe:nth-child(3) {
-  background-image: url("../../img/product/fullframe/32851960_1.png");
-} 
-.productList .preview_fullframe:nth-child(4) {
-  background-image: url("../../img/product/fullframe/32850860_1.png");
-} 
-.productList .preview_fullframe:nth-child(5) {
-  background-image: url("../../img/product/fullframe/32829460_0.png");
-} 
-.productList .preview_fullframe:nth-child(6) {
-  background-image: url("../../img/product/fullframe/32829360_0.png");
-} 
-.productList .preview_fullframe:nth-child(7) {
-  background-image: url("../../img/product/fullframe/32828960_0.png");
-} 
+// .product_fullframe {
+//   background-image:url("../../img/product/fullframe/32853360_1.png");
+// }
+// .productList .preview_fullframe:nth-child(1) {
+//   background-image: url("../../img/product/fullframe/32853060_1.png");
+// }
+// .productList .preview_fullframe:nth-child(2) {
+//   background-image: url("../../img/product/fullframe/32853360_1.png");
+// }
+// .productList .preview_fullframe:nth-child(3) {
+//   background-image: url("../../img/product/fullframe/32851960_1.png");
+// }
+// .productList .preview_fullframe:nth-child(4) {
+//   background-image: url("../../img/product/fullframe/32850860_1.png");
+// }
+// .productList .preview_fullframe:nth-child(5) {
+//   background-image: url("../../img/product/fullframe/32829460_0.png");
+// }
+// .productList .preview_fullframe:nth-child(6) {
+//   background-image: url("../../img/product/fullframe/32829360_0.png");
+// }
+// .productList .preview_fullframe:nth-child(7) {
+//   background-image: url("../../img/product/fullframe/32828960_0.png");
+// }
 /* // fullframe img */
 /* aps-c img */
-.product_apsc, .preview_apsc {
+.product_apsc,
+.preview_apsc {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -162,14 +164,15 @@
 /* .productList .preview_apsc:nth-child(1) {}  */
 .productList .preview_apsc:nth-child(2) {
   background-image: url("../../img/product/apsc/32852760_0.png");
-} 
+}
 /* .productList .preview_apsc:nth-child(3) {} 
 .productList .preview_apsc:nth-child(4) {} 
 .productList .preview_apsc:nth-child(5) {} 
 .productList .preview_apsc:nth-child(6) {}  */
 /* // aps-c img */
 /* lens img */
-.product_lens, .preview_lens {
+.product_lens,
+.preview_lens {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -200,7 +203,8 @@
 }
 /* // lens img */
 /* rx zv img */
-.product_rxzv, .preview_rxzv {
+.product_rxzv,
+.preview_rxzv {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -210,22 +214,22 @@
 }
 .productList .preview_rxzv:nth-child(1) {
   background-image: url("../../img/product/rxzv/80818880_1.png");
-} 
+}
 .productList .preview_rxzv:nth-child(2) {
   background-image: url("../../img/product/rxzv/80819081_0.png");
 }
 .productList .preview_rxzv:nth-child(3) {
   background-image: url("../../img/product/rxzv/80818680_1.png");
-} 
+}
 .productList .preview_rxzv:nth-child(4) {
   background-image: url("../../img/product/rxzv/80817780_1.png");
-} 
+}
 .productList .preview_rxzv:nth-child(5) {
   background-image: url("../../img/product/rxzv/80817680_1.png");
-} 
+}
 .productList .preview_rxzv:nth-child(6) {
   background-image: url("../../img/product/rxzv/80817580_0.png");
-} 
+}
 /* // rx zv img */
 /* acc img */
 /* // acc img */
@@ -233,28 +237,28 @@
 .productContent {
   position: relative;
   width: 100%;
-  @include unit(height,250);
+  @include unit(height, 250);
   margin: auto;
-  @include unit(bottom,80);
+  @include unit(bottom, 80);
   p {
-    @include unit(width,300);
-    @include unit(height,60);
+    @include unit(width, 300);
+    @include unit(height, 60);
     margin: auto;
     text-align: center;
-    @include unit(line-height,60);
+    @include unit(line-height, 60);
     font-weight: 700;
-    @include unit(font-size,16);
+    @include unit(font-size, 16);
   }
   @at-root .productBtn {
     position: relative;
     width: 80%;
     height: auto;
     margin: auto;
-    @include unit(margin-top,20);
+    @include unit(margin-top, 20);
     button {
       position: absolute;
-      @include unit(width,80);
-      @include unit(height,80);;
+      @include unit(width, 80);
+      @include unit(height, 80);
       transform: translateY(50%);
     }
     .prevBtn {
@@ -268,7 +272,7 @@
         left: 30%;
         width: 40px;
         height: 4px;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         transform: rotate(135deg);
         background-color: $color-black;
       }
@@ -280,7 +284,7 @@
         left: 30%;
         width: 40px;
         height: 4px;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         transform: rotate(45deg);
         background-color: $color-black;
       }
@@ -296,7 +300,7 @@
         left: 30%;
         width: 40px;
         height: 4px;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         transform: rotate(45deg);
         background-color: $color-black;
       }
@@ -308,7 +312,7 @@
         left: 30%;
         width: 40px;
         height: 4px;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         transform: rotate(135deg);
         background-color: $color-black;
       }
@@ -317,33 +321,34 @@
   @at-root .productList {
     overflow: hidden;
     position: absolute;
-    @include unit(bottom,20);
+    @include unit(bottom, 20);
     left: 0;
     right: 0;
-    @include unit(width,910);
-    @include unit(height,150);
+    @include unit(width, 910);
+    @include unit(height, 150);
     margin: auto;
     ul {
-      $product:8;
-      width: calc( 100% * $product);
+      $product: 8;
+      width: calc(100% * $product);
       height: 100%;
       li {
         float: left;
-        @include unit(width,150);
-        @include unit(height,150);
-        @include unit(margin-right,40);
-        &:nth-child(5) {margin-right: 0;}
+        @include unit(width, 150);
+        @include unit(height, 150);
+        @include unit(margin-right, 40);
+        &:nth-child(5) {
+          margin-right: 0;
+        }
         &.action {
-          @include border($w:4,$c:$color-black);
+          @include border($w: 4, $c: $color-black);
+        }
+        button {
+          @include display-block();
         }
       }
     }
   }
 }
-
-
-
-
 
 @include mobile-v {
   .productBox {
@@ -354,7 +359,7 @@
         clear: both;
         @at-root .product_img {
           width: 100%;
-          @include unit(height,300);
+          @include unit(height, 300);
           margin-right: 0;
         }
         @at-root .product_txt {
@@ -392,7 +397,7 @@
         clear: both;
         @at-root .product_img {
           width: 100%;
-          @include unit(height,500);
+          @include unit(height, 500);
           margin-right: 0;
         }
         @at-root .product_txt {
@@ -428,12 +433,12 @@
       li {
         clear: both;
         @at-root .product_img {
-          @include unit(width,540);
-          @include unit(height,700);
+          @include unit(width, 540);
+          @include unit(height, 700);
           margin-right: 0;
         }
         @at-root .product_txt {
-          @include unit(width,540);
+          @include unit(width, 540);
           margin: auto;
           .product_title {
             width: 100%;
@@ -460,4 +465,5 @@
     }
   }
 }
-@include laptop {}
+@include laptop {
+}
