@@ -1,6 +1,6 @@
-const fullFrameData = "../data/productFullFrameData.json";
+const rxzvData = "../data/productRxzvData.json";
 
-fetch(fullFrameData)
+fetch(rxzvData)
   .then((response) => {
     return response.json();
   })
@@ -21,7 +21,7 @@ fetch(fullFrameData)
     const makeButtonFn = () => {
       for (let i = 0; i < dataArr.length; i++) {
         const makeLi = document.createElement("li");
-        makeLi.setAttribute("class", "preview_fullframe");
+        makeLi.setAttribute("class", "preview_rxzv");
         const productListCode = `<button type="button"><span class="blind">${dataArr[i].productName}</span></button>`;
         makeLi.style.backgroundImage = `url("${dataArr[i].img}")`;
         makeLi.innerHTML = productListCode;
@@ -31,13 +31,13 @@ fetch(fullFrameData)
 
     // 클릭한 productListLi를 크게 보여주는 함수
     const appendProductFn = () => {
-      const productListLi = document.querySelectorAll(".preview_fullframe");
+      const productListLi = document.querySelectorAll(".preview_rxzv");
 
       productListLi.forEach((element, index) => {
         element.querySelector("button").addEventListener("click", (e) => {
           e.preventDefault();
           const productImgCode = ` <ul>
-    <li class="product_img product_fullframe"><span></span></li>
+    <li class="product_img product_rxzv"><span></span></li>
     <li class="product_txt"><div class="product_title"><span>${dataArr[index].productName}</span></div>
       <ul class="clearfix">
         <li><span class="info_name">용도별</span><div class="info_product"><span>${dataArr[index].usage}</span></div></li>
@@ -58,8 +58,8 @@ fetch(fullFrameData)
     </ul>`;
           productBoxUl.remove();
           productBox.innerHTML = productImgCode;
-          const productFullFrameImg = document.querySelector(".product_img");
-          productFullFrameImg.style.backgroundImage = `url("${dataArr[index].img}")`;
+          const productRxZvImg = document.querySelector(".product_img");
+          productRxZvImg.style.backgroundImage = `url("${dataArr[index].img}")`;
           resetViewOnFn(productListLi, ACTIVE_ON);
           element.classList.add(ACTIVE_ON);
         });
@@ -68,7 +68,7 @@ fetch(fullFrameData)
     // 기본값으로 img 보여줄 함수
     const basicProductFn = (n) => {
       const productImgCode = ` <ul>
-      <li class="product_img product_fullframe"><span></span></li>
+      <li class="product_img product_rxzv"><span></span></li>
       <li class="product_txt"><div class="product_title"><span>${dataArr[n].productName}</span></div>
         <ul class="clearfix">
           <li><span class="info_name">용도별</span><div class="info_product"><span>${dataArr[n].usage}</span></div></li>
@@ -88,10 +88,10 @@ fetch(fullFrameData)
       </li>
       </ul>`;
       productBox.innerHTML = productImgCode;
-      const productFullFrameImg = document.querySelector(".product_img");
-      const productListLi = document.querySelectorAll(".preview_fullframe");
+      const productRxZvImg = document.querySelector(".product_img");
+      const productListLi = document.querySelectorAll(".preview_rxzv");
       productListLi[n].classList.add(ACTIVE_ON);
-      productFullFrameImg.style.backgroundImage = `url("${dataArr[n].img}")`;
+      productRxZvImg.style.backgroundImage = `url("${dataArr[n].img}")`;
     };
 
     makeButtonFn();
