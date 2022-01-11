@@ -161,7 +161,7 @@
     location.reload(true);
     console.log(1);
   });
-  console.log(mediaArray);
+
   // unb - search button
   // search 모달창이 작동되었을때 바깥 스크롤을 막는 방법
   openBtn.addEventListener("click", function (event) {

@@ -30,7 +30,7 @@
       makeViewArea.after(makeViewIndicator);
       const makeViewIndiUl = document.createElement("ul");
       makeViewIndicator.append(makeViewIndiUl);
-      const viewBoxIndicatoCode = `<button type="button">
+      const viewBoxIndicatorCode = `<button type="button">
       <span></span>
     </button>`;
 
@@ -43,7 +43,7 @@
       }
       for (let i = 0; i < dataArrLen; i++) {
         const makeIndiLi = document.createElement("li");
-        makeIndiLi.innerHTML = viewBoxIndicatoCode;
+        makeIndiLi.innerHTML = viewBoxIndicatorCode;
         makeViewIndiUl.append(makeIndiLi);
         const viewIndiLi = makeViewIndiUl.querySelectorAll("li");
         const viewIndiSpan = viewIndiLi[i].querySelector("span");
