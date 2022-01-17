@@ -1,85 +1,84 @@
 // mixin.scss
 @use "sass:math";
 
-$root:16;
-
+$root: 16;
 
 // ============ size ==============================
-@function px($size){
+@function px($size) {
   @return #{$size}px;
 }
-@function rem($size){
-  @return math.div($size , $root) + rem;
+@function rem($size) {
+  @return math.div($size, $root) + rem;
 }
-@mixin unit-calc-plus($unit,$percent,$size){
-  #{$unit}:calc($percent + px($size));
-  #{$unit}:calc($percent + rem($size));
+@mixin unit-calc-plus($unit, $percent, $size) {
+  #{$unit}: calc($percent + px($size));
+  #{$unit}: calc($percent + rem($size));
 }
-@mixin unit-calc-minus($unit,$percent,$size){
-  #{$unit}:calc($percent - px($size));
-  #{$unit}:calc($percent - rem($size));
+@mixin unit-calc-minus($unit, $percent, $size) {
+  #{$unit}: calc($percent - px($size));
+  #{$unit}: calc($percent - rem($size));
 }
-@mixin unit($unit,$size){
-  #{$unit}:px($size);
-  #{$unit}:rem($size);
+@mixin unit($unit, $size) {
+  #{$unit}: px($size);
+  #{$unit}: rem($size);
 }
-@mixin size($w:100%,$h:auto){
+@mixin size($w: 100%, $h: auto) {
   width: $w;
   height: $h;
   @content;
 }
-@mixin full($s:100%){
-  width:$s;
+@mixin full($s: 100%) {
+  width: $s;
   height: $s;
 }
-@mixin margin($t:0,$r:0,$b:0,$l:0){
-  margin:px($t) px($r) px($b) px($l);
-  margin:rem($t) rem($r) rem($b) rem($l);
+@mixin margin($t: 0, $r: 0, $b: 0, $l: 0) {
+  margin: px($t) px($r) px($b) px($l);
+  margin: rem($t) rem($r) rem($b) rem($l);
 }
-@mixin padding($t:0,$r:0,$b:0,$l:0){
-  padding:px($t) px($r) px($b) px($l);
-  padding:rem($t) rem($r) rem($b) rem($l);
+@mixin padding($t: 0, $r: 0, $b: 0, $l: 0) {
+  padding: px($t) px($r) px($b) px($l);
+  padding: rem($t) rem($r) rem($b) rem($l);
 }
-@mixin text-shadow($x,$y,$r,$c){
-  text-shadow:px($x) px($y) px($r) $c;
-  text-shadow:rem($x) rem($y) rem($r) $c;
+@mixin text-shadow($x, $y, $r, $c) {
+  text-shadow: px($x) px($y) px($r) $c;
+  text-shadow: rem($x) rem($y) rem($r) $c;
 }
 // ============================================
 
 // =========== border , outline =========================
-@mixin border($w:1,$s:solid,$c:$color-white){
-  border:px($w) $s $c;
-  border:rem($w) $s $c;
+@mixin border($w: 1, $s: solid, $c: $color-white) {
+  border: px($w) $s $c;
+  border: rem($w) $s $c;
   @content;
 }
-@mixin border-top($w:1,$s:solid,$c:$color-white){
-  border-top:px($w) $s $c;
-  border-top:rem($w) $s $c;
+@mixin border-top($w: 1, $s: solid, $c: $color-white) {
+  border-top: px($w) $s $c;
+  border-top: rem($w) $s $c;
   @content;
 }
-@mixin border-right($w:1,$s:solid,$c:$color-white){
-  border-right:px($w) $s $c;
-  border-right:rem($w) $s $c;
+@mixin border-right($w: 1, $s: solid, $c: $color-white) {
+  border-right: px($w) $s $c;
+  border-right: rem($w) $s $c;
   @content;
 }
-@mixin border-bottom($w:1,$s:solid,$c:$color-white){
-  border-bottom:px($w) $s $c;
-  border-bottom:rem($w) $s $c;
+@mixin border-bottom($w: 1, $s: solid, $c: $color-white) {
+  border-bottom: px($w) $s $c;
+  border-bottom: rem($w) $s $c;
   @content;
 }
-@mixin border-left($w:1,$s:solid,$c:$color-white){
-  border-left:px($w) $s $c;
-  border-left:rem($w) $s $c;
+@mixin border-left($w: 1, $s: solid, $c: $color-white) {
+  border-left: px($w) $s $c;
+  border-left: rem($w) $s $c;
   @content;
 }
-@mixin border-width($t,$r,$b,$l){
+@mixin border-width($t, $r, $b, $l) {
   border-width: px($t) px($r) px($b) px($l);
   border-width: rem($t) rem($r) rem($b) rem($l);
   @content;
 }
-@mixin outline($w:1,$s:solid,$c:$color-white){
-  outline:px($w) $s $c;
-  outline:rem($w) $s $c;
+@mixin outline($w: 1, $s: solid, $c: $color-white) {
+  outline: px($w) $s $c;
+  outline: rem($w) $s $c;
   @content;
 }
 // ============================================
@@ -87,20 +86,20 @@ $root:16;
 // ================ vw ========================
 // 기준 디바이스 크기를 입력, vw계산기 생성
 $device: 600;
-@mixin vw($unit,$size,$d:$device){
-  #{$unit}:px($size);
-  #{$unit}: math.div($size , $d)*100vw;
+@mixin vw($unit, $size, $d: $device) {
+  #{$unit}: px($size);
+  #{$unit}: math.div($size, $d) * 100vw;
   @content;
 }
 // ============================================
 
 // img ========================================
-$url:"../../img/";
-@mixin img($i, $r:no-repeat, $p:50% 50%, $s:cover){
+$url: "../../img/";
+@mixin img($i, $r: no-repeat, $p: 50% 50%, $s: cover) {
   background: {
-    image: url('#{$url}#{$i}');
-    repeat:$r;
-    position:$p;
+    image: url("#{$url}#{$i}");
+    repeat: $r;
+    position: $p;
     size: $s;
   }
   @content;
@@ -108,76 +107,74 @@ $url:"../../img/";
 // ============================================
 
 // display ====================================
-@mixin display-block($b:block, $w:100%, $h:100%){
-  display:$b;
+@mixin display-block($b: block, $w: 100%, $h: 100%) {
+  display: $b;
   width: $w;
   height: $h;
 }
 // ===========================================
 // ======== font size, weight ================
-@mixin font-set (){
-  font-family:$font-family-en,  $font-family-kr,  $font-family-common; 
+@mixin font-set() {
+  font-family: $font-family-en, $font-family-kr, $font-family-common;
 }
 
-@mixin text-option($s:title3, $w:4, $line:false){ 
-  font-size:map-get($map:$font-size, $key: $s);
-  font-weight:nth($font-weight,$w);
+@mixin text-option($s: title3, $w: 4, $line: false) {
+  font-size: map-get($map: $font-size, $key: $s);
+  font-weight: nth($font-weight, $w);
   @if $line {
-    line-height:24px;
-    letter-spacing:-0.006em;    
+    line-height: 24px;
+    letter-spacing: -0.006em;
   }
 }
 // ===========================================
 
 // ======== font color =======================
 
-
 // ============================================
 
 // ======== background coloe ==================
-
 
 // ============================================
 
 // =========== media query coloe ==============
 @mixin mobile-v {
-  @media all and (max-width: #{$breakpoint-moblie-h - 1}){
+  @media all and (max-width: #{$breakpoint-mobile-h - 1}) {
     @content;
   }
 }
 @mixin mobile-h {
-  @media all and (min-width: #{$breakpoint-moblie-h})
-  and (max-width: #{$breakpoint-tablet - 1}){
+  @media all and (min-width: #{$breakpoint-mobile-h})
+  and (max-width: #{$breakpoint-tablet - 1}) {
     @content;
   }
 }
 @mixin tablet {
   @media all and (min-width: #{$breakpoint-tablet})
-  and (max-width: #{$breakpoint-laptop - 1}){
+  and (max-width: #{$breakpoint-laptop - 1}) {
     @content;
   }
 }
 @mixin laptop {
   @media all and (min-width: #{$breakpoint-laptop})
-  and (max-width: #{$breakpoint-pc1280 - 1}){
+  and (max-width: #{$breakpoint-pc1280 - 1}) {
     @content;
   }
 }
 @mixin pc1280 {
   @media all and (min-width: #{$breakpoint-pc1280})
-  and (max-width: #{$breakpoint-pc1440 - 1}){
+  and (max-width: #{$breakpoint-pc1440 - 1}) {
     @content;
   }
 }
 @mixin pc1440 {
   @media all and (min-width: #{$breakpoint-pc1440})
-  and (max-width: #{$breakpoint-pc1920 - 1}){
+  and (max-width: #{$breakpoint-pc1920 - 1}) {
     @content;
   }
 }
 @mixin pc1920 {
   @media all and (min-width: #{$breakpoint-pc1920})
-  and (max-width: #{$breakpoint-pc2560 - 1}){
+  and (max-width: #{$breakpoint-pc2560 - 1}) {
     @content;
   }
 }
