@@ -159,7 +159,6 @@
 
   mobMatches.addEventListener("change", (e) => {
     location.reload(true);
-    console.log(1);
   });
 
   // unb - search button

@@ -109,7 +109,6 @@
               el.append(vodArea);
               vodArea.innerHTML = vodIframe;
             }
-            console.log(i);
             videoLiCvt = [...videoLi];
           });
         });
