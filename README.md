@@ -1,5 +1,10 @@
 # Sony Korea Alpha
 
+## media query 를 통한 반응형 웹 구현
+![media query](https://user-images.githubusercontent.com/34502254/150126045-e784bfa4-2e56-49b7-a14f-07f976413f00.gif)<br />
+##### min-width : 320px ~ max-width : 2560px 까지 기기에서 사용이 가능하도록 구현
+---
+
 ## JavaScript 로 구현한 기능
 
 ![viewBox](https://user-images.githubusercontent.com/34502254/150124523-03666348-2968-48f2-a8f7-435c24aeb4f5.gif)<br />
